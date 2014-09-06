@@ -1,0 +1,120 @@
+<html>
+<head>
+	<title>Home Sports Bar</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var frameOverlay = function(frameNumber) {
+				$("#frame-" + frameNumber).hover(
+					function() {
+						$("#frame-" + frameNumber + "-overlay").show();
+					},
+					function() {
+						$("#frame-" + frameNumber + "-overlay").hide();
+					});
+				$("#frame-" + frameNumber + "-overlay").hover(
+					function() {
+						$("#frame-" + frameNumber + "-overlay").show();
+					},
+					function() {
+						$("#frame-" + frameNumber + "-overlay").hide();
+					});
+			};
+
+			frameOverlay(1);
+			frameOverlay(2);
+			frameOverlay(3);
+			frameOverlay(4);
+		});
+
+
+	</script>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: #000000;
+			overflow: hidden;
+		}
+
+		iframe {
+			width: 50%;
+			height: 50%;
+			margin: 0px -1px;
+			padding: 0px;
+			border: 0px none transparent;
+			display: inline;
+			overflow: hidden;
+		}
+
+		iframe::-webkit-scrollbar {
+			display: none;
+		}
+
+		#frame-1-overlay {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			display: none;
+		}
+
+		#frame-2-overlay {
+			position: absolute;
+			top: 0%;
+			left: 50%;
+			display: none;
+		}
+
+		#frame-3-overlay {
+			position: absolute;
+			top: 50%;
+			left: 0%;
+			display: none;
+		}
+
+		#frame-4-overlay {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: none;
+		}
+
+		div {
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+
+		a {
+			padding: 2px 6px;
+			color: red;
+			font-family: helvetica;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		a:hover {
+			background: white;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<a href="single-screen.html">launch single screen</a>
+	</div>
+	<div>
+		<a href="home-sports-bar.html">launch home sports bar (four screens)</a>
+	</div>
+	<div>
+		<a href="six-screens.html">launch home sports bar (six screens)</a>
+	</div>
+	<div>
+		<a href="six-screens-transpose.html">launch home sports bar (six screens transpose)</a>
+	</div>
+	<div>
+		<a href="landing.html">launch landing</a>
+	</div>
+
+</body>
+</html>

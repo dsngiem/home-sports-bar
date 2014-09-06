@@ -1,0 +1,69 @@
+{
+    "manifest_version": 2,
+
+    "name": "Home Sports Bar",
+    "description": "Watch four television streaming websites at once.",
+    "version": "1.0",
+
+    "content_scripts": [
+    {
+        "matches": ["http://xfinitytv.comcast.net/live/network/*"],
+        "js": ["xfinity.js"],
+        "css": ["xfinity.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://xfinitytv.comcast.net/watch-live-tv/*"],
+        "js": ["xfinity-list.js"],
+        "css": ["xfinity-list.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.foxsports.com/foxsportsgo/"],
+        "js": ["foxsportsgo.js"],
+        "css": ["foxsportsgo.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://live.mlssoccer.com/mlsmdl/*"],
+        "js": ["mls.js"],
+        "css": ["mls.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://espn.go.com/watchespn/player/*"],
+        "js": ["espn.js"],
+        "css": ["espn.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://espn.go.com/watchespn/index/*"],
+        "js": ["watchespn.js"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://stream.nbcsports.com/*/*"],
+        "js": ["nbcsn.js"],
+        "css": ["nbcsn.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://entertainment.verizon.com/tv/3/player/*"],
+        "js": ["fios.js"],
+        "css": ["fios.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://tve-common.nbcuni.com/web/restricted/*"],
+        "js": ["nbcuni.js"],
+        "css": ["nbcuni.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://player.theplatform.com/*"],
+        "js": ["nbcuni.js"],
+        "css": ["nbcuni.css"],
+        "all_frames": true
+    }
+    ]
+}

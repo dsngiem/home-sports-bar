@@ -1,0 +1,149 @@
+<html>
+<head>
+	<title>Home Sports Bar</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var frameOverlay = function(frameNumber) {
+				$("#frame-" + frameNumber).hover(
+					function() {
+						$("#frame-" + frameNumber + "-overlay").show();
+					},
+					function() {
+						$("#frame-" + frameNumber + "-overlay").hide();
+					});
+				$("#frame-" + frameNumber + "-overlay").hover(
+					function() {
+						$("#frame-" + frameNumber + "-overlay").show();
+					},
+					function() {
+						$("#frame-" + frameNumber + "-overlay").hide();
+					});
+			};
+
+			frameOverlay(1);
+			frameOverlay(2);
+			frameOverlay(3);
+			frameOverlay(4);
+			frameOverlay(5);
+			frameOverlay(6);
+		});
+
+
+	</script>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: #000000;
+			overflow: hidden;
+		}
+
+		iframe {
+			width: 33%;
+			height: 50%;
+			margin: 0px -1px;
+			padding: 0px;
+			border: 0px none transparent;
+			display: inline;
+			overflow: hidden;
+		}
+
+		iframe::-webkit-scrollbar {
+			display: none;
+		}
+
+		#frame-1-overlay {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			display: none;
+		}
+
+		#frame-2-overlay {
+			position: absolute;
+			top: 0%;
+			left: 33%;
+			display: none;
+		}
+
+		#frame-3-overlay {
+			position: absolute;
+			top: 0%;
+			left: 66%;
+			display: none;
+		}
+
+		#frame-4-overlay {
+			position: absolute;
+			top: 50%;
+			left: 0%;
+			display: none;
+		}
+
+		#frame-5-overlay {
+			position: absolute;
+			top: 50%;
+			left: 33%;
+			display: none;
+		}
+
+		#frame-6-overlay {
+			position: absolute;
+			top: 50%;
+			left: 66%;
+			display: none;
+		}
+
+		div {
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+
+		a {
+			padding: 2px 6px;
+			color: red;
+			font-family: helvetica;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		a:hover {
+			background: white;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="frame-1" name="frame-1" src="landing.html"></iframe>
+	<iframe id="frame-2" name="frame-2" src="landing.html"></iframe>
+	<iframe id="frame-3" name="frame-3" src="landing.html"></iframe>
+	<iframe id="frame-4" name="frame-4" src="landing.html"></iframe>
+	<iframe id="frame-5" name="frame-5" src="landing.html"></iframe>
+	<iframe id="frame-6" name="frame-6" src="landing.html"></iframe>
+
+	<div id="frame-1-overlay">
+		<a href="landing.html" target="frame-1">&#215;</a>
+	</div>
+
+	<div id="frame-2-overlay">
+		<a href="landing.html" target="frame-2">&#215;</a>
+	</div>
+
+	<div id="frame-3-overlay">
+		<a href="landing.html" target="frame-3">&#215;</a>
+	</div>
+
+	<div id="frame-4-overlay">
+		<a href="landing.html" target="frame-4">&#215;</a>
+	</div>
+
+	<div id="frame-5-overlay">
+		<a href="landing.html" target="frame-5">&#215;</a>
+	</div>
+
+	<div id="frame-6-overlay">
+		<a href="landing.html" target="frame-6">&#215;</a>
+	</div>
+</body>
+</html>
