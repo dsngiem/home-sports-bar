@@ -42,6 +42,7 @@ if (process.argv.length >= 3) {
 
 console.log(port)
 
+port = process.env.PORT || port
 
 /** MODULES **/
 var HTTP = require('http')
