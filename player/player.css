@@ -1,0 +1,43 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #000000;
+	overflow: hidden;
+}
+
+iframe::-webkit-scrollbar {
+	display: none;
+}
+
+div {
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+a {
+	padding: 2px 6px;
+	color: black;
+	font-family: helvetica;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	background: white;
+	color: red;
+}
+
+#startup p {
+	position: fixed;
+	top: 95%;
+	left: 50%;
+	transform: translateX(-50%);
+	transform: translateY(50%);
+	-webkit-transform: translateY(50%);
+	-webkit-transform: translateX(-50%);
+	font-family: helvetica;
+	text-align: center;
+	margin: 0px;
+	background-color: rgba(0,0,0,.1);
+	text-shadow: 0px 0px 3px #111111;
+}

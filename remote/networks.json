@@ -1,0 +1,1971 @@
+{	
+	"networks": [
+	{
+		"name": "espn",
+		"alt": "ESPN",
+		"channelId": "10179",
+		"color": "#FF0033",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/220px-ESPN_wordmark.svg.png",
+		"urls": [
+		{
+			"source": "WatchESPN",
+			"url": "http://espn.go.com/watchespn/player/_/channel/espn1/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espn?cmpid=livetv_espn"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/espn"
+		}
+		]
+	},
+	{
+		"name": "espn2",
+		"alt": "ESPN2",
+		"channelId": "12444",
+		"color": "#FF0033",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ESPN2_logo.svg/225px-ESPN2_logo.svg.png",
+		"urls": [
+		{
+			"source": "WatchESPN",
+			"url": "http://espn.go.com/watchespn/player/_/channel/espn2/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espn2?cmpid=livetv_espn2"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/espn2"
+		}
+		]
+	},
+	{
+		"name": "espnews",
+		"alt": "ESPNews",
+		"channelId": "16485",
+		"color": "#FF0033",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/ESPN_ews.svg/250px-ESPN_ews.svg.png",
+		"urls": [
+		{
+			"source": "WatchESPN",
+			"url": "http://espn.go.com/watchespn/player/_/channel/espnews/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espnews?cmpid=livetv_espnews"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/espnews"
+		}
+		]
+	},
+	{
+		"name": "espnu",
+		"alt": "ESPNU",
+		"channelId": "45654",
+		"color": "#FF0033",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/ESPN_U_logo.svg/100px-ESPN_U_logo.svg.png",
+		"urls": [
+		{
+			"source": "WatchESPN",
+			"url": "http://espn.go.com/watchespn/player/_/channel/espnu/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espnu?cmpid=livetv_espnews"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/espnu"
+		}
+		]
+	},
+	{
+		"name": "espngoalline",
+		"alt": "ESPN Goal Line/Buzzer Beater",
+		"channelId": "69034",
+		"color": "#FF0033",
+		"image": "http://d1ff979u6gd5fc.cloudfront.net/api/pub/imgedge/services/v1/image/http/tmsimg/h3/NowShowing/69034/s69034_h3_aa.png?w=146&width=146",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espngoalline"
+		}
+		]
+	},
+	{
+		"name": "sec",
+		"alt": "SEC Network",
+		"channelId": "89535",
+		"color": "#FF0033",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/99/SEC_Network_Logo.png/200px-SEC_Network_Logo.png",
+		"urls": [
+		{
+			"source": "WatchESPN",
+			"url": "http://espn.go.com/watchespn/player/_/channel/sec/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/sec?cmpid=chrome_ext_1"
+		}
+		]
+	},
+	{
+		"name": "espn3",
+		"alt": "ESPN3",
+		"channelId": "espn3-0",
+		"color": "#FF0033",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/51/ESPN3_Logo.png/200px-ESPN3_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espn3?cmpid=livetv_espn3"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/espn3"
+		}
+		]
+	},
+	{
+		"name": "fs1",
+		"alt": "FS1",
+		"channelId": "82547",
+		"color": "#00285A",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/FS1_New_Logo.png/200px-FS1_New_Logo.png",
+		"urls": [
+		
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82547"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1"
+		},
+		{
+			"source": "FSGO",
+			"url": "http://www.foxsports.com/foxsportsgo/"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FOX-Sports-1-HD-219"
+		}
+		]
+	},
+	{
+		"name": "fs2",
+		"alt": "FS2",
+		"channelId": "59305",
+		"color": "#00285A",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",		
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618"
+		},
+		{
+			"source": "FSGO",
+			"url": "http://www.foxsports.com/foxsportsgo/"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=59305"
+		}
+		]
+	},
+	{
+		"name": "nbcsn",
+		"alt": "NBCSN",
+		"channelId": "48639",
+		"color": "#FDB812",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
+		},
+		{
+			"source": "NBCSN",
+			"url": "http://stream.nbcsports.com/nbcsn/"
+		},
+		{
+			"source": "iframe",
+			"url": "http://player.theplatform.com/p/HNK2IC/nbcsports_live?MVPDid=Verizon#playerurl=http%3A//stream.nbcsports.com/nbcsn/%3Fpid%3D47%26referrer%3Dhttp%3A//stream.nbcsports.com/liveextra/"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nbcsn"
+		},
+		{
+			"source": "LiveExtra",
+			"url": "http://stream.nbcsports.com/liveextra/"
+		}
+		]
+	},
+	{
+		"name": "nhl",
+		"alt": "NHL GameCenter",
+		"channelId": "58690",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png",
+		"urls": [
+		{
+			"source": "NHL GameCenter",
+			"url": "http://www.nhl.com/gamecenter/"
+		}
+		]
+	},
+	{
+		"name": "tnt",
+		"alt": "TNT",
+		"channelId": "42642",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/e/e5/TNT_%28TV_channel%29.png/145px-TNT_%28TV_channel%29.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/tnt?cmpid=livetv_tnt"
+		},
+		{
+			"source": "TNT",
+			"url": "http://www.tntdrama.com/watchtnt/east.html"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/tnt"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/TNT-HD-245"
+		}
+		]
+	},
+	{
+		"name": "tbs",
+		"alt": "TBS",
+		"channelId": "58515",
+		"color": "#0094DA",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/PerfectTBS.svg/115px-PerfectTBS.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/tbs?cmpid=livetv_tbs"
+		},
+		{
+			"source": "TBS",
+			"url": "http://tbs.com/watchtbs/east.html"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/tbs"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/TBS-HD-247"
+		}
+		]
+	},
+	{
+		"name": "nfl",
+		"alt": "NFL Network",
+		"channelId": "45399",
+		"color": "#1B3067",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/12/National_Football_League_2008.svg/196px-National_Football_League_2008.svg.png",
+		"urls": [
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nfl"
+		}
+		]
+	},
+	{
+		"name": "nba",
+		"alt": "NBA TV",
+		"channelId": "45526",
+		"color": "#1B3067",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/d/d2/NBA_TV.svg/170px-NBA_TV.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/NBA-TV-HD-216"
+		}
+		]
+	},
+	{
+		"name": "mlb",
+		"alt": "MLB Network",
+		"channelId": "62081",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/MLBNetworkLogo.svg/200px-MLBNetworkLogo.svg.png",
+		"urls": [
+		{
+			"source": "MLB",
+			"url": "http://m.mlb.com/network/live"
+		}
+		]
+	},
+	{
+		"name": "tennis",
+		"alt": "Tennis Channel",
+		"channelId": "60316",
+		"color": "#005500",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/150px-Tennis_Channel_logo.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Tennis-Channel-HD-217"
+		}
+		]
+	},
+	{
+		"name": "foxsoccer2go",
+		"alt": "FOX Soccer 2 Go",
+		"channelId": "66879",
+		"color": "#00285A",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/d/d7/FSPlus_New2011.jpg/150px-FSPlus_New2011.jpg",
+		"urls": [
+		{
+			"source": "FS2G",
+			"url": "http://www.foxsoccer2go.com/home"
+		}
+		]
+	},
+	{
+		"name": "udn",
+		"alt": "Univision Deportes",
+		"channelId": "77033",
+		"color": "#004887",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Univision_Deportes_Network_2013.png/200px-Univision_Deportes_Network_2013.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/univisiondeportes?cmpid=livetv_univision-deportes-network"
+		},
+		{
+			"source": "DirecTV (Ch. 455)",
+			"url": "https://www.directv.com/Channels/Univision-Deportes-Network-HD-455"
+		},
+		{
+			"source": "DirecTV (Ch. 464)",
+			"url": "https://www.directv.com/Channels/Univision-Deportes-Network-HD-464-464"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=77033"
+		}
+		]
+	},
+	{
+		"name": "bein",
+		"alt": "BeIn Sports",
+		"channelId": "76950",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/06/BeIN_SPORTS_logo.png/200px-BeIN_SPORTS_logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76950"
+		}
+		]
+	},
+	{
+		"name": "beinespanol",
+		"alt": "BeIñ Sports",
+		"channelId": "76955",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/06/BeIN_SPORTS_logo.png/200px-BeIN_SPORTS_logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76955"
+		}
+		]
+	},
+	{
+		"name": "btn",
+		"alt": "Big Ten Network",
+		"channelId": "58321",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Big_Ten_Network.png/240px-Big_Ten_Network.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Big-Ten-Network-HD-610"
+		}
+		]
+	},
+	{
+		"name": "mls",
+		"alt": "MLS Live",
+		"channelId": "mls-0",
+		"color": "#003558",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/MLS_logo.svg/220px-MLS_logo.svg.png",
+		"urls": [
+		{
+			"source": "MLS Live",
+			"url": "http://live.mlssoccer.com/mlsmdl/"
+		}
+		]
+	},
+	{
+		"name": "wabc",
+		"alt": "ABC",
+		"channelId": "20453",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/5/58/American_Broadcasting_Company_2013_Logo.png/150px-American_Broadcasting_Company_2013_Logo.png",
+		"urls": [
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/abc"
+		}
+		]
+	},
+	{
+		"name": "wcbs",
+		"alt": "CBS",
+		"channelId": "11331",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png"
+	},
+	{
+		"name": "wnbc",
+		"alt": "NBC",
+		"channelId": "11705",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NBC_2014_Indent.svg/200px-NBC_2014_Indent.svg.png",
+		"urls": [
+		{
+			"source": "NBC Live",
+			"url": "http://www.nbc.com/live"
+		}
+		]
+	},
+	{
+		"name": "wnyw",
+		"alt": "FOX",
+		"channelId": "11746",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/FOX_wordmark.svg/230px-FOX_wordmark.svg.png"		
+	},
+	{
+		"name": "wwor",
+		"alt": "My9",
+		"channelId": "26566",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/b/bf/WWOR_NewJersey.png"		
+	},
+	{
+		"name": "wpix",
+		"alt": "PIX11",
+		"channelId": "20373",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/WPIX11.svg/210px-WPIX11.svg.png"		
+	},
+	{
+		"name": "wnet",
+		"alt": "PBS",
+		"channelId": "26182",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/7/79/WNET_2009_Logo.png"
+	},
+	{
+		"name": "wpxn",
+		"alt": "Ion",
+		"channelId": "43818",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Ion_Television_2013.png/180px-Ion_Television_2013.png"
+	},
+	{
+		"name": "wnju",
+		"alt": "Telemundo",
+		"channelId": "54437",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Telemundo_logo_2012.svg/200px-Telemundo_logo_2012.svg.png"
+	},
+	{
+		"name": "wxtv",
+		"alt": "Univision",
+		"channelId": "35361",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Univision_2013_logo.png/200px-Univision_2013_logo.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Univision-East-HD-402"
+		}
+		]
+	},
+	{
+		"name": "wfut",
+		"alt": "UniMas",
+		"channelId": "35364",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_UniM%C3%A1s.svg/130px-Logo_UniM%C3%A1s.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/UniMas-West-HD-408"
+		}
+		]
+	},
+	{
+		"name": "galavision",
+		"alt": "Galavision",
+		"channelId": "68367",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Galavision_Logo_2013.svg/150px-Galavision_Logo_2013.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Galavision-HD-404"
+		}
+		]
+	},
+	{
+		"name": "a&e",
+		"alt": "A&E",
+		"channelId": "51529",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/170px-A%26E_Network_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/ae?cmpid=livetv_a&e"
+		}
+		]
+	},
+	{
+		"name": "abcfamily",
+		"alt": "ABC Family",
+		"channelId": "59615",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/ABC_Family_logo.svg/250px-ABC_Family_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/abcfamily?cmpid=livetv_abc-family"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/abcfamily"
+		}
+		]
+	},
+	{
+		"name": "alja",
+		"alt": "Al Jazeera America",
+		"channelId": "83276",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/31/Al_Jazeera_America_Logo.png/150px-Al_Jazeera_America_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/aljazeeraamerica?cmpid=livetv_al-jazeera-america"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=83276"
+		}
+		]
+	},
+	{
+		"name": "amc",
+		"alt": "AMC",
+		"channelId": "59337",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/2/2d/AMC_logo_2013.png/200px-AMC_logo_2013.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/amc?cmpid=livetv_amc"
+		}
+		]
+	},
+	{
+		"name": "aspire",
+		"alt": "ASPiRE",
+		"channelId": "76126",
+		"color": "#000000",
+		"image": "http://www.aspire.tv/sites/all/themes/aspire/images/aspire-logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76126"
+		}
+		]
+	},
+	{
+		"name": "audience",
+		"alt": "Audience Network",
+		"channelId": "49432",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/5/5e/Aunet.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/AUDIENCE-239-HD-239"
+		}
+		]
+	},
+	{
+		"name": "axs",
+		"alt": "AXS TV",
+		"channelId": "28506",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/AXSTV_Logo.jpg/250px-AXSTV_Logo.jpg",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/AXS-TV-340"
+		}
+		]
+	},
+	{
+		"name": "bbcamerica",
+		"alt": "BBC America",
+		"channelId": "64492",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/BBC_America.svg/200px-BBC_America.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/bbcamerica?cmpid=livetv_bbc-america"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/BBC-America-HD-264"
+		}
+		]
+	},
+	{
+		"name": "bbcamerica-west",
+		"alt": "BBC America (West)",
+		"channelId": "76739",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/BBC_America.svg/200px-BBC_America.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76739"
+		}
+		]
+	},
+	{
+		"name": "bbcwn",
+		"alt": "BBC World News",
+		"channelId": "76774",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/BBC_World_News_red.svg/200px-BBC_World_News_red.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/bbcworldnews?cmpid=livetv_bbc-world-news"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/BBC-World-News-HD-346"
+		}
+		]
+	},
+	{
+		"name": "bet",
+		"alt": "BET",
+		"channelId": "63236",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/90/BET_Logo.svg/250px-BET_Logo.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/BET-HD-329"
+		}
+		]
+	},
+	{
+		"name": "bloomberg",
+		"alt": "Bloomberg",
+		"channelId": "71799",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Bloomberg_Television_logo.svg/220px-Bloomberg_Television_logo.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Bloomberg-HD-353"
+		}
+		]
+	},
+	{
+		"name": "bravo",
+		"alt": "Bravo",
+		"channelId": "58625",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Bravo_TV.svg/250px-Bravo_TV.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/bravo?cmpid=livetv_bravo"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/bravo"
+		}
+		]
+	},
+	{
+		"name": "cartoonnetwork",
+		"alt": "Cartoon Network",
+		"channelId": "60048",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/220px-Cartoon_Network_2010_logo.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Cartoon-Network-HD-296"
+		},
+		{
+			"source": "Adult Swim",
+			"url": "http://tv.verizon.com/livetv/adultswim"
+		},
+		{
+			"source": "Cartoon Network",
+			"url": "http://tv.verizon.com/livetv/cartoonnetwork"
+		}
+		]
+	},
+	{
+		"name": "comedy",
+		"alt": "Comedy Central",
+		"channelId": "62420",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Comedy_Central_2011_Logo.svg/200px-Comedy_Central_2011_Logo.svg.png",
+		"urls": [		
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Comedy-Central-HD-249"
+		}
+		]
+	},
+	{
+		"name": "cmt",
+		"alt": "CMT",
+		"channelId": "59440",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CMT_logo.svg/200px-CMT_logo.svg.png",
+		"urls": [		
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/CMT-HD-327"
+		}
+		]
+	},
+	{
+		"name": "cnbc",
+		"alt": "CNBC",
+		"channelId": "58780",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/180px-CNBC_logo.svg.png",
+		"urls": [		
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/cnbc"
+		}
+		]
+	},
+	{
+		"name": "cnn",
+		"alt": "CNN",
+		"channelId": "58646",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/230px-Cnn.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/cnn?cmpid=livetv_cnn"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/cnn"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/CNN-HD-202"
+		}
+		]
+	},
+	{
+		"name": "cooking",
+		"alt": "Cooking Channel",
+		"channelId": "68065",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cooking_Channel.png/170px-Cooking_Channel.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/cookingchannel?cmpid=livetv_cooking-channel"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Cooking-Channel-HD-232"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=68065"
+		}
+		]
+	},
+	{
+		"name": "cspan",
+		"alt": "CSPAN",
+		"channelId": "10161",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
+		"urls": [
+		{
+			"source": "1",
+			"url": "http://xfinitytv.comcast.net/live/network/cspan?cmpid=livetv_cspan"
+		},
+		{
+			"source": "2",
+			"url": "http://xfinitytv.comcast.net/live/network/cspan2?cmpid=livetv_cspan2"
+		},
+		{
+			"source": "3",
+			"url": "http://xfinitytv.comcast.net/live/network/cspan3?cmpid=livetv_cspan3"
+		}
+		]
+	},
+	{
+		"name": "disney",
+		"alt": "Disney Channel",
+		"channelId": "59684",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Disney_Channel_2014.png/200px-Disney_Channel_2014.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/disneychannel?cmpid=livetv_disney-channel"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/disney"
+		}
+		]
+	},
+	{
+		"name": "disneyjnr",
+		"alt": "Disney Junior",
+		"channelId": "74885",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/83/Disney_Junior_Logo.png/250px-Disney_Junior_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/disneyjunior?cmpid=livetv_disney-junior"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/disneyjnr"
+		}
+		]
+	},
+	{
+		"name": "disneyxd",
+		"alt": "Disney XD",
+		"channelId": "60006",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logo_Disney_XD.svg/200px-Logo_Disney_XD.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/disneyxd?cmpid=livetv_disney-xd"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/disneyxd"
+		}
+		]
+	},
+	{
+		"name": "diy",
+		"alt": "DIY Network",
+		"channelId": "67375",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Diy_logo.svg/130px-Diy_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/diy?cmpid=livetv_diy"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/DIY-Network-HD-230"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=67375"
+		}
+		]
+	},
+	{
+		"name": "e",
+		"alt": "E! Network",
+		"channelId": "61812",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/E%21_logo_2012.png/50px-E%21_logo_2012.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/e?cmpid=livetv_e!"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/e"
+		}
+		]
+	},
+	{
+		"name": "elrey",
+		"alt": "El Rey",
+		"channelId": "84175",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/El_Rey_Network.jpeg/220px-El_Rey_Network.jpeg",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=84175"
+		}
+		]
+	},
+	{
+		"name": "encore",
+		"alt": "encore",
+		"channelId": "36225",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/4/48/Encore_Logo_2013.jpg",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/encore?cmpid=livetv_encore"
+		}
+		]
+	},
+	{
+		"name": "encoreaction",
+		"alt": "encore Action",
+		"channelId": "72015",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Encore_Action.png/125px-Encore_Action.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/encoreaction_dark?cmpid=livetv_encore-action"
+		}
+		]
+	},
+	{
+		"name": "encoresuspense",
+		"alt": "encore Suspense",
+		"channelId": "14766",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Encore_Suspense.png/125px-Encore_Suspense.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/encoresuspense_dark?cmpid=livetv_encore-suspense"
+		}
+		]
+	},
+	{
+		"name": "encoreblack",
+		"alt": "encore Black",
+		"channelId": "14870",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Encore_Black.png/125px-Encore_Black.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/encoreblack_dark?cmpid=livetv_encore-black"
+		}
+		]
+	},
+	{
+		"name": "encoreespanol",
+		"alt": "encore Español",
+		"channelId": "72016",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Encore_Espanol.png/125px-Encore_Espanol.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/encoreenespanol_dark?cmpid=livetv_encore-en-espanol"
+		}
+		]
+	},
+	{
+		"name": "espnd",
+		"alt": "ESPN Deportes",
+		"channelId": "71914",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Espn_deportes.svg/200px-Espn_deportes.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/espndeportes?cmpid=livetv_espn-deportes"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/espnd"
+		}
+		]
+	},
+	{
+		"name": "esquire",
+		"alt": "Esquire",
+		"channelId": "18511",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Esquire_Network.svg/225px-Esquire_Network.svg.png",
+		"urls": [
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/esquire"
+		}
+		]
+	},
+	{
+		"name": "food",
+		"alt": "Food Network",
+		"channelId": "50747",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Food_Network_New_Logo.png/130px-Food_Network_New_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/foodnetwork?cmpid=livetv_food-network"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Food-Network-HD-231"
+		}
+		]
+	},
+	{
+		"name": "food-west",
+		"alt": "Food Network (West)",
+		"channelId": "82119",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Food_Network_New_Logo.png/130px-Food_Network_New_Logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82119"
+		}
+		]
+	},
+	{
+		"name": "foxbusiness",
+		"alt": "FOX Business",
+		"channelId": "58718",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Fox_Business.svg/210px-Fox_Business.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/foxbusiness?cmpid=livetv_fox-business"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/foxbix"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Fox-Business-Network-HD-359"
+		}
+		]
+	},
+	{
+		"name": "foxdeportes",
+		"alt": "FOX Deportes",
+		"channelId": "72189",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Fox_deportes_logo.png/150px-Fox_deportes_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://tvgo.xfinity.com/live/network/foxdeportes?cmpid=livetv_fox-deportes"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=72189"
+		}
+		]
+	},
+	{
+		"name": "foxnews",
+		"alt": "FOX News",
+		"channelId": "60179",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Fox_News_Channel_logo.png/200px-Fox_News_Channel_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/foxnews?cmpid=livetv_fox-news"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/foxnews"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FOX-News-HD-360"
+		}
+		]
+	},
+	{
+		"name": "france24",
+		"alt": "France 24",
+		"channelId": "70130",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/FRANCE_24_logo.svg/200px-FRANCE_24_logo.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=70130"
+		}
+		]
+	},
+	{
+		"name": "fx",
+		"alt": "FX",
+		"channelId": "58574",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/190px-FX_International_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/fx?cmpid=livetv_fx"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FX-HD-248"
+		}
+		]
+	},
+	{
+		"name": "fx-west",
+		"alt": "FX (West)",
+		"channelId": "59814",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/190px-FX_International_logo.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=59814"
+		}
+		]
+	},
+	{
+		"name": "fxm",
+		"alt": "FXM",
+		"channelId": "70253",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/220px-FXM_Logo.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=70253"
+		}
+		]
+	},
+	{
+		"name": "fxx",
+		"alt": "FXX",
+		"channelId": "66379",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/FXX_Logo.svg/130px-FXX_Logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/fxx?cmpid=livetv_fxx"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FXX-HD-259"
+		}
+		]
+	},
+	{
+		"name": "fxx-west",
+		"alt": "FXX (West)",
+		"channelId": "82571",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/FXX_Logo.svg/130px-FXX_Logo.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82571"
+		}
+		]
+	},
+	{
+		"name": "golf",
+		"alt": "Golf Channel",
+		"channelId": "61854",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Golf_Channel_Logo.png/220px-Golf_Channel_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/golfchannel?cmpid=livetv_golf-channel"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/golf"
+		}
+		]
+	},
+	{
+		"name": "hallmark",
+		"alt": "Hallmark Channel",
+		"channelId": "66268",
+		"color": "#000000",
+		"image": "https://www.directv.com/images/logos/channels/light/medium/927.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Hallmark-Channel-HD-312"
+		}
+		]
+	},
+	{
+		"name": "hgtv",
+		"alt": "HGTV",
+		"channelId": "49788",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Hgtv-2010.png/200px-Hgtv-2010.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/hgtv?cmpid=livetv_hgtv"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/HGTV-HD-229"
+		}
+		]
+	},
+	{
+		"name": "hgtv-west",
+		"alt": "HGTV (West)",
+		"channelId": "87317",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Hgtv-2010.png/200px-Hgtv-2010.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=87317"
+		}
+		]
+	},
+	{
+		"name": "hln",
+		"alt": "HLN",
+		"channelId": "64549",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/HLN_TV_logo.png/175px-HLN_TV_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/hln?cmpid=livetv_hln"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/hln"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/HLN-HD-204"
+		}
+		]
+	},
+	{
+		"name": "history",
+		"alt": "History",
+		"channelId": "57708",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/History_Logo.svg/150px-History_Logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/history?cmpid=livetv_history-channel"
+		}
+		]
+	},
+	{
+		"name": "ifc",
+		"alt": "IFC",
+		"channelId": "59444",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/56/IFC_2014_logo.png/220px-IFC_2014_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/ifc?cmpid=livetv_ifc"
+		}
+		]
+	},
+	{
+		"name": "idc",
+		"alt": "Investigation Discovery",
+		"channelId": "80309",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/InvestigationDiscovery.png/130px-InvestigationDiscovery.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/investigationdiscovery?cmpid=livetv_investigation-discovery"
+		}
+		]
+	},
+	{
+		"name": "movieplex",
+		"alt": "movieplex",
+		"channelId": "15295",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Movieplex_logo.svg/250px-Movieplex_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/movieplex?cmpid=livetv_movieplex"
+		}
+		]
+	},
+	{
+		"name": "msnbc",
+		"alt": "MSNBC",
+		"channelId": "64241",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/msnbc?cmpid=livetv_msnbc"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/msnbc"
+		}
+		]
+	},
+	{
+		"name": "mtv",
+		"alt": "MTV",
+		"channelId": "60964",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/MTV_Logo_2010.svg/200px-MTV_Logo_2010.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/MTV-HD-331"
+		}
+		]
+	},
+	{
+		"name": "mtv2",
+		"alt": "MTV2",
+		"channelId": "75077",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/2/24/Mtv2_logo.svg/130px-Mtv2_logo.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/MTV2-HD-333"
+		}
+		]
+	},
+	{
+		"name": "univo",
+		"alt": "NBC Universo",
+		"channelId": "91588",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NBCUniverso_logo.png/200px-NBCUniverso_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcuniverso?cmpid=livetv_nbc-universo"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nbcuniverso"
+		}
+		]
+	},
+	{
+		"name": "natgeo",
+		"alt": "National Geographic",
+		"channelId": "49438",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/13/National_Geographic_Channel.svg/200px-National_Geographic_Channel.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/natgeo?cmpid=livetv_nat-geo"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/National-Geographic-Channel-HD-276"
+		}
+		]
+	},
+	{
+		"name": "natgeo-west",
+		"alt": "National Geographic (West)",
+		"channelId": "71601",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/13/National_Geographic_Channel.svg/200px-National_Geographic_Channel.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=71601"
+		}
+		]
+	},
+	{
+		"name": "natgeowild",
+		"alt": "National Geographic Wild",
+		"channelId": "67331",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Logo_Nat_Geo_Wild.svg/200px-Logo_Nat_Geo_Wild.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/natgeowild?cmpid=livetv_nat-geo-wild"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Nat-Geo-Wild-HD-283"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=67331"
+		}
+		]
+	},
+	{
+		"name": "nick",
+		"alt": "Nickelodeon",
+		"channelId": "59432",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nickelodeon_logo_new.svg/245px-Nickelodeon_logo_new.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299"
+		}
+		]
+	},
+	{
+		"name": "nickjr",
+		"alt": "Nick Jr.",
+		"channelId": "19211",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nick_Jr._logo_2009.svg/200px-Nick_Jr._logo_2009.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Nick-Jr-HD-301"
+		}
+		]
+	},
+	{
+		"name": "outdoor",
+		"alt": "Outdoor Channel",
+		"channelId": "14776",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/89/Outdoor_Channel.svg/199px-Outdoor_Channel.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/outdoorchannel?cmpid=livetv_outdoor-channel"
+		}
+		]
+	},
+	{
+		"name": "own",
+		"alt": "OWN",
+		"channelId": "70388",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oprah_Winfrey_Network.png/250px-Oprah_Winfrey_Network.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/OWN-HD-279"
+		}
+		]
+	},
+	{
+		"name": "oxygen",
+		"alt": "Oxygen",
+		"channelId": "21484",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Oxygen_%28TV_channel%29_new_logo.png/200px-Oxygen_%28TV_channel%29_new_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/oxygen?cmpid=livetv_oxygen"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/oxygen"
+		}
+		]
+	},
+	{
+		"name": "pac12",
+		"alt": "Pac-12 Networks",
+		"channelId": "76366",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Pac-12_Networks_logo.png/150px-Pac-12_Networks_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/pac12network?cmpid=livetv_pac-12"
+		}
+		]
+	},
+	{
+		"name": "pac12la",
+		"alt": "Pac-12 Los Angeles",
+		"channelId": "76381",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Pac-12_Networks_logo.png/150px-Pac-12_Networks_logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76381"
+		}
+		]
+	},
+	{
+		"name": "pivot",
+		"alt": "Pivot",
+		"channelId": "68757",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pivot_Logo_%2B_Tagline.png/200px-Pivot_Logo_%2B_Tagline.png",
+		"urls": [
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/pivot"
+		}
+		]
+	},
+	{
+		"name": "pop",
+		"alt": "Pop",
+		"channelId": "71954",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Pop_Network_Logo.png/250px-Pop_Network_Logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=71954"
+		}
+		]
+	},
+	{
+		"name": "qvc",
+		"alt": "QVC",
+		"channelId": "60222",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/48/QVC.svg/200px-QVC.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/QVC-HD-275"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=60222"
+		}
+		]
+	},
+	{
+		"name": "reelz",
+		"alt": "Reelz",
+		"channelId": "68385",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Reelz_Channel_Logo.png/200px-Reelz_Channel_Logo.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/ReelzChannel-HD-238"
+		}
+		]
+	},
+	{
+		"name": "revolt",
+		"alt": "Revolt",
+		"channelId": "83098",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Revolt_TV_logo.png/260px-Revolt_TV_logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=83098"
+		}
+		]
+	},
+	{
+		"name": "spike",
+		"alt": "Spike",
+		"channelId": "59186",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Spike_logo_2015.svg/200px-Spike_logo_2015.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Spike-HD-241"
+		}
+		]
+	},
+	{
+		"name": "sprout",
+		"alt": "Sprout",
+		"channelId": "47540",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sprout_logo.svg/190px-Sprout_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/sprout?cmpid=livetv_sprout"
+		}
+		]
+	},
+	{
+		"name": "starz",
+		"alt": "starz",
+		"channelId": "34949",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Starz_2008.svg/215px-Starz_2008.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/starz?cmpid=livetv_starz"
+		}
+		]
+	},
+	{
+		"name": "starzedge",
+		"alt": "starz Edge",
+		"channelId": "57573",
+		"color": "#000000",
+		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/4696354068600397163?width=121&height=87&bg=WHITE",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/starzedge?cmpid=livetv_starz-edge"
+		}
+		]
+	},
+	{
+		"name": "starzinblack",
+		"alt": "starz In Black",
+		"channelId": "67235",
+		"color": "#000000",
+		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/8869618193667289163?width=121&height=87&bg=WHITE",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/starzinblack?cmpid=livetv_starz-in-black"
+		}
+		]
+	},
+	{
+		"name": "starzkidsandfamily",
+		"alt": "starz Kids & Family",
+		"channelId": "57581",
+		"color": "#000000",
+		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/6263871685002421163?width=121&height=87&bg=WHITE",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/starzkidsfamily?cmpid=livetv_starz-kids-&-family"
+		}
+		]
+	},
+	{
+		"name": "starzcinema",
+		"alt": "starz Cinema",
+		"channelId": "67236",
+		"color": "#000000",
+		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/6892846710612644163?width=121&height=87&bg=WHITE",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/starzcinema?cmpid=livetv_starz-cinema"
+		}
+		]
+	},
+	{
+		"name": "starzcomedy",
+		"alt": "starz Comedy",
+		"channelId": "57569",
+		"color": "#000000",
+		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/8666528165464630163?width=121&height=87&bg=WHITE",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/starzcomedy?cmpid=livetv_starz-comedy"
+		}
+		]
+	},
+	{
+		"name": "sundance",
+		"alt": "Sundance",
+		"channelId": "16108",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/0d/SundanceTV_logo_2014.jpg/200px-SundanceTV_logo_2014.jpg",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/sundancetv?cmpid=livetv_sundancetv"
+		}
+		]
+	},
+	{
+		"name": "syfy",
+		"alt": "Syfy",
+		"channelId": "58623",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Syfy.svg/225px-Syfy.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/syfy?cmpid=livetv_syfy"	
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/syfy"
+		}
+		]
+	},
+	{
+		"name": "tcm",
+		"alt": "TCM",
+		"channelId": "64312",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tcm.svg/225px-Tcm.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/tcm?cmpid=livetv_tcm"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/TCM"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Turner-Classic-Movies-HD-256"
+		}
+		]
+	},
+	{
+		"name": "tvland",
+		"alt": "TV Land",
+		"channelId": "73541",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/0b/TV_Land_2012.svg/250px-TV_Land_2012.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/TV-Land-HD-304"
+		}
+		]
+	},
+	{
+		"name": "twc",
+		"alt": "The Weather Channel",
+		"channelId": "58812",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/100px-The_Weather_Channel_logo_2005-present.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/theweatherchannel?cmpid=livetv_the-weather-channel"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/The-Weather-Channel-HD-362"
+		}
+		]
+	},
+	{
+		"name": "travel",
+		"alt": "Travel Channel",
+		"channelId": "59303",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Travel_Channel_%28International%29_logo.png/170px-Travel_Channel_%28International%29_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/travelchannel?cmpid=livetv_travel-channel"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Travel-Channel-HD-277"
+		}
+		]
+	},
+	{
+		"name": "trutv",
+		"alt": "truTV",
+		"channelId": "64490",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/TruTV_logo_2014.png/200px-TruTV_logo_2014.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/trutv?cmpid=livetv_trutv"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/trutv"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/truTV-HD-246"
+		}
+		]
+	},
+	{
+		"name": "usa",
+		"alt": "USA",
+		"channelId": "58452",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/USA_Network_logo_%282006%29.svg/220px-USA_Network_logo_%282006%29.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/usa?cmpid=livetv_usa"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/usa"
+		}
+		]
+	},
+	{
+		"name": "vh1",
+		"alt": "VH1",
+		"channelId": "60046",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/VH1_logonew.svg/220px-VH1_logonew.svg.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/VH1-HD-335"
+		}
+		]
+	},
+	{
+		"name": "weathernation",
+		"alt": "WeatherNation",
+		"channelId": "84291",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/e/e2/WeatherNation_logo.png/225px-WeatherNation_logo.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/WeatherNation-HD-361"
+		}
+		]
+	},
+	{
+		"name": "we",
+		"alt": "WEtv",
+		"channelId": "16409",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/WEtv_Logo_2014.png/220px-WEtv_Logo_2014.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/we?cmpid=livetv_we-tv"
+		}
+		]
+	},
+	{
+		"name": "xfinity",
+		"alt": "xfinity",
+		"channelId": "xfinity-0",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Xfinity_logo.svg/300px-Xfinity_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/watch-live-tv/"
+		}
+		]
+	},
+	{
+		"name": "fios",
+		"alt": "Verizon FiOS",
+		"channelId": "fios-0",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Verizon_FiOS_logo.svg/310px-Verizon_FiOS_logo.svg.png",
+		"urls": [
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv"
+		}
+		]
+	},
+	{
+		"name": "directv",
+		"alt": "DirecTV",
+		"channelId": "directv-0",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Directv_2015_logo.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/guide"
+		}
+		]
+	},
+	{
+		"name": "twc",
+		"alt": "Time Warner Cable",
+		"channelId": "twc-0",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/05/Time_Warner_Cable_logo.svg/150px-Time_Warner_Cable_logo.svg.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv"
+		}
+		]
+	},
+	{
+		"name": "blank",
+		"alt": "Blank Screen",
+		"channelId": "blank-0",
+		"color": "#000000",
+		"image": "",
+		"urls": [
+		{
+			"source": "",
+			"url": "index.html"
+		}
+		]
+	}
+
+	]
+}

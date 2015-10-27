@@ -1,0 +1,310 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #000000;
+	overflow: auto;
+	font-family: helvetica;
+}
+
+iframe::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+
+li {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	background: #FFFFFF;
+	margin: 4px; 
+	border: 1px solid transparent;
+
+	overflow: hidden;
+}		
+
+#numFrames li {
+	width: 70px;
+	height: 30px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	background: #FFFFFF;
+	margin: 4px; 
+	border: 1px solid transparent;
+
+	overflow: hidden;
+}		
+
+li.channel {
+	width: calc(98% - 10px);
+	height: 70px;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+	background: #FFFFFF;
+	margin: 4px; 
+	border: 1px solid transparent;
+	position: relative;
+
+	overflow: hidden;
+}
+
+li:hover {
+	border: 1px solid red;
+}
+
+li.channel img {
+	display: inline-block;
+	max-width: 50px;
+	max-height: 50px;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+
+li img {
+	position: relative;
+	top: 0%;
+	transform: translateY(0%);
+	-webkit-transform: translateY(0%);
+}
+
+li.channel div.info {
+	display: block; 
+	/*position: relative; 
+	top: 0px; 
+	left: 75px;*/
+	width: 100%;
+}
+
+li.channel div.sources {
+	display: block; 
+	/*position: relative; 
+	top: 0px; 
+	left: 75px;*/
+	width: calc(100% - 70px);
+	height: auto;
+	float: left;
+}
+
+li.channel div.sources a {
+	height: 70px;
+	padding-right: 5px;
+}
+li.channel div.sources a div {
+	letter-spacing: 0;
+    position: relative;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+li.channel div.image {
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	/*position: absolute;
+	top: 0px;
+	left: 0px;*/
+}
+
+li.channel div.image div {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+}
+
+li.channel a div {
+	display: block;
+}
+
+
+#numFrames a div, #frames a div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+#numFrames a {
+	width: 70px;
+	height: 30px;
+}
+
+#frames a {
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	padding-left: 0px;
+}
+
+.espn {
+	color: #FF0033;
+}
+
+.fox {
+	color: #00285A;
+}
+
+.nbcsn {
+	color: #FDB812;
+}
+
+.mls {
+	color: #003558;
+}
+
+.nfl {
+	color: #1B3067;
+}
+
+.tnt {
+	color: #000000;
+}
+
+.tbs {
+	color: #0094DA;
+}
+
+.landing {
+	color: #222222;
+}
+
+.landing:hover {
+	color: #555555;
+}
+
+.directv {
+	color: #004887;
+}
+
+.frame {
+	background-color: #222211;
+}
+
+#frames	li:hover {
+	border: 1px solid red;
+}
+
+#frames li {
+	border: 1px solid black;
+}
+
+#frames li.selected {
+	border: 1px solid white;
+}
+
+#frames li div p {
+	color: #666666;
+}
+
+#frames li.selected p {
+	color: #FFFFFF;
+}
+
+#numFrames {
+	position: fixed;
+	bottom: 80px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	background-color: #000000;
+	z-index: 10;
+}
+
+#numFrames li {
+	background-color: #000000;
+}
+
+#networks {
+	margin-top: 4px;
+	margin-bottom: 120px;
+}
+
+#frames {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #333333;
+	text-align: center;
+	z-index: 10;
+}
+
+#status {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #000000;
+	color: #ff0000;
+	text-align: center;
+	display: block;
+	padding: 2px;
+	z-index: 10;
+}
+
+.programTitle {
+	display: inline-block;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000000;
+	padding-right: 3px;
+}
+
+.timeDisplay {
+	display: inline-block;
+	font-size: 10pt;
+	color: #000000;
+}
+
+.episodeTitle {
+	display: block;
+	font-size: 10pt;
+	font-style: italic;
+	color: #444444;
+}
+
+.flags {
+	display: inline block;
+	font-size: 8pt;
+	font-style: italic;
+	color: #999999;
+}
+
+.genre {
+	display: inline block;
+	font-size: 8pt;
+	font-style: italic;
+	color: #999999;
+}
+
+.description {
+	display: block;
+	font-size: 8pt;
+	color: #999999;
+}

@@ -1,0 +1,267 @@
+<html>
+<head>
+	<title>Home Remote</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: #000000;
+			overflow: auto;
+			font-family: helvetica;
+		}
+
+		iframe::-webkit-scrollbar {
+			display: none;
+		}
+
+		a {
+			color: #FFFFFF;
+			text-decoration: none;
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		a:hover {
+
+		}
+
+		p {
+			margin-top: 2px;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+			text-align: center;
+		}
+
+		li {
+			width: 70px;
+			height: 70px;
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			background: #FFFFFF;
+			margin: 4px; 
+			border: 1px solid transparent;
+
+			overflow: hidden;
+		}
+
+		li:hover {
+			border: 1px solid red;
+		}
+
+		a img {
+			display: inline-block;
+			max-width: 50px;
+			max-height: 50px;
+			width: auto;
+			height: auto;
+			vertical-align: middle;
+
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+
+		a div {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+
+		div img {
+			position: relative;
+			top: 0;
+			transform: translateY(0%);
+			-webkit-transform: translateY(0%);
+		}
+
+		img {
+			padding-left: 0px;
+		}
+
+		.espn {
+			color: #FF0033;
+		}
+
+		.fox {
+			color: #00285A;
+		}
+
+		.nbcsn {
+			color: #FDB812;
+		}
+
+		.mls {
+			color: #003558;
+		}
+
+		.nfl {
+			color: #1B3067;
+		}
+
+		.tnt {
+			color: #000000;
+		}
+
+		.tbs {
+			color: #0094DA;
+		}
+
+		.landing {
+			color: #222222;
+		}
+
+		.landing:hover {
+			color: #555555;
+		}
+
+		.directv {
+			color: #004887;
+		}
+
+		.frame {
+			background-color: #222211;
+		}
+
+		#frames	li:hover {
+			border: 1px solid red;
+		}
+
+		#frames li {
+			border: 1px solid black;
+		}
+
+		#frames li.selected {
+			border: 1px solid white;
+		}
+
+		#frames li div p {
+			color: #666666;
+		}
+
+		#frames li.selected p {
+			color: #FFFFFF;
+		}
+
+		#numFrames {
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			text-align: center;
+			background-color: #000000;
+			z-index: 10;
+		}
+
+		#numFrames li {
+			background-color: #000000;
+		}
+
+		#networks {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		#frames {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			background-color: #333333;
+			text-align: center;
+			z-index: 10;
+			height: 80px;
+		}
+
+		#status {
+			position: fixed;
+			top: 80px;
+			left: 0px;
+			width: 100%;
+			background-color: #ffffff;
+			color: #ff0000;
+			text-align: center;
+			display: none;
+			padding: 10px;
+			z-index: 10;
+		}
+
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// $(".network").click(function() {
+		// 	console.log("clicked")
+
+			//post_data = {"frame": 0, "url": "http://www.google.com"}
+			
+			// $.post("/api/publish", post_data)
+			// 	.done(function (response) {
+			// 		$("#test_results").html(response)
+			// 	})
+		// })
+
+		var networks;
+		var getNetworks = function() {
+			$.get("networks.json")
+				.done(function (response) {
+					console.log(response)
+					networks = response.networks;
+
+					networks.forEach(function (network, index, networkarray) {
+						var name = network.name
+						var alt = network.alt
+						var color = network.color
+						var image = network.image
+						var urls = network.urls
+
+						if (urls) {
+							urls.forEach(function (element, index, urlsarray) {
+								var source = element.source
+								var url = element.url
+								
+								var html = '<li><a href="' + url + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '"><div>'
+
+								if (image) {
+									html += '<img src="' + image + '" alt="' + alt + '"/>'
+								} else {
+									html += '<p style="color: ' + color + '">' + alt + '</p>'
+								}
+
+								if (urls.length != 1) {
+									html += '<p style="color: ' + color + '">' + source + '</p>'
+								} 
+
+								html += '</div></a></li>'
+
+								$("#networks").append(html)
+							})
+						}
+					})
+				}
+			)
+		}
+
+		getNetworks();
+	})
+	</script>
+</head>
+<body>
+	<ul id="networks">
+	</ul>
+</body>
+</html>

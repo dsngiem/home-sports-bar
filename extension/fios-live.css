@@ -1,0 +1,62 @@
+#playerarea object {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	z-index: 9999 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+object {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	z-index: 9999 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#playerFrame {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	border: 0px !important;
+}
+
+#foxlive-player {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+
+#oo_tab {
+	display: none !important;
+}
+
+#oo_tab div {
+	display: none !important;
+}
+
+iframe {
+	border: 0px !important;
+}
+
+#norze {
+	top: -30px !important;
+	height: calc(100% + 60px) !important;
+	height: -moz-calc(100% + 60px) !important;
+	height: -webkit-calc(100% + 60px) !important;
+}
+
+
+div[data-component='player/abclive'] object {
+	height: calc(100% + 28px) !important;
+	height: -moz-calc(100% + 28px) !important;
+	height: -webkit-calc(100% + 28px) !important;
+}

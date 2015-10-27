@@ -1,0 +1,404 @@
+<html>
+<head>
+	<title>Home Remote</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background: #000000;
+			overflow: auto;
+			font-family: helvetica;
+		}
+
+		iframe::-webkit-scrollbar {
+			display: none;
+		}
+
+		a {
+			color: #FFFFFF;
+			text-decoration: none;
+			width: 100%;
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		a:hover {
+
+		}
+
+		p {
+			margin-top: 2px;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+			text-align: center;
+		}
+
+		li {
+			width: 70px;
+			height: 70px;
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			background: #FFFFFF;
+			margin: 4px; 
+			border: 1px solid transparent;
+
+			overflow: hidden;
+		}
+
+		li:hover {
+			border: 1px solid red;
+		}
+
+		a img {
+			display: inline-block;
+			max-width: 50px;
+			max-height: 50px;
+			width: auto;
+			height: auto;
+			vertical-align: middle;
+
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+
+		a div {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+
+		div img {
+			position: relative;
+			top: 0;
+			transform: translateY(0%);
+			-webkit-transform: translateY(0%);
+		}
+
+		img {
+			padding-left: 0px;
+		}
+
+		.espn {
+			color: #FF0033;
+		}
+
+		.fox {
+			color: #00285A;
+		}
+
+		.nbcsn {
+			color: #FDB812;
+		}
+
+		.mls {
+			color: #003558;
+		}
+
+		.nfl {
+			color: #1B3067;
+		}
+
+		.tnt {
+			color: #000000;
+		}
+
+		.tbs {
+			color: #0094DA;
+		}
+
+		.landing {
+			color: #222222;
+		}
+
+		.landing:hover {
+			color: #555555;
+		}
+
+		.directv {
+			color: #004887;
+		}
+
+		.frame {
+			background-color: #222211;
+		}
+
+		#frames	li:hover {
+			border: 1px solid red;
+		}
+
+		#frames li {
+			border: 1px solid black;
+		}
+
+		#frames li.selected {
+			border: 1px solid white;
+		}
+
+		#frames li div p {
+			color: #666666;
+		}
+
+		#frames li.selected p {
+			color: #FFFFFF;
+		}
+
+		#numFrames {
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			text-align: center;
+			background-color: #000000;
+			z-index: 10;
+		}
+
+		#numFrames li {
+			background-color: #000000;
+		}
+
+		#networks {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		#frames {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			background-color: #333333;
+			text-align: center;
+			z-index: 10;
+			height: 80px;
+		}
+
+		#status {
+			position: fixed;
+			top: 80px;
+			left: 0px;
+			width: 100%;
+			background-color: #ffffff;
+			color: #ff0000;
+			text-align: center;
+			display: none;
+			padding: 10px;
+			z-index: 10;
+		}
+
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// $(".network").click(function() {
+		// 	console.log("clicked")
+
+			//post_data = {"frame": 0, "url": "http://www.google.com"}
+			
+			// $.post("/api/publish", post_data)
+			// 	.done(function (response) {
+			// 		$("#test_results").html(response)
+			// 	})
+		// })
+		var frames = 1
+		var selectedFrame = 1
+		var subscriberID
+
+		var publish = function (post_data) {
+			$.post("/api/publish", post_data).done(function (response) {
+				var jsonResponse = JSON.parse(response)
+				frames = jsonResponse.frames
+				subscriberIDs = jsonResponse.subscriberIDs
+
+				if (frames == 0) {
+					for (var i = 0; i < subscriberIDs.length; i++) {
+						var html = '<li id="frame-' + i + '-box"><a href="#" class="subscriber" src="' + subscriberIDs[i] + '"><div><p>' + subscriberIDs[i] + '</p></div></a></li>'
+						$("#frames").append(html)
+					}
+
+					if (subscriberIDs.length == 0) {
+						var html = '<li style="width: 200px"><div style="position: relative; top: 50%; transform: translateY(-50%);	-webkit-transform: translateY(-50%);"><p>No available players</p></div></li>'
+						$("#frames").append(html)
+					}
+				} else {
+					$("#frames").html("")				
+				}
+
+				frameSet();
+			})
+		}
+
+		var frameSet = function() {
+			if (frames != 0) {
+				$("#frames").html("")
+
+				for (var i = 1; i < frames + 1; i++) {
+					var html = '<li id="frame-' + i + '-box"'
+					if (i == 1) {
+						html += ' class="selected"'
+					}
+					html += '><a href="#" class="frame" src="' + i + '"><div><p>' + i + '</p></div></a></li>'
+
+					$("#frames").append(html)
+				}
+			}
+		}
+
+		$(document).on('click', '.subscriber', function (event) {
+			subscriberID = $(this).attr('src')
+			var post_data = {"subscriberID": subscriberID}
+
+			$("#status").hide()
+
+			publish(post_data)
+			return false;
+		})
+
+		$(document).on('click', '.frame', function (event) {
+			var frame = $(this).attr('src')
+
+			$("#frame-" + selectedFrame + "-box").removeClass("selected")
+
+			selectedFrame = frame;
+
+			$("#frame-" + selectedFrame + "-box").addClass("selected")
+
+			return false;
+		})
+
+
+		$(document).on('click', '.network', function (event) {
+			if (!subscriberID) {
+				statusMessage("Player not selected.")
+				return
+			}
+			
+			var networkUrl = $(this).attr('src')
+			var alt = $(this).attr('alt')
+
+			var post_data = {
+				"frame": selectedFrame, 
+				"url": networkUrl,
+				"alt": alt,
+				"subscriberID": subscriberID
+			}
+
+			console.log(post_data)
+			
+			$.post("/api/publish/message", post_data)
+				.done(function (response) {
+					console.log(response)
+				})
+		})
+
+		var networks;
+		var getNetworks = function() {
+			$.get("networks.json")
+				.done(function (response) {
+					console.log(response)
+					networks = response.networks;
+
+					networks.forEach(function (network, index, networkarray) {
+						var name = network.name
+						var alt = network.alt
+						var color = network.color
+						var image = network.image
+						var urls = network.urls
+
+						if (urls) {
+							urls.forEach(function (element, index, urlsarray) {
+								var source = element.source
+								var url = element.url
+								
+								var html = '<li><a href="#' + name + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '"><div>'
+
+								if (image) {
+									html += '<img src="' + image + '" alt="' + alt + '"/>'
+								} else {
+									html += '<p style="color: ' + color + '">' + alt + '</p>'
+								}
+
+								if (urls.length != 1) {
+									html += '<p style="color: ' + color + '">' + source + '</p>'
+								} 
+
+								html += '</div></a></li>'
+
+								$("#networks").append(html)
+							})
+						}
+					})
+				}
+			)
+		}
+
+		var statusMessage = function(innerHtml) {
+			$("#status p").html(innerHtml)
+			$("#status p").show()
+		}
+
+		$("#numFrames-1").click(function() {
+			var post_data = {"frames": 1, "subscriberID": subscriberID}
+
+			$.post("/api/publish/frames", post_data)
+				.done( function(response) {
+					frames = 1
+					selectedFrame = 1
+					frameSet();				
+				})
+		})
+
+		$("#numFrames-2").click(function() {
+			var post_data = {"frames": 2, "subscriberID": subscriberID}
+
+			$.post("/api/publish/frames", post_data)
+				.done( function(response) {
+					frames = 2
+					selectedFrame = 1
+					frameSet();			
+				})
+		})
+
+		$("#numFrames-4").click(function() {
+			var post_data = {"frames": 4, "subscriberID": subscriberID}
+
+			$.post("/api/publish/frames", post_data)
+				.done( function(response) {
+					frames = 4
+					selectedFrame = 1
+					frameSet();			
+				})
+		})
+
+		getNetworks();
+		publish();
+	})
+	</script>
+</head>
+<body>
+	<div id="status"><p></p></div>
+	<ul id="numFrames">
+		<li><a href="#one" id="numFrames-1"><div><p>1</p></div></a></li>
+		<li><a href="#two" id="numFrames-2"><div><p>2</p></div></a></li>
+		<li><a href="#four" id="numFrames-4"><div><p>4</p></div></a></li>
+	</ul>
+	<ul id="networks">
+	</ul>
+	<ul id="frames">
+	</ul>
+</body>
+</html>

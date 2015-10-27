@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title>Home Sports Bar</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		_frames = 2
+	</script>
+	<script src="jquery.cookie.js"></script>
+	<script src="playerscript.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			function endsWith(str, suffix) {
+			    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+			}
+
+			var countLoad = 0
+
+			$("#frame-1").load(function() {
+				if (countLoad == 0) {
+					countLoad += 1
+					return
+				} else {
+					$("#startup").hide()
+					$("#frame-1-title").hide()
+				}
+			})
+
+			frameOverlay(1);
+			frameOverlay(2);
+		})
+	</script>
+	<link href="player.css" type="text/css" rel="stylesheet" />
+	<style>
+		iframe {
+			width: 50%;
+			height: 100%;
+			margin: 0px -1px;
+			padding: 0px;
+			border: 0px none transparent;
+			display: inline;
+			overflow: hidden;
+		}
+
+		#frame-1-overlay {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-2-overlay {
+			position: absolute;
+			top: 0%;
+			left: 50%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-1-title {
+			position: absolute;
+			top: 0%;
+			right: 50%;
+			display: block;
+			z-index: 10000000;
+			margin-right: 5px;
+			color: white;
+			font-size: 48px;
+			font-family: helvetica;
+			font-weight: bold;
+			text-shadow: 0px 0px 3px #111111;
+		}
+
+		#frame-2-title {
+			position: absolute;
+			top: 0%;
+			right: 0%;
+			display: none;
+			z-index: 10000000;
+			margin-right: 5px;
+			color: white;
+			font-size: 48px;
+			font-family: helvetica;
+			font-weight: bold;
+			text-shadow: 0px 0px 3px #111111;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="frame-1" name="frame-1" src="/landing.html"></iframe>
+	<iframe id="frame-2" name="frame-2" src="/landing.html"></iframe>
+
+	<div id="frame-1-overlay">
+		<a href="/landing.html" target="frame-1">&#215;</a>
+	</div>	
+	<div id="frame-2-overlay">
+		<a href="/landing.html" target="frame-2">&#215;</a>
+	</div>	
+
+	<div id="frame-1-title"></div>
+	<div id="frame-2-title"></div>
+	
+	<div id="startup">
+		<p style="color: #FFFFFF; text-align: center">Connect to <span style="color: yellow">http://<span id="location"></span>/remote/remote.html</span> to change this page</p>
+	</div>
+</body>
+</html>

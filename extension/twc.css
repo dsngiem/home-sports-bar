@@ -1,0 +1,15 @@
+.bonus {
+	position: fixed !important;
+	margin-top: 0px !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	left: 0px !important;
+	right: 0px !important;
+	top: 0px !important;
+	bottom: 0px !important;
+	z-index: 1000 !important;
+	width: 100% !important;
+	height: calc(100% + 45px) !important;
+	height: -moz-calc(100% + 45px) !important;
+	height: -webkit-calc(100% + 45px) !important;
+}

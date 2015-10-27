@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#test_link").click(function() {
+		post_data = {"frames": 1}
+		
+		$.post("/api/subscribe", post_data)
+			.done(function (response) {
+				var frame = response["frame"]
+				var url = response["url"]
+				
+				$("#test_results").html("response received\nframe: " + response["frame"] + "\nurl: " + response["url"])
+			})
+	})
+})
+</script>
+
+</head>
+<body>
+
+<a id="test_link" href="#">test</a>
+<a href="remote.html">test somewhere else</a>
+<div id="test_results"></div>
+
+</body>
+</html>
