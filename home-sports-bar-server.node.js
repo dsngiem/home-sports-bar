@@ -32,8 +32,15 @@ Future improvements:
 **/
 
 /** COMMAND LINE ARGUMENTS **/
-var port = process.argv[2]
+console.log(process.argv.length)
 
+var port = 80
+if (process.argv.length >= 3) {
+	port = process.argv[2]
+	console.log(port)
+}
+
+console.log(port)
 
 
 /** MODULES **/
@@ -953,6 +960,6 @@ var fetchPreCachePrograms = function() {
 
 /** START SERVER **/
 server.listen(port)
-console.log("Server successfully created on port ".green + port.green)
+console.log("Server successfully created on port ".green + port.toString().green)
 clearSubscribers()
 clearProgramGuideCache()
