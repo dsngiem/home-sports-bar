@@ -32,17 +32,13 @@ Future improvements:
 **/
 
 /** COMMAND LINE ARGUMENTS **/
-console.log(process.argv.length)
-
 var port = 80
 if (process.argv.length >= 3) {
 	port = process.argv[2]
-	console.log(port)
 }
-
-console.log(port)
-
 port = process.env.PORT || port
+
+
 
 /** MODULES **/
 var HTTP = require('http')
@@ -654,7 +650,7 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 			var result = {"url": uri}
 
 			console.log(uri)
-			console.log(scheduleBody)
+			//console.log(scheduleBody)
 
 			response.writeHead(200, {'Content-Type': 'application/json'})
 			return response.end(JSON.stringify(result))
