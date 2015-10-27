@@ -1,0 +1,32 @@
+{
+  "name": "home-sports-bar-remote",
+  "version": "1.0.0",
+  "description": "Stream television to your browser which can be changed remotely.",
+  "main": "home-sports-bar-server.node.js",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "colors": "^1.0.3",
+    "cookies": "^0.5.0",
+    "node-static": "^0.7.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dsngiem/home-sports-bar.git"
+  },
+  "keywords": [
+    "tv",
+    "stream",
+    "chrome",
+    "provider"
+  ],
+  "author": "Daniel Sngiem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dsngiem/home-sports-bar/issues"
+  },
+  "homepage": "https://github.com/dsngiem/home-sports-bar"
+}
