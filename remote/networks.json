@@ -1,6 +1,108 @@
 {	
 	"networks": [
 	{
+		"name": "fs1",
+		"alt": "FS1",
+		"channelId": "82547",
+		"color": "#00285A",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/FS1_New_Logo.png/200px-FS1_New_Logo.png",
+		"urls": [
+		
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82547"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1"
+		},
+		{
+			"source": "FSGO",
+			"url": "http://www.foxsports.com/foxsportsgo/"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FOX-Sports-1-HD-219"
+		}
+		]
+	},
+	{
+		"name": "fs2",
+		"alt": "FS2",
+		"channelId": "59305",
+		"color": "#00285A",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",		
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618"
+		},
+		{
+			"source": "FSGO",
+			"url": "http://www.foxsports.com/foxsportsgo/"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=59305"
+		}
+		]
+	},
+	{
+		"name": "nbcsn",
+		"alt": "NBCSN",
+		"channelId": "48639",
+		"color": "#FDB812",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
+		},
+		{
+			"source": "NBCSN",
+			"url": "http://stream.nbcsports.com/nbcsn/"
+		},
+		{
+			"source": "iframe",
+			"url": "http://player.theplatform.com/p/HNK2IC/nbcsports_live?MVPDid=Verizon#playerurl=http%3A//stream.nbcsports.com/nbcsn/%3Fpid%3D47%26referrer%3Dhttp%3A//stream.nbcsports.com/liveextra/"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nbcsn"
+		},
+		{
+			"source": "LiveExtra",
+			"url": "http://stream.nbcsports.com/liveextra/"
+		}
+		]
+	},
+	{
+		"name": "nhl",
+		"alt": "NHL GameCenter",
+		"channelId": "58690",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png",
+		"urls": [
+		{
+			"source": "NHL GameCenter",
+			"url": "http://www.nhl.com/gamecenter/"
+		}
+		]
+	},
+	{
+		"name": "mls",
+		"alt": "MLS Live",
+		"channelId": "mls-0",
+		"color": "#003558",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/MLS_logo.svg/220px-MLS_logo.svg.png",
+		"urls": [
+		{
+			"source": "MLS Live",
+			"url": "http://live.mlssoccer.com/mlsmdl/"
+		}
+		]
+	},
+	{
 		"name": "espn",
 		"alt": "ESPN",
 		"channelId": "10179",
@@ -128,95 +230,6 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/espn3"
-		}
-		]
-	},
-	{
-		"name": "fs1",
-		"alt": "FS1",
-		"channelId": "82547",
-		"color": "#00285A",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/FS1_New_Logo.png/200px-FS1_New_Logo.png",
-		"urls": [
-		
-		{
-			"source": "TWC",
-			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82547"
-		},
-		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1"
-		},
-		{
-			"source": "FSGO",
-			"url": "http://www.foxsports.com/foxsportsgo/"
-		},
-		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FOX-Sports-1-HD-219"
-		}
-		]
-	},
-	{
-		"name": "fs2",
-		"alt": "FS2",
-		"channelId": "59305",
-		"color": "#00285A",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",		
-		"urls": [
-		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618"
-		},
-		{
-			"source": "FSGO",
-			"url": "http://www.foxsports.com/foxsportsgo/"
-		},
-		{
-			"source": "TWC",
-			"url": "https://video2.timewarnercable.com/liveTv?tmsid=59305"
-		}
-		]
-	},
-	{
-		"name": "nbcsn",
-		"alt": "NBCSN",
-		"channelId": "48639",
-		"color": "#FDB812",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png",
-		"urls": [
-		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
-		},
-		{
-			"source": "NBCSN",
-			"url": "http://stream.nbcsports.com/nbcsn/"
-		},
-		{
-			"source": "iframe",
-			"url": "http://player.theplatform.com/p/HNK2IC/nbcsports_live?MVPDid=Verizon#playerurl=http%3A//stream.nbcsports.com/nbcsn/%3Fpid%3D47%26referrer%3Dhttp%3A//stream.nbcsports.com/liveextra/"
-		},
-		{
-			"source": "FiOS",
-			"url": "http://tv.verizon.com/livetv/nbcsn"
-		},
-		{
-			"source": "LiveExtra",
-			"url": "http://stream.nbcsports.com/liveextra/"
-		}
-		]
-	},
-	{
-		"name": "nhl",
-		"alt": "NHL GameCenter",
-		"channelId": "58690",
-		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png",
-		"urls": [
-		{
-			"source": "NHL GameCenter",
-			"url": "http://www.nhl.com/gamecenter/"
 		}
 		]
 	},
@@ -396,19 +409,6 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Big-Ten-Network-HD-610"
-		}
-		]
-	},
-	{
-		"name": "mls",
-		"alt": "MLS Live",
-		"channelId": "mls-0",
-		"color": "#003558",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/MLS_logo.svg/220px-MLS_logo.svg.png",
-		"urls": [
-		{
-			"source": "MLS Live",
-			"url": "http://live.mlssoccer.com/mlsmdl/"
 		}
 		]
 	},
