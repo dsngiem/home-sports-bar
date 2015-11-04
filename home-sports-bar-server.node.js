@@ -210,7 +210,7 @@ var server = HTTP.createServer(
 					return fetchGuideNbcsnUrl(response, parameters)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nhl") {
-					return fetchGuideNhl(response)
+					return fetchGuideNhl(response, parameters)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/mls") {
 					return fetchGuideMls(response)
@@ -671,11 +671,15 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideNhl = function(response) {					
-	var currentDate = new Date()
-	var currentMonth = currentDate.getMonth() + 1
-	var currentDay = currentDate.getDate()
-	var scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
+var fetchGuideNhl = function(response, parameters) {
+	var scheduleDate = parameters["date"]
+
+	if (scheduleDate != null) {
+		var currentDate = new Date()
+		var currentMonth = currentDate.getMonth() + 1
+		var currentDay = currentDate.getDate()
+		scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
+	}
 
 	var schedulePath = "/GameData/GCScoreboard/" + scheduleDate + ".jsonp"
 	console.log("Requesting program guide for nhl " + scheduleDate + "...")

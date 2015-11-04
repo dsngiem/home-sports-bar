@@ -425,7 +425,11 @@ $(document).ready(function() {
 		}
 
 		var getGuideNhl = function() {			
-			var nhlPost = $.post("/api/guide/nhl")
+			var post_data = {
+				"date": moment().format('YYYY-MM-DD')
+			}
+
+			var nhlPost = $.post("/api/guide/nhl", post_data)
 
 			nhlPost.done(function (response) {
 				console.log(response)
@@ -611,7 +615,7 @@ $(document).ready(function() {
 						html += '<span class="programTitle">' + alt + '</span> '
 						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + '</span>'
 						html += '<span class="episodeTitle"></span>'
-						html += '<span class="flags">' + espnChannelMap[currentValue.channel] + '</span>'
+						html += '<span class="flags">' + espnChannelMap[currentValue.channel] != undefined ? espnChannelMap[currentValue.channel] : currentValue.channel + '</span>'
 						
 						html += '</div></li>'
 
