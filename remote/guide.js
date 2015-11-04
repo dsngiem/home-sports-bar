@@ -444,6 +444,13 @@ $(document).ready(function() {
 						var url = "http://www.nhl.com/gamecenter/en/gamecenterlive?id=" + currentValue.id
 						var alt = toTitleCase(currentValue.atcommon) + " at " + toTitleCase(currentValue.htcommon)
 						
+						var startTime = moment(currentValue.bs, "h:mm A")
+						var currentTime = moment()
+						var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
+						
+						var timeUntil = moment.duration(startTime.diff(currentTime))
+						var timeLeft = moment.duration(endTime.diff(currentTime))
+
 						var html = ""
 						
 						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
@@ -459,10 +466,12 @@ $(document).ready(function() {
 						
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
-						html += '<span class="timeDisplay">' + currentValue.usnationalbroadcasts + '</span>'
+						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
+							 + (moment().isDST() ? ' EDT' : ' EST') + ' '
+							  + (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
 						html += '<span class="episodeTitle"></span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
-						html += '<span class="description">' + '<span class="flags">' + currentValue.bs + '</span> ' + currentValue.ata + " " + currentValue.ats + " - " + currentValue.hts + " " + currentValue.hta + '</span>'
+						html += '<span class="description">' + '<span class="flags">' + (currentValue.usnationalbroadcasts == "" ? "" : "[") + currentValue.usnationalbroadcasts + (currentValue.usnationalbroadcasts == "" ? "" : "]") + '</span> ' + (currentValue.ats == "" ? "" : currentValue.ata + " " + currentValue.ats + " - " + currentValue.hts + " " + currentValue.hta) + '</span>'
 
 						html += '</div></li>'
 
@@ -615,7 +624,7 @@ $(document).ready(function() {
 						html += '<span class="programTitle">' + alt + '</span> '
 						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + '</span>'
 						html += '<span class="episodeTitle"></span>'
-						html += '<span class="flags">' + espnChannelMap[currentValue.channel] != undefined ? espnChannelMap[currentValue.channel] : currentValue.channel + '</span>'
+						html += '<span class="flags">' + (espnChannelMap[currentValue.channel] != undefined ? espnChannelMap[currentValue.channel] : currentValue.channel) + '</span>'
 						
 						html += '</div></li>'
 
@@ -814,7 +823,7 @@ $(document).ready(function() {
 				var html = ''
 
 				html += '<span class="programTitle">' + programTitle + '</span> '
-				html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + ' (' + timeLeft.humanize() + ' left)</span>'
+				html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 				html += '<span class="episodeTitle">' + episodeTitle + '</span>'
 				//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 				html += '<span class="description"><span class="genre">' + ($.isArray(genre) && genre.length > 0 ? "[" + toTitleCase(genre.join(" &#8226 ")) + "]" : "") + '</span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span> ' + description + '</span>'
@@ -851,7 +860,7 @@ $(document).ready(function() {
 						var html = ''
 						
 						html += '<span class="programTitle">' + programTitle + '</span> '
-						html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + ' (' + timeLeft + ' left)</span>'
+						html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft + ' left)</span>'
 						html += '<span class="episodeTitle">' + episodeTitle + '</span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 						html += '<span class="description"><span class="genre">' + ($.isArray(genre) ? "[" +toTitleCase(genre.join(" &#8226 ")) + "]" : "") + '</span><span class="flags">' + ($.isArray(flags) ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span> ' + description + '</span>'
