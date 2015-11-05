@@ -466,9 +466,13 @@ $(document).ready(function() {
 						
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
-						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
-							 + (moment().isDST() ? ' EDT' : ' EST') + ' '
-							  + (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
+						if (currentValue.bsc != "") {
+							html += '<span class="timeDisplay">' + (currentValue.ats == "" ? "" : currentValue.bs) + '</span> '
+						} else {
+							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
+								 + (moment().isDST() ? ' EDT' : ' EST') + ' '
+								 + (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
+						}
 						html += '<span class="episodeTitle"></span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 						html += '<span class="description">' + '<span class="flags">' + (currentValue.usnationalbroadcasts == "" ? "" : "[") + currentValue.usnationalbroadcasts + (currentValue.usnationalbroadcasts == "" ? "" : "]") + '</span> ' + (currentValue.ats == "" ? "" : currentValue.ata + " " + currentValue.ats + " - " + currentValue.hts + " " + currentValue.hta) + '</span>'
