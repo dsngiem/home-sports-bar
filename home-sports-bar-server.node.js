@@ -674,7 +674,7 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 var fetchGuideNhl = function(response, parameters) {
 	var scheduleDate = parameters["date"]
 
-	if (scheduleDate != null) {
+	if (scheduleDate == null) {
 		var currentDate = new Date()
 		var currentMonth = currentDate.getMonth() + 1
 		var currentDay = currentDate.getDate()
