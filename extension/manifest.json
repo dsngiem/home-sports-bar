@@ -156,6 +156,16 @@
         "css": ["nbclive.css"],
         "js": ["nbclive.js"],
         "all_frames": true
+    },   
+    {
+        "matches": ["http://abc.go.com/watch-live*"],
+        "css": ["abc-live.css"],
+        "all_frames": true
+    },    
+    {
+        "matches": ["http://pix11.com/on-air/live-streaming/*"],
+        "css": ["pix-11.css"],
+        "all_frames": true
     },    
     {
         "matches": ["https://idp.optimum.net/idp.optimum.net/SSOPOST/metaAlias/realm4/idpv2"],

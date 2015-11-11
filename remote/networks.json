@@ -420,6 +420,10 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/5/58/American_Broadcasting_Company_2013_Logo.png/150px-American_Broadcasting_Company_2013_Logo.png",
 		"urls": [
 		{
+			"source": "ABC Live",
+			"url": "http://abc.go.com/watch-live"
+		},
+		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/abc"
 		}
@@ -464,7 +468,13 @@
 		"alt": "PIX11",
 		"channelId": "20373",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/WPIX11.svg/210px-WPIX11.svg.png"		
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/WPIX11.svg/210px-WPIX11.svg.png",
+		"urls": [
+		{
+			"source": "PIX 11",
+			"url": "http://pix11.com/on-air/live-streaming/"
+		}
+		]
 	},
 	{
 		"name": "wnet",
