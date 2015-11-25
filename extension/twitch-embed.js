@@ -17,8 +17,8 @@
 
 
 var addBonus = function() {
-	if (document.getElementById('player') != null) {
-		var p0 = document.getElementById('player').getElementsByTagName('object')[0];
+	if (document.getElementsByClassName('ember-view')[0] != null) {
+		var p0 = document.getElementsByClassName('ember-view')[0].getElementsByTagName('object')[0];
 		p0.classList.add("bonus");
 	} else {
 		setTimeout(function() {addBonus()}, 5000)
@@ -29,7 +29,7 @@ var addBonus = function() {
 addBonus()
 
 document.documentElement.onmouseover = function() {
-	var p0 = document.getElementById('player').getElementsByTagName('object')[0];
+	var p0 = document.getElementsByClassName('ember-view')[0].getElementsByTagName('object')[0];
 	if (p0.classList.contains("bonus")) {
 		p0.classList.remove("bonus")
 	}
@@ -37,7 +37,7 @@ document.documentElement.onmouseover = function() {
 }
 
 document.documentElement.onmouseout = function() {
-	var p0 = document.getElementById('player').getElementsByTagName('object')[0];
+	var p0 = document.getElementsByClassName('ember-view')[0].getElementsByTagName('object')[0];
 	if (!p0.classList.contains("bonus")) {
 			p0.classList.add("bonus")
 			clearTimeout(mousemoveTimer)
@@ -46,14 +46,14 @@ document.documentElement.onmouseout = function() {
 
 var mousemoveTimer;
 document.documentElement.addEventListener('mousemove', function() {
-	var p0 = document.getElementById('player').getElementsByTagName('object')[0];
+	var p0 = document.getElementsByClassName('ember-view')[0].getElementsByTagName('object')[0];
 	if (p0.classList.contains("bonus")) {
 		p0.classList.remove("bonus")
 	}
 
 	clearTimeout(mousemoveTimer)
 	mousemoveTimer = setTimeout( function() {
-		var p0 = document.getElementById('player').getElementsByTagName('object')[0];
+		var p0 = document.getElementsByClassName('ember-view')[0].getElementsByTagName('object')[0];
 		if (!p0.classList.contains("bonus")) {
 				p0.classList.add("bonus")
 		}

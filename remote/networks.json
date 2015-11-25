@@ -22,7 +22,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FOX-Sports-1-HD-219"
+			"url": "https://www.directv.com/Channels/FOX-Sports-1-HD-219?format=HD"
 		}
 		]
 	},
@@ -35,7 +35,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618"
+			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618?format=HD"
 		},
 		{
 			"source": "FSGO",
@@ -254,7 +254,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/TNT-HD-245"
+			"url": "https://www.directv.com/Channels/TNT-HD-245?format=HD"
 		}
 		]
 	},
@@ -279,7 +279,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/TBS-HD-247"
+			"url": "https://www.directv.com/Channels/TBS-HD-247?format=HD"
 		}
 		]
 	},
@@ -305,7 +305,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/NBA-TV-HD-216"
+			"url": "https://www.directv.com/Channels/NBA-TV-HD-216?format=HD"
 		}
 		]
 	},
@@ -331,7 +331,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Tennis-Channel-HD-217"
+			"url": "https://www.directv.com/Channels/Tennis-Channel-HD-217?format=HD"
 		}
 		]
 	},
@@ -361,11 +361,11 @@
 		},
 		{
 			"source": "DirecTV (Ch. 455)",
-			"url": "https://www.directv.com/Channels/Univision-Deportes-Network-HD-455"
+			"url": "https://www.directv.com/Channels/Univision-Deportes-Network-HD-455?format=HD"
 		},
 		{
 			"source": "DirecTV (Ch. 464)",
-			"url": "https://www.directv.com/Channels/Univision-Deportes-Network-HD-464-464"
+			"url": "https://www.directv.com/Channels/Univision-Deportes-Network-HD-464-464?format=HD"
 		},
 		{
 			"source": "TWC",
@@ -408,7 +408,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Big-Ten-Network-HD-610-610"
+			"url": "https://www.directv.com/Channels/Big-Ten-Network-HD-610-610?format=HD"
 		}
 		]
 	},
@@ -506,7 +506,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Univision-East-HD-402"
+			"url": "https://www.directv.com/Channels/Univision-East-HD-402?format=HD"
 		}
 		]
 	},
@@ -519,7 +519,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/UniMas-West-HD-408"
+			"url": "https://www.directv.com/Channels/UniMas-West-HD-408?format=HD"
 		}
 		]
 	},
@@ -532,7 +532,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Galavision-HD-404"
+			"url": "https://www.directv.com/Channels/Galavision-HD-404?format=HD"
 		}
 		]
 	},
@@ -618,7 +618,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/AUDIENCE-239-HD-239"
+			"url": "https://www.directv.com/Channels/AUDIENCE-239-HD-239?format=HD"
 		}
 		]
 	},
@@ -631,7 +631,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/AXS-TV-340"
+			"url": "https://www.directv.com/Channels/AXS-TV-340?format=HD"
 		}
 		]
 	},
@@ -648,7 +648,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/BBC-America-HD-264"
+			"url": "https://www.directv.com/Channels/BBC-America-HD-264?format=HD"
 		}
 		]
 	},
@@ -678,7 +678,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/BBC-World-News-HD-346"
+			"url": "https://www.directv.com/Channels/BBC-World-News-HD-346?format=HD"
 		}
 		]
 	},
@@ -691,7 +691,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/BET-HD-329"
+			"url": "https://www.directv.com/Channels/BET-HD-329?format=HD"
 		}
 		]
 	},
@@ -704,7 +704,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Bloomberg-HD-353"
+			"url": "https://www.directv.com/Channels/Bloomberg-HD-353?format=HD"
 		}
 		]
 	},
@@ -734,7 +734,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Cartoon-Network-HD-296"
+			"url": "https://www.directv.com/Channels/Cartoon-Network-HD-296?format=HD"
 		},
 		{
 			"source": "Adult Swim",
@@ -755,7 +755,7 @@
 		"urls": [		
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Comedy-Central-HD-249"
+			"url": "https://www.directv.com/Channels/Comedy-Central-HD-249?format=HD"
 		}
 		]
 	},
@@ -768,7 +768,7 @@
 		"urls": [		
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/CMT-HD-327"
+			"url": "https://www.directv.com/Channels/CMT-HD-327?format=HD"
 		}
 		]
 	},
@@ -806,7 +806,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/CNN-HD-202"
+			"url": "https://www.directv.com/Channels/CNN-HD-202?format=HD"
 		}
 		]
 	},
@@ -823,7 +823,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Cooking-Channel-HD-232"
+			"url": "https://www.directv.com/Channels/Cooking-Channel-HD-232?format=HD"
 		},
 		{
 			"source": "TWC",
@@ -916,7 +916,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/DIY-Network-HD-230"
+			"url": "https://www.directv.com/Channels/DIY-Network-HD-230?format=HD"
 		},
 		{
 			"source": "TWC",
@@ -1062,7 +1062,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Food-Network-HD-231"
+			"url": "https://www.directv.com/Channels/Food-Network-HD-231?format=HD"
 		}
 		]
 	},
@@ -1096,7 +1096,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Fox-Business-Network-HD-359"
+			"url": "https://www.directv.com/Channels/Fox-Business-Network-HD-359?format=HD"
 		}
 		]
 	},
@@ -1134,7 +1134,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FOX-News-HD-360"
+			"url": "https://www.directv.com/Channels/FOX-News-HD-360?format=HD"
 		}
 		]
 	},
@@ -1164,7 +1164,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FX-HD-248"
+			"url": "https://www.directv.com/Channels/FX-HD-248?format=HD"
 		}
 		]
 	},
@@ -1207,7 +1207,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FXX-HD-259"
+			"url": "https://www.directv.com/Channels/FXX-HD-259?format=HD"
 		}
 		]
 	},
@@ -1250,7 +1250,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Hallmark-Channel-HD-312"
+			"url": "https://www.directv.com/Channels/Hallmark-Channel-HD-312?format=HD"
 		}
 		]
 	},
@@ -1267,7 +1267,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/HGTV-HD-229"
+			"url": "https://www.directv.com/Channels/HGTV-HD-229?format=HD"
 		}
 		]
 	},
@@ -1301,7 +1301,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/HLN-HD-204"
+			"url": "https://www.directv.com/Channels/HLN-HD-204?format=HD"
 		}
 		]
 	},
@@ -1383,7 +1383,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/MTV-HD-331"
+			"url": "https://www.directv.com/Channels/MTV-HD-331?format=HD"
 		}
 		]
 	},
@@ -1396,7 +1396,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/MTV2-HD-333"
+			"url": "https://www.directv.com/Channels/MTV2-HD-333?format=HD"
 		}
 		]
 	},
@@ -1430,7 +1430,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/National-Geographic-Channel-HD-276"
+			"url": "https://www.directv.com/Channels/National-Geographic-Channel-HD-276?format=HD"
 		}
 		]
 	},
@@ -1460,7 +1460,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Nat-Geo-Wild-HD-283"
+			"url": "https://www.directv.com/Channels/Nat-Geo-Wild-HD-283?format=HD"
 		},
 		{
 			"source": "TWC",
@@ -1477,7 +1477,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299"
+			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299?format=HD"
 		}
 		]
 	},
@@ -1490,7 +1490,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Nick-Jr-HD-301"
+			"url": "https://www.directv.com/Channels/Nick-Jr-HD-301?format=HD"
 		}
 		]
 	},
@@ -1516,7 +1516,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/OWN-HD-279"
+			"url": "https://www.directv.com/Channels/OWN-HD-279?format=HD"
 		}
 		]
 	},
@@ -1598,7 +1598,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/QVC-HD-275"
+			"url": "https://www.directv.com/Channels/QVC-HD-275?format=HD"
 		},
 		{
 			"source": "TWC",
@@ -1615,7 +1615,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/ReelzChannel-HD-238"
+			"url": "https://www.directv.com/Channels/ReelzChannel-HD-238?format=HD"
 		}
 		]
 	},
@@ -1641,7 +1641,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Spike-HD-241"
+			"url": "https://www.directv.com/Channels/Spike-HD-241?format=HD"
 		}
 		]
 	},
@@ -1783,7 +1783,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Turner-Classic-Movies-HD-256"
+			"url": "https://www.directv.com/Channels/Turner-Classic-Movies-HD-256?format=HD"
 		}
 		]
 	},
@@ -1796,7 +1796,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/TV-Land-HD-304"
+			"url": "https://www.directv.com/Channels/TV-Land-HD-304?format=HD"
 		}
 		]
 	},
@@ -1813,7 +1813,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/The-Weather-Channel-HD-362"
+			"url": "https://www.directv.com/Channels/The-Weather-Channel-HD-362?format=HD"
 		}
 		]
 	},
@@ -1830,7 +1830,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Travel-Channel-HD-277"
+			"url": "https://www.directv.com/Channels/Travel-Channel-HD-277?format=HD"
 		}
 		]
 	},
@@ -1851,7 +1851,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/truTV-HD-246"
+			"url": "https://www.directv.com/Channels/truTV-HD-246?format=HD"
 		}
 		]
 	},
@@ -1881,7 +1881,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/VH1-HD-335"
+			"url": "https://www.directv.com/Channels/VH1-HD-335?format=HD"
 		}
 		]
 	},
@@ -1894,7 +1894,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/WeatherNation-HD-361"
+			"url": "https://www.directv.com/Channels/WeatherNation-HD-361?format=HD"
 		}
 		]
 	},

@@ -285,6 +285,21 @@ $(document).ready(function() {
 				nextEventTitle = events[i + 1].program.title
 			}					
 
+			var nextEventEpisode = ""
+			if (i + 1 < events.length) {
+				nextEventEpisode = events[i + 1].program.episodeTitle
+			}
+
+			var nextEventStartTime = ""
+			if (i + 1 < events.length) {
+				nextEventStartTime = events[i + 1].program.startTimeDisplay
+			}
+
+			var nextEventEndTime = ""
+			if (i + 1 < events.length) {
+				nextEventEndTime = events[i + 1].program.endTimeDisplay
+			}
+
 			channelGuide[channelId] = {
 				"callSign": callSign,
 				"programTitle": events[i].program.title,
@@ -296,6 +311,9 @@ $(document).ready(function() {
 				"genre": events[i].program.genres,
 				"timeLeft": timeLeft,
 				"nextEventTitle": nextEventTitle,
+				"nextEventEpisode": nextEventEpisode,
+				"nextEventStartTime": nextEventStartTime,
+				"nextEventEndTime": nextEventEndTime,
 				"events": events
 			}
 		}
@@ -822,6 +840,7 @@ $(document).ready(function() {
 				var timeLeft = moment.duration(endTime.diff(currentTime))
 				if (nextProgram) {
 					var nextEventTitle = endTime ? nextProgram.title : ""
+					var nextEventEpisode = endTime ? nextProgram.episode : ""
 				}
 
 				var html = ''
@@ -831,7 +850,7 @@ $(document).ready(function() {
 				html += '<span class="episodeTitle">' + episodeTitle + '</span>'
 				//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 				html += '<span class="description"><span class="genre">' + ($.isArray(genre) && genre.length > 0 ? "[" + toTitleCase(genre.join(" &#8226 ")) + "]" : "") + '</span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span> ' + description + '</span>'
-				html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + '</span></span>'
+				html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + ' - ' + nextEventEpisode + '</span></span>'
 				
 
 				$("#" + channel + " .info").html(html)

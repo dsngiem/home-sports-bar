@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.17",
+    "version": "1.0.18",
 
     "content_scripts": [
     {
@@ -130,6 +130,12 @@
     },
     {
         "matches": ["http://www.twitch.tv/*/embed"],
+        "js": ["twitch-embed.js"],
+        "css": ["twitch.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.twitch.tv/*"],
         "js": ["twitch.js"],
         "css": ["twitch.css"],
         "all_frames": true
