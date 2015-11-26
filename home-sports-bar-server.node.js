@@ -299,7 +299,7 @@ var handleMessage = function(response, parameters) {
 	} else if (endsWith(paramUrl.host, "youtu.be")) {
 		result["url"] = "https://www.youtube.com/embed" + paramUrl["pathname"] + "?autoplay=1"
 	} else if (endsWith(paramUrl.host, "twitch.tv")) {
-		result["url"] = result["url"] + "/embed"
+		result["url"] = "http://player.twitch.tv/?volume=1.0&channel=" + paramUrl["pathname"].slice(1)
 	}
 	//console.log(paramUrl)
 
