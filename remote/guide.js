@@ -840,7 +840,8 @@ $(document).ready(function() {
 				var timeLeft = moment.duration(endTime.diff(currentTime))
 				if (nextProgram) {
 					var nextEventTitle = endTime ? nextProgram.title : ""
-					var nextEventEpisode = endTime ? " - " + nextProgram.episode : ""
+					var nextEventEpisode = endTime ? nextProgram.episode : ""
+					nextEventEpisode = nextEventEpisode == "" ? "" : " - " + nextEventEpisode
 				}
 
 				var html = ''
