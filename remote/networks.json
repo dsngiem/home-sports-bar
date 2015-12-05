@@ -606,7 +606,6 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76126"
-		}
 		]
 	},
 	{
@@ -692,6 +691,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/BET-HD-329?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/bet?cmpid=livetv_bet"
 		}
 		]
 	},
@@ -1345,6 +1348,19 @@
 		]
 	},
 	{
+		"name": "lifetime",
+		"alt": "lifetime",
+		"channelId": "10918",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/3/34/Lifetime_logo_2013.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/lifetime?cmpid=livetv_lifetime"
+		}
+		]
+	},
+	{
 		"name": "movieplex",
 		"alt": "movieplex",
 		"channelId": "15295",
@@ -1384,6 +1400,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/MTV-HD-331?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/mtv?cmpid=livetv_mtv"
 		}
 		]
 	},
@@ -1479,6 +1499,10 @@
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299?format=HD"
 		}
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nickelodeon?cmpid=livetv_nickelodeon"
+		}
 		]
 	},
 	{
@@ -1560,6 +1584,23 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76381"
+		}
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/pac12networklosangeles?cmpid=livetv_pac-12-los-angeles"
+		}
+		]
+	},
+	{
+		"name": "palladia",
+		"alt": "Palladia",
+		"channelId": "49141",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/8/8f/Palladia.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/palladia?cmpid=livetv_palladia"
 		}
 		]
 	},
@@ -1882,6 +1923,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/VH1-HD-335?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/vh1?cmpid=livetv_vh1"
 		}
 		]
 	},
