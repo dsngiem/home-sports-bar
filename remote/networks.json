@@ -606,6 +606,7 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76126"
+		}
 		]
 	},
 	{
@@ -1498,7 +1499,7 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299?format=HD"
-		}
+		},
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/nickelodeon?cmpid=livetv_nickelodeon"
@@ -1584,7 +1585,7 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76381"
-		}
+		},
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/pac12networklosangeles?cmpid=livetv_pac-12-los-angeles"
