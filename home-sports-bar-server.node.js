@@ -902,7 +902,7 @@ var fetchGuideFsgo = function(response) {
 	console.log("Requesting program guide for FSGO...")
 	
 	//var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FCSA|FCSC|FCSP|FXDEP|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fcs|fsw|bige|fsgo|tudor|usopen|yes}"
-	var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fsw|bige|fsgo|tudor|usopen|yes}"
+	var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME|FSW},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fsw|bige|fsgo|tudor|usopen|yes}"
 	var scheduleRequest = HTTP.request({
 		host: 'feed.theplatform.com',
 		path: schedulePath,
