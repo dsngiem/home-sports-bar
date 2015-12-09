@@ -13,7 +13,15 @@
         "all_frames": true
     },
     {
-        "matches": ["http://xfinitytv.comcast.net/live/network/espn*","http://xfinitytv.comcast.net/live/network/sec*","http://tvgo.xfinity.com/live/network/espn*","http://tvgo.xfinity.com/live/network/sec*","http://xfinitytv.comcast.net/live/network/abcfamily*","http://tvgo.comcast.net/live/network/abcfamily*"],
+        "matches": [
+            "http://xfinitytv.comcast.net/live/network/espn*",
+            "http://xfinitytv.comcast.net/live/network/sec*",
+            "http://tvgo.xfinity.com/live/network/espn*",
+            "http://tvgo.xfinity.com/live/network/sec*",
+            "http://xfinitytv.comcast.net/live/network/abcfamily*",
+            "http://tvgo.comcast.net/live/network/abcfamily*",
+            "http://xfinitytv.comcast.net/live/network/disney*",
+            "http://tvgo.comcast.net/live/network/disney*"],
         "js": ["xfinity-espn.js"],
         "all_frames": true
     },
