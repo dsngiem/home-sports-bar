@@ -477,9 +477,10 @@ $(document).ready(function() {
 
 						html += '<div class="sources" style="display: none;">'
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '&feed=away" alt="' + alt + '"><div><p style="color: #000000">Away</p>'
-						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '&feed=home" alt="' + alt + '"><div><p style="color: #000000">Home</p>'
-						
 						html += '</div></a>  '
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '&feed=home" alt="' + alt + '"><div><p style="color: #000000">Home</p>'
+						html += '</div></a>  '
+						
 
 						html += '</div><div class="info" style="">'
 						
