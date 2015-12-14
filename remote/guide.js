@@ -476,7 +476,8 @@ $(document).ready(function() {
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png" alt="' + alt + '"/></div></div></a>'
 
 						html += '<div class="sources" style="display: none;">'
-						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '&feed=away" alt="' + alt + '"><div><p style="color: #000000">' + currentValue.atcommon + ' Broadcast</p>'
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '&feed=home" alt="' + alt + '"><div><p style="color: #000000">' + currentValue.htcommon + ' Broadcast</p>'
 						
 						html += '</div></a>  '
 
