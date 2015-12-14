@@ -506,6 +506,69 @@ $(document).ready(function() {
 			nhlPost.always(function () {
 				getGuideMls()
 			})
+
+		}
+		var getGuideNba = function() {			
+			var post_data = {
+				"date": moment().format('YYYYMMDD')
+			}
+
+			var nbaPost = $.post("/api/guide/nba", post_data)
+
+			nbaPost.done(function (response) {
+				console.log(response)
+
+				$("li[id^=NBA-]").detach()	
+						
+				if ($.isArray(response.games)) {
+					response.games.reverse()
+					response.games.forEach( function(currentValue, index, array) {
+						var name = "NBA"
+						var awayTeam = currentValue.teams[0].awayTeam
+						var homeTeam = currentValue.teams[1].homeTeam
+						var source = "NBA-" + awayTeam + homeTeam
+						var url = "http://premium.nba.com/pr/leaguepass/app/2015/console.html?debug=true&gameID=" + currentValue.gid
+						var alt = awayTeam + " at " + homeTeam
+						
+						//var startTime = moment(currentValue.bs, "h:mm A")
+						//var currentTime = moment()
+						//var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
+						
+						//var timeUntil = moment.duration(startTime.diff(currentTime))
+						//var timeLeft = moment.duration(endTime.diff(currentTime))
+
+						var html = ""
+						
+						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
+
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/07/NBALogo.svg/100px-NBALogo.svg.png" alt="' + alt + '"/></div></div></a>'
+
+						html += '<div class="sources" style="display: none;">'
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
+						
+						html += '</div></a>  '
+
+						html += '</div><div class="info" style="">'
+						
+						alt = alt.split(" ").join('</span><span class="programTitle">')
+						html += '<span class="programTitle">' + alt + '</span> '
+						html += '<span class="timeDisplay">' + (currentValue.prd.s) + '</span> '
+						
+						html += '<span class="episodeTitle"></span>'
+						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
+						html += '<span class="description">' + '<span class="flags">' + (currentValue.broadcaster.is_national ? "[" + currentValue.broadcaster.name + "]" : "") + '</span>'
+
+						html += '</div></li>'
+
+						$(html).insertAfter("#45526")
+						//$("#networks").append(html)
+					})
+				}
+			})
+
+			nbaPost.always(function () {
+				
+			})
 		}
 
 		var getGuideMls = function() {			
@@ -751,7 +814,7 @@ $(document).ready(function() {
 			})
 
 			fsgoPost.always(function() {
-				
+				getGuideNba();
 			})
 		}
 

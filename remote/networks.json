@@ -123,7 +123,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/ESPN-HD-206?format=HD"
+			"url": "http://www.directv.com/entertainment/video/206"
 		}
 		]
 	},
@@ -148,7 +148,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/ESPN2-HD-209?format=HD"
+			"url": "http://www.directv.com/entertainment/video/209"
 		}
 		]
 	},
@@ -173,7 +173,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/ESPNews-HD-207?format=HD"
+			"url": "http://www.directv.com/entertainment/video/207"
 		}
 		]
 	},
@@ -198,7 +198,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/ESPNU-HD-208?format=HD"
+			"url": "http://www.directv.com/entertainment/video/208"
 		}
 		]
 	},
@@ -232,7 +232,7 @@
 		},
 		{
 			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/SEC-Network-HD-611?format=HD"
+			"url": "http://www.directv.com/entertainment/video/611"
 		}
 		]
 	},

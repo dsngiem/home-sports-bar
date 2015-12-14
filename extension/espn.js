@@ -1,5 +1,5 @@
 var reloadFlash = function() {
-	var videoPlayer = document.getElementById('${application}')
+	var videoPlayer = document.getElementById('e3p-flash-container')
 	var flashObject = videoPlayer.children[0].cloneNode(true)
 
 	videoPlayer.removeChild(videoPlayer.children[0])

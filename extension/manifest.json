@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.18",
+    "version": "1.0.21",
 
     "content_scripts": [
     {
@@ -125,7 +125,7 @@
         "all_frames": true
     },
     {
-        "matches": ["https://www.directv.com/Channels/*"],
+        "matches": ["https://www.directv.com/Channels/*", "https://www.directv.com/entertainment/video/*", "http://www.directv.com/entertainment/video/*"],
         "js": ["dtv.js"],
         "css": ["dtv.css"],
         "all_frames": true
@@ -134,6 +134,12 @@
         "matches": ["http://m.mlb.com/network/*"],
         "js": ["mlb.js"],
         "css": ["mlb.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://premium.nba.com/pr/leaguepass/app/*"],
+        "js": ["nba.js"],
+        "css": ["nba.css"],
         "all_frames": true
     },
     {
