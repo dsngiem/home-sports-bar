@@ -510,6 +510,41 @@ $(document).ready(function() {
 			})
 
 		}
+
+
+		var nbaTeamMap = {
+			"ATL": "Atlanta Hawks",
+			"BOS": "Boston Celtics",
+			"CLE": "Cleveland Cavaliers",
+			"NOP": "New Orleans Pelicans",
+			"CHI": "Chicago Bulls",
+			"DAL": "Dallas Mavericks",
+			"DEN": "Denver Nuggets",
+			"GSW": "Golden State Warriors",
+			"HOU": "Houston Rockets",
+			"LAC": "Los Angeles Clippers",
+			"LAL": "Los Angeles Lakers",
+			"MIA": "Miami Heat",
+			"MIL": "Milwaukee Bucks",
+			"MIN": "Minnesota Timberwolves",
+			"BKN": "Brooklyn Nets",
+			"NYK": "New York Knicks",
+			"ORL": "Orlando Magic",
+			"IND": "Indiana Pacers",
+			"PHI": "Philidelphia 76ers",
+			"POR": "Portland Trailblazers",
+			"PHX": "Phoenix Suns",
+			"SAC": "Sacramento Kings",
+			"SAS": "San Antonio Spurs",
+			"OKC": "Oklahoma City Thunder",
+			"TOR": "Toronto Raptors",
+			"UTA": "Utah Jazz",
+			"MEM": "Memphis Grizzlies",
+			"WAS": "Washington Wizards",
+			"DET": "Detroit Pistons",
+			"CHA": "Charlotte Hornets"
+		}
+
 		var getGuideNba = function() {			
 			var post_data = {
 				"date": moment().format('YYYYMMDD')
@@ -529,8 +564,8 @@ $(document).ready(function() {
 						var awayTeam = currentValue.teams[0].awayTeam
 						var homeTeam = currentValue.teams[1].homeTeam
 						var source = "NBA-" + awayTeam + homeTeam
-						var url = "http://premium.nba.com/pr/leaguepass/app/2015/console.html?debug=true&gameID=" + currentValue.gid
-						var alt = awayTeam + " at " + homeTeam
+						var url = "http://premium.nba.com/pr/leaguepass/app/2015/console.html?debug=false&gameID=" + currentValue.gid
+						var alt = nbaTeamMap[awayTeam] + " at " + nbaTeamMap[homeTeam]
 						
 						//var startTime = moment(currentValue.bs, "h:mm A")
 						//var currentTime = moment()
@@ -554,7 +589,7 @@ $(document).ready(function() {
 						
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
-						html += '<span class="timeDisplay">' + (currentValue.prd.s) + '</span> '
+						html += '<span class="timeDisplay">' + (currentValue.prd.s == "0Q - 00:00" ? "" : currentValue.prd.s) + '</span> '
 						
 						html += '<span class="episodeTitle"></span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
