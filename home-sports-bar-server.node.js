@@ -957,7 +957,9 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 		scheduleDate = currentDate.getFullYear() + (currentMonth < 10 ? "0" : "") + currentMonth + (currentDay < 10 ? "0" : "") + currentDay
 	}
 	//var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FCSA|FCSC|FCSP|FXDEP|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fcs|fsw|bige|fsgo|tudor|usopen|yes}"
-	var schedulePath = "/data/10s/json/nbacom/" + currentDate.getFullYear() + "/gameline/" + scheduleDate + "/games.json"
+	var seasonYear = currentDate.getMonth() < 8 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()
+	console.log(seasonYear)
+	var schedulePath = "/data/10s/json/nbacom/" + seasonYear + "/gameline/" + scheduleDate + "/games.json"	
 	var scheduleRequest = HTTP.request({
 		host: 'data.nba.com',
 		path: schedulePath,
@@ -978,6 +980,9 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nba league pass sent.")
+
+			console.log(scheduleBody)
+
 			response.writeHead(200, {'Content-Type': 'application/json'})
 			return response.end(scheduleBody)
 		})
