@@ -557,22 +557,33 @@ $(document).ready(function() {
 
 				$("li[id^=NBA-]").detach()	
 						
-				if ($.isArray(response.games)) {
-					response.games.reverse()
-					response.games.forEach( function(currentValue, index, array) {
+				if ($.isArray(response.sports_content.games.game)) {
+					response.sports_content.games.game.reverse()
+					response.sports_content.games.game.forEach( function(currentValue, index, array) {
 						var name = "NBA"
-						var awayTeam = currentValue.teams[0].awayTeam
-						var homeTeam = currentValue.teams[1].homeTeam
-						var source = "NBA-" + awayTeam + homeTeam
-						var url = "http://premium.nba.com/pr/leaguepass/app/2015/console.html?debug=false&gameID=" + currentValue.gid
-						var alt = nbaTeamMap[awayTeam] + " at " + nbaTeamMap[homeTeam]
+						var awayTeam = currentValue.visitor
+						var homeTeam = currentValue.home
+						var source = "NBA-" + awayTeam.abbreviation + homeTeam.abbreviation
+						var url = "http://premium.nba.com/pr/leaguepass/app/2015/console.html?debug=false&gameID=" + currentValue.id
+						var alt = awayTeam.city + " " + awayTeam.nickname + " at " + homeTeam.city + " " + homeTeam.nickname
 						
-						//var startTime = moment(currentValue.bs, "h:mm A")
-						//var currentTime = moment()
-						//var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
+						var startTime = moment(currentValue.period_time.period_status.substring(0, currentValue.period_time.period_status.length - 2), "h:mm A")
+						var currentTime = moment()
+						var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
 						
-						//var timeUntil = moment.duration(startTime.diff(currentTime))
-						//var timeLeft = moment.duration(endTime.diff(currentTime))
+						var timeUntil = moment.duration(startTime.diff(currentTime))
+						var timeLeft = moment.duration(endTime.diff(currentTime))
+
+						var broadcasters = currentValue.broadcasters.tv.broadcaster
+						var isNational = false
+						var displayName = ""
+
+						broadcasters.forEach( function(cv, i, a) {
+							if (cv.scope == "natl") {
+								isNational = true
+								displayName = cv.display_name
+							}
+						})
 
 						var html = ""
 						
@@ -589,13 +600,29 @@ $(document).ready(function() {
 						
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
-						html += '<span class="timeDisplay">' + (currentValue.prd.s == "0Q - 00:00" ? "" : currentValue.prd.s) + '</span> '
-						
-						html += '<span class="episodeTitle"></span>'
-						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
-						html += '<span class="description">' + '<span class="flags">' + (currentValue.broadcaster.is_national ? "[" + currentValue.broadcaster.name + "]" : "") + '</span>'
 
-						html += '</div></li>'
+						
+						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
+						if (currentValue.period_time.game_status != 1) {
+							html += '<span class="episodeTitle"></span>'
+							html += '<span class="description">' + '<span class="flags">' + awayTeam.abbreviation + " " + awayTeam.score + " - " + homeTeam.score + " " + homeTeam.abbreviation + " " + currentValue.period_time.period_status + " "
+						} else {
+							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
+							  + (moment().isDST() ? ' EDT' : ' EST') + ' '
+							  + (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
+							html += '<span class="episodeTitle"></span>'
+						}
+
+						html += '<span class="flags">' + (isNational ? "[" + displayName + "]" : "") + '</span>'
+
+						// html += '<span class="programTitle">' + alt + '</span> '
+						// html += '<span class="timeDisplay">' + (currentValue.prd.s == "0Q - 00:00" ? "" : currentValue.prd.s) + '</span> '
+						
+						// html += '<span class="episodeTitle"></span>'
+						// //html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
+						// html += '<span class="description">' + '<span class="flags">' + (currentValue.broadcaster.is_national ? "[" + currentValue.broadcaster.name + "]" : "") + '</span>'
+
+						// html += '</div></li>'
 
 						$(html).insertAfter("#45526")
 						//$("#networks").append(html)
