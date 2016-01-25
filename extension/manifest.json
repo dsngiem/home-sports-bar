@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.21",
+    "version": "1.0.22",
 
     "content_scripts": [
     {
@@ -155,7 +155,7 @@
         "all_frames": true
     },
     {
-        "matches": ["https://video2.timewarnercable.com/liveTv*"],
+        "matches": ["https://video2.timewarnercable.com/liveTv*", "https://video2.timewarnercable.com/auth*"],
         "js": ["twc.js"],
         "css": ["twc.css"],
         "all_frames": true
@@ -210,6 +210,11 @@
     {
         "matches": ["https://login.comcast.net/login*"],
         "js": ["logins/xfinity.js"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.nhl.com/gamecenter/en/*"],
+        "js": ["logins/nhlgc-login.js"],
         "all_frames": true
     }
     ]
