@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Home Guide</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" href="/images/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png" />
+	<link href="/remote/guide.css" type="text/css" rel="stylesheet" />
+
+	<script src="/js/jquery-1.11.2.min.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
+	<script src="/js/moment/moment.js"></script>
+	<script src="guide-twc.js"></script>
+
+</head>
+<body>
+	<div id="status">
+	</div>
+	<ul id="numFrames" style="display: none;">
+		<li style="float: left; position: absolute; top: 0px; left: 0px;"><a href="#back" class="numFrames-back"><div><p>&lt;</p></div></a></li>
+		<li><a href="#one" id="numFrames-1"><div><p>1</p></div></a></li>
+		<li><a href="#two" id="numFrames-2"><div><p>2</p></div></a></li>
+		<li><a href="#four" id="numFrames-4"><div><p>4</p></div></a></li>
+	</ul>
+	<ul id="frames">
+	</ul>
+	<ul id="networks">
+		<li onclick="void(0)" id="custom" class="channel">
+			<a class="network" style="float: left;" alt="custom">
+				<div class="image">
+					<div>
+						<p style="color: #000000;">Custom URL</p>
+					</div>
+				</div>		
+			</a>
+			<div class="sources" style="">
+				<form id="custom-url" style="height:70px; padding:0px; margin:0px" method="post" action="#">
+					<div style=" position: relative; text-align: center; top: 50%; transform: translateY(-50%);">
+						<input type="text" name="url" style="width:90%; border:2px #000000 solid">
+						<input type="submit" value="Submit" style="width:9%; border:2px #000000 solid">
+					</div>
+				</form>
+			</div>
+			<div style="" class="info">
+			</div>
+		</li>
+	</ul>
+</body>
+</html>
