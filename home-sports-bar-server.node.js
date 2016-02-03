@@ -131,10 +131,10 @@ var clearProgramGuideCache = function() {
 /** SERVER FUNCTIONS **/
 var file = new(NS.Server)();
 
-const options = {
-	key: FS.readFileSync('server.key'),
-	cert: FS.readFileSync('server.crt')
-}
+// const options = {
+// 	key: FS.readFileSync('server.key'),
+// 	cert: FS.readFileSync('server.crt')
+// }
 
 // var serverHttps = HTTPS.createServer(options,
 // 	function (request, response) {
