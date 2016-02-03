@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.22",
+    "version": "1.0.31",
 
     "content_scripts": [
     {
@@ -122,6 +122,12 @@
         "matches": ["http://www.nhl.com/gamecenter/en/*"],
         "js": ["nhlgc.js"],
         "css": ["nhlgc.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.nhl.com/tv/*", "https://www.nhl.com/tv/*"],
+        "js": ["nhltv.js"],
+        "css": ["nhltv.css"],
         "all_frames": true
     },
     {

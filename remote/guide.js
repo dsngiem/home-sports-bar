@@ -434,12 +434,93 @@ $(document).ready(function() {
 			})
 
 			nbcsnPost.always(function() {
-				getGuideNhl()
+				getGuideNhlTv()
 			})
 		}
 
 		var toTitleCase = function(str) {
 			return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+		}
+
+
+		var getGuideNhlTv = function() {			
+			var post_data = {
+				"date": moment().format('YYYY-MM-DD')
+			}
+
+			var nhlPost = $.post("/api/guide/nhltv", post_data)
+
+			nhlPost.done(function (response) {
+				console.log(response)
+
+				$("li[id^=NHL-]").detach()	
+				
+				var games = response.dates[0].games
+
+				if ($.isArray(games)) {
+					games.reverse()
+					games.forEach( function(currentValue, index, array) {
+						var name = "NHL"
+						var source = "NHL-" + currentValue.teams.away.team.abbreviation + currentValue.teams.home.team.abbreviation
+						var url = "http://www.nhl.com/tv/" + currentValue.gamePk
+						var alt = currentValue.teams.away.team.name + " at " + currentValue.teams.home.team.name
+						
+						var startTime = moment(currentValue.gameDate)
+						var currentTime = moment()
+						var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
+						
+						var timeUntil = moment.duration(startTime.diff(currentTime))
+						var timeLeft = moment.duration(endTime.diff(currentTime))
+
+						var html = ""
+						
+						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
+
+						html += '<a href="#' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png" alt="' + alt + '"/></div></div></a>'
+
+						html += '<div class="sources" style="display: none;">'
+
+						var epgArray = currentValue.content.media.epg
+						var nhlTv = epgArray[0]
+						var tvItems = nhlTv.items
+						for (var i = 0; i < tvItems.length; i++) {
+							var currentValueMedia = tvItems[i]
+							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '/' + currentValueMedia.eventId + '/' + currentValueMedia.mediaPlaybackId + '" alt="' + alt + '"><div><p style="color: #000000">' + (currentValueMedia.callLetters == "" ? currentValueMedia.feedName : currentValueMedia.callLetters) + ' (' + toTitleCase(currentValueMedia.mediaFeedType) + ')</p>'
+							html += '</div></a>  ' 
+						}
+
+						html += '</div><div class="info" style="">'
+						
+						alt = alt.split(" ").join('</span><span class="programTitle">')
+						html += '<span class="programTitle">' + alt + '</span> '
+						if (currentValue.status.statusCode != "1") {
+							html += '<span class="timeDisplay">' + (currentValue.status.abstractGameState) + '</span> '
+						} else {
+							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
+								 + (moment().isDST() ? ' EDT' : ' EST') + ' '
+								 + (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
+						}
+						html += '<span class="episodeTitle"></span>'
+						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
+						if (currentValue.content.media.epg[0].items.length > 0) {
+							isNational = currentValue.content.media.epg[0].items[0].mediaFeedType == "NATIONAL"
+						} else {
+							isNational = false
+						}
+						html += '<span class="description">' + '<span class="flags">' + (isNational ? "[" + currentValue.content.media.epg[0].items[0].callLetters + "]" : "") + '</span> ' + (currentValue.status.statusCode == "1" ? "" : currentValue.teams.away.team.abbreviation + " " + currentValue.teams.away.score + " - " + currentValue.teams.home.score + " " + currentValue.teams.home.team.abbreviation) + '</span>'
+
+						html += '</div></li>'
+
+						$(html).insertAfter("#58690")
+						//$("#networks").append(html)
+					})
+				}
+			})
+
+			nhlPost.always(function () {
+				getGuideMls()
+			})
+
 		}
 
 		var getGuideNhl = function() {			

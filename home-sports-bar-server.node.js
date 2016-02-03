@@ -42,6 +42,7 @@ port = process.env.PORT || port
 
 /** MODULES **/
 var HTTP = require('http')
+//var HTTPS = require('https')
 var URL = require('url')
 var FS = require('fs')
 var QS = require('querystring')
@@ -130,6 +131,114 @@ var clearProgramGuideCache = function() {
 /** SERVER FUNCTIONS **/
 var file = new(NS.Server)();
 
+const options = {
+	key: FS.readFileSync('server.key'),
+	cert: FS.readFileSync('server.crt')
+}
+
+// var serverHttps = HTTPS.createServer(options,
+// 	function (request, response) {
+// 		var body = "";
+
+// 		request.on('data', function (chunk) {
+// 			body += chunk;
+// 		})
+
+// 		request.on('end', function () {
+// 			var requestUrl = request.url
+// 			var parsedUrl = URL.parse(requestUrl, true)	
+
+// 			console.log(request.method.grey.bold + " " + requestUrl.grey.italic)
+			
+// 			if (body) {
+// 				console.log("body: ".grey + body.grey)
+// 			}
+			
+// 			if (request.method == 'GET') {
+// 				//set up regular page fetch
+
+// 				if (startsWith(requestUrl, "/player/video/")) {
+// 					return playVideo(response, parsedUrl)
+
+// 				}
+
+// 				file.serve(request, response, function (error, result) {
+// 					if (error) {
+// 						if (endsWith(requestUrl, "/")) {
+// 							var tryRequest = request
+// 							tryRequest += "index.html"
+
+// 							file.serve(request, response)
+// 						}
+
+// 						console.log(error.status.toString().bold.red + " " + error.message.magenta + " " + requestUrl)
+// 						response.end();
+// 					}
+// 				})
+
+// 			} else if (request.method == 'POST') {
+// 				var result
+// 				var parameters = QS.parse(body)
+// 				// console.log(parameters)
+
+// 				if (parsedUrl["pathname"] == "/api/publish") {
+// 					return addPublisher(response, parameters)
+
+
+					
+// 				} else if (parsedUrl["pathname"] == "/api/publish/message") {
+// 					return handleMessage(response, parameters)
+
+// 				} else if (parsedUrl["pathname"] == "/api/publish/frames") {
+// 					return sendFrames(response, parameters)
+
+
+
+// 				} else if (parsedUrl["pathname"] == "/api/subscribe") {
+// 					return addSubscriber(request, response, parameters)
+
+// 				} else if (parsedUrl["pathname"] == "/api/subscribe/delete") {
+// 					return deleteSubscriber(response, parameters)
+
+
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide") {
+// 					return fetchGuide(response)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/channel") {
+// 					var channel = parameters["channel"]
+// 					return fetchGuideChannel(response, channel)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn") {
+// 					return fetchGuideNbcsn(response)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn/url") {
+// 					return fetchGuideNbcsnUrl(response, parameters)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/nhl") {
+// 					return fetchGuideNhl(response, parameters)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/mls") {
+// 					return fetchGuideMls(response)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/watchEspn") {
+// 					return fetchGuideWatchEspn(response)
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/fsgo") {
+// 					return fetchGuideFsgo(response)				
+
+// 				} else if (parsedUrl["pathname"] == "/api/guide/nba") {
+// 					return fetchGuideNbaLeaguePass(response, parameters)
+// 				}
+
+// 				console.log(parsedUrl)
+// 				response.writeHead(404)
+// 				response.end("Invalid API request: " + parsedUrl["pathname"])				
+// 			}
+// 		})
+// 	}
+// )
+
 var server = HTTP.createServer(
 	function (request, response) {
 		var body = "";
@@ -211,6 +320,9 @@ var server = HTTP.createServer(
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nhl") {
 					return fetchGuideNhl(response, parameters)
+
+				} else if (parsedUrl["pathname"] == "/api/guide/nhltv") {
+					return fetchGuideNhlTv(response, parameters)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/mls") {
 					return fetchGuideMls(response)
@@ -730,6 +842,59 @@ var fetchGuideNhl = function(response, parameters) {
 	return scheduleRequest.end()
 }
 
+
+var fetchGuideNhlTv = function(response, parameters) {
+	var scheduleDate = parameters["date"]
+
+	if (scheduleDate == null) {
+		var currentDate = new Date()
+		var currentMonth = currentDate.getMonth() + 1
+		var currentDay = currentDate.getDate()
+		scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
+	}
+
+	var schedulePath = "/api/v1/schedule?date=" + scheduleDate + "&expand=schedule.game.content.media.epg,schedule.teams"
+	console.log("Requesting program guide for nhl tv" + scheduleDate + "...")
+	var scheduleRequest = HTTP.request({
+		host: 'statsapi.web.nhl.com',
+		path: schedulePath,
+
+		// headers: {
+		// 	'content-type': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+		// 	'connection': 'keep-alive',
+		// 	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:35.0) Gecko/20100101 Firefox/35.0',
+		// 	'X-Requested-With': 'XMLHttpRequest'
+		// }
+	}, function(scheduleResponse) {
+		//scheduleResponse.setEncoding('binary')
+		
+		var scheduleBody = ""
+		scheduleResponse.on('data', function(chunk) {
+			scheduleBody += chunk
+		})
+
+		scheduleResponse.on('end', function() {
+			console.log("Program guide for nhl tv sent.")
+
+			response.writeHead(200, {'Content-Type': 'application/json'})
+			return response.end(scheduleBody)
+		})
+
+		scheduleResponse.on('error', function(scheduleError) {
+			console.log("schedule error for nhl tv")
+			response.writeHead(200)
+			return response.end(scheduleError.error)
+		})
+	})	
+
+	scheduleRequest.on('error', function(scheduleRequestError) {
+		console.log("schedule request error for nhl tv".red)
+		console.log("error: ".red + scheduleRequestError.message)
+	})
+
+	return scheduleRequest.end()
+}
+
 var fetchGuideMls = function(response) {					
 	var currentDate = new Date()
 	var currentMonth = currentDate.getMonth() + 1
@@ -1023,5 +1188,8 @@ var fetchPreCachePrograms = function() {
 /** START SERVER **/
 server.listen(port)
 console.log("Server successfully created on port ".green + port.toString().green)
+
+// serverHttps.listen(4433)
+// console.log("HTTPS Server successfully created on port 4433")
 clearSubscribers()
 clearProgramGuideCache()
