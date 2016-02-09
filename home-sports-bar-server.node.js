@@ -241,7 +241,7 @@ var file = new(NS.Server)();
 
 var server = HTTP.createServer(
 	function (request, response) {
-		response.setHeader('Access-Control-Allow-Origin', 'chrome-extension://mccjidcbgbbpbjdoappebgmmddohjofi/');
+		response.setHeader('Access-Control-Allow-Origin', 'chrome-extension://mccjidcbgbbpbjdoappebgmmddohjofi');
 
 		var body = "";
 
