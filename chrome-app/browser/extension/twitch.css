@@ -1,0 +1,5 @@
+.bonus {
+	height: calc(100% + 30px) !important;
+	height: -moz-calc(100% + 30px) !important;
+	height: -webkit-calc(100% + 30px) !important;
+}

@@ -348,6 +348,10 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/12/National_Football_League_2008.svg/196px-National_Football_League_2008.svg.png",
 		"urls": [
 		{
+			"source": "NFL Network",
+			"url": "http://nflnonline.nfl.com/nflno/console.jsp"
+		},
+		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/nfl"
 		}
@@ -389,6 +393,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Tennis-Channel-HD-217?format=HD"
+		},
+		{
+			"source": "Tennis Channel Everywhere",
+			"url": "http://www.tennischanneleverywhere.com/channel/tennis-channel"
 		}
 		]
 	},
@@ -466,6 +474,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Big-Ten-Network-HD-610-610?format=HD"
+		},
+		{
+			"source": "BTN2Go",
+			"url": "http://www.btn2go.com/channel/btnlive"
 		}
 		]
 	},
@@ -566,15 +578,19 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/ae?cmpid=livetv_a&e"
+		},
+		{
+			"source": "A&E",
+			"url": "http://www.aetv.com/live-stream"
 		}
 		]
 	},
 	{
-		"name": "abcfamily",
-		"alt": "ABC Family",
+		"name": "freeform",
+		"alt": "Freeform",
 		"channelId": "59615",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/ABC_Family_logo.svg/250px-ABC_Family_logo.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Freeform_temp.svg/250px-Freeform_temp.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -583,6 +599,23 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/abcfamily"
+		},
+		{
+			"source": "Freeform",
+			"url": "http://freeform.go.com/watch-live"
+		}
+		]
+	},
+	{
+		"name": "ahc",
+		"alt": "American Heroes Channel",
+		"channelId": "18284",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/American_Heroes_Channel_logo.svg/200px-American_Heroes_Channel_logo.svg.png",
+		"urls": [
+		{
+			"source": "American Heroes Channel",
+			"url": "https://www.discoverygo.com/watch/ahc/"
 		}
 		]
 	},
@@ -613,6 +646,23 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/amc?cmpid=livetv_amc"
+		},
+		{
+			"source": "AMC",
+			"url": "http://www.amc.com/livestream"
+		}
+		]
+	},
+	{
+		"name": "animal-planet",
+		"alt": "Animal Planet",
+		"channelId": "57394",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Animal_Planet_logo_%28black_and_green%29.svg/190px-Animal_Planet_logo_%28black_and_green%29.svg.png",
+		"urls": [
+		{
+			"source": "Animal Planet",
+			"url": "https://www.discoverygo.com/watch/animal-planet/"
 		}
 		]
 	},
@@ -621,7 +671,7 @@
 		"alt": "ASPiRE",
 		"channelId": "76126",
 		"color": "#000000",
-		"image": "http://www.aspire.tv/sites/all/themes/aspire/images/aspire-logo.png",
+		"image": "http://www.aspire.tv/wp-content/themes/tvcore/assets/images/logo.png",
 		"urls": [
 		{
 			"source": "TWC",
@@ -669,6 +719,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/BBC-America-HD-264?format=HD"
+		},
+		{
+			"source": "BBC America",
+			"url": "http://www.bbcamerica.com/livestream"
 		}
 		]
 	},
@@ -729,6 +783,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Bloomberg-HD-353?format=HD"
+		},
+		{
+			"source": "Bloomberg Television Live",
+			"url": "http://www.bloomberg.com/live"
 		}
 		]
 	},
@@ -746,6 +804,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/bravo"
+		},
+		{
+			"source": "Bravo Live",
+			"url": "http://www.bravotv.com/live"
 		}
 		]
 	},
@@ -762,11 +824,36 @@
 		},
 		{
 			"source": "Adult Swim",
-			"url": "http://tv.verizon.com/livetv/adultswim"
+			"url": "http://www.adultswim.com/videos/streams/live-simulcast-east"
 		},
 		{
 			"source": "Cartoon Network",
+			"url": "http://www.cartoonnetwork.com/livetv/index.html"
+		},
+		{
+			"source": "Adult Swim (FiOS)",
+			"url": "http://tv.verizon.com/livetv/adultswim"
+		},
+		{
+			"source": "Cartoon Network (FiOS)",
 			"url": "http://tv.verizon.com/livetv/cartoonnetwork"
+		}
+		]
+	},
+	{
+		"name": "cartoonnetwork-west",
+		"alt": "Cartoon Network (West)",
+		"channelId": "67703",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/220px-Cartoon_Network_2010_logo.svg.png",
+		"urls": [
+		{
+			"source": "Adult Swim (West)",
+			"url": "http://www.adultswim.com/videos/streams/live-simulcast-west"
+		},
+		{
+			"source": "Cartoon Network (West)",
+			"url": "http://www.cartoonnetwork.com/livetv/pacific/index.html"
 		}
 		]
 	},
@@ -808,6 +895,10 @@
 			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
 		},
 		{
+			"source": "CNBC",
+			"url": "http://www.cnbc.com/live-tv/"
+		},
+		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/cnbc"
 		}
@@ -831,6 +922,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/CNN-HD-202?format=HD"
+		},
+		{
+			"source": "CNN",
+			"url": "http://go.cnn.com/?stream=cnn"
 		}
 		]
 	},
@@ -852,6 +947,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=68065"
+		},
+		{
+			"source": "Cooking Channel",
+			"url": "http://watch.cookingchanneltv.com/live.html"
 		}
 		]
 	},
@@ -877,6 +976,19 @@
 		]
 	},
 	{
+		"name": "destination-america",
+		"alt": "Destination America",
+		"channelId": "60468",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Destinat_america_logo15.png/170px-Destinat_america_logo15.png",
+		"urls": [
+		{
+			"source": "Destination America",
+			"url": "https://www.discoverygo.com/watch/destination-america/"
+		}
+		]
+	},
+	{
 		"name": "discovery",
 		"alt": "Discovery Channel",
 		"channelId": "80399",
@@ -886,6 +998,23 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=80399"
+		},
+		{
+			"source": "Discovery Channel",
+			"url": "https://www.discoverygo.com/watch/discovery/"
+		}
+		]
+	},
+	{
+		"name": "discovery-life",
+		"alt": "Discovery Life",
+		"channelId": "16125",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discovery_Life_logo.svg/220px-Discovery_Life_logo.svg.png",
+		"urls": [
+		{
+			"source": "Discovery Life",
+			"url": "https://www.discoverygo.com/watch/discovery-life/"
 		}
 		]
 	},
@@ -903,6 +1032,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/disney"
+		},
+		{
+			"source": "Disney Channel",
+			"url": "http://watchdisneychannel.go.com/live"
 		}
 		]
 	},
@@ -920,6 +1053,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/disneyjnr"
+		},
+		{
+			"source": "Disney Junior",
+			"url": "http://watchdisneyjunior.go.com/live"
 		}
 		]
 	},
@@ -937,6 +1074,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/disneyxd"
+		},
+		{
+			"source": "Disney XD",
+			"url": "http://watchdisneyxd.go.com/live"
 		}
 		]
 	},
@@ -958,6 +1099,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=67375"
+		},
+		{
+			"source": "DIY Network",
+			"url": "http://watch.diynetwork.com/live.html"
 		}
 		]
 	},
@@ -975,6 +1120,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/e"
+		},
+		{
+			"source": "E! Now",
+			"url": "http://www.eonline.com/now/live"
 		}
 		]
 	},
@@ -1083,6 +1232,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/esquire"
+		},
+		{
+			"source": "Esquire",
+			"url": "http://tv.esquire.com/now/live"
 		}
 		]
 	},
@@ -1100,6 +1253,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Food-Network-HD-231?format=HD"
+		},
+		{
+			"source": "Food Network",
+			"url": "http://watch.foodnetwork.com/live.html"
 		}
 		]
 	},
@@ -1134,6 +1291,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Fox-Business-Network-HD-359?format=HD"
+		},
+		{
+			"source": "FOX Business",
+			"url": "http://video.foxnews.com/v/1251429410001/fox-business-network/?#sp=watch-live"
 		}
 		]
 	},
@@ -1172,6 +1333,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/FOX-News-HD-360?format=HD"
+		},
+		{
+			"source": "FOX News",
+			"url": "http://video.foxnews.com/v/1241186546001/fox-news-channel/?#sp=watch-live"
 		}
 		]
 	},
@@ -1185,6 +1350,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=70130"
+		},
+		{
+			"source": "France 24",
+			"url": "http://www.france24.com/en/livefeed"
 		}
 		]
 	},
@@ -1215,6 +1384,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/FX-HD-248?format=HD"
+		},
+		{
+			"source": "FX Networks",
+			"url": "http://www.fxnetworks.com/live-tv/fx/Eastern"
 		}
 		]
 	},
@@ -1228,12 +1401,29 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=59814"
+		},
+		{
+			"source": "FX Networks",
+			"url": "http://www.fxnetworks.com/live-tv/fx/Pacific"
 		}
 		]
 	},
 	{
 		"name": "fxm",
 		"alt": "FXM",
+		"channelId": "14988",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/220px-FXM_Logo.svg.png",
+		"urls": [
+		{
+			"source": "FX Networks",
+			"url": "http://www.fxnetworks.com/live-tv/fxm/Eastern"
+		}
+		]
+	},
+	{
+		"name": "fxm-west",
+		"alt": "FXM (West)",
 		"channelId": "70253",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/220px-FXM_Logo.svg.png",
@@ -1241,6 +1431,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=70253"
+		},
+		{
+			"source": "FX Networks",
+			"url": "http://www.fxnetworks.com/live-tv/fxm/Pacific"
 		}
 		]
 	},
@@ -1258,6 +1452,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/FXX-HD-259?format=HD"
+		},
+		{
+			"source": "FX Networks",
+			"url": "http://www.fxnetworks.com/live-tv/fxx/Pacific"
 		}
 		]
 	},
@@ -1271,6 +1469,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82571"
+		},
+		{
+			"source": "FX Networks",
+			"url": "http://www.fxnetworks.com/live-tv/fxx/Western"
 		}
 		]
 	},
@@ -1288,6 +1490,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/golf"
+		},
+		{
+			"source": "Golf Channel",
+			"url": "http://stream.golfchannel.com/"
 		}
 		]
 	},
@@ -1318,6 +1524,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/HGTV-HD-229?format=HD"
+		},
+		{
+			"source": "HGTV",
+			"url": "http://watch.hgtv.com/live.html"
 		}
 		]
 	},
@@ -1352,6 +1562,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/HLN-HD-204?format=HD"
+		},
+		{
+			"source": "HLN",
+			"url": "http://go.cnn.com/?stream=hln"
 		}
 		]
 	},
@@ -1365,6 +1579,10 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/history?cmpid=livetv_history-channel"
+		},		
+		{
+			"source": "History",
+			"url": "http://www.history.com/live-stream"
 		}
 		]
 	},
@@ -1378,6 +1596,10 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/ifc?cmpid=livetv_ifc"
+		},
+		{
+			"source": "IFC",
+			"url": "http://www.ifc.com/livestream"
 		}
 		]
 	},
@@ -1391,6 +1613,10 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/investigationdiscovery?cmpid=livetv_investigation-discovery"
+		},
+		{
+			"source": "Investigation Discovery",
+			"url": "https://www.discoverygo.com/watch/investigation-discovery/"
 		}
 		]
 	},
@@ -1434,6 +1660,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/msnbc"
+		},
+		{
+			"source": "MSNBC",
+			"url": "http://www.msnbc.com/now"
 		}
 		]
 	},
@@ -1481,6 +1711,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/nbcuniverso"
+		},
+		{
+			"source": "NBC Universo",
+			"url": "http://www.nbcuniverso.com/now/live"
 		}
 		]
 	},
@@ -1605,6 +1839,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/oxygen"
+		},
+		{
+			"source": "Oxygen",
+			"url": "http://www.oxygen.com/live"
 		}
 		]
 	},
@@ -1717,6 +1955,19 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=83098"
+		}
+		]
+	},
+	{
+		"name": "science",
+		"alt": "Science",
+		"channelId": "57390",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Science_chanell_2011logo.png/150px-Science_chanell_2011logo.png",
+		"urls": [
+		{
+			"source": "Science Channel",
+			"url": "https://www.discoverygo.com/watch/science/"
 		}
 		]
 	},
@@ -1885,6 +2136,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=79911"
+		},
+		{
+			"source": "TLC",
+			"url": "https://www.discoverygo.com/watch/tlc/"
 		}
 		]
 	},
@@ -1970,6 +2225,19 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/usa"
+		}
+		]
+	},
+	{
+		"name": "velocity",
+		"alt": "Velocity",
+		"channelId": "31046",
+		"color": "#000000",
+		"image": "https://en.wikipedia.org/wiki/File:Velocity_logo.png",
+		"urls": [
+		{
+			"source": "Velocity",
+			"url": "https://www.discoverygo.com/watch/velocity/"
 		}
 		]
 	},

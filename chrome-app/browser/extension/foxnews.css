@@ -1,0 +1,8 @@
+div.fox-video iframe {	
+	position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10000 !important;
+}

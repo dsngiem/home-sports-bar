@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="browser.css">
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="browser.js"></script>
+	<style>
+		iframe {
+			width: 100%;
+			height: 100%;
+			margin: 0px 0px;
+			padding: 0px;
+			border: 0px none transparent;
+			display: inline;
+			overflow: hidden;
+		}
+
+		#webview-1-overlay {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			display: none;
+			z-index: 10000000;
+		}
+
+		#webview-1-title {
+			position: absolute;
+			top: 0%;
+			right: 0%;
+			display: block;
+			z-index: 10000000;
+			margin-right: 10px;
+			color: white;
+			font-size: 48px;
+			font-family: helvetica;
+			font-weight: bold;
+			text-shadow: 0px 0px 3px #111111;
+		}
+	</style>
+
+  <body>
+
+	<div id="webview-1-title"></div>
+	<div id="webview-1-overlay">
+		<a href="index.html" target="webview-1">&#215;</a>
+	</div>	
+    <webview id="webview-1" src="http://watch.diynetwork.com/live.html" style="width:1280px; height:720px"></webview>
+    <!--<webview id="webview-2" src="http://watch.foodnetwork.com/live.html" style="width:640px; height:720px; left:640px"></webview>-->
+
+  </body>
+</html>

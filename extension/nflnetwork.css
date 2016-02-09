@@ -1,0 +1,7 @@
+#norz {
+	top: -60px !important;
+	height: calc(100% + 120px) !important;
+	height: -moz-calc(100% + 120px) !important;
+	height: -webkit-calc(100% + 120px) !important;
+	position: fixed;
+}

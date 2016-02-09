@@ -1,0 +1,25 @@
+#scorestrip, #statsBox, #footer, #snsBox, .playerHeader {
+	display: none !important;
+}
+
+#mainContainer #playBox #player #playerObject, #mainContainer #playBox #player #playerObjectInfo {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	margin: 0px !important;
+}
+
+#mainContainer #playBox #player #playerObject:hover{
+	position: fixed !important;
+	top: auto !important;
+	left: 0px !important;
+	bottom: 0px !important;
+}
+
+.content {
+	padding: 0px !important;
+}
+
+#mainContainer {
+	margin: 0px !important;
+}
