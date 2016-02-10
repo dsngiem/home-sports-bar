@@ -441,9 +441,9 @@ var handleMessage = function(response, parameters) {
 			return response.end("No player subscriber available.");
 		}
 
-		lastSubscriberFrames = null
-		lastSubscriberRequest = null
-		lastSubscriberResponse = null
+		subscribers[subscriberID].frames = null
+		subscribers[subscriberID].request = null
+		subscribers[subscriberID].response = null
 
 		response.writeHead(200)
 		return response.end("Message published to server.");
