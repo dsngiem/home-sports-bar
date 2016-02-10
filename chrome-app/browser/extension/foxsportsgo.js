@@ -16,7 +16,7 @@
 // }
 
 var addBonus = function() {
-	if (document.getElementById('p0').getAttribute('enabled') == 'true') {
+	if (document.getElementById('p0') != null && document.getElementById('p0').getAttribute('enabled') == 'true') {
 		var p0 = document.getElementById('p0');
 		p0.classList.add("bonus");		
 	} else {

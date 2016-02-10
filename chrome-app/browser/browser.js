@@ -262,7 +262,7 @@ function closeBoxes() {
       var errorCount = 0;
       var timeout = 1;
       var titleTimeout;
-      var subscriberID = "HSB-webview";
+      var subscriberID = "HSB";
 
       if (_frames == 1) {
         //$("#webview-1-title").html(subscriberID)
@@ -329,7 +329,7 @@ function closeBoxes() {
               var initial_backoff = 700;
               var multiply_factor = 5.0;
               var jitter_factor = 0.4;
-              var maximum_backoff = 15 * 60 * 1000;
+              var maximum_backoff = 1 * 60 * 1000;
 
               if (errorCount > 2) {
                 timeout = timeout * multiply_factor ^ (errorCount - 1)
