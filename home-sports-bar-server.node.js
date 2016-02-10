@@ -1100,7 +1100,7 @@ var fetchGuideFsgo = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for fsgo sent.")
-			response.writeHead(200, {'Content-Type': 'application'});
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(scheduleBody)
 		})
 
