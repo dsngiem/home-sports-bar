@@ -386,7 +386,7 @@ var addPublisher = function(response, parameters) {
 		if (lastSubscriberFrames) {
 			result["frames"] = lastSubscriberFrames
 
-			response.writeHead(200, {'Content-Type', 'application/json'})
+			response.writeHead(200, {'Content-Type': 'application/json'})
 			return response.end(JSON.stringify(result))
 		}	
 	}
