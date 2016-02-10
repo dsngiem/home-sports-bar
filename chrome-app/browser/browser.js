@@ -4,7 +4,7 @@ var isLoading = false;
 onload = function() {
   var webview1 = document.querySelector('#webview-1');
   //var webview2 = document.querySelector('#webview-2');
-  //doLayout();
+  doLayout();
 
   var version = navigator.appVersion.substr(navigator.appVersion.lastIndexOf('Chrome/') + 7);
   var match = /([0-9]*)\.([0-9]*)\.([0-9]*)\.([0-9]*)/.exec(version);
@@ -18,8 +18,6 @@ onload = function() {
   webview1.addEventListener('loadredirect', handleLoadRedirect);
   webview1.addEventListener('loadcommit', handleLoadCommit);
 
-  //add manifest script for use in setting content scripts and rules
-
   var baseExtensionUrl = "/extension/";
   $.getJSON('/extension/manifest.json', function( extensionManifest ) {
     extensionManifest.content_scripts.forEach( function(element, index, array) {
@@ -29,11 +27,13 @@ onload = function() {
           matches: element.matches,
           css: { files: element.css },
           js: { files: element.js },
-          run_at: 'document_end'
+          run_at: 'document_start'
         }
       ]);
     });
   });
+
+  //add manifest script for use in setting content scripts and rules
 
   // webview2.addEventListener('exit', handleExit);
   // webview2.addEventListener('loadstart', handleLoadStart);
@@ -64,7 +64,7 @@ function doLayout() {
   var webview = document.querySelector('#webview-1');
   var windowWidth = document.documentElement.clientWidth;
   var windowHeight = document.documentElement.clientHeight;
-  var webviewWidth = windowWidth / 2;
+  var webviewWidth = windowWidth;
   var webviewHeight = windowHeight;
 
   webview.style.width = webviewWidth + 'px';
@@ -146,7 +146,8 @@ function handleLoadCommit(event) {
 
   // document.querySelector('#location').value = event.url;
 
-  var webview = document.querySelector('webview');
+  var webview1 = document.querySelector('#webview-1');
+
   // document.querySelector('#back').disabled = !webview.canGoBack();
   // document.querySelector('#forward').disabled = !webview.canGoForward();
   closeBoxes();
@@ -264,7 +265,7 @@ function closeBoxes() {
       var subscriberID = "HSB-webview";
 
       if (_frames == 1) {
-        $("#webview-1-title").html(subscriberID)
+        //$("#webview-1-title").html(subscriberID)
       } else {
         $("#webview-2-title").html(subscriberID)
       }
@@ -312,7 +313,7 @@ function closeBoxes() {
               console.log("response received\nframe: " + response["frame"] + "\nurl: " + response["url"] + "\nalt: " + response["alt"])
 
               errorCount = 0
-              timeout = 1
+              timeout = 700;
 
               clearTimeout(titleTimeout)
               $("#webview-" + frame + "-title").html(alt).show();
@@ -325,10 +326,15 @@ function closeBoxes() {
             .fail(function (jqXHR, textStatus, errorThrown) {
               errorCount++
 
-              if (errorCount > 20) {
-                timeout = timeout * 5
-                if (timeout > 10000) {
-                  timeout = 10000
+              var initial_backoff = 700;
+              var multiply_factor = 5.0;
+              var jitter_factor = 0.4;
+              var maximum_backoff = 15 * 60 * 1000;
+
+              if (errorCount > 2) {
+                timeout = timeout * multiply_factor ^ (errorCount - 1)
+                if (timeout > maximum_backoff) {
+                  timeout = maximum_backoff
                 }
 
                 console.log(errorCount + " " + timeout)
@@ -357,13 +363,6 @@ function closeBoxes() {
             $("#webview-" + frameNumber + "-overlay").hide();
           });
       };
-
-      $(window).unload(function () {
-        var post_data = {"subscriberID": subscriberID}
-
-        subscribe = function () {}
-        $.post("/api/subscribe/delete", post_data)
-      })
 
       subscribe();
 

@@ -8,8 +8,8 @@
     "content_scripts": [
     {
         "matches": ["http://xfinitytv.comcast.net/live/network/*","http://tvgo.xfinity.com/live/network/*"],
-        "css": ["xfinity.css"],
-        "js": ["xfinity.js"],
+        "css": ["extension/xfinity.css"],
+        "js": ["extension/xfinity.js"],
         "all_frames": true
     },
     {
@@ -22,296 +22,296 @@
             "http://tvgo.comcast.net/live/network/abcfamily*",
             "http://xfinitytv.comcast.net/live/network/disney*",
             "http://tvgo.comcast.net/live/network/disney*"],
-        "js": ["xfinity-espn.js"],
+        "js": ["extension/xfinity-espn.js"],
         "all_frames": true
     },
     {
         "matches": ["http://xfinitytv.comcast.net/watch-live-tv/*"],
-        "js": ["xfinity-list.js"],
-        "css": ["xfinity-list.css"],
+        "js": ["extension/xfinity-list.js"],
+        "css": ["extension/xfinity-list.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.foxsports.com/foxsportsgo/*"],
-        "js": ["foxsportsgo.js"],
-        "css": ["foxsportsgo.css"],
+        "js": ["extension/foxsportsgo.js"],
+        "css": ["extension/foxsportsgo.css"],
         "all_frames": true
     },
     {
         "matches": ["http://live.mlssoccer.com/mlsmdl/*"],
-        "js": ["mls.js"],
-        "css": ["mls.css"],
+        "js": ["extension/mls.js"],
+        "css": ["extension/mls.css"],
         "all_frames": true
     },
     {
         "matches": ["http://live.mlssoccer.com/mlsmdl/matchembed/*", "https://live.mlssoccer.com/mlsmdl/secure/*"],
-        "js": ["mlsembed.js"],
-        "css": ["mlsembed.css"],
+        "js": ["extension/mlsembed.js"],
+        "css": ["extension/mlsembed.css"],
         "all_frames": true
     },
     {
         "matches": ["http://espn.go.com/watchespn/player/*"],
-        "js": ["espn.js"],
-        "css": ["espn.css"],
+        "js": ["extension/espn.js"],
+        "css": ["extension/espn.css"],
         "all_frames": true
     },
     {
         "matches": ["http://espn.go.com/watchespn/index/*"],
-        "js": ["watchespn.js"],
+        "js": ["extension/watchespn.js"],
         "all_frames": true
     },
     {
         "matches": ["http://stream.nbcsports.com/*/*", "http://stream.golfchannel.com/*", "http://stream.nbcdeportes.com/*"],
-        "js": ["nbcsn.js"],
-        "css": ["nbcsn.css"],
+        "js": ["extension/nbcsn.js"],
+        "css": ["extension/nbcsn.css"],
         "all_frames": true
     },
     {
         "matches": ["http://entertainment.verizon.com/tv/3/player/*"],
-        "js": ["fios.js"],
-        "css": ["fios.css"],
+        "js": ["extension/fios.js"],
+        "css": ["extension/fios.css"],
         "all_frames": true
     },
     {
         "matches": ["http://tv.verizon.com/livetv*"],
-        "js": ["fios-live.js"],
-        "css": ["fios-live.css"],
+        "js": ["extension/fios-live.js"],
+        "css": ["extension/fios-live.css"],
         "all_frames": true
     },
     {
         "matches": ["http://tv.verizon.com/livetv/abc*"],
-        "js": ["abc.js"],
+        "js": ["extension/abc.js"],
         "all_frames": true
     },
     {
         "matches": ["http://tve-common.nbcuni.com/web/restricted/*"],
-        "js": ["nbcuni.js"],
-        "css": ["nbcuni.css"],
+        "js": ["extension/nbcuni.js"],
+        "css": ["extension/nbcuni.css"],
         "all_frames": true
     },
     {
         "matches": ["http://player.theplatform.com/*"],
-        "js": ["nbcuni.js"],
-        "css": ["nbcuni.css"],
+        "js": ["extension/nbcuni.js"],
+        "css": ["extension/nbcuni.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.foxsoccer2go.com/watchlive/*"],
-        "js": ["foxsoccer.js"],
-        "css": ["foxsoccer.css"],
+        "js": ["extension/foxsoccer.js"],
+        "css": ["extension/foxsoccer.css"],
         "all_frames": true
     },
     {
         "matches": ["http://gofirstrow.eu/*"],
-        "css": ["firstrow.css"],
+        "css": ["extension/firstrow.css"],
         "all_frames": true
     },
     {
         "matches": ["http://freeform.go.com/watch-live"],
-        "css": ["freeform.css"],
+        "css": ["extension/freeform.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.bloomberg.com/live"],
-        "css": ["bloomberg.css"],
+        "css": ["extension/bloomberg.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.bbcamerica.com/livestream"],
-        "css": ["bbcamerica.css"],
+        "css": ["extension/bbcamerica.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.amc.com/livestream"],
-        "css": ["amc.css"],
-        "js": ["amc.js"],
+        "css": ["extension/amc.css"],
+        "js": ["extension/amc.js"],
         "all_frames": true
     },
     {
         "matches": ["http://www.fxnetworks.com/live-tv/*", "http://www.ifc.com/livestream"],
-        "css": ["fxnetworks.css"],
+        "css": ["extension/fxnetworks.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.btn2go.com/channel/btnlive"],
-        "css": ["btn2go.css"],
+        "css": ["extension/btn2go.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.bravotv.com/live", "http://www.cnbc.com/live-tv/", "http://www.eonline.com/now/live", "http://tv.esquire.com/now/live", "http://www.msnbc.com/now", "http://www.nbcuniverso.com/now/live", "http://www.oxygen.com/live"],
-        "css": ["bravo.css"],
+        "css": ["extension/bravo.css"],
         "all_frames": true
     },
     {
         "matches": ["http://video.foxnews.com/v/1241186546001/fox-news-channel/*", "http://video.foxnews.com/v/1251429410001/fox-business-network/*"],
-        "css": ["foxnews.css"],
+        "css": ["extension/foxnews.css"],
         "all_frames": true
     },
     {
         "matches": ["http://go.cnn.com/?stream=*"],
-        "css": ["cnn.css"],
+        "css": ["extension/cnn.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.france24.com/en/livefeed"],
-        "css": ["france24.css"],
+        "css": ["extension/france24.css"],
         "all_frames": true
     },
     {
         "matches": ["http://watchdisneychannel.go.com/live", "http://watchdisneyjunior.go.com/live", "http://watchdisneyxd.go.com/live"],
-        "css": ["disneychannel.css"],
+        "css": ["extension/disneychannel.css"],
         "all_frames": true
     },
     {
         "matches": ["http://watch.cookingchanneltv.com/live.html", "http://watch.diynetwork.com/live.html", "http://watch.foodnetwork.com/live.html", "http://watch.hgtv.com/live.html"],
-        "css": ["cooking.css"],
+        "css": ["extension/cooking.css"],
         "all_frames": true
     },
     {
         "matches": ["http://watch.diynetwork.com/live.html"],
-        "js": ["cooking.js"],
+        "js": ["extension/cooking.js"],
         "all_frames": true
     },
     {
         "matches": ["https://www.discoverygo.com/watch/*"],
-        "css": ["discovery.css"],
+        "css": ["extension/discovery.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.tennischanneleverywhere.com/channel/tennis-channel"],
-        "css": ["tennischannel.css"],
+        "css": ["extension/tennischannel.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.aetv.com/live-stream", "http://www.history.com/live-stream"],
-        "css": ["aetv.css"],
+        "css": ["extension/aetv.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.adultswim.com/videos/streams/*", "http://www.cartoonnetwork.com/livetv/*"],
-        "css": ["cn.css"],
+        "css": ["extension/cn.css"],
         "all_frames": true
     },
     {
         "matches": ["http://nflnonline.nfl.com/nflno/console.jsp"],
-        "css": ["nflnetwork.css"],
+        "css": ["extension/nflnetwork.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.tbs.com/watchtbs/*"],
-        "js": ["tbs.js"],
-        "css": ["tbs.css"],
+        "js": ["extension/tbs.js"],
+        "css": ["extension/tbs.css"],
         "all_frames": true
     },
     {
         "matches": ["http://gamecenter.nhl.com/nhlgc/gcl/*"],
-        "js": ["nhl.js"],
-        "css": ["nhl.css"],
+        "js": ["extension/nhl.js"],
+        "css": ["extension/nhl.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.nhl.com/gamecenter/en/*"],
-        "js": ["nhlgc.js"],
-        "css": ["nhlgc.css"],
+        "js": ["extension/nhlgc.js"],
+        "css": ["extension/nhlgc.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.nhl.com/tv/*", "https://www.nhl.com/tv/*"],
-        "js": ["nhltv.js"],
-        "css": ["nhltv.css"],
+        "js": ["extension/nhltv.js"],
+        "css": ["extension/nhltv.css"],
         "all_frames": true
     },
     {
         "matches": ["https://www.directv.com/Channels/*", "https://www.directv.com/entertainment/video/*", "http://www.directv.com/entertainment/video/*"],
-        "js": ["dtv.js"],
-        "css": ["dtv.css"],
+        "js": ["extension/dtv.js"],
+        "css": ["extension/dtv.css"],
         "all_frames": true
     },
     {
         "matches": ["http://m.mlb.com/network/*"],
-        "js": ["mlb.js"],
-        "css": ["mlb.css"],
+        "js": ["extension/mlb.js"],
+        "css": ["extension/mlb.css"],
         "all_frames": true
     },
     {
         "matches": ["http://premium.nba.com/pr/leaguepass/app/*"],
-        "js": ["nba.js"],
-        "css": ["nba.css"],
+        "js": ["extension/nba.js"],
+        "css": ["extension/nba.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.twitch.tv/*/embed"],
-        "js": ["twitch-embed.js"],
-        "css": ["twitch.css"],
+        "js": ["extension/twitch-embed.js"],
+        "css": ["extension/twitch.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.twitch.tv/*"],
-        "js": ["twitch.js"],
-        "css": ["twitch.css"],
+        "js": ["extension/twitch.js"],
+        "css": ["extension/twitch.css"],
         "all_frames": true
     },
     {
         "matches": ["https://video2.timewarnercable.com/liveTv*", "https://video2.timewarnercable.com/auth*"],
-        "js": ["twc.js"],
-        "css": ["twc.css"],
+        "js": ["extension/twc.js"],
+        "css": ["extension/twc.css"],
         "all_frames": true
     },
     {
         "matches": ["https://player.video.com/video/*"],
-        "js": ["thelp.js"],
+        "js": ["extension/thelp.js"],
         "all_frames": true
     },
     {
         "matches": ["http://s546271843.onlinehome.us/*"],
-        "js": ["thelp.js"],
-        "css": ["thelp.css"],
+        "js": ["extension/thelp.js"],
+        "css": ["extension/thelp.css"],
         "all_frames": true
     },
     {
         "matches": ["http://www.nbc.com/live*"],
-        "css": ["nbclive.css"],
-        "js": ["nbclive.js"],
+        "css": ["extension/nbclive.css"],
+        "js": ["extension/nbclive.js"],
         "all_frames": true
     },   
     {
         "matches": ["http://abc.go.com/watch-live*"],
-        "css": ["abc-live.css"],
+        "css": ["extension/abc-live.css"],
         "all_frames": true
     },    
     {
         "matches": ["http://pix11.com/on-air/live-streaming/*"],
-        "css": ["pix-11.css"],
+        "css": ["extension/pix-11.css"],
         "all_frames": true
     },    
     {
         "matches": ["https://idp.optimum.net/idp.optimum.net/SSOPOST/metaAlias/realm4/idpv2"],
-        "js": ["logins/optimum.js"],
+        "js": ["extension/logins/optimum.js"],
         "all_frames": true
     },
     {
         "matches": ["https://ids.rr.com/nidp/saml2/sso"],
-        "js": ["logins/twc.js"],
+        "js": ["extension/logins/twc.js"],
         "all_frames": true
     },
     {
         "matches": ["https://video2.timewarnercable.com/"],
-        "js": ["logins/twc-live.js"],
+        "js": ["extension/logins/twc-live.js"],
         "all_frames": true
     },
     {
         "matches": ["https://signin.verizon.com/sso/VOLPortalLogin*"],
-        "js": ["logins/verizon.js"],
+        "js": ["extension/logins/verizon.js"],
         "all_frames": true
     },
     {
         "matches": ["https://login.comcast.net/login*"],
-        "js": ["logins/xfinity.js"],
+        "js": ["extension/logins/xfinity.js"],
         "all_frames": true
     },
     {
         "matches": ["http://www.nhl.com/gamecenter/en/*"],
-        "js": ["logins/nhlgc-login.js"],
+        "js": ["extension/logins/nhlgc-login.js"],
         "all_frames": true
     }
     ]
