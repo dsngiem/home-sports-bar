@@ -256,7 +256,7 @@ function closeBoxes() {
 }
 
 
-    _frames = 1
+    var _frames = 1
 
     $(document).ready(function () {
       var errorCount = 0;

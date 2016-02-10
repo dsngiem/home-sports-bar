@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 		var publish = function (post_data) {
 			$.post("/api/publish", post_data).done(function (response) {
-				var jsonResponse = JSON.parse(response)
+				var jsonResponse = response
 				frames = jsonResponse.frames
 				subscriberIDs = jsonResponse.subscriberIDs
 
