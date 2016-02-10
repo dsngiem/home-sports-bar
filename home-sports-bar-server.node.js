@@ -446,7 +446,7 @@ var handleMessage = function(response, parameters) {
 			return response.end("No player subscriber available.");
 		}
 
-		subscribers[subscriberID].frames = null
+		subscribers[subscriberID].frames = lastSubscriberFrames
 		subscribers[subscriberID].request = null
 		subscribers[subscriberID].response = null
 
