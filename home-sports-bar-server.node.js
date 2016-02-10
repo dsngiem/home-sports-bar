@@ -577,8 +577,7 @@ var fetchGuide = function(response) {
 			console.log("Program guide sent.")
 			console.log(scheduleRequest.headers)
 			console.log(scheduleResponse.headers)
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(scheduleBody)
 		})
 
@@ -609,8 +608,7 @@ var fetchGuideChannel = function(response, channel) {
 
 		console.log("Send program guide for channel " + channel + " from cache...")
 
-		response.setHeader('Content-Type', 'application/json')
-		response.writeHead(200);
+		response.writeHead(200, {'Content-Type': 'application/json'});
 		return response.end(JSON.stringify(result))
 	}
 
@@ -674,8 +672,7 @@ var fetchGuideChannel = function(response, channel) {
 					  "programs": programGuide[channel]}
 
 			if (response) {
-				response.setHeader('Content-Type', 'application/json')
-				response.writeHead(200);
+				response.writeHead(200, {'Content-Type': 'application/json'});
 				return response.end(JSON.stringify(result))
 			}
 		})
@@ -722,8 +719,7 @@ var fetchGuideNbcsn = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nbcsn sent.")
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(scheduleBody)
 		})
 
@@ -779,8 +775,7 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 			console.log(uri)
 			//console.log(scheduleBody)
 
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(JSON.stringify(result))
 		})
 
@@ -836,8 +831,7 @@ var fetchGuideNhl = function(response, parameters) {
 			scheduleBody = scheduleBody.trim()
 			scheduleBody = scheduleBody.slice(0, -1)
 
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(scheduleBody)
 		})
 
@@ -890,8 +884,7 @@ var fetchGuideNhlTv = function(response, parameters) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nhl tv sent.")
 
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(scheduleBody)
 		})
 
@@ -990,8 +983,7 @@ var fetchGuideMls = function(response) {
 
 			//console.log(result)
 
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(JSON.stringify(result))
 		})
 
@@ -1061,8 +1053,7 @@ var fetchGuideWatchEspn = function(response) {
 
 			//console.log(result)
 
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(JSON.stringify(result))
 		})
 
@@ -1108,8 +1099,7 @@ var fetchGuideFsgo = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for fsgo sent.")
-			response.setHeader('Content-Type', 'application')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application'});
 			return response.end(scheduleBody)
 		})
 
@@ -1167,8 +1157,7 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 
 			//console.log(scheduleBody)
 
-			response.setHeader('Content-Type', 'application/json')
-			response.writeHead(200);
+			response.writeHead(200, {'Content-Type': 'application/json'});
 			return response.end(scheduleBody)
 		})
 
