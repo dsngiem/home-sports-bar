@@ -292,7 +292,7 @@ function closeBoxes() {
         setTimeout( function() {
           $.ajax({
             type: "POST",
-            url: "http://localhost:8888/api/subscribe", 
+            url: "https://peaceful-forest-5547.herokuapp.com/api/subscribe", 
             data: post_data,
             dataType: "json",
             timeout: 30000 //every thirty seconds
