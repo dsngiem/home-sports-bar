@@ -64,6 +64,10 @@
 		{
 			"source": "NBC Live",
 			"url": "http://www.nbc.com/live"
+		},
+		{
+			"source": "DirecTV",
+			"url": "http://www.directv.com/entertainment/video/4"
 		}
 		]
 	},
@@ -663,6 +667,10 @@
 		{
 			"source": "Animal Planet",
 			"url": "https://www.discoverygo.com/watch/animal-planet/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/animalplanet"
 		}
 		]
 	},
@@ -795,7 +803,7 @@
 		"alt": "Bravo",
 		"channelId": "58625",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Bravo_TV.svg/250px-Bravo_TV.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bravo_TV.svg/250px-Bravo_TV.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -863,10 +871,14 @@
 		"channelId": "62420",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Comedy_Central_2011_Logo.svg/200px-Comedy_Central_2011_Logo.svg.png",
-		"urls": [		
+		"urls": [
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Comedy-Central-HD-249?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/comedycentral"
 		}
 		]
 	},
@@ -1002,6 +1014,10 @@
 		{
 			"source": "Discovery Channel",
 			"url": "https://www.discoverygo.com/watch/discovery/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/discovery"
 		}
 		]
 	},
@@ -1303,7 +1319,7 @@
 		"alt": "FOX Deportes",
 		"channelId": "72189",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Fox_deportes_logo.png/150px-Fox_deportes_logo.png",
+		"image": "http://cdn.livesoccertv.com/images/channels/thumbnails/fox-deportes.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -1367,6 +1383,19 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Fuse-HD-339?format=HD"
+		}
+		]
+	},
+	{
+		"name": "fusion",
+		"alt": "fusion",
+		"channelId": "83173",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fusion_TV_2013_logo.png/150px-Fusion_TV_2013_logo.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Fusion-HD-342?format=HD"
 		}
 		]
 	},
@@ -1477,6 +1506,19 @@
 		]
 	},
 	{
+		"name": "gsn",
+		"alt": "Game Show Network",
+		"channelId": "14909",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Game_show_netw_logo15.png/150px-Game_show_netw_logo15.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/gsn?cmpid=livetv_gsn_onnow"
+		}
+		]
+	},
+	{
 		"name": "golf",
 		"alt": "Golf Channel",
 		"channelId": "61854",
@@ -1507,6 +1549,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Hallmark-Channel-HD-312?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/hallmark"
 		}
 		]
 	},
@@ -1698,6 +1744,19 @@
 		]
 	},
 	{
+		"name": "mtvlive",
+		"alt": "MTV Live",
+		"channelId": "49141",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/14/MTV_Live_Logo.png/150px-MTV_Live_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/palladia?cmpid=livetv_palladia_onnow"
+		}
+		]
+	},
+	{
 		"name": "univo",
 		"alt": "NBC Universo",
 		"channelId": "91588",
@@ -1822,6 +1881,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/OWN-HD-279?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/own"
 		}
 		]
 	},
@@ -1873,19 +1936,6 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/pac12networklosangeles?cmpid=livetv_pac-12-los-angeles"
-		}
-		]
-	},
-	{
-		"name": "palladia",
-		"alt": "Palladia",
-		"channelId": "49141",
-		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/8/8f/Palladia.png",
-		"urls": [
-		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/palladia?cmpid=livetv_palladia"
 		}
 		]
 	},
@@ -1968,6 +2018,10 @@
 		{
 			"source": "Science Channel",
 			"url": "https://www.discoverygo.com/watch/science/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/science"
 		}
 		]
 	},
@@ -1981,6 +2035,10 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Spike-HD-241?format=HD"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/spike"
 		}
 		]
 	},
@@ -2140,6 +2198,10 @@
 		{
 			"source": "TLC",
 			"url": "https://www.discoverygo.com/watch/tlc/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/tlc?cmpid=livetv_tlc_onnow"
 		}
 		]
 	},
@@ -2238,6 +2300,10 @@
 		{
 			"source": "Velocity",
 			"url": "https://www.discoverygo.com/watch/velocity/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/velocity"
 		}
 		]
 	},

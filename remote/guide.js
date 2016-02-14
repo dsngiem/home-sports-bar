@@ -985,18 +985,35 @@ $(document).ready(function() {
 			}, 60000)
 		}
 
+		var queue = [];
+		var fired = [];
+
 		var getGuideChannel = function(channel) {	
+			if (fired.length >= 10) {
+				queue.push(channel);
 
-			post_data = {
-				"channel": channel
-			}		
+			} else {
+				fired.push(channel);
 
-			$.post("/api/guide/channel", post_data).done(function (response) {
-				console.log(response)			
-				channelGuide[response.channel] = response.programs
-				channelGuideFetchDate[response.channel] = response.fetchDate
-				postCurrentProgram(response.channel)
-			})
+				post_data = {
+					"channel": channel
+				}		
+
+				$.post("/api/guide/channel", post_data).done(function (response) {
+					console.log(response)			
+					channelGuide[response.channel] = response.programs
+					channelGuideFetchDate[response.channel] = response.fetchDate
+					postCurrentProgram(response.channel)
+
+				}).always(function(response) {
+					fired.splice(fired.indexOf(channel), 1);
+
+					if (queue.length > 0) {
+						var queuedChannel = queue.shift();
+						getGuideChannel(queuedChannel);
+					}
+				});			
+			}
 		}
 
 		var postCurrentProgram = function (channel) {

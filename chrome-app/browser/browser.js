@@ -33,6 +33,16 @@ onload = function() {
     });
   });
 
+  chrome.contextMenus.create({"title": "Reload", "contexts": ["all"], "onclick": 
+    function() {
+      if (isLoading) {
+        webview.stop();
+      } else {
+        webview.reload();
+      }
+    }
+  });
+
   //add manifest script for use in setting content scripts and rules
 
   // webview2.addEventListener('exit', handleExit);
@@ -53,6 +63,7 @@ onload = function() {
   // ]);
 
   window.addEventListener('keydown', handleKeyDown);
+  fullscreenWindow();
 };
 
 function navigateTo(url) {
@@ -281,10 +292,10 @@ function closeBoxes() {
         setTimeout( function() {
           $.ajax({
             type: "POST",
-            url: "https://peaceful-forest-5547.herokuapp.com/api/subscribe", 
+            url: "http://localhost:8888/api/subscribe", 
             data: post_data,
             dataType: "json",
-            timeout: 36000000 //every ten minutes
+            timeout: 30000 //every thirty seconds
             })
             .done(function (response) {
               if (response.hasOwnProperty('frames')) {
@@ -329,7 +340,7 @@ function closeBoxes() {
               var initial_backoff = 700;
               var multiply_factor = 5.0;
               var jitter_factor = 0.4;
-              var maximum_backoff = 1 * 60 * 1000;
+              var maximum_backoff = 1 * 30 * 1000;
 
               if (errorCount > 2) {
                 timeout = timeout * multiply_factor ^ (errorCount - 1)
@@ -338,6 +349,8 @@ function closeBoxes() {
                 }
 
                 console.log(errorCount + " " + timeout)
+                console.log(textStatus)
+                console.log(errorThrown)
               }
             })
             .always(function (){
@@ -364,7 +377,9 @@ function closeBoxes() {
           });
       };
 
-      subscribe();
+      setTimeout( function() { 
+        subscribe()
+      }, 5000);
 
       function endsWith(str, suffix) {
           return str.indexOf(suffix, str.length - suffix.length) !== -1;

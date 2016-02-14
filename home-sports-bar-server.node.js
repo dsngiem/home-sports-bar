@@ -242,11 +242,7 @@ var file = new(NS.Server)();
 var server = HTTP.createServer(
 	function (request, response) {
 		response.setHeader('Access-Control-Allow-Origin', 'chrome-extension://mccjidcbgbbpbjdoappebgmmddohjofi');
-		response.setHeader('Content-Type', 'application/json');
-		response.setTimeout(25000, function(){
-			response.writeHead(200);
-			response.end();
-		});
+		//response.setHeader('Content-Type', 'application/json');		
 
 		var body = "";
 
@@ -394,7 +390,7 @@ var addPublisher = function(response, parameters) {
 	result["frames"] = 0
 	result["subscriberIDs"] = getKeys(subscribers)
 
-	response.writeHead(200)
+	response.writeHead(200, {"Content-Type": "application/json"})
 	return response.end(JSON.stringify(result))
 }
 
@@ -529,6 +525,12 @@ var addSubscriber = function(request, response, parameters) {
 	subscribers[subscriberID]["frames"] = Number(parameters["frames"])
 	subscribers[subscriberID]["request"] = request
 	subscribers[subscriberID]["response"] = response
+
+	response.setTimeout(25000, function(){
+		response.writeHead(200);
+		response.write("{}");
+		clearOldSubscriber(subscriberID);
+	});
 
 	//console.log(subscribers[subscriberID])
 	console.log("Subscriber ".yellow + subscriberID +" waiting for message.".yellow)
@@ -672,8 +674,8 @@ var fetchGuideChannel = function(response, channel) {
 					  "fetchDate": programGuideFetchDate[channel],
 					  "programs": programGuide[channel]}
 
-			if (response) {
-				response.writeHead(200, {'Content-Type': 'application/json'});
+			if (response != null) {
+				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
 				return response.end(JSON.stringify(result))
 			}
 		})
@@ -1185,8 +1187,8 @@ var fetchPreCachePrograms = function() {
 
 		networks = JSON.parse(data)
 		networks.networks.forEach(function(currentValue, index, array) {
-			channelId = currentValue.channelId
-			fetchGuideChannel(null, channelId)
+			channelId = currentValue.channelId;
+			fetchGuideChannel(null, channelId);
 		})
 
 		console.log('Guide prefetched.'.yellow)
