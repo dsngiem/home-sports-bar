@@ -61,7 +61,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://stream.nbcsports.com/*/*", "http://stream.golfchannel.com/*", "http://stream.nbcdeportes.com/*"],
+        "matches": ["http://stream.nbcsports.com/*/*", "http://stream.nbcsports.com/*", "http://stream.golfchannel.com/*", "http://stream.nbcdeportes.com/*"],
         "js": ["extension/nbcsn.js"],
         "css": ["extension/nbcsn.css"],
         "all_frames": true

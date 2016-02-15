@@ -32,9 +32,10 @@ setTimeout(function () {
 	}
 }, 30000)
 
-
-var p0 = document.getElementById('flash-content-wrapper');
-p0.classList.add("bonus");
+setTimeout(function() {
+	var p0 = document.getElementById('flash-content-wrapper');
+	p0.classList.add("bonus");
+}, 5000)
 
 document.documentElement.onmouseover = function() {
 	var p0 = document.getElementById('flash-content-wrapper');

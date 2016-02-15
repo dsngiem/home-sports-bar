@@ -19,7 +19,7 @@ onload = function() {
   webview1.addEventListener('loadcommit', handleLoadCommit);
 
   var baseExtensionUrl = "/extension/";
-  $.getJSON('/extension/manifest.json', function( extensionManifest ) {
+  $.getJSON('/extension/extension-manifest.json', function( extensionManifest ) {
     extensionManifest.content_scripts.forEach( function(element, index, array) {
       webview1.addContentScripts([
         {
@@ -293,6 +293,7 @@ function closeBoxes() {
           $.ajax({
             type: "POST",
             url: "https://peaceful-forest-5547.herokuapp.com/api/subscribe", 
+            //url: "http://localhost:8888/api/subscribe", 
             data: post_data,
             dataType: "json",
             timeout: 30000 //every thirty seconds
