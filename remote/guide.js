@@ -26,7 +26,7 @@ $(document).ready(function() {
 					}
 
 					if (subscriberIDs.length == 0) {
-						var html = '<li style="width: 200px" id="noAvailable"><div style="position: relative; top: 50%; transform: translateY(-50%);	-webkit-transform: translateY(-50%);"><p>No available players</p></div></li>'
+						var html = '<li style="width: 200px" class="noAvailable"><div style="position: relative; top: 50%; transform: translateY(-50%);	-webkit-transform: translateY(-50%);"><p>No available players</p></div></li>'
 						$("#frames").append(html)
 					}
 				} else {
@@ -1174,7 +1174,9 @@ $(document).ready(function() {
 			publish()
 		})
 
-		$("#noAvailable").click(function() {
+		$(document).on('click', '.noAvailable', function (event) {
+			console.log("no available clicked: ")
+
 			$("#numFrames").hide()
 			$("#frames").html("")
 
