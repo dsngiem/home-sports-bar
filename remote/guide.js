@@ -1165,6 +1165,17 @@ $(document).ready(function() {
 				})
 		})
 
+		$("#numFrames-8").click(function() {
+			var post_data = {"frames": 8, "subscriberID": subscriberID}
+
+			$.post("/api/publish/frames", post_data)
+				.done( function(response) {
+					frames = 8
+					selectedFrame = 1
+					frameSet();			
+				})
+		})
+
 		$(".numFrames-back").click(function() {
 			$("#numFrames").hide()
 			$("#frames").html("")

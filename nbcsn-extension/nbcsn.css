@@ -1,0 +1,82 @@
+.bonus {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    z-index: 1000000 !important;
+    left: 0px !important;
+    top: 0px !important;  
+    cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjbQg61aAAAADUlEQVQYV2P4//8/IwAI/QL/+TZZdwAAAABJRU5ErkJggg=='),
+    url(images/blank.cur),
+    none !important;
+}
+
+#linearPlayerFrame {
+	width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    z-index: 1000000 !important;
+    left: 0px !important;
+    top: 0px !important;  
+}
+
+div::-webkit-scrollbar, iframe::-webkit-scrollbar, 
+body::-webkit-scrollbar, *::-webkit-scrollbar, ::-webkit-scrollbar, #golf-header {
+	display: none !important;
+	width: 0px !important;
+}
+
+/*
+#accessEnablerButtons {
+	display: none !important;
+}
+
+#major-events-scroll,
+#match-summary {
+	display: none !important;
+}
+#nbc-header, #nbc-footer {
+	display: none !important;
+}
+
+.live-extra-promo {
+	display: none !important;
+}
+*/
+
+/*
+.topbar, .column-right {
+    display: none;
+}
+
+
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+#nbc-content {
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0px !important;
+}
+
+.main-wrapper {
+	padding: 0px !important;
+}
+
+#linearPlayerFrame {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#contentAccessEnablerWrapper {
+	width: 0px !important;
+	height: 0px !important;
+}
+
+.no-pencil-ad #player-wrapper {
+	padding-bottom: 0px !important;
+}*/

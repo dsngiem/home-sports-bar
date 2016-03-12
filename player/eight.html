@@ -1,0 +1,267 @@
+<html>
+<head>
+	<title>Home Sports Bar</title>
+	<script src="/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		_frames = 8
+	</script>
+	<script src="jquery.cookie.js"></script>
+	<script src="playerscript.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			function endsWith(str, suffix) {
+			    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+			}
+
+			var countLoad = 0
+
+			$("#frame-1").load(function() {
+				if (countLoad == 0) {
+					countLoad += 1
+					return
+				} else {
+					$("#startup").hide()
+					$("#frame-1-title").hide()
+				}
+			})
+
+			frameOverlay(1);
+			frameOverlay(2);
+			frameOverlay(3);
+			frameOverlay(4);
+			frameOverlay(5);
+			frameOverlay(6);
+			frameOverlay(7);
+			frameOverlay(8);
+		})
+	</script>
+
+	<link href="player.css" type="text/css" rel="stylesheet" />
+	<style>
+		iframe {
+			margin: 0px -1px;
+			padding: 0px;
+			border: 0px none transparent;
+			display: inline;
+			overflow: hidden;
+		}
+
+		#frame-1 {			
+			width: 75%;
+			height: 75%;
+		}
+
+		#frame-2, #frame-3, #frame-4, #frame-5, #frame-6, #frame-7, #frame-8 {
+			width: 25%;
+			height: 25%;
+		} 
+
+		#frame-2 {
+			position: absolute;
+			top: 0%;
+			left: 75%;
+		}
+
+		#frame-3 {
+			position: absolute;
+			top: 25%;
+			left: 75%;
+		}
+
+		#frame-4 {
+			position: absolute;
+			top: 50%;
+			left: 75%;
+		}
+
+		#frame-5 {
+			position: absolute;
+			top: 75%;
+			left: 0%;
+		}
+
+		#frame-6 {
+			position: absolute;
+			top: 75%;
+			left: 25%;
+		}
+
+		#frame-7 {
+			position: absolute;
+			top: 75%;
+			left: 50%;
+		}
+
+		#frame-8 {
+			position: absolute;
+			top: 75%;
+			left: 75%;
+		}
+
+		#frame-1-overlay {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-2-overlay {
+			position: absolute;
+			top: 0%;
+			left: 75%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-3-overlay {
+			position: absolute;
+			top: 25%;
+			left: 75%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-4-overlay {
+			position: absolute;
+			top: 50%;
+			left: 75%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-5-overlay {
+			position: absolute;
+			top: 75%;
+			left: 0%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-6-overlay {
+			position: absolute;
+			top: 75%;
+			left: 25%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-7-overlay {
+			position: absolute;
+			top: 75%;
+			left: 50%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-8-overlay {
+			position: absolute;
+			top: 75%;
+			left: 75%;
+			display: none;
+			z-index: 10000;
+		}
+
+		#frame-1-title {
+			top: 0%;
+			right: 25%;
+		}
+
+		#frame-2-title {
+			top: 0%;
+			right: 0%;
+		}
+
+		#frame-3-title {
+			top: 25%;
+			right: 0%;
+		}
+
+		#frame-4-title {
+			top: 50%;
+			right: 0%;
+		}
+
+		#frame-5-title {
+			top: 75%;
+			right: 75%;
+		}
+
+		#frame-6-title {
+			top: 75%;
+			right: 50%;
+		}
+
+		#frame-7-title {
+			top: 75%;
+			right: 25%;
+		}
+
+		#frame-8-title {
+			top: 75%;
+			right: 0%;
+		}
+
+		.title {			
+			position: absolute;
+			display: none;
+			z-index: 10000000;
+			margin-right: 5px;
+			color: white;
+			font-size: 48px;
+			font-family: helvetica;
+			font-weight: bold;
+			text-shadow: 0px 0px 3px #111111;
+		}
+	</style>
+</head>
+<body>
+	<iframe id="frame-1" name="frame-1" src="/landing.html"></iframe>
+	<iframe id="frame-2" name="frame-2" src="/landing.html"></iframe>
+	<iframe id="frame-3" name="frame-3" src="/landing.html"></iframe>
+	<iframe id="frame-4" name="frame-4" src="/landing.html"></iframe>
+	<iframe id="frame-5" name="frame-5" src="/landing.html"></iframe>
+	<iframe id="frame-6" name="frame-6" src="/landing.html"></iframe>
+	<iframe id="frame-7" name="frame-7" src="/landing.html"></iframe>
+	<iframe id="frame-8" name="frame-8" src="/landing.html"></iframe>
+
+	<div id="frame-1-overlay">
+		<a href="/landing.html" target="frame-1">&#215;</a>
+	</div>	
+	<div id="frame-2-overlay">
+		<a href="/landing.html" target="frame-2">&#215;</a>
+	</div>	
+	<div id="frame-3-overlay">
+		<a href="/landing.html" target="frame-3">&#215;</a>
+	</div>	
+	<div id="frame-4-overlay">
+		<a href="/landing.html" target="frame-4">&#215;</a>
+	</div>		
+	<div id="frame-5-overlay">
+		<a href="/landing.html" target="frame-5">&#215;</a>
+	</div>		
+	<div id="frame-6-overlay">
+		<a href="/landing.html" target="frame-6">&#215;</a>
+	</div>		
+	<div id="frame-7-overlay">
+		<a href="/landing.html" target="frame-7">&#215;</a>
+	</div>		
+	<div id="frame-8-overlay">
+		<a href="/landing.html" target="frame-8">&#215;</a>
+	</div>	
+
+	<div id="frame-1-title" class="title"></div>
+	<div id="frame-2-title" class="title"></div>
+	<div id="frame-3-title" class="title"></div>
+	<div id="frame-4-title" class="title"></div>
+	<div id="frame-5-title" class="title"></div>
+	<div id="frame-6-title" class="title"></div>
+	<div id="frame-7-title" class="title"></div>
+	<div id="frame-8-title" class="title"></div>
+	
+	<div id="startup">
+		<p style="color: #FFFFFF; text-align: center">Connect to <span style="color: yellow">http://<span id="location"></span>/remote/remote.html</span> to change this page</p>
+	</div>
+</body>
+</html>

@@ -49,6 +49,9 @@
 									case 4:
 										window.location.href = "/player/four.html"
 										break
+									case 8:
+										window.location.href = "/player/eight.html"
+										break
 									default:
 
 								}

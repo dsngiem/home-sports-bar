@@ -916,7 +916,7 @@ var fetchGuideMls = function(response) {
 	var currentDay = currentDate.getDate()
 	var scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
 
-	var schedulePath = "/mlsmdl/home"
+	var schedulePath = "/mlsmdl/schedule"
 	console.log("Requesting program guide for mls " + scheduleDate + "...")
 	var scheduleRequest = HTTP.request({
 		host: 'live.mlssoccer.com',
@@ -943,43 +943,48 @@ var fetchGuideMls = function(response) {
 			games = []
 
 			cheerioBox = Cheerio.load(scheduleBody)
-			gameItems = cheerioBox('.gameItem')
+			gameItems = cheerioBox('.schedule-now')
 			gameItems.each(function(index, element) {
 				gameItem = cheerioBox(element)
-				teams = gameItem.attr('class').split(/\s+/)
+				live = cheerioBox('.table-status', gameItem).text()
+				// teams = gameItem.attr('class').split(/\s+/)
 
-				var live = false
+				// var live = false
 
-				if (teams.indexOf("upcoming") == 1) {
-					teams.splice(0, 2)
-					teams.splice(2, 1)
-				} else {
-					teams.splice(0, 1)
-					teams.splice(2, 1)
-					live = true
-				}
+				// if (teams.indexOf("upcoming") == 1) {
+				// 	teams.splice(0, 2)
+				// 	teams.splice(2, 1)
+				// } else {
+				// 	teams.splice(0, 1)
+				// 	teams.splice(2, 1)
+				// 	live = true
+				// }
 
-				gameId = gameItem.attr('gameid')
+				homeTeam = cheerioBox('.table-home-title', gameItem).text()
+				awayTeam = cheerioBox('.table-away-title', gameItem).text()
 
-				gameDate = cheerioBox('.date', gameItem).text()
-				gameTime = cheerioBox('.time', gameItem).text()
+				gameId = cheerioBox('div.watch-div a', gameItem).attr('programid')
+				url = cheerioBox('div.watch-div a', gameItem).attr('url')
+
+				gameDate = gameItem.attr('gamedate')
+				gameTime = cheerioBox('.table-game-time', gameItem).text()
 
 				liveTime = cheerioBox('.liveTime', gameItem).text()
 
-				homeScore = cheerioBox('.score.homeScore', gameItem).html()
-				awayScore = cheerioBox('.score.awayScore', gameItem).html()
+				homeScore = cheerioBox('.table-home-score', gameItem).html()
+				awayScore = cheerioBox('.table-away-score', gameItem).html()
 
 				//console.log(gameItem.html().magenta)
 
 				games.push({
-					"match": teams[1] + " vs. " + teams[0], 
+					"match": homeTeam + " vs. " + awayTeam, 
 					"gameId": gameId,
-					"url": "http://live.mlssoccer.com/mlsmdl/matchembed/" + gameId,
+					"url": "http://live.mlssoccer.com/mlsmdl/" + url,
 					"date": gameDate,
 					"time": gameTime,
 					"liveTime": liveTime,
-					"homeTeam": teams[1],
-					"awayTeam": teams[0],
+					"homeTeam": homeTeam,
+					"awayTeam": awayTeam,
 					"homeScore": homeScore,
 					"awayScore": awayScore,
 					"live": live

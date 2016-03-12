@@ -13,6 +13,11 @@
         "all_frames": true
     },
     {
+        "matches": ["http://*"],
+        "js": ["extension/cursor.js"],
+        "all_frames": true
+    },
+    {
         "matches": [
             "http://xfinitytv.comcast.net/live/network/espn*",
             "http://xfinitytv.comcast.net/live/network/sec*",
