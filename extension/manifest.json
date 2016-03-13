@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.32",
+    "version": "1.0.33",
 
     "content_scripts": [
     {
@@ -38,7 +38,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://live.mlssoccer.com/mlsmdl/*"],
+        "matches": ["http://live.mlssoccer.com/mlsmdl/match/*"],
         "js": ["mls.js"],
         "css": ["mls.css"],
         "all_frames": true

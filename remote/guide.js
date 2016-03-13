@@ -727,11 +727,11 @@ $(document).ready(function() {
 				if ($.isArray(response.games)) {
 					response.games.reverse()
 					response.games.forEach( function(currentValue, index, array) {										
-						var startTime = moment(currentValue.date + " " + currentValue.time, "MMM D h:mm A")
+						var startTime = moment(currentValue.date, "YYYY-MM-DD HH:mm:ss.S")
 						var durationMin = 120
 						
 						var currentTime = moment()
-						var endTime = moment(currentValue.date + " " + currentValue.time, "MMM D h:mm A").add(durationMin, 'm')
+						var endTime = moment(currentValue.date, "YYYY-MM-DD HH:mm:ss.S").add(durationMin, 'm')
 						
 						var timeUntil = moment.duration(startTime.diff(currentTime))
 						var timeLeft = moment.duration(endTime.diff(currentTime))
@@ -774,7 +774,7 @@ $(document).ready(function() {
 							if (currentValue.live == true) {
 								html += '<span class="description">' + '<span class="flags">' + currentValue.homeTeam + " " + currentValue.homeScore + " - " + currentValue.awayScore + " " + currentValue.awayTeam + (currentTime.isBefore(endTime) ? "" : ' FINAL') + '</span>'
 							} else {
-								html += '<span class="description">' + '<span class="flags">' + currentValue.date + " " + currentValue.time + '</span>'
+								html += '<span class="description">'// + '<span class="flags">' + currentValue.date + " " + currentValue.time + '</span>'
 							}
 							
 
