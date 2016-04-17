@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.34",
+    "version": "1.0.35",
 
     "content_scripts": [
     {
