@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="browser.css">
     <script src="jquery-1.11.2.min.js"></script>
     <script src="browser.js"></script>
+    <script src="canvas-test.js"></script>
 	<style>
 		iframe {
 			width: 100%;
@@ -43,12 +44,13 @@
 	</style>
 
   <body>
+  	<canvas id="canvas-test" width="1280" height="720" style="z-index: 10; position: fixed; top: 0px; left: 0px;"></canvas>
 
 	<div id="webview-1-title"></div>
 	<!--<div id="webview-1-overlay">
 		<a href="index.html" target="webview-1">&#215;</a>
 	</div>	-->
-    <webview id="webview-1" src="http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1" style="width:1280px; height:720px"></webview>
+    <webview id="webview-1" src="http://live.mlssoccer.com/mlsmdl/" style="width:1280px; height:720px"></webview>
     <!--<webview id="webview-2" src="http://watch.foodnetwork.com/live.html" style="width:640px; height:720px; left:640px"></webview>-->
 
   </body>

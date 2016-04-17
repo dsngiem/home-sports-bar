@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.33",
+    "version": "1.0.34",
 
     "content_scripts": [
     {
@@ -29,6 +29,16 @@
         "matches": ["http://xfinitytv.comcast.net/watch-live-tv/*"],
         "js": ["xfinity-list.js"],
         "css": ["xfinity-list.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.ncaa.com/march-madness-live/game/*"],        
+        "css": ["ncaa.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.cbssports.com/watch/cbssportsnetwork/*"],        
+        "css": ["cbssn.css"],
         "all_frames": true
     },
     {

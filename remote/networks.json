@@ -4,6 +4,8 @@
 		"name": "wnyw",
 		"alt": "FOX",
 		"channelId": "11746",
+		"channelIdTvGuide": "11129",
+		"baseIdTvGuide": "901078",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/FOX_wordmark.svg/230px-FOX_wordmark.svg.png"		
 	},
@@ -11,6 +13,8 @@
 		"name": "fs1",
 		"alt": "FS1",
 		"channelId": "82547",
+		"channelIdTvGuide": "44423",
+		"baseIdTvGuide": "80001",
 		"color": "#00285A",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2015_Fox_Sports_1_logo.svg/150px-2015_Fox_Sports_1_logo.svg.png",
 		"urls": [
@@ -37,6 +41,8 @@
 		"name": "fs2",
 		"alt": "FS2",
 		"channelId": "59305",
+		"channelIdTvGuide": "29044",
+		"baseIdTvGuide": "85061",
 		"color": "#00285A",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",		
 		"urls": [
@@ -58,6 +64,8 @@
 		"name": "wnbc",
 		"alt": "NBC",
 		"channelId": "11705",
+		"channelIdTvGuide": "11293",
+		"baseIdTvGuide": "20517",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NBC_2014_Indent.svg/200px-NBC_2014_Indent.svg.png",
 		"urls": [
@@ -75,6 +83,8 @@
 		"name": "nbcsn",
 		"alt": "NBCSN",
 		"channelId": "48639",
+		"channelIdTvGuide": "18729",
+		"baseIdTvGuide": "85061",
 		"color": "#FDB812",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png",
 		"urls": [
@@ -104,6 +114,8 @@
 		"name": "nhl",
 		"alt": "NHL GameCenter",
 		"channelId": "58690",
+		"channelIdTvGuide": "20236",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png",
 		"urls": [
@@ -130,6 +142,8 @@
 		"name": "wabc",
 		"alt": "ABC",
 		"channelId": "20453",
+		"channelIdTvGuide": "20160",
+		"baseIdTvGuide": "20517",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/5/58/American_Broadcasting_Company_2013_Logo.png/150px-American_Broadcasting_Company_2013_Logo.png",
 		"urls": [
@@ -147,6 +161,8 @@
 		"name": "espn",
 		"alt": "ESPN",
 		"channelId": "10179",
+		"channelIdTvGuide": "423",
+		"baseIdTvGuide": "80001",
 		"color": "#FF0033",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/220px-ESPN_wordmark.svg.png",
 		"urls": [
@@ -172,6 +188,8 @@
 		"name": "espn2",
 		"alt": "ESPN2",
 		"channelId": "12444",
+		"channelIdTvGuide": "15628",
+		"baseIdTvGuide": "85061",
 		"color": "#FF0033",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ESPN2_logo.svg/225px-ESPN2_logo.svg.png",
 		"urls": [
@@ -197,6 +215,8 @@
 		"name": "espnews",
 		"alt": "ESPNews",
 		"channelId": "16485",
+		"channelIdTvGuide": "20777",
+		"baseIdTvGuide": "85061",
 		"color": "#FF0033",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/ESPN_ews.svg/250px-ESPN_ews.svg.png",
 		"urls": [
@@ -222,6 +242,8 @@
 		"name": "espnu",
 		"alt": "ESPNU",
 		"channelId": "45654",
+		"channelIdTvGuide": "21300",
+		"baseIdTvGuide": "85061",
 		"color": "#FF0033",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/ESPN_U_logo.svg/100px-ESPN_U_logo.svg.png",
 		"urls": [
@@ -247,6 +269,8 @@
 		"name": "espngoalline",
 		"alt": "ESPN Goal Line/Buzzer Beater",
 		"channelId": "69034",
+		"channelIdTvGuide": "27771",
+		"baseIdTvGuide": "85061",
 		"color": "#FF0033",
 		"image": "http://d1ff979u6gd5fc.cloudfront.net/api/pub/imgedge/services/v1/image/http/tmsimg/h3/NowShowing/69034/s69034_h3_aa.png?w=146&width=146",
 		"urls": [
@@ -260,6 +284,8 @@
 		"name": "sec",
 		"alt": "SEC Network",
 		"channelId": "89535",
+		"channelIdTvGuide": "52334",
+		"baseIdTvGuide": "85061",
 		"color": "#FF0033",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/99/SEC_Network_Logo.png/200px-SEC_Network_Logo.png",
 		"urls": [
@@ -298,6 +324,8 @@
 		"name": "tnt",
 		"alt": "TNT",
 		"channelId": "42642",
+		"channelIdTvGuide": "13412",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/e/e5/TNT_%28TV_channel%29.png/145px-TNT_%28TV_channel%29.png",
 		"urls": [
@@ -323,6 +351,8 @@
 		"name": "tbs",
 		"alt": "TBS",
 		"channelId": "58515",
+		"channelIdTvGuide": "15662",
+		"baseIdTvGuide": "85061",
 		"color": "#0094DA",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/PerfectTBS.svg/115px-PerfectTBS.svg.png",
 		"urls": [
@@ -348,6 +378,8 @@
 		"name": "nfl",
 		"alt": "NFL Network",
 		"channelId": "45399",
+		"channelIdTvGuide": "14796",
+		"baseIdTvGuide": "85061",
 		"color": "#1B3067",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/12/National_Football_League_2008.svg/196px-National_Football_League_2008.svg.png",
 		"urls": [
@@ -365,6 +397,8 @@
 		"name": "nba",
 		"alt": "NBA TV",
 		"channelId": "45526",
+		"channelIdTvGuide": "20765",
+		"baseIdTvGuide": "85061",
 		"color": "#1B3067",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/d/d2/NBA_TV.svg/170px-NBA_TV.svg.png",
 		"urls": [
@@ -378,6 +412,8 @@
 		"name": "mlb",
 		"alt": "MLB Network",
 		"channelId": "62081",
+		"channelIdTvGuide": "22235",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/MLBNetworkLogo.svg/200px-MLBNetworkLogo.svg.png",
 		"urls": [
@@ -391,6 +427,8 @@
 		"name": "tennis",
 		"alt": "Tennis Channel",
 		"channelId": "60316",
+		"channelIdTvGuide": "20735",
+		"baseIdTvGuide": "85061",
 		"color": "#005500",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tennis_Channel_logo.svg/150px-Tennis_Channel_logo.svg.png",
 		"urls": [
@@ -421,6 +459,8 @@
 		"name": "udn",
 		"alt": "Univision Deportes",
 		"channelId": "77033",
+		"channelIdTvGuide": "37216",
+		"baseIdTvGuide": "85061",
 		"color": "#004887",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Univision_Deportes_Network_2013.png/200px-Univision_Deportes_Network_2013.png",
 		"urls": [
@@ -446,6 +486,8 @@
 		"name": "bein",
 		"alt": "BeIn Sports",
 		"channelId": "76950",
+		"channelIdTvGuide": "37293",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/06/BeIN_SPORTS_logo.png/200px-BeIN_SPORTS_logo.png",
 		"urls": [
@@ -459,6 +501,8 @@
 		"name": "beinespanol",
 		"alt": "BeIñ Sports",
 		"channelId": "76955",
+		"channelIdTvGuide": "36938",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/06/BeIN_SPORTS_logo.png/200px-BeIN_SPORTS_logo.png",
 		"urls": [
@@ -472,6 +516,8 @@
 		"name": "btn",
 		"alt": "Big Ten Network",
 		"channelId": "58321",
+		"channelIdTvGuide": "19695",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Big_Ten_Network.png/240px-Big_Ten_Network.png",
 		"urls": [
@@ -489,6 +535,8 @@
 		"name": "wcbs",
 		"alt": "CBS",
 		"channelId": "11331",
+		"channelIdTvGuide": "11116",
+		"baseIdTvGuide": "20517",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png"
 	},
@@ -496,6 +544,8 @@
 		"name": "wwor",
 		"alt": "My9",
 		"channelId": "26566",
+		"channelIdTvGuide": "11153",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/b/bf/WWOR_NewJersey.png"		
 	},
@@ -503,6 +553,8 @@
 		"name": "wpix",
 		"alt": "PIX11",
 		"channelId": "20373",
+		"channelIdTvGuide": "11908",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/WPIX11.svg/210px-WPIX11.svg.png",
 		"urls": [
@@ -516,6 +568,8 @@
 		"name": "wnet",
 		"alt": "PBS",
 		"channelId": "26182",
+		"channelIdTvGuide": "11145",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/7/79/WNET_2009_Logo.png"
 	},
@@ -523,6 +577,8 @@
 		"name": "wpxn",
 		"alt": "Ion",
 		"channelId": "43818",
+		"channelIdTvGuide": "14597",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Ion_Television_2013.png/180px-Ion_Television_2013.png"
 	},
@@ -530,6 +586,8 @@
 		"name": "wnju",
 		"alt": "Telemundo",
 		"channelId": "54437",
+		"channelIdTvGuide": "23223",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Telemundo_logo_2012.svg/200px-Telemundo_logo_2012.svg.png"
 	},
@@ -537,6 +595,8 @@
 		"name": "wxtv",
 		"alt": "Univision",
 		"channelId": "35361",
+		"channelIdTvGuide": "14479",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Univision_2013_logo.png/200px-Univision_2013_logo.png",
 		"urls": [
@@ -550,6 +610,8 @@
 		"name": "wfut",
 		"alt": "UniMas",
 		"channelId": "35364",
+		"channelIdTvGuide": "22583",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_UniM%C3%A1s.svg/130px-Logo_UniM%C3%A1s.svg.png",
 		"urls": [
@@ -563,6 +625,8 @@
 		"name": "galavision",
 		"alt": "Galavision",
 		"channelId": "68367",
+		"channelIdTvGuide": "27229",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Galavision_Logo_2013.svg/150px-Galavision_Logo_2013.svg.png",
 		"urls": [
@@ -576,6 +640,8 @@
 		"name": "a&e",
 		"alt": "A&E",
 		"channelId": "51529",
+		"channelIdTvGuide": "17962",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/170px-A%26E_Network_logo.svg.png",
 		"urls": [
@@ -593,6 +659,8 @@
 		"name": "freeform",
 		"alt": "Freeform",
 		"channelId": "59615",
+		"channelIdTvGuide": "20863",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Freeform_temp.svg/250px-Freeform_temp.svg.png",
 		"urls": [
@@ -607,6 +675,10 @@
 		{
 			"source": "Freeform",
 			"url": "http://freeform.go.com/watch-live"
+		},
+		{
+			"source": "DirecTV",
+			"url": "http://www.directv.com/Channels/Freeform-HD-311?format=HD"
 		}
 		]
 	},
@@ -614,6 +686,8 @@
 		"name": "ahc",
 		"alt": "American Heroes Channel",
 		"channelId": "18284",
+		"channelIdTvGuide": "3790",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/American_Heroes_Channel_logo.svg/200px-American_Heroes_Channel_logo.svg.png",
 		"urls": [
@@ -622,28 +696,13 @@
 			"url": "https://www.discoverygo.com/watch/ahc/"
 		}
 		]
-	},
-	{
-		"name": "alja",
-		"alt": "Al Jazeera America",
-		"channelId": "83276",
-		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/31/Al_Jazeera_America_Logo.png/150px-Al_Jazeera_America_Logo.png",
-		"urls": [
-		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/aljazeeraamerica?cmpid=livetv_al-jazeera-america"
-		},
-		{
-			"source": "TWC",
-			"url": "https://video2.timewarnercable.com/liveTv?tmsid=83276"
-		}
-		]
-	},
+	},	
 	{
 		"name": "amc",
 		"alt": "AMC",
 		"channelId": "59337",
+		"channelIdTvGuide": "20419",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/2/2d/AMC_logo_2013.png/200px-AMC_logo_2013.png",
 		"urls": [
@@ -661,6 +720,8 @@
 		"name": "animal-planet",
 		"alt": "Animal Planet",
 		"channelId": "57394",
+		"channelIdTvGuide": "19976",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Animal_Planet_logo_%28black_and_green%29.svg/190px-Animal_Planet_logo_%28black_and_green%29.svg.png",
 		"urls": [
@@ -691,6 +752,8 @@
 		"name": "audience",
 		"alt": "Audience Network",
 		"channelId": "49432",
+		"channelIdTvGuide": "22057",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/5/5e/Aunet.png",
 		"urls": [
@@ -704,6 +767,8 @@
 		"name": "axs",
 		"alt": "AXS TV",
 		"channelId": "28506",
+		"channelIdTvGuide": "10944",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/AXSTV_Logo.jpg/250px-AXSTV_Logo.jpg",
 		"urls": [
@@ -717,6 +782,8 @@
 		"name": "bbcamerica",
 		"alt": "BBC America",
 		"channelId": "64492",
+		"channelIdTvGuide": "23523",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/BBC_America.svg/200px-BBC_America.svg.png",
 		"urls": [
@@ -751,6 +818,8 @@
 		"name": "bbcwn",
 		"alt": "BBC World News",
 		"channelId": "76774",
+		"channelIdTvGuide": "34805",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/BBC_World_News_red.svg/200px-BBC_World_News_red.svg.png",
 		"urls": [
@@ -768,6 +837,8 @@
 		"name": "bet",
 		"alt": "BET",
 		"channelId": "63236",
+		"channelIdTvGuide": "23186",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/90/BET_Logo.svg/250px-BET_Logo.svg.png",
 		"urls": [
@@ -785,6 +856,8 @@
 		"name": "bloomberg",
 		"alt": "Bloomberg",
 		"channelId": "71799",
+		"channelIdTvGuide": "29715",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Bloomberg_Television_logo.svg/220px-Bloomberg_Television_logo.svg.png",
 		"urls": [
@@ -802,6 +875,8 @@
 		"name": "bravo",
 		"alt": "Bravo",
 		"channelId": "58625",
+		"channelIdTvGuide": "404",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bravo_TV.svg/250px-Bravo_TV.svg.png",
 		"urls": [
@@ -823,6 +898,8 @@
 		"name": "cartoonnetwork",
 		"alt": "Cartoon Network",
 		"channelId": "60048",
+		"channelIdTvGuide": "20326",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/220px-Cartoon_Network_2010_logo.svg.png",
 		"urls": [
@@ -869,6 +946,8 @@
 		"name": "comedy",
 		"alt": "Comedy Central",
 		"channelId": "62420",
+		"channelIdTvGuide": "21715",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Comedy_Central_2011_Logo.svg/200px-Comedy_Central_2011_Logo.svg.png",
 		"urls": [
@@ -886,6 +965,8 @@
 		"name": "cmt",
 		"alt": "CMT",
 		"channelId": "59440",
+		"channelIdTvGuide": "20732",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CMT_logo.svg/200px-CMT_logo.svg.png",
 		"urls": [		
@@ -899,6 +980,8 @@
 		"name": "cnbc",
 		"alt": "CNBC",
 		"channelId": "58780",
+		"channelIdTvGuide": "20279",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/180px-CNBC_logo.svg.png",
 		"urls": [		
@@ -920,6 +1003,8 @@
 		"name": "cnn",
 		"alt": "CNN",
 		"channelId": "58646",
+		"channelIdTvGuide": "19994",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/230px-Cnn.svg.png",
 		"urls": [
@@ -945,6 +1030,8 @@
 		"name": "cooking",
 		"alt": "Cooking Channel",
 		"channelId": "68065",
+		"channelIdTvGuide": "27227",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cooking_Channel.png/170px-Cooking_Channel.png",
 		"urls": [
@@ -970,6 +1057,8 @@
 		"name": "cspan",
 		"alt": "CSPAN",
 		"channelId": "10161",
+		"channelIdTvGuide": "442",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
 		"urls": [
@@ -991,6 +1080,8 @@
 		"name": "destination-america",
 		"alt": "Destination America",
 		"channelId": "60468",
+		"channelIdTvGuide": "21068",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Destinat_america_logo15.png/170px-Destinat_america_logo15.png",
 		"urls": [
@@ -1004,6 +1095,8 @@
 		"name": "discovery",
 		"alt": "Discovery Channel",
 		"channelId": "80399",
+		"channelIdTvGuide": "19978",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Discovery_Channel_International.svg/190px-Discovery_Channel_International.svg.png",
 		"urls": [
@@ -1025,6 +1118,8 @@
 		"name": "discovery-life",
 		"alt": "Discovery Life",
 		"channelId": "16125",
+		"channelIdTvGuide": "5799",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discovery_Life_logo.svg/220px-Discovery_Life_logo.svg.png",
 		"urls": [
@@ -1038,6 +1133,8 @@
 		"name": "disney",
 		"alt": "Disney Channel",
 		"channelId": "59684",
+		"channelIdTvGuide": "20708",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Disney_Channel_2014.png/200px-Disney_Channel_2014.png",
 		"urls": [
@@ -1052,6 +1149,10 @@
 		{
 			"source": "Disney Channel",
 			"url": "http://watchdisneychannel.go.com/live"
+		},
+		{
+			"source": "DirecTV",
+			"url": "http://www.directv.com/Channels/Disney-Channel-HD-290?format=HD"
 		}
 		]
 	},
@@ -1059,6 +1160,8 @@
 		"name": "disneyjnr",
 		"alt": "Disney Junior",
 		"channelId": "74885",
+		"channelIdTvGuide": "34384",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/83/Disney_Junior_Logo.png/250px-Disney_Junior_Logo.png",
 		"urls": [
@@ -1073,6 +1176,10 @@
 		{
 			"source": "Disney Junior",
 			"url": "http://watchdisneyjunior.go.com/live"
+		},
+		{
+			"source": "DirecTV",
+			"url": "http://www.directv.com/Channels/Disney-Junior-HD-289?format=HD"
 		}
 		]
 	},
@@ -1080,6 +1187,8 @@
 		"name": "disneyxd",
 		"alt": "Disney XD",
 		"channelId": "60006",
+		"channelIdTvGuide": "20965",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Logo_Disney_XD.svg/200px-Logo_Disney_XD.svg.png",
 		"urls": [
@@ -1094,6 +1203,10 @@
 		{
 			"source": "Disney XD",
 			"url": "http://watchdisneyxd.go.com/live"
+		},
+		{
+			"source": "DirecTV",
+			"url": "http://www.directv.com/Channels/Disney-XD-HD-292?format=HD"
 		}
 		]
 	},
@@ -1101,6 +1214,8 @@
 		"name": "diy",
 		"alt": "DIY Network",
 		"channelId": "67375",
+		"channelIdTvGuide": "26971",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Diy_logo.svg/130px-Diy_logo.svg.png",
 		"urls": [
@@ -1126,6 +1241,8 @@
 		"name": "e",
 		"alt": "E! Network",
 		"channelId": "61812",
+		"channelIdTvGuide": "21294",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/E%21_logo_2012.png/50px-E%21_logo_2012.png",
 		"urls": [
@@ -1160,6 +1277,8 @@
 		"name": "encore",
 		"alt": "encore",
 		"channelId": "36225",
+		"channelIdTvGuide": "13168",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/4/48/Encore_Logo_2013.jpg",
 		"urls": [
@@ -1173,6 +1292,8 @@
 		"name": "encoreaction",
 		"alt": "encore Action",
 		"channelId": "72015",
+		"channelIdTvGuide": "29910",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Encore_Action.png/125px-Encore_Action.png",
 		"urls": [
@@ -1186,6 +1307,8 @@
 		"name": "encoresuspense",
 		"alt": "encore Suspense",
 		"channelId": "14766",
+		"channelIdTvGuide": "2002",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Encore_Suspense.png/125px-Encore_Suspense.png",
 		"urls": [
@@ -1199,6 +1322,8 @@
 		"name": "encoreblack",
 		"alt": "encore Black",
 		"channelId": "14870",
+		"channelIdTvGuide": "2001",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Encore_Black.png/125px-Encore_Black.png",
 		"urls": [
@@ -1212,6 +1337,8 @@
 		"name": "encoreespanol",
 		"alt": "encore Español",
 		"channelId": "72016",
+		"channelIdTvGuide": "2001",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Encore_Espanol.png/125px-Encore_Espanol.png",
 		"urls": [
@@ -1225,6 +1352,8 @@
 		"name": "espnd",
 		"alt": "ESPN Deportes",
 		"channelId": "71914",
+		"channelIdTvGuide": "9976",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Espn_deportes.svg/200px-Espn_deportes.svg.png",
 		"urls": [
@@ -1242,6 +1371,8 @@
 		"name": "esquire",
 		"alt": "Esquire",
 		"channelId": "18511",
+		"channelIdTvGuide": "4224",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Esquire_Network.svg/225px-Esquire_Network.svg.png",
 		"urls": [
@@ -1259,6 +1390,8 @@
 		"name": "food",
 		"alt": "Food Network",
 		"channelId": "50747",
+		"channelIdTvGuide": "17546",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Food_Network_New_Logo.png/130px-Food_Network_New_Logo.png",
 		"urls": [
@@ -1293,6 +1426,8 @@
 		"name": "foxbusiness",
 		"alt": "FOX Business",
 		"channelId": "58718",
+		"channelIdTvGuide": "20256",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Fox_Business.svg/210px-Fox_Business.svg.png",
 		"urls": [
@@ -1318,6 +1453,8 @@
 		"name": "foxdeportes",
 		"alt": "FOX Deportes",
 		"channelId": "72189",
+		"channelIdTvGuide": "30587",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://cdn.livesoccertv.com/images/channels/thumbnails/fox-deportes.png",
 		"urls": [
@@ -1335,6 +1472,8 @@
 		"name": "foxnews",
 		"alt": "FOX News",
 		"channelId": "60179",
+		"channelIdTvGuide": "20779",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Fox_News_Channel_logo.png/200px-Fox_News_Channel_logo.png",
 		"urls": [
@@ -1377,6 +1516,8 @@
 		"name": "fuse",
 		"alt": "fuse",
 		"channelId": "14929",
+		"channelIdTvGuide": "20423",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Fuse_logo15.png/200px-Fuse_logo15.png",
 		"urls": [
@@ -1390,6 +1531,8 @@
 		"name": "fusion",
 		"alt": "fusion",
 		"channelId": "83173",
+		"channelIdTvGuide": "45997",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fusion_TV_2013_logo.png/150px-Fusion_TV_2013_logo.png",
 		"urls": [
@@ -1403,6 +1546,8 @@
 		"name": "fx",
 		"alt": "FX",
 		"channelId": "58574",
+		"channelIdTvGuide": "20311",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/190px-FX_International_logo.svg.png",
 		"urls": [
@@ -1441,22 +1586,15 @@
 		"name": "fxm",
 		"alt": "FXM",
 		"channelId": "14988",
+		"channelIdTvGuide": "2419",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/220px-FXM_Logo.svg.png",
 		"urls": [
 		{
 			"source": "FX Networks",
 			"url": "http://www.fxnetworks.com/live-tv/fxm/Eastern"
-		}
-		]
-	},
-	{
-		"name": "fxm-west",
-		"alt": "FXM (West)",
-		"channelId": "70253",
-		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/220px-FXM_Logo.svg.png",
-		"urls": [
+		},
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=70253"
@@ -1471,6 +1609,8 @@
 		"name": "fxx",
 		"alt": "FXX",
 		"channelId": "66379",
+		"channelIdTvGuide": "44424",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/FXX_Logo.svg/130px-FXX_Logo.svg.png",
 		"urls": [
@@ -1509,6 +1649,8 @@
 		"name": "gsn",
 		"alt": "Game Show Network",
 		"channelId": "14909",
+		"channelIdTvGuide": "1184",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Game_show_netw_logo15.png/150px-Game_show_netw_logo15.png",
 		"urls": [
@@ -1522,6 +1664,8 @@
 		"name": "golf",
 		"alt": "Golf Channel",
 		"channelId": "61854",
+		"channelIdTvGuide": "20001",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Golf_Channel_Logo.png/220px-Golf_Channel_Logo.png",
 		"urls": [
@@ -1543,6 +1687,8 @@
 		"name": "hallmark",
 		"alt": "Hallmark Channel",
 		"channelId": "66268",
+		"channelIdTvGuide": "24329",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://www.directv.com/images/logos/channels/light/medium/927.png",
 		"urls": [
@@ -1560,6 +1706,8 @@
 		"name": "hgtv",
 		"alt": "HGTV",
 		"channelId": "49788",
+		"channelIdTvGuide": "17119",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Hgtv-2010.png/200px-Hgtv-2010.png",
 		"urls": [
@@ -1594,6 +1742,8 @@
 		"name": "hln",
 		"alt": "HLN",
 		"channelId": "64549",
+		"channelIdTvGuide": "23462",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/HLN_TV_logo.png/175px-HLN_TV_logo.png",
 		"urls": [
@@ -1619,6 +1769,8 @@
 		"name": "history",
 		"alt": "History",
 		"channelId": "57708",
+		"channelIdTvGuide": "19933",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/History_Logo.svg/150px-History_Logo.svg.png",
 		"urls": [
@@ -1636,6 +1788,8 @@
 		"name": "ifc",
 		"alt": "IFC",
 		"channelId": "59444",
+		"channelIdTvGuide": "20420",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/56/IFC_2014_logo.png/220px-IFC_2014_logo.png",
 		"urls": [
@@ -1653,6 +1807,8 @@
 		"name": "idc",
 		"alt": "Investigation Discovery",
 		"channelId": "80309",
+		"channelIdTvGuide": "24011",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/InvestigationDiscovery.png/130px-InvestigationDiscovery.png",
 		"urls": [
@@ -1670,6 +1826,8 @@
 		"name": "lifetime",
 		"alt": "Lifetime",
 		"channelId": "10918",
+		"channelIdTvGuide": "20995",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/3/34/Lifetime_logo_2013.png",
 		"urls": [
@@ -1696,6 +1854,8 @@
 		"name": "msnbc",
 		"alt": "MSNBC",
 		"channelId": "64241",
+		"channelIdTvGuide": "23408",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
 		"urls": [
@@ -1717,6 +1877,8 @@
 		"name": "mtv",
 		"alt": "MTV",
 		"channelId": "60964",
+		"channelIdTvGuide": "21787",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/MTV_Logo_2010.svg/200px-MTV_Logo_2010.svg.png",
 		"urls": [
@@ -1734,6 +1896,8 @@
 		"name": "mtv2",
 		"alt": "MTV2",
 		"channelId": "75077",
+		"channelIdTvGuide": "33898",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/2/24/Mtv2_logo.svg/130px-Mtv2_logo.svg.png",
 		"urls": [
@@ -1747,6 +1911,8 @@
 		"name": "mtvlive",
 		"alt": "MTV Live",
 		"channelId": "49141",
+		"channelIdTvGuide": "16977",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/14/MTV_Live_Logo.png/150px-MTV_Live_Logo.png",
 		"urls": [
@@ -1781,6 +1947,8 @@
 		"name": "natgeo",
 		"alt": "National Geographic",
 		"channelId": "49438",
+		"channelIdTvGuide": "17251",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/13/National_Geographic_Channel.svg/200px-National_Geographic_Channel.svg.png",
 		"urls": [
@@ -1811,6 +1979,8 @@
 		"name": "natgeowild",
 		"alt": "National Geographic Wild",
 		"channelId": "67331",
+		"channelIdTvGuide": "24471",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Logo_Nat_Geo_Wild.svg/200px-Logo_Nat_Geo_Wild.svg.png",
 		"urls": [
@@ -1832,6 +2002,8 @@
 		"name": "nick",
 		"alt": "Nickelodeon",
 		"channelId": "59432",
+		"channelIdTvGuide": "20730",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nickelodeon_logo_new.svg/245px-Nickelodeon_logo_new.svg.png",
 		"urls": [
@@ -1849,6 +2021,8 @@
 		"name": "nickjr",
 		"alt": "Nick Jr.",
 		"channelId": "19211",
+		"channelIdTvGuide": "44718",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nick_Jr._logo_2009.svg/200px-Nick_Jr._logo_2009.svg.png",
 		"urls": [
@@ -1862,6 +2036,8 @@
 		"name": "outdoor",
 		"alt": "Outdoor Channel",
 		"channelId": "14776",
+		"channelIdTvGuide": "1220",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/89/Outdoor_Channel.svg/199px-Outdoor_Channel.svg.png",
 		"urls": [
@@ -1875,6 +2051,8 @@
 		"name": "own",
 		"alt": "OWN",
 		"channelId": "70388",
+		"channelIdTvGuide": "28442",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oprah_Winfrey_Network.png/250px-Oprah_Winfrey_Network.png",
 		"urls": [
@@ -1892,6 +2070,8 @@
 		"name": "oxygen",
 		"alt": "Oxygen",
 		"channelId": "21484",
+		"channelIdTvGuide": "8172",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Oxygen_%28TV_channel%29_new_logo.png/200px-Oxygen_%28TV_channel%29_new_logo.png",
 		"urls": [
@@ -1943,6 +2123,8 @@
 		"name": "pivot",
 		"alt": "Pivot",
 		"channelId": "68757",
+		"channelIdTvGuide": "3858",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pivot_Logo_%2B_Tagline.png/200px-Pivot_Logo_%2B_Tagline.png",
 		"urls": [
@@ -1956,6 +2138,8 @@
 		"name": "pop",
 		"alt": "Pop",
 		"channelId": "71954",
+		"channelIdTvGuide": "4678",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Pop_Network_Logo.png/250px-Pop_Network_Logo.png",
 		"urls": [
@@ -1969,6 +2153,8 @@
 		"name": "qvc",
 		"alt": "QVC",
 		"channelId": "60222",
+		"channelIdTvGuide": "20971",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/48/QVC.svg/200px-QVC.svg.png",
 		"urls": [
@@ -1986,6 +2172,8 @@
 		"name": "reelz",
 		"alt": "Reelz",
 		"channelId": "68385",
+		"channelIdTvGuide": "27330",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Reelz_Channel_Logo.png/200px-Reelz_Channel_Logo.png",
 		"urls": [
@@ -1999,6 +2187,8 @@
 		"name": "revolt",
 		"alt": "Revolt",
 		"channelId": "83098",
+		"channelIdTvGuide": "45504",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Revolt_TV_logo.png/260px-Revolt_TV_logo.png",
 		"urls": [
@@ -2012,6 +2202,8 @@
 		"name": "science",
 		"alt": "Science",
 		"channelId": "57390",
+		"channelIdTvGuide": "19977",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Science_chanell_2011logo.png/150px-Science_chanell_2011logo.png",
 		"urls": [
@@ -2029,6 +2221,8 @@
 		"name": "spike",
 		"alt": "Spike",
 		"channelId": "59186",
+		"channelIdTvGuide": "20524",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Spike_logo_2015.svg/200px-Spike_logo_2015.svg.png",
 		"urls": [
@@ -2046,6 +2240,8 @@
 		"name": "sprout",
 		"alt": "Sprout",
 		"channelId": "47540",
+		"channelIdTvGuide": "16397",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sprout_logo.svg/190px-Sprout_logo.svg.png",
 		"urls": [
@@ -2059,6 +2255,8 @@
 		"name": "starz",
 		"alt": "starz",
 		"channelId": "34949",
+		"channelIdTvGuide": "12907",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Starz_2008.svg/215px-Starz_2008.svg.png",
 		"urls": [
@@ -2072,6 +2270,8 @@
 		"name": "starzedge",
 		"alt": "starz Edge",
 		"channelId": "57573",
+		"channelIdTvGuide": "19916",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/4696354068600397163?width=121&height=87&bg=WHITE",
 		"urls": [
@@ -2085,6 +2285,8 @@
 		"name": "starzinblack",
 		"alt": "starz In Black",
 		"channelId": "67235",
+		"channelIdTvGuide": "24600",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/8869618193667289163?width=121&height=87&bg=WHITE",
 		"urls": [
@@ -2098,6 +2300,8 @@
 		"name": "starzkidsandfamily",
 		"alt": "starz Kids & Family",
 		"channelId": "57581",
+		"channelIdTvGuide": "19917",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/6263871685002421163?width=121&height=87&bg=WHITE",
 		"urls": [
@@ -2111,6 +2315,8 @@
 		"name": "starzcinema",
 		"alt": "starz Cinema",
 		"channelId": "67236",
+		"channelIdTvGuide": "24589",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/6892846710612644163?width=121&height=87&bg=WHITE",
 		"urls": [
@@ -2124,6 +2330,8 @@
 		"name": "starzcomedy",
 		"alt": "starz Comedy",
 		"channelId": "57569",
+		"channelIdTvGuide": "19915",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/8666528165464630163?width=121&height=87&bg=WHITE",
 		"urls": [
@@ -2137,6 +2345,8 @@
 		"name": "sundance",
 		"alt": "Sundance",
 		"channelId": "16108",
+		"channelIdTvGuide": "30785",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/0d/SundanceTV_logo_2014.jpg/200px-SundanceTV_logo_2014.jpg",
 		"urls": [
@@ -2150,6 +2360,8 @@
 		"name": "syfy",
 		"alt": "Syfy",
 		"channelId": "58623",
+		"channelIdTvGuide": "20250",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Syfy.svg/225px-Syfy.svg.png",
 		"urls": [
@@ -2167,6 +2379,8 @@
 		"name": "tcm",
 		"alt": "TCM",
 		"channelId": "64312",
+		"channelIdTvGuide": "23458",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tcm.svg/225px-Tcm.svg.png",
 		"urls": [
@@ -2188,6 +2402,8 @@
 		"name": "tlc",
 		"alt": "TLC",
 		"channelId": "79911",
+		"channelIdTvGuide": "19975",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TLC_USA_logo.png/200px-TLC_USA_logo.png",
 		"urls": [
@@ -2209,6 +2425,8 @@
 		"name": "tvland",
 		"alt": "TV Land",
 		"channelId": "73541",
+		"channelIdTvGuide": "33895",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/0b/TV_Land_2012.svg/250px-TV_Land_2012.svg.png",
 		"urls": [
@@ -2222,6 +2440,8 @@
 		"name": "twc",
 		"alt": "The Weather Channel",
 		"channelId": "58812",
+		"channelIdTvGuide": "20178",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/100px-The_Weather_Channel_logo_2005-present.svg.png",
 		"urls": [
@@ -2239,6 +2459,8 @@
 		"name": "travel",
 		"alt": "Travel Channel",
 		"channelId": "59303",
+		"channelIdTvGuide": "20519",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Travel_Channel_%28International%29_logo.png/170px-Travel_Channel_%28International%29_logo.png",
 		"urls": [
@@ -2256,6 +2478,8 @@
 		"name": "trutv",
 		"alt": "truTV",
 		"channelId": "64490",
+		"channelIdTvGuide": "23561",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/TruTV_logo_2014.png/200px-TruTV_logo_2014.png",
 		"urls": [
@@ -2277,6 +2501,8 @@
 		"name": "usa",
 		"alt": "USA",
 		"channelId": "58452",
+		"channelIdTvGuide": "20019",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/USA_Network_logo_%282006%29.svg/220px-USA_Network_logo_%282006%29.svg.png",
 		"urls": [
@@ -2294,6 +2520,8 @@
 		"name": "velocity",
 		"alt": "Velocity",
 		"channelId": "31046",
+		"channelIdTvGuide": "10559",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Velocity_logo.png/200px-Velocity_logo.png",
 		"urls": [
@@ -2311,6 +2539,8 @@
 		"name": "vh1",
 		"alt": "VH1",
 		"channelId": "60046",
+		"channelIdTvGuide": "21716",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/VH1_logonew.svg/220px-VH1_logonew.svg.png",
 		"urls": [
@@ -2328,6 +2558,8 @@
 		"name": "weathernation",
 		"alt": "WeatherNation",
 		"channelId": "84291",
+		"channelIdTvGuide": "10559",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/e/e2/WeatherNation_logo.png/225px-WeatherNation_logo.png",
 		"urls": [
@@ -2341,6 +2573,8 @@
 		"name": "we",
 		"alt": "WEtv",
 		"channelId": "16409",
+		"channelIdTvGuide": "20418",
+		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/WEtv_Logo_2014.png/220px-WEtv_Logo_2014.png",
 		"urls": [

@@ -80,6 +80,8 @@ function doLayout() {
 
   webview.style.width = webviewWidth + 'px';
   webview.style.height = webviewHeight + 'px';
+
+  testCanvas();
 }
 
 function handleExit(event) {
@@ -399,5 +401,4 @@ function closeBoxes() {
       })
 
       frameOverlay(1);
-    
     });

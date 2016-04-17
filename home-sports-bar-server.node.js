@@ -702,6 +702,12 @@ var fetchGuideChannel = function(response, channel) {
 	return scheduleRequest.end()
 }
 
+var fetchGuideChannelTvGuide = function(response, channelId, baseId) {
+// format
+// http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/80001/start/1460817000/duration/20160?channelsourceids=423%7C*&formattype=json
+// http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/{base id -- cable 80001, broadcast 901078}/start/{current unix timestamp}/duration/{duration in minutes}}?channelsourceids={channel source ids separated by | (%7c) }}%7C*&formattype=json
+};
+
 var fetchGuideNbcsn = function(response) {	
 	console.log("Requesting program guide for nbcsn...")
 	

@@ -1,7 +1,7 @@
 var checkElementsByIdExists = function(id) {
 	if (document.getElementById(id) != null) {
-		document.getElementById("IDToken1").value = "147ocean"
-		document.getElementById("IDToken2").value = "147ocean"
+		document.getElementById("IDToken1").value = "dbloch32"
+		document.getElementById("IDToken2").value = "batdan32"
 		document.getElementById("signin_button").click()
 	} else {
 		setTimeout(function() {
