@@ -63,7 +63,7 @@ onload = function() {
   // ]);
 
   window.addEventListener('keydown', handleKeyDown);
-  fullscreenWindow();
+  //fullscreenWindow();
 };
 
 function navigateTo(url) {
