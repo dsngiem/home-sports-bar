@@ -50,7 +50,10 @@ var NS = require('node-static')
 var Colors = require('colors')
 var Cheerio = require('cheerio')
 var Cookies = require('cookies')
+var Moment = require('moment-timezone')
 
+//set default time zone to New York
+Moment().tz("America/New_York").format();
 
 
 /** GLOBAL VARIABLES **/
@@ -146,14 +149,14 @@ var file = new(NS.Server)();
 
 // 		request.on('end', function () {
 // 			var requestUrl = request.url
-// 			var parsedUrl = URL.parse(requestUrl, true)	
+// 			var parsedUrl = URL.parse(requestUrl, true)
 
 // 			console.log(request.method.grey.bold + " " + requestUrl.grey.italic)
-			
+
 // 			if (body) {
 // 				console.log("body: ".grey + body.grey)
 // 			}
-			
+
 // 			if (request.method == 'GET') {
 // 				//set up regular page fetch
 
@@ -185,7 +188,7 @@ var file = new(NS.Server)();
 // 					return addPublisher(response, parameters)
 
 
-					
+
 // 				} else if (parsedUrl["pathname"] == "/api/publish/message") {
 // 					return handleMessage(response, parameters)
 
@@ -225,7 +228,7 @@ var file = new(NS.Server)();
 // 					return fetchGuideWatchEspn(response)
 
 // 				} else if (parsedUrl["pathname"] == "/api/guide/fsgo") {
-// 					return fetchGuideFsgo(response)				
+// 					return fetchGuideFsgo(response)
 
 // 				} else if (parsedUrl["pathname"] == "/api/guide/nba") {
 // 					return fetchGuideNbaLeaguePass(response, parameters)
@@ -233,7 +236,7 @@ var file = new(NS.Server)();
 
 // 				console.log(parsedUrl)
 // 				response.writeHead(404)
-// 				response.end("Invalid API request: " + parsedUrl["pathname"])				
+// 				response.end("Invalid API request: " + parsedUrl["pathname"])
 // 			}
 // 		})
 // 	}
@@ -245,8 +248,8 @@ var server = HTTP.createServer(
 
 		var origin = request.headers.origin;
 		if (origin == 'chrome-extension://mccjidcbgbbpbjdoappebgmmddohjofi' || origin == 'chrome-extension://fehcoajbkcnlncncfbnimnahjocgikjf') {
-			response.setHeader('Access-Control-Allow-Origin', origin);	
-		}	
+			response.setHeader('Access-Control-Allow-Origin', origin);
+		}
 
 		var body = "";
 
@@ -256,14 +259,14 @@ var server = HTTP.createServer(
 
 		request.on('end', function () {
 			var requestUrl = request.url
-			var parsedUrl = URL.parse(requestUrl, true)	
+			var parsedUrl = URL.parse(requestUrl, true)
 
 			console.log(request.method.grey.bold + " " + requestUrl.grey.italic)
-			
+
 			if (body) {
 				console.log("body: ".grey + body.grey)
 			}
-			
+
 			if (request.method == 'GET') {
 				//set up regular page fetch
 
@@ -295,7 +298,7 @@ var server = HTTP.createServer(
 					return addPublisher(response, parameters)
 
 
-					
+
 				} else if (parsedUrl["pathname"] == "/api/publish/message") {
 					return handleMessage(response, parameters)
 
@@ -338,7 +341,7 @@ var server = HTTP.createServer(
 					return fetchGuideWatchEspn(response)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/fsgo") {
-					return fetchGuideFsgo(response)				
+					return fetchGuideFsgo(response)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nba") {
 					return fetchGuideNbaLeaguePass(response, parameters)
@@ -346,7 +349,7 @@ var server = HTTP.createServer(
 
 				console.log(parsedUrl)
 				response.writeHead(404)
-				response.end("Invalid API request: " + parsedUrl["pathname"])				
+				response.end("Invalid API request: " + parsedUrl["pathname"])
 			}
 		})
 	}
@@ -388,7 +391,7 @@ var addPublisher = function(response, parameters) {
 
 			response.writeHead(200, {'Content-Type': 'application/json'})
 			return response.end(JSON.stringify(result))
-		}	
+		}
 	}
 
 	result["frames"] = 0
@@ -426,7 +429,7 @@ var handleMessage = function(response, parameters) {
 	//console.log(paramUrl)
 
 	//console.log(result)
-	console.log(JSON.stringify(result).grey)			
+	console.log(JSON.stringify(result).grey)
 
 	if (subscribers[subscriberID]) {
 		var lastSubscriberResponse = subscribers[subscriberID].response
@@ -475,9 +478,9 @@ var sendFrames = function(response, parameters) {
 	result["frames"] = Number(parameters["frames"])
 
 	//console.log(result)
-	console.log(JSON.stringify(result).grey)			
+	console.log(JSON.stringify(result).grey)
 
-	if (subscribers[subscriberID]) {					
+	if (subscribers[subscriberID]) {
 		var lastSubscriberResponse = subscribers[subscriberID].response
 		var lastSubscriberRequest = subscribers[subscriberID].request
 		var lastSubscriberFrames = subscribers[subscriberID].frames
@@ -488,7 +491,7 @@ var sendFrames = function(response, parameters) {
 			lastSubscriberResponse.end(JSON.stringify(result))
 
 			console.log("Message sent to subscriber ".cyan + subscriberID)
-			
+
 		} else {
 			console.log("No player subscriber available.".bold.cyan)
 
@@ -507,14 +510,14 @@ var sendFrames = function(response, parameters) {
 		console.log("No player subscriber available.".bold.cyan)
 
 		response.writeHead(503)
-		return response.end("No player subscriber available.");						
+		return response.end("No player subscriber available.");
 	}
 }
 
 
 
 /** SUBSCRIBER FUNCTIONS **/
-var addSubscriber = function(request, response, parameters) {	
+var addSubscriber = function(request, response, parameters) {
 	var subscriberID = parameters["subscriberID"]
 	if (!subscribers[subscriberID]) {
 		subscribers[subscriberID] = {}
@@ -574,7 +577,7 @@ var fetchGuide = function(response) {
 
 	}, function(scheduleResponse) {
 		scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -593,7 +596,7 @@ var fetchGuide = function(response) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error".red)
@@ -603,7 +606,7 @@ var fetchGuide = function(response) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideChannel = function(response, channel) {	
+var fetchGuideChannel = function(response, channel) {
 	console.log("Requesting program guide for channel " + channel + "...")
 
 	//check if program guide exists
@@ -626,7 +629,7 @@ var fetchGuideChannel = function(response, channel) {
 
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -642,7 +645,7 @@ var fetchGuideChannel = function(response, channel) {
 
 			var pushProgram = function(pItem) {
 				time = cheerioBox('.zc-ssl-pg-time', pItem).text()
-				title = cheerioBox('.zc-ssl-pg-title', pItem).text()								
+				title = cheerioBox('.zc-ssl-pg-title', pItem).text()
 				episode = cheerioBox('.zc-ssl-pg-ep', pItem).text().replace('"', "").replace('"', "").replace('"', "")
 				icons = cheerioBox('.zc-icons', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ")
 
@@ -664,7 +667,7 @@ var fetchGuideChannel = function(response, channel) {
 						previousItem = previousItem.prev()
 					}
 
-					pushProgram(previousItem)					
+					pushProgram(previousItem)
 					first = false
 				}
 
@@ -692,7 +695,119 @@ var fetchGuideChannel = function(response, channel) {
 				return response.end(scheduleError.error)
 			}
 		})
-	})	
+	})
+
+	scheduleRequest.on('error', function(scheduleRequestError) {
+		console.log("schedule request error".red)
+		console.log("error: ".red + scheduleRequestError.message)
+	})
+
+	return scheduleRequest.end()
+}
+
+var fetchGuideChannelGrid = function(response, channel) {
+	console.log("Requesting program guide for channel " + channel + "...")
+
+	//check if program guide exists
+	if (channel in programGuide) {
+		result = {"channel": channel,
+				  "fetchDate": programGuideFetchDate[channel],
+				  "programs": programGuide[channel]}
+
+
+		console.log("Send program guide for channel " + channel + " from cache...")
+
+		response.writeHead(200, {'Content-Type': 'application/json'});
+		return response.end(JSON.stringify(result))
+	}
+
+	var schedulePath = "/tvlistings/ZCSGrid.do?fromTimeInMillis=0&sgt=grid&aid=zap2it&stnNum=" + channel
+	var scheduleRequest = HTTP.request({
+		host: 'tvlistings.zap2it.com',
+		path: schedulePath,
+
+	}, function(scheduleResponse) {
+		//scheduleResponse.setEncoding('binary')
+
+		var scheduleBody = ""
+		scheduleResponse.on('data', function(chunk) {
+			scheduleBody += chunk
+		})
+
+		scheduleResponse.on('end', function() {
+			console.log("Program guide for channel " + channel + " fetched.")
+
+			programs = []
+
+			cheerioBox = Cheerio.load(scheduleBody)
+			programItems = cheerioBox("div[id^=1_]")
+
+			var heightToMinuteRatio = 4
+			var runningHeight = 0
+			var pushProgram = function(pItem) {
+				height = parseInt(cheerioBox(pItem).attr('style').replace("height: ", "").replace("px;", ""));
+
+				time = Moment().startOf('day').add(runningHeight / heightToMinuteRatio, 'minutes').format("h:mm A");
+				runningHeight += height;
+
+				duration = height / heightToMinuteRatio;
+
+				genre = cheerioBox(pItem).attr('class').replace("zc-program zc-genre-", "");
+				title = cheerioBox('.zc-program-title', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
+				episode = cheerioBox('.zc-program-episode', pItem).text().replace('"', "").replace('"', "").replace('"', "");
+				description = cheerioBox('.zc-program-description', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ").replace('"', "").replace('"', "").replace('"', "");
+				icons = cheerioBox('.zc-icons', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
+
+				programs.push({
+					"time": time,
+					"duration": duration,
+					"genre": genre,
+					"title": title,
+					"episode": episode,
+					"description": description,
+					"icons": icons
+				})
+			}
+
+			var first = false
+			programItems.each(function(index, element) {
+				programItem = cheerioBox(element)
+
+				if (first) {
+					previousItem = programItem.prev()
+					if (previousItem.attr('class') == "zc-ssl-sp") {
+						previousItem = previousItem.prev()
+					}
+
+					pushProgram(previousItem)
+					first = false
+				}
+
+				pushProgram(programItem)
+			})
+
+			programGuide[channel] = programs
+			programGuideFetchDate[channel] = new Date()
+
+			result = {"channel": channel,
+					  "fetchDate": programGuideFetchDate[channel],
+					  "programs": programGuide[channel]}
+
+			if (response != null) {
+				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
+				return response.end(JSON.stringify(result))
+			}
+		})
+
+		scheduleResponse.on('error', function(scheduleError) {
+			console.log("schedule error")
+
+			if (response) {
+				response.writeHead(200)
+				return response.end(scheduleError.error)
+			}
+		})
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error".red)
@@ -708,9 +823,9 @@ var fetchGuideChannelTvGuide = function(response, channelId, baseId) {
 // http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/{base id -- cable 80001, broadcast 901078}/start/{current unix timestamp}/duration/{duration in minutes}}?channelsourceids={channel source ids separated by | (%7c) }}%7C*&formattype=json
 };
 
-var fetchGuideNbcsn = function(response) {	
+var fetchGuideNbcsn = function(response) {
 	console.log("Requesting program guide for nbcsn...")
-	
+
 	var schedulePath = "/data/splash_data.json"
 	var scheduleRequest = HTTP.request({
 		host: 'stream.nbcsports.com',
@@ -724,7 +839,7 @@ var fetchGuideNbcsn = function(response) {
 		// }
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -741,7 +856,7 @@ var fetchGuideNbcsn = function(response) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for nbcsn".red)
@@ -751,29 +866,29 @@ var fetchGuideNbcsn = function(response) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideNbcsnUrl = function(response, parameters) {	
+var fetchGuideNbcsnUrl = function(response, parameters) {
 	console.log("Requesting url for nbcsn...")
-	
+
 	var post_url = parameters["url"]
 	console.log(post_url)
-	
+
 	post_url = post_url.replace("http://", "")
-	
+
 	var schedulePath = post_url.substring(post_url.indexOf("/"))
 	post_url = post_url.substring(0, post_url.indexOf("/"))
-	
+
 
 	if (post_url == "") {
 		return response.end("empty url for nbcsn")
 	}
-						
+
 	var scheduleRequest = HTTP.request({
 		host: post_url,
 		path: schedulePath
 
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -797,7 +912,7 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for nbcsn url".red)
@@ -831,7 +946,7 @@ var fetchGuideNhl = function(response, parameters) {
 		// }
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -839,7 +954,7 @@ var fetchGuideNhl = function(response, parameters) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nhl sent.")
-			
+
 			scheduleBody = scheduleBody.replace("loadScoreboard(", "")
 			scheduleBody = scheduleBody.trim()
 			scheduleBody = scheduleBody.slice(0, -1)
@@ -853,7 +968,7 @@ var fetchGuideNhl = function(response, parameters) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for nhl".red)
@@ -888,7 +1003,7 @@ var fetchGuideNhlTv = function(response, parameters) {
 		// }
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -906,7 +1021,7 @@ var fetchGuideNhlTv = function(response, parameters) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for nhl tv".red)
@@ -916,7 +1031,7 @@ var fetchGuideNhlTv = function(response, parameters) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideMls = function(response) {					
+var fetchGuideMls = function(response) {
 	var currentDate = new Date()
 	var currentMonth = currentDate.getMonth() + 1
 	var currentDay = currentDate.getDate()
@@ -945,7 +1060,7 @@ var fetchGuideMls = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for mls sent.")
-			
+
 			games = []
 
 			cheerioBox = Cheerio.load(scheduleBody)
@@ -984,7 +1099,7 @@ var fetchGuideMls = function(response) {
 
 				if (awayTeam != "" && homeTeam != "") {
 					games.push({
-						"match": homeTeam + " vs. " + awayTeam, 
+						"match": homeTeam + " vs. " + awayTeam,
 						"gameId": gameId,
 						"url": "http://live.mlssoccer.com/mlsmdl/" + url,
 						"date": gameDate,
@@ -1012,7 +1127,7 @@ var fetchGuideMls = function(response) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for mls".red)
@@ -1022,7 +1137,7 @@ var fetchGuideMls = function(response) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideWatchEspn = function(response) {					
+var fetchGuideWatchEspn = function(response) {
 	var currentDate = new Date()
 	var currentMonth = currentDate.getMonth() + 1
 	var currentDay = currentDate.getDate()
@@ -1044,7 +1159,7 @@ var fetchGuideWatchEspn = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for watchEspn sent.")
-			
+
 			events = []
 
 			cheerioBox = Cheerio.load(scheduleBody)
@@ -1057,7 +1172,7 @@ var fetchGuideWatchEspn = function(response) {
 
 				eventTime = cheerioBox('.time', eventItem).text()
 				eventChannel = cheerioBox('.channel-logo', eventItem).text()
-				
+
 				//console.log(eventItem.html().magenta)
 
 				events.push({
@@ -1082,7 +1197,7 @@ var fetchGuideWatchEspn = function(response) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for watchEspn".red)
@@ -1094,9 +1209,9 @@ var fetchGuideWatchEspn = function(response) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideFsgo = function(response) {	
+var fetchGuideFsgo = function(response) {
 	console.log("Requesting program guide for FSGO...")
-	
+
 	//var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FCSA|FCSC|FCSP|FXDEP|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fcs|fsw|bige|fsgo|tudor|usopen|yes}"
 	var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME|FSW},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fsw|bige|fsgo|tudor|usopen|yes}"
 	var scheduleRequest = HTTP.request({
@@ -1111,7 +1226,7 @@ var fetchGuideFsgo = function(response) {
 		// }
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -1128,7 +1243,7 @@ var fetchGuideFsgo = function(response) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for fsgo".red)
@@ -1138,9 +1253,9 @@ var fetchGuideFsgo = function(response) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideNbaLeaguePass = function(response, parameters) {	
+var fetchGuideNbaLeaguePass = function(response, parameters) {
 	console.log("Requesting program guide for NBA League Pass...")
-	
+
 	var scheduleDate = parameters["date"]
 	var currentDate = new Date()
 
@@ -1153,7 +1268,7 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 	var seasonYear = currentDate.getMonth() < 8 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()
 	//console.log(seasonYear)
 	var schedulePath = "/data/5s/json/cms/noseason/scoreboard/" + scheduleDate + "/games.json"
-	//var schedulePath = "/data/10s/json/nbacom/" + seasonYear + "/gameline/" + scheduleDate + "/games.json"	
+	//var schedulePath = "/data/10s/json/nbacom/" + seasonYear + "/gameline/" + scheduleDate + "/games.json"
 	var scheduleRequest = HTTP.request({
 		host: 'data.nba.com',
 		path: schedulePath,
@@ -1166,7 +1281,7 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 		// }
 	}, function(scheduleResponse) {
 		//scheduleResponse.setEncoding('binary')
-		
+
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
 			scheduleBody += chunk
@@ -1186,7 +1301,7 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 			response.writeHead(200)
 			return response.end(scheduleError.error)
 		})
-	})	
+	})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
 		console.log("schedule request error for nba league pass".red)
@@ -1205,7 +1320,7 @@ var fetchPreCachePrograms = function() {
 		networks = JSON.parse(data)
 		networks.networks.forEach(function(currentValue, index, array) {
 			channelId = currentValue.channelId;
-			fetchGuideChannel(null, channelId);
+			fetchGuideChannelGrid(null, channelId);
 		})
 
 		console.log('Guide prefetched.'.yellow)

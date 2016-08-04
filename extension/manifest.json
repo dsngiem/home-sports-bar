@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.35",
+    "version": "1.0.36",
 
     "content_scripts": [
     {
@@ -32,12 +32,12 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.ncaa.com/march-madness-live/game/*"],        
+        "matches": ["http://www.ncaa.com/march-madness-live/game/*"],
         "css": ["ncaa.css"],
         "all_frames": true
     },
     {
-        "matches": ["http://www.cbssports.com/watch/cbssportsnetwork/*"],        
+        "matches": ["http://www.cbssports.com/watch/cbssportsnetwork/*"],
         "css": ["cbssn.css"],
         "all_frames": true
     },
@@ -71,7 +71,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://stream.nbcsports.com/*/*", "http://stream.nbcsports.com/*", "http://stream.golfchannel.com/*", "http://stream.nbcdeportes.com/*"],
+        "matches": ["http://stream.nbcsports.com/*/*", "http://stream.nbcsports.com/*", "http://stream.golfchannel.com/*", "http://stream.nbcdeportes.com/*", "http://stream.nbcolympics.com/*"],
         "js": ["nbcsn.js"],
         "css": ["nbcsn.css"],
         "all_frames": true
@@ -283,17 +283,17 @@
         "css": ["nbclive.css"],
         "js": ["nbclive.js"],
         "all_frames": true
-    },   
+    },
     {
         "matches": ["http://abc.go.com/watch-live*"],
         "css": ["abc-live.css"],
         "all_frames": true
-    },    
+    },
     {
         "matches": ["http://pix11.com/on-air/live-streaming/*"],
         "css": ["pix-11.css"],
         "all_frames": true
-    },    
+    },
     {
         "matches": ["https://idp.optimum.net/idp.optimum.net/SSOPOST/metaAlias/realm4/idpv2"],
         "js": ["logins/optimum.js"],

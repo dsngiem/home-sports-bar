@@ -1,0 +1,209 @@
+{
+	"networks": [
+	{
+		"name": "wnbc",
+		"alt": "NBC",
+		"channelId": "11705",
+		"channelIdTvGuide": "11293",
+		"baseIdTvGuide": "20517",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NBC_2014_Indent.svg/200px-NBC_2014_Indent.svg.png",
+		"urls": [
+		{
+			"source": "NBC Live",
+			"url": "http://www.nbc.com/live"
+		},
+		{
+			"source": "DirecTV",
+			"url": "http://www.directv.com/entertainment/video/4"
+		}
+		]
+	},
+	{
+		"name": "nbcsn",
+		"alt": "NBCSN",
+		"channelId": "48639",
+		"channelIdTvGuide": "18729",
+		"baseIdTvGuide": "85061",
+		"color": "#FDB812",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
+		},
+		{
+			"source": "NBCSN",
+			"url": "http://stream.nbcsports.com/nbcsn/"
+		},
+		{
+			"source": "iframe",
+			"url": "http://player.theplatform.com/p/HNK2IC/nbcsports_live?MVPDid=Verizon#playerurl=http%3A//stream.nbcsports.com/nbcsn/%3Fpid%3D47%26referrer%3Dhttp%3A//stream.nbcsports.com/liveextra/"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nbcsn"
+		},
+		{
+			"source": "LiveExtra",
+			"url": "http://stream.nbcsports.com/liveextra/"
+		}
+		]
+	},
+	{
+		"name": "bravo",
+		"alt": "Bravo",
+		"channelId": "58625",
+		"channelIdTvGuide": "404",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Bravo_TV.svg/250px-Bravo_TV.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/bravo?cmpid=livetv_bravo"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/bravo"
+		},
+		{
+			"source": "Bravo Live",
+			"url": "http://www.bravotv.com/live"
+		}
+		]
+	},
+	{
+		"name": "cnbc",
+		"alt": "CNBC",
+		"channelId": "58780",
+		"channelIdTvGuide": "20279",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/180px-CNBC_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
+		},
+		{
+			"source": "CNBC",
+			"url": "http://www.cnbc.com/live-tv/"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/cnbc"
+		}
+		]
+	},
+	{
+		"name": "golf",
+		"alt": "Golf Channel",
+		"channelId": "61854",
+		"channelIdTvGuide": "20001",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Golf_Channel_Logo.png/220px-Golf_Channel_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/golfchannel?cmpid=livetv_golf-channel"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/golf"
+		},
+		{
+			"source": "Golf Channel",
+			"url": "http://stream.golfchannel.com/"
+		}
+		]
+	},
+	{
+		"name": "msnbc",
+		"alt": "MSNBC",
+		"channelId": "64241",
+		"channelIdTvGuide": "23408",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/msnbc?cmpid=livetv_msnbc"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/msnbc"
+		},
+		{
+			"source": "MSNBC",
+			"url": "http://www.msnbc.com/now"
+		}
+		]
+	},
+	{
+		"name": "usa",
+		"alt": "USA",
+		"channelId": "58452",
+		"channelIdTvGuide": "20019",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/USA_Network_logo_%282006%29.svg/220px-USA_Network_logo_%282006%29.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/usa?cmpid=livetv_usa"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/usa"
+		}
+		]
+	},
+	{
+		"name": "wnju",
+		"alt": "Telemundo",
+		"channelId": "54437",
+		"channelIdTvGuide": "23223",
+		"baseIdTvGuide": "85061",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Telemundo_logo_2012.svg/200px-Telemundo_logo_2012.svg.png"
+	},
+	{
+		"name": "univo",
+		"alt": "NBC Universo",
+		"channelId": "91588",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NBCUniverso_logo.png/200px-NBCUniverso_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcuniverso?cmpid=livetv_nbc-universo"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nbcuniverso"
+		},
+		{
+			"source": "NBC Universo",
+			"url": "http://www.nbcuniverso.com/now/live"
+		}
+		]
+	},
+	{
+		"name": "blank",
+		"alt": "Blank Screen",
+		"channelId": "blank-0",
+		"color": "#000000",
+		"image": "",
+		"urls": [
+		{
+			"source": "",
+			"url": "index.html"
+		}
+		]
+	}
+
+	]
+}

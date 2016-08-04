@@ -1,4 +1,4 @@
-{	
+{
 	"networks": [
 	{
 		"name": "wnyw",
@@ -7,7 +7,7 @@
 		"channelIdTvGuide": "11129",
 		"baseIdTvGuide": "901078",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/FOX_wordmark.svg/230px-FOX_wordmark.svg.png"		
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/FOX_wordmark.svg/230px-FOX_wordmark.svg.png"
 	},
 	{
 		"name": "fs1",
@@ -18,7 +18,7 @@
 		"color": "#00285A",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2015_Fox_Sports_1_logo.svg/150px-2015_Fox_Sports_1_logo.svg.png",
 		"urls": [
-		
+
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82547"
@@ -44,7 +44,7 @@
 		"channelIdTvGuide": "29044",
 		"baseIdTvGuide": "85061",
 		"color": "#00285A",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",		
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",
 		"urls": [
 		{
 			"source": "DirecTV",
@@ -547,7 +547,7 @@
 		"channelIdTvGuide": "11153",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/b/bf/WWOR_NewJersey.png"		
+		"image": "https://upload.wikimedia.org/wikipedia/en/b/bf/WWOR_NewJersey.png"
 	},
 	{
 		"name": "wpix",
@@ -696,7 +696,7 @@
 			"url": "https://www.discoverygo.com/watch/ahc/"
 		}
 		]
-	},	
+	},
 	{
 		"name": "amc",
 		"alt": "AMC",
@@ -969,7 +969,7 @@
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CMT_logo.svg/200px-CMT_logo.svg.png",
-		"urls": [		
+		"urls": [
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/CMT-HD-327?format=HD"
@@ -984,7 +984,7 @@
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/180px-CNBC_logo.svg.png",
-		"urls": [		
+		"urls": [
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
@@ -1777,7 +1777,7 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/history?cmpid=livetv_history-channel"
-		},		
+		},
 		{
 			"source": "History",
 			"url": "http://www.history.com/live-stream"
@@ -2367,7 +2367,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/syfy?cmpid=livetv_syfy"	
+			"url": "http://xfinitytv.comcast.net/live/network/syfy?cmpid=livetv_syfy"
 		},
 		{
 			"source": "FiOS",

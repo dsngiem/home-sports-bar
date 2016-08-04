@@ -3,7 +3,7 @@ $(document).ready(function() {
 		// 	console.log("clicked")
 
 			//post_data = {"frame": 0, "url": "http://www.google.com"}
-			
+
 			// $.post("/api/publish", post_data)
 			// 	.done(function (response) {
 			// 		$("#test_results").html(response)
@@ -30,7 +30,7 @@ $(document).ready(function() {
 						$("#frames").append(html)
 					}
 				} else {
-					$("#frames").html("")				
+					$("#frames").html("")
 				}
 
 				frameSet();
@@ -83,7 +83,7 @@ $(document).ready(function() {
 				statusMessage("Player not selected.")
 				return
 			}
-			
+
 			var networkUrl = $(this).attr('src')
 			var alt = $(this).attr('alt')
 
@@ -114,8 +114,8 @@ $(document).ready(function() {
 			var networkUrl = $("input:text[name=url]").val();
 
 			if (networkUrl == null) {
-				return false;			
-			} 
+				return false;
+			}
 
 			// else if (networkUrl.indexOf("youtube.com/watch") > -1) {
 
@@ -131,14 +131,14 @@ $(document).ready(function() {
 				return
 			}
 			var post_data = {
-				"frame": selectedFrame, 
+				"frame": selectedFrame,
 				"url": networkUrl,
 				"alt": alt,
 				"subscriberID": subscriberID
 			}
 
 			console.log(post_data)
-			
+
 			if (networkUrl != "") {
 				$.post("/api/publish/message", post_data)
 					.done(function (response) {
@@ -168,7 +168,7 @@ $(document).ready(function() {
 
 				//$(activeChannel).children(".sources").show('slide', {direction: "left"})
 				$(activeChannel).children(".sources").show()
-				$(activeChannel).css('height', 'auto')				
+				$(activeChannel).css('height', 'auto')
 			}
 		})
 
@@ -186,18 +186,18 @@ $(document).ready(function() {
 						var color = network.color
 						var image = network.image
 						var urls = network.urls
-						
+
 						var html = ""
-						
+
 						html += '<li class="channel" id="'+ channelId + '" onclick = "void(0)">'
 
 						if (image) {
 							html += '<a href="#' + name + '-' + (urls ? urls[0].source : " ") + '" class="network ' + name + '" src="' + (urls ? urls[0].url : "") + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="' + image + '" alt="' + alt + '"/></div></div></a>'
 
-							
+
 						} else {
 							html += '<a href="#' + name + '-' + (urls ? urls[0].source : "") + '" class="network ' + name + '" src="' + (urls ? urls[0].url : "") + '" alt="' + alt + '" style="width: 100%; height: 70px; text-align: center"><p style="color: ' + color + '; position: relative; text-align: center; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); width: 100%;">' + alt + '</p></a>'
-						
+
 						}
 
 						html += '<div class="sources" style="display: none;">'
@@ -207,7 +207,7 @@ $(document).ready(function() {
 								var url = element.url
 
 								html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '"><div><p style="color: ' + color + '">' + source + '</p>'
-								
+
 								html += '</div></a>  '
 							})
 						}
@@ -218,7 +218,7 @@ $(document).ready(function() {
 					})
 
 					getGuidePrograms();
-					getGuideNbcsn();					
+					getGuideNbcsn();
 				}
 			)
 		}
@@ -238,7 +238,7 @@ $(document).ready(function() {
 				// 	a[3] += 24
 
 				// }
-				// return new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]);		
+				// return new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]);
 		}
 
 		var findCurrentEvent = function(events, callSign, channelId) {
@@ -259,7 +259,7 @@ $(document).ready(function() {
 					} else {
 						endTime = parseTime(events[i].startTime).add(events[i].duration, 'minutes')
 						break;
-					}						
+					}
 				}
 
 				//console.log(Math.floor((endTime.getTime() - currentTime.getTime()) / 60000))
@@ -283,7 +283,7 @@ $(document).ready(function() {
 			var nextEventTitle = ""
 			if (i + 1 < events.length) {
 				nextEventTitle = events[i + 1].program.title
-			}					
+			}
 
 			var nextEventEpisode = ""
 			if (i + 1 < events.length) {
@@ -328,7 +328,7 @@ $(document).ready(function() {
 				"offset": offset,
 				"count": count
 			}
-			
+
 			var guidePost = $.post("/api/guide", post_data)
 
 			guidePost.done(function (response) {
@@ -342,12 +342,12 @@ $(document).ready(function() {
 				if ($.isArray(response.data.results.stations)) {
 					response.data.results.stations.forEach( function(currentValue, index, array) {
 						if (!currentValue.ad) {
-							findCurrentEvent(currentValue.events, currentValue.callSign, currentValue.channelId)						
+							findCurrentEvent(currentValue.events, currentValue.callSign, currentValue.channelId)
 						};
 					})
 				}
 
-				//console.log(channelGuide)				
+				//console.log(channelGuide)
 			})
 
 			guidePost.always(function () {
@@ -370,7 +370,7 @@ $(document).ready(function() {
 			})
 		}
 
-		var getGuideNbcsn = function() {			
+		var getGuideNbcsn = function() {
 			var nbcsnPost = $.post("/api/guide/nbcsn")
 
 			nbcsnPost.done(function (response) {
@@ -382,7 +382,7 @@ $(document).ready(function() {
 					response.eventListings.forEach( function(currentValue, index, array) {
 						var startTime = moment(currentValue.EventDateAndTime).add(moment().isDST() ? 4 : 5, 'h')
 						var durationMin = parseInt(currentValue.EventDuration)
-						
+
 						var currentTime = moment()
 						var endTime = moment(currentValue.EventDateAndTime).add(moment().isDST() ? 4 : 5, 'h').add(durationMin, 'm')
 
@@ -398,18 +398,18 @@ $(document).ready(function() {
 							var url = currentValue.DestinationURL
 
 							var alt = currentValue.EventDescription
-							
+
 							var timeLeft = moment.duration(endTime.diff(currentTime))
 
 							var html = ""
-							
+
 							html += '<li class="channel" id="NBCSN-' + source + '" onclick = "void(0)">'
 
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png" alt="' + alt + '"/></div></div></a>'
 
 							html += '<div class="sources" style="display: none;">'
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
-							
+
 							html += '</div></a>  '
 
 							html += '</div><div class="info" style="">'
@@ -426,11 +426,11 @@ $(document).ready(function() {
 
 							$(html).insertAfter("#48639")
 
-							getNbcsnUrl(url, name, source)					
+							getNbcsnUrl(url, name, source)
 						}
 
 					})
-				}				
+				}
 			})
 
 			nbcsnPost.always(function() {
@@ -443,7 +443,7 @@ $(document).ready(function() {
 		}
 
 
-		var getGuideNhlTv = function() {			
+		var getGuideNhlTv = function() {
 			var post_data = {
 				"date": moment().format('YYYY-MM-DD')
 			}
@@ -453,8 +453,8 @@ $(document).ready(function() {
 			nhlPost.done(function (response) {
 				console.log(response)
 
-				$("li[id^=NHL-]").detach()	
-				
+				$("li[id^=NHL-]").detach()
+
 				var games = response.dates[0].games
 
 				if ($.isArray(games)) {
@@ -464,16 +464,16 @@ $(document).ready(function() {
 						var source = "NHL-" + currentValue.teams.away.team.abbreviation + currentValue.teams.home.team.abbreviation
 						var url = "http://www.nhl.com/tv/" + currentValue.gamePk
 						var alt = currentValue.teams.away.team.name + " at " + currentValue.teams.home.team.name
-						
+
 						var startTime = moment(currentValue.gameDate)
 						var currentTime = moment()
 						var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
-						
+
 						var timeUntil = moment.duration(startTime.diff(currentTime))
 						var timeLeft = moment.duration(endTime.diff(currentTime))
 
 						var html = ""
-						
+
 						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
 
 						html += '<a href="#' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png" alt="' + alt + '"/></div></div></a>'
@@ -486,11 +486,11 @@ $(document).ready(function() {
 						for (var i = 0; i < tvItems.length; i++) {
 							var currentValueMedia = tvItems[i]
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '/' + currentValueMedia.eventId + '/' + currentValueMedia.mediaPlaybackId + '" alt="' + alt + '"><div><p style="color: #000000">' + (currentValueMedia.callLetters == "" ? currentValueMedia.feedName : currentValueMedia.callLetters) + ' (' + toTitleCase(currentValueMedia.mediaFeedType) + ')</p>'
-							html += '</div></a>  ' 
+							html += '</div></a>  '
 						}
 
 						html += '</div><div class="info" style="">'
-						
+
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
 						if (currentValue.status.statusCode != "1") {
@@ -523,7 +523,7 @@ $(document).ready(function() {
 
 		}
 
-		var getGuideNhl = function() {			
+		var getGuideNhl = function() {
 			var post_data = {
 				"date": moment().format('YYYY-MM-DD')
 			}
@@ -533,8 +533,8 @@ $(document).ready(function() {
 			nhlPost.done(function (response) {
 				console.log(response)
 
-				$("li[id^=NHL-]").detach()	
-						
+				$("li[id^=NHL-]").detach()
+
 				if ($.isArray(response.games)) {
 					response.games.reverse()
 					response.games.forEach( function(currentValue, index, array) {
@@ -542,16 +542,16 @@ $(document).ready(function() {
 						var source = "NHL-" + currentValue.ata + currentValue.hta
 						var url = "http://www.nhl.com/gamecenter/en/gamecenterlive?id=" + currentValue.id
 						var alt = toTitleCase(currentValue.atcommon) + " at " + toTitleCase(currentValue.htcommon)
-						
+
 						var startTime = moment(currentValue.bs, "h:mm A")
 						var currentTime = moment()
 						var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
-						
+
 						var timeUntil = moment.duration(startTime.diff(currentTime))
 						var timeLeft = moment.duration(endTime.diff(currentTime))
 
 						var html = ""
-						
+
 						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
 
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png" alt="' + alt + '"/></div></div></a>'
@@ -561,10 +561,10 @@ $(document).ready(function() {
 						html += '</div></a>  '
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '&feed=home" alt="' + alt + '"><div><p style="color: #000000">Home</p>'
 						html += '</div></a>  '
-						
+
 
 						html += '</div><div class="info" style="">'
-						
+
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
 						if (currentValue.bsc != "") {
@@ -626,7 +626,7 @@ $(document).ready(function() {
 			"CHA": "Charlotte Hornets"
 		}
 
-		var getGuideNba = function() {			
+		var getGuideNba = function() {
 			var post_data = {
 				"date": moment().format('YYYYMMDD')
 			}
@@ -636,8 +636,8 @@ $(document).ready(function() {
 			nbaPost.done(function (response) {
 				console.log(response)
 
-				$("li[id^=NBA-]").detach()	
-						
+				$("li[id^=NBA-]").detach()
+
 				if ($.isArray(response.sports_content.games.game)) {
 					response.sports_content.games.game.reverse()
 					response.sports_content.games.game.forEach( function(currentValue, index, array) {
@@ -647,11 +647,11 @@ $(document).ready(function() {
 						var source = "NBA-" + awayTeam.abbreviation + homeTeam.abbreviation
 						var url = "http://premium.nba.com/pr/leaguepass/app/2015/console.html?debug=false&gameID=" + currentValue.id
 						var alt = awayTeam.city + " " + awayTeam.nickname + " at " + homeTeam.city + " " + homeTeam.nickname
-						
+
 						var startTime = moment(currentValue.period_time.period_status.substring(0, currentValue.period_time.period_status.length - 2), "h:mm A")
 						var currentTime = moment()
 						var endTime = moment(startTime).add(2, 'hours').add(30, 'minutes')
-						
+
 						var timeUntil = moment.duration(startTime.diff(currentTime))
 						var timeLeft = moment.duration(endTime.diff(currentTime))
 
@@ -667,22 +667,22 @@ $(document).ready(function() {
 						})
 
 						var html = ""
-						
+
 						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
 
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/07/NBALogo.svg/100px-NBALogo.svg.png" alt="' + alt + '"/></div></div></a>'
 
 						html += '<div class="sources" style="display: none;">'
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
-						
+
 						html += '</div></a>  '
 
 						html += '</div><div class="info" style="">'
-						
+
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
 
-						
+
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 						if (currentValue.period_time.game_status != 1) {
 							html += '<span class="episodeTitle"></span>'
@@ -698,7 +698,7 @@ $(document).ready(function() {
 
 						// html += '<span class="programTitle">' + alt + '</span> '
 						// html += '<span class="timeDisplay">' + (currentValue.prd.s == "0Q - 00:00" ? "" : currentValue.prd.s) + '</span> '
-						
+
 						// html += '<span class="episodeTitle"></span>'
 						// //html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 						// html += '<span class="description">' + '<span class="flags">' + (currentValue.broadcaster.is_national ? "[" + currentValue.broadcaster.name + "]" : "") + '</span>'
@@ -712,27 +712,27 @@ $(document).ready(function() {
 			})
 
 			nbaPost.always(function () {
-				
+
 			})
 		}
 
-		var getGuideMls = function() {			
+		var getGuideMls = function() {
 			var mlsPost = $.post("/api/guide/mls")
 
 			mlsPost.done(function (response) {
 				console.log(response)
 
-				$("li[id^=MLS-]").detach()	
-						
+				$("li[id^=MLS-]").detach()
+
 				if ($.isArray(response.games)) {
 					response.games.reverse()
-					response.games.forEach( function(currentValue, index, array) {										
+					response.games.forEach( function(currentValue, index, array) {
 						var startTime = moment(currentValue.date, "YYYY-MM-DD HH:mm:ss.S")
 						var durationMin = 120
-						
+
 						var currentTime = moment()
 						var endTime = moment(currentValue.date, "YYYY-MM-DD HH:mm:ss.S").add(durationMin, 'm')
-						
+
 						var timeUntil = moment.duration(startTime.diff(currentTime))
 						var timeLeft = moment.duration(endTime.diff(currentTime))
 
@@ -750,20 +750,20 @@ $(document).ready(function() {
 							var source = "MLS-" + currentValue.gameId
 							var url = currentValue.url
 							var alt = currentValue.match
-							
+
 							var html = ""
-							
+
 							html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
 
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/86/MLS_logo.svg/220px-MLS_logo.svg.png" alt="' + alt + '"/></div></div></a>'
 
 							html += '<div class="sources" style="display: none;">'
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
-							
+
 							html += '</div></a>  '
 
 							html += '</div><div class="info" style="">'
-							
+
 							alt = alt.split(" ").join('</span><span class="programTitle">')
 							html += '<span class="programTitle">' + alt + '</span> '
 							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
@@ -776,7 +776,7 @@ $(document).ready(function() {
 							} else {
 								html += '<span class="description">'// + '<span class="flags">' + currentValue.date + " " + currentValue.time + '</span>'
 							}
-							
+
 
 							html += '</div></li>'
 
@@ -815,47 +815,47 @@ $(document).ready(function() {
 			"ESPN3": "ESPN3"
 		}
 
-		var getGuideWatchEspn = function() {			
+		var getGuideWatchEspn = function() {
 			var watchEspnPost = $.post("/api/guide/watchEspn")
 
 			watchEspnPost.done(function (response) {
 				console.log(response)
 
-				$("li[id^=watchEspn-]").detach()	
-						
+				$("li[id^=watchEspn-]").detach()
+
 				if ($.isArray(response.events)) {
 					response.events.sort(function(a, b) {
 						return espnChannelRank[a.channel]-espnChannelRank[b.channel]
 					})
 
 					response.events.reverse()
-					response.events.forEach( function(currentValue, index, array) {										
+					response.events.forEach( function(currentValue, index, array) {
 						var startTime = moment(currentValue.time, "h:mm A z")
-						
+
 						var name = "WatchESPN"
 						var source = "watchEspn-" + currentValue.eventId
 						var url = currentValue.url
 						var alt = currentValue.eventName
-						
+
 						var html = ""
-						
+
 						html += '<li class="channel" id="'+ source + '" onclick = "void(0)">'
 
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/WatchESPN_logo.png/200px-WatchESPN_logo.png" alt="' + alt + '"/></div></div></a>'
 
 						html += '<div class="sources" style="display: none;">'
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
-						
+
 						html += '</div></a>  '
 
 						html += '</div><div class="info" style="">'
-						
+
 						alt = alt.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + alt + '</span> '
 						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + '</span>'
 						html += '<span class="episodeTitle"></span>'
 						html += '<span class="flags">' + (espnChannelMap[currentValue.channel] != undefined ? espnChannelMap[currentValue.channel] : currentValue.channel) + '</span>'
-						
+
 						html += '</div></li>'
 
 						$(html).insertAfter("#espn3-0")
@@ -865,7 +865,7 @@ $(document).ready(function() {
 
 			watchEspnPost.always(function () {
 				getGuideFsgo();
-				
+
 			})
 		}
 
@@ -884,7 +884,7 @@ $(document).ready(function() {
 			"PRIME": 12
 		}
 
-		var getGuideFsgo = function() {			
+		var getGuideFsgo = function() {
 			var fsgoPost = $.post("/api/guide/fsgo")
 
 			fsgoPost.done(function (response) {
@@ -901,7 +901,7 @@ $(document).ready(function() {
 					response.entries.forEach( function(currentValue, index, array) {
 						var startTime = moment(currentValue.fsmobile$eventStartTime)
 						//var durationMin = parseInt(currentValue.EventDuration)
-						
+
 						var currentTime = moment()
 						var endTime = moment(currentValue.fsmobile$eventEndTime)
 
@@ -917,18 +917,18 @@ $(document).ready(function() {
 							var url = "http://www.foxsports.com/foxsportsgo/?mcpid=" + source
 
 							var alt = name + " - " + currentValue.title
-							
+
 							var timeLeft = moment.duration(endTime.diff(currentTime))
 
 							var html = ""
-							
+
 							html += '<li class="channel" id="FSGO-' + source + '" onclick = "void(0)">'
 
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://a2.mzstatic.com/us/r30/Purple7/v4/21/68/bd/2168bd8a-484c-bfab-0f22-8f6e022923fc/icon175x175.png" alt="' + alt + '"/></div></div></a>'
 
 							html += '<div class="sources" style="display: none;">'
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
-							
+
 							html += '</div></a>  '
 
 							html += '</div><div class="info" style="">'
@@ -951,11 +951,11 @@ $(document).ready(function() {
 
 							html += '</div></li>'
 
-							$(html).insertAfter("#59305")			
+							$(html).insertAfter("#59305")
 						}
 
 					})
-				}				
+				}
 			})
 
 			fsgoPost.always(function() {
@@ -988,7 +988,7 @@ $(document).ready(function() {
 		var queue = [];
 		var fired = [];
 
-		var getGuideChannel = function(channel) {	
+		var getGuideChannel = function(channel) {
 			if (fired.length >= 10) {
 				queue.push(channel);
 
@@ -997,10 +997,10 @@ $(document).ready(function() {
 
 				post_data = {
 					"channel": channel
-				}		
+				}
 
 				$.post("/api/guide/channel", post_data).done(function (response) {
-					console.log(response)			
+					console.log(response)
 					channelGuide[response.channel] = response.programs
 					channelGuideFetchDate[response.channel] = response.fetchDate
 					postCurrentProgram(response.channel)
@@ -1012,7 +1012,7 @@ $(document).ready(function() {
 						var queuedChannel = queue.shift();
 						getGuideChannel(queuedChannel);
 					}
-				});			
+				});
 			}
 		}
 
@@ -1037,7 +1037,7 @@ $(document).ready(function() {
 					//}
 
 					if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
-						newDay += 1 
+						newDay += 1
 					}
 
 					if (moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days') > currentTime) {
@@ -1060,9 +1060,10 @@ $(document).ready(function() {
 				var endTimeDisplay = endTime ? endTime.format("h:mm A") : nextProgram.time
 				var episodeTitle = currentProgram.episode
 				var flags = currentProgram.icons == "" ? [] : currentProgram.icons.split(" ")
-				var genre = ""; // = currentValue.program.genre
-				var description = ""; // = currentValue.program.description
+				var genre = currentProgram.genre
+				var description = currentProgram.description
 				var timeLeft = moment.duration(endTime.diff(currentTime))
+				// var duration = currentProgram.duration;
 				if (nextProgram) {
 					var nextEventTitle = endTime ? nextProgram.title : ""
 					var nextEventEpisode = endTime ? nextProgram.episode : ""
@@ -1074,14 +1075,14 @@ $(document).ready(function() {
 				html += '<span class="programTitle">' + programTitle + '</span> '
 				html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 				html += '<span class="episodeTitle">' + episodeTitle + '</span>'
-				//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
-				html += '<span class="description"><span class="genre">' + ($.isArray(genre) && genre.length > 0 ? "[" + toTitleCase(genre.join(" &#8226 ")) + "]" : "") + '</span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span> ' + description + '</span>'
-				html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + nextEventEpisode + '</span></span>'
-				
+				html += '<span class="description">' + description + '</span>'
+				html += '<span class="genre">' + (genre && genre.length > 0 ? "[" + genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span>'
+				html += nextEventTitle == "" ? "" : '<span class="description"><br />Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
+
 
 				$("#" + channel + " .info").html(html)
-				$("#" + channel + " .info").fadeIn(1000)	
-			}	
+				$("#" + channel + " .info").fadeIn(1000)
+			}
 		}
 
 		var linkNetworksGuide = function() {
@@ -1090,10 +1091,10 @@ $(document).ready(function() {
 
 			if (!$.isEmptyObject(channelGuide) && networks) {
 				networks.forEach(function(currentValue, index, array) {
-					if (channelGuide[currentValue.channelId]) {			
+					if (channelGuide[currentValue.channelId]) {
 						findCurrentEvent(channelGuide[currentValue.channelId].events, channelGuide[currentValue.channelId].callSign, currentValue.channelId)
 
-						currentValue["program"] = channelGuide[currentValue.channelId]		
+						currentValue["program"] = channelGuide[currentValue.channelId]
 
 						var programTitle = currentValue.program.programTitle
 						programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
@@ -1107,19 +1108,19 @@ $(document).ready(function() {
 						var nextEventTitle = currentValue.program.nextEventTitle
 
 						var html = ''
-						
+
 						html += '<span class="programTitle">' + programTitle + '</span> '
 						html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft + ' left)</span>'
 						html += '<span class="episodeTitle">' + episodeTitle + '</span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 						html += '<span class="description"><span class="genre">' + ($.isArray(genre) ? "[" +toTitleCase(genre.join(" &#8226 ")) + "]" : "") + '</span><span class="flags">' + ($.isArray(flags) ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span> ' + description + '</span>'
 						html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + '</span></span>'
-						
+
 
 						$("#" + currentValue.channelId + " .info").html(html)
-						$("#" + currentValue.channelId + " .info").fadeIn(1000)		
-						
-					} 
+						$("#" + currentValue.channelId + " .info").fadeIn(1000)
+
+					}
 				})
 
 				// console.log(networks)
@@ -1139,7 +1140,7 @@ $(document).ready(function() {
 				.done( function(response) {
 					frames = 1
 					selectedFrame = 1
-					frameSet();				
+					frameSet();
 				})
 		})
 
@@ -1150,7 +1151,7 @@ $(document).ready(function() {
 				.done( function(response) {
 					frames = 2
 					selectedFrame = 1
-					frameSet();			
+					frameSet();
 				})
 		})
 
@@ -1161,7 +1162,7 @@ $(document).ready(function() {
 				.done( function(response) {
 					frames = 4
 					selectedFrame = 1
-					frameSet();			
+					frameSet();
 				})
 		})
 
@@ -1172,7 +1173,7 @@ $(document).ready(function() {
 				.done( function(response) {
 					frames = 8
 					selectedFrame = 1
-					frameSet();			
+					frameSet();
 				})
 		})
 
@@ -1210,7 +1211,7 @@ $(document).ready(function() {
 
 			//getGuide(offset, delta);
 		}
-		
+
 		var refreshChannelsTimeout;
 		var refreshChannels = function() {
 			getAllChannels();
