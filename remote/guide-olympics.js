@@ -1068,6 +1068,7 @@ $(document).ready(function() {
 					var nextEventTitle = endTime ? nextProgram.title : ""
 					var nextEventEpisode = endTime ? nextProgram.episode : ""
 					nextEventEpisode = nextEventEpisode == "" ? "" : " - " + nextEventEpisode
+					var nextFlags = nextProgram.icons == "" ? [] : nextProgram.icons.split(" ")
 				}
 
 				var html = ''
@@ -1075,9 +1076,8 @@ $(document).ready(function() {
 				html += '<span class="programTitle">' + programTitle + '</span> '
 				html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 				html += '<span class="episodeTitle">' + episodeTitle + '</span>'
-				html += '<span class="description">' + description + '</span>'
-				html += '<span class="genre">' + (genre && genre.length > 0 ? "[" + genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span>'
-				html += nextEventTitle == "" ? "" : '<span class="description"><br />Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
+				html += '<span class="description"><span class="genre">' + (genre && genre.length > 0 ? "[" + genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "")+ '</span> ' + description + '</span>'
+				html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' <span class="genre">' + (nextProgram.genre && nextProgram.genre.length > 0 ? "[" + nextProgram.genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(nextFlags) && nextFlags.length > 0 ? "[" + nextFlags.join(" &#8226 ") + "]" : "")+ '</span>' //' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
 
 
 				$("#" + channel + " .info").html(html)
