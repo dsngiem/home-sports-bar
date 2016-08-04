@@ -320,7 +320,7 @@ var server = HTTP.createServer(
 
 				} else if (parsedUrl["pathname"] == "/api/guide/channel") {
 					var channel = parameters["channel"]
-					return fetchGuideChannel(response, channel)
+					return fetchGuideChannelGrid(response, channel)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn") {
 					return fetchGuideNbcsn(response)
@@ -770,6 +770,25 @@ var fetchGuideChannelGrid = function(response, channel) {
 			}
 
 			var first = false
+			programItems.each(function(index, element) {
+				programItem = cheerioBox(element)
+
+				if (first) {
+					previousItem = programItem.prev()
+					if (previousItem.attr('class') == "zc-ssl-sp") {
+						previousItem = previousItem.prev()
+					}
+
+					pushProgram(previousItem)
+					first = false
+				}
+
+				pushProgram(programItem)
+			})
+
+
+			programItems = cheerioBox("div[id^=2_]")
+
 			programItems.each(function(index, element) {
 				programItem = cheerioBox(element)
 
