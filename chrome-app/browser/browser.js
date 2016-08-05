@@ -19,26 +19,43 @@ onload = function() {
   webview1.addEventListener('loadcommit', handleLoadCommit);
 
   var baseExtensionUrl = "/extension/";
-  $.getJSON('/extension/extension-manifest.json', function( extensionManifest ) {
+  $.getJSON('/extension/manifest.json', function( extensionManifest ) {
     extensionManifest.content_scripts.forEach( function(element, index, array) {
+
+      var webviewCss = []
+      if(element.css) {
+        element.css.forEach( function(element, index, array) {
+          webviewCss.push("extension/" + element);
+        });
+      }
+
+      var webviewJs = []
+      if (element.js) {
+        element.js.forEach( function(element, index, array) {
+          webviewJs.push("extension/" + element);
+        });
+      }
+
       webview1.addContentScripts([
         {
           name: 'rule'+index,
           matches: element.matches,
-          css: { files: element.css },
-          js: { files: element.js },
+          css: { files: webviewCss },
+          js: { files: webviewJs },
           run_at: 'document_start'
         }
       ]);
     });
   });
 
-  chrome.contextMenus.create({"title": "Reload", "contexts": ["all"], "onclick": 
-    function() {
+  chrome.contextMenus.create({"title": "Reload", "contexts": ["all"], id: "reloadOnClick"});
+
+  chrome.contextMenus.onClicked.addListener( function(info, tab) {
+    if (info.menuItemId == "reloadOnClick") {
       if (isLoading) {
-        webview.stop();
+        webview1.stop();
       } else {
-        webview.reload();
+        webview1.reload();
       }
     }
   });
@@ -138,10 +155,17 @@ function findBoxObscuresActiveMatch(findBoxRect, matchRect) {
 function handleKeyDown(event) {
   if (event.ctrlKey) {
     switch (event.keyCode) {
-      // Ctrl+F.
-      case 70:
+      case 70: // Ctrl+F.
         event.preventDefault();
         fullscreenWindow();
+        break;
+      case 82: // Ctrl+R.
+        event.preventDefault();
+        if (isLoading) {
+          webview1.stop();
+        } else {
+          webview1.reload();
+        }
         break;
     }
   }
@@ -282,20 +306,20 @@ function closeBoxes() {
       } else {
         $("#webview-2-title").html(subscriberID)
       }
-      
+
       $("#subscriberID").html(subscriberID)
       $("#location").html(window.location.host)
 
       var subscribe = function() {
         var post_data = {"frames": _frames, "subscriberID": subscriberID}
-        
+
         console.log(post_data);
 
         setTimeout( function() {
           $.ajax({
             type: "POST",
-            url: "https://peaceful-forest-5547.herokuapp.com/api/subscribe", 
-            //url: "http://localhost:8888/api/subscribe", 
+            url: "https://peaceful-forest-5547.herokuapp.com/api/subscribe",
+            //url: "http://localhost:8888/api/subscribe",
             data: post_data,
             dataType: "json",
             timeout: 30000 //every thirty seconds
@@ -322,7 +346,7 @@ function closeBoxes() {
               var frame = response["frame"]
               var url = response["url"]
               var alt = response["alt"]
-              
+
               $("#webview-" + frame).attr('src', url)
               console.log("response received\nframe: " + response["frame"] + "\nurl: " + response["url"] + "\nalt: " + response["alt"])
 
@@ -380,7 +404,7 @@ function closeBoxes() {
           });
       };
 
-      setTimeout( function() { 
+      setTimeout( function() {
         subscribe()
       }, 5000);
 

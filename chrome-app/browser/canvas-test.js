@@ -21,9 +21,9 @@ var fitTextBoundingBox = function(text, baseFontSize, minFontSize, fontWeight, f
   return currentSize;
 };
 
-var drawDebugGridLines = function() {  
+var drawDebugGridLines = function() {
   var context = canvas.getContext("2d");
-  
+
   var canvasWidth = canvas.width;
   var canvasHeight = canvas.height;
 
@@ -44,15 +44,15 @@ var drawDebugGridLines = function() {
 
   context.moveTo(0, bottomMargin);
   context.lineTo(canvasWidth, bottomMargin);
-  
+
   context.moveTo(leftMargin, 0);
   context.lineTo(leftMargin, canvasHeight);
-  
+
   context.moveTo(rightMargin, 0);
   context.lineTo(rightMargin, canvasHeight);
 
   context.stroke();
-  
+
 
   //thirds
   context.beginPath();
@@ -64,10 +64,10 @@ var drawDebugGridLines = function() {
 
   context.moveTo(0, canvasHeight * 2 / 3);
   context.lineTo(canvasWidth, canvasHeight * 2 / 3);
-  
+
   context.moveTo(canvasWidth / 3, 0);
   context.lineTo(canvasWidth / 3, canvasHeight);
-  
+
   context.moveTo(canvasWidth * 2 / 3, 0);
   context.lineTo(canvasWidth * 2 / 3, canvasHeight);
 
@@ -89,13 +89,13 @@ var drawDebugGridLines = function() {
 
   context.moveTo(canvasWidth / 4, 0);
   context.lineTo(canvasWidth / 4, canvasHeight);
-  
+
   context.moveTo(canvasWidth / 2, 0);
   context.lineTo(canvasWidth / 2, canvasHeight);
-  
+
   context.moveTo(canvasWidth * 3 / 4, 0);
   context.lineTo(canvasWidth * 3 / 4, canvasHeight);
-  
+
   context.stroke()
 }
 
@@ -118,7 +118,7 @@ var fitDimensionsBoundingBox = function(iwidth, iheight, bwidth, bheight) {
 
 var drawImageSrc = function(src, x, y, bwidth, bheight, center) {
   var context = canvas.getContext("2d");
-  
+
   var canvasWidth = canvas.width;
   var canvasHeight = canvas.height;
 
@@ -140,7 +140,7 @@ var drawImageSrc = function(src, x, y, bwidth, bheight, center) {
     var offsetY = 0;
 
     if (center) {
-      offsetX = (bwidth - nw) / 2;      
+      offsetX = (bwidth - nw) / 2;
       offsetY = (bheight - nh) / 2;
     }
 
@@ -150,7 +150,7 @@ var drawImageSrc = function(src, x, y, bwidth, bheight, center) {
 
 var drawUpperThird = function() {
   var context = canvas.getContext("2d");
-  
+
   var canvasWidth = canvas.width;
   var canvasHeight = canvas.height;
 
@@ -174,7 +174,7 @@ var drawUpperThird = function() {
   gradientBackFill.addColorStop(25/33, 'rgba(0, 0, 0, .8)');
   gradientBackFill.addColorStop(0, 'rgba(0, 0, 0, .8)');
 
-  context.fillStyle = gradientBackFill;  
+  context.fillStyle = gradientBackFill;
   context.fillRect(0, 0, widthBackFill, heightBackFill);
 
   //channel logo
@@ -194,7 +194,7 @@ var drawUpperThird = function() {
 
 var drawLowerThird = function(programTitle, episodeTitle, startTime, endTime) {
   var context = canvas.getContext("2d");
-  
+
   var canvasWidth = canvas.width;
   var canvasHeight = canvas.height;
 
@@ -218,7 +218,7 @@ var drawLowerThird = function(programTitle, episodeTitle, startTime, endTime) {
   gradientBackFill.addColorStop(1 - 25/33, 'rgba(0, 0, 0, .8)');
   gradientBackFill.addColorStop(1, 'rgba(0, 0, 0, .8)');
 
-  context.fillStyle = gradientBackFill;  
+  context.fillStyle = gradientBackFill;
   context.fillRect(xBackFill, yBackFill, widthBackFill, heightBackFill);
 
 
@@ -242,7 +242,7 @@ var drawLowerThird = function(programTitle, episodeTitle, startTime, endTime) {
 
   //episode title
   var widthProgramTitle = context.measureText(programTitle).width;
-  
+
   var fontSizeBaseEpisodeTitle = fontSizeProgramTitle;
 
   var episodeTitle = "Postgame Show";
@@ -274,7 +274,7 @@ var drawLowerThird = function(programTitle, episodeTitle, startTime, endTime) {
   context.fillText(startTime, xStartTime, yStartTime);
 
 
-  //status time  
+  //status time
   var xStatusTime = leftMargin + (canvasWidth * 0.90 * .5);
   var yStatusTime = bottomMargin;
 
@@ -320,7 +320,7 @@ var drawLowerThird = function(programTitle, episodeTitle, startTime, endTime) {
   context.font = fontSizeCurrentTime + "pt Helvetica";
   context.textAlign = "center"
   var widthCurrentTime = context.measureText(currentTime).width;
-  
+
   context.fillText(currentTime, xCurrentTime, yCurrentTime);
 
 
@@ -361,7 +361,7 @@ var testCanvas = function() {
       //drawDebugGridLines();
 
       setTimeout( function() {
-        //$(canvas).fadeOut(800);
+        $(canvas).fadeOut(800);
       }, 5000);
 
     } else {

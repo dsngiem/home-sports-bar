@@ -62,52 +62,7 @@ var windowOnload = function(event) {
 
 	document.getElementsByName('flashvars')[0].setAttribute('value', newFlashvars)
 
-	var player = document.getElementById('${application}');
-	player.width = w + "px";
-	player.height = h + "px";
-
-	getInitialDimensions();
-
 	reloadFlash()
-}
-
-var scaleFactor = function(width, height, nw, nh) {
-	var scale = 1	
-
-	var ratio = 16.0 / 9
-	if (nw/nh >= ratio) {
-		//height is the constraint
-		scale = nh * 1.0 / height
-	} else if (nw/nh < ratio) {
-		//width is the constraint
-		scale = nw * 1.0 / width
-	}
-
-	return scale
-}
-
-var videoPlayer;	
-
-var playerWidth;
-var playerHeight;
-
-var getInitialDimensions = function() {
-	videoPlayer = document.getElementById('${application}');
-
-	playerWidth = videoPlayer.offsetWidth;
-	playerHeight = videoPlayer.offsetHeight;
-}
-
-var scalePlayer = function() {
-	var windowWidth = window.innerWidth;
-	var windowHeight = window.innerHeight;
-
-	var scale = scaleFactor(playerWidth, playerHeight, windowWidth, windowHeight);
-	
-	videoPlayer = document.getElementById('${application}');
-
-	videoPlayer.style["transform"] = "scale(" + scale + ")";
-	videoPlayer.style["transform-origin"] = "left top";
 }
 
 var checkElementsByNameExists = function(name) {
@@ -120,20 +75,9 @@ var checkElementsByNameExists = function(name) {
 	}	
 }
 
-var checkElementByIdExists = function(name) {
-	if (document.getElementById(name) != null) {
-		getInitialDimensions();
-
-	} else {
-		setTimeout(function() {
-			checkElementByIdExists(name);
-		}, 1000)
-	}	
-		
-}
 
 window.addEventListener('resize', function(event) {
-	scalePlayer();
+	windowOnload();
 })
 
 window.addEventListener('load', function() {

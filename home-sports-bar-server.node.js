@@ -247,7 +247,9 @@ var server = HTTP.createServer(
 		//console.log(request.headers);
 
 		var origin = request.headers.origin;
-		if (origin == 'chrome-extension://mccjidcbgbbpbjdoappebgmmddohjofi' || origin == 'chrome-extension://fehcoajbkcnlncncfbnimnahjocgikjf') {
+		if (origin == 'chrome-extension://mccjidcbgbbpbjdoappebgmmddohjofi'
+				|| origin == 'chrome-extension://fehcoajbkcnlncncfbnimnahjocgikjf'
+				|| origin == 'chrome-extension://jfpjbbiakobdkaiammlgjdhhjjjhpfbh') {
 			response.setHeader('Access-Control-Allow-Origin', origin);
 		}
 

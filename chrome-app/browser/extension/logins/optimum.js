@@ -5,9 +5,9 @@ var checkElementsByIdExists = function(id) {
 		document.getElementById("signin_button").click()
 	} else {
 		setTimeout(function() {
-			checkElementsByIdExists(id)			
+			checkElementsByIdExists(id)
 		}, 1000)
-	}	
+	}
 }
 
 checkElementsByIdExists("IDToken1")
