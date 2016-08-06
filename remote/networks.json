@@ -145,7 +145,7 @@
 		"channelIdTvGuide": "20160",
 		"baseIdTvGuide": "20517",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/5/58/American_Broadcasting_Company_2013_Logo.png/150px-American_Broadcasting_Company_2013_Logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Wabc_2013.png/175px-Wabc_2013.png",
 		"urls": [
 		{
 			"source": "ABC Live",
@@ -547,7 +547,7 @@
 		"channelIdTvGuide": "11153",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/b/bf/WWOR_NewJersey.png"
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/WWOR_NewJersey.svg/200px-WWOR_NewJersey.svg.png"
 	},
 	{
 		"name": "wpix",
@@ -580,7 +580,7 @@
 		"channelIdTvGuide": "14597",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Ion_Television_2013.png/180px-Ion_Television_2013.png"
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/IONTelevision.svg/100px-IONTelevision.svg.png"
 	},
 	{
 		"name": "wnju",
@@ -691,6 +691,10 @@
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/American_Heroes_Channel_logo.svg/200px-American_Heroes_Channel_logo.svg.png",
 		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/americanheroes?cmpid=livetv_american-heroes"
+		},
 		{
 			"source": "American Heroes Channel",
 			"url": "https://www.discoverygo.com/watch/ahc/"
@@ -943,6 +947,21 @@
 		]
 	},
 	{
+		"name": "centric",
+		"alt": "Centric",
+		"channelId": "63220",
+		"channelIdTvGuide": "20732",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Centric_2015_logo_black.png/150px-Centric_2015_logo_black.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/centric?cmpid=livetv_centric"
+		}
+		]
+	},
+	{
 		"name": "comedy",
 		"alt": "Comedy Central",
 		"channelId": "62420",
@@ -1085,6 +1104,10 @@
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Destinat_america_logo15.png/170px-Destinat_america_logo15.png",
 		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/destinationamerica?cmpid=livetv_destination-america"
+		},
 		{
 			"source": "Destination America",
 			"url": "https://www.discoverygo.com/watch/destination-america/"
@@ -1646,6 +1669,21 @@
 		]
 	},
 	{
+		"name": "fyi",
+		"alt": "FYI",
+		"channelId": "16834",
+		"channelIdTvGuide": "1184",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FYI%2C_logo.svg/175px-FYI%2C_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/fyi?cmpid=livetv_fyi"
+		}
+		]
+	},
+	{
 		"name": "gsn",
 		"alt": "Game Show Network",
 		"channelId": "14909",
@@ -2027,8 +2065,42 @@
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Nick_Jr._logo_2009.svg/200px-Nick_Jr._logo_2009.svg.png",
 		"urls": [
 		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nickjr?cmpid=livetv_nick-jr."
+		},
+		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Nick-Jr-HD-301?format=HD"
+		}
+		]
+	},
+	{
+		"name": "nicktoons",
+		"alt": "Nicktoons",
+		"channelId": "82654",
+		"channelIdTvGuide": "44718",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Nicktoons_2014_logo.svg/240px-Nicktoons_2014_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nicktoons?cmpid=livetv_nicktoons-network"
+		}
+		]
+	},
+	{
+		"name": "teennick",
+		"alt": "TeenNick",
+		"channelId": "59036",
+		"channelIdTvGuide": "44718",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/TeenNick_logo_2009.svg/240px-TeenNick_logo_2009.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/teennick?cmpid=livetv_teennick"
 		}
 		]
 	},
@@ -2044,6 +2116,21 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/outdoorchannel?cmpid=livetv_outdoor-channel"
+		}
+		]
+	},
+	{
+		"name": "ovation",
+		"alt": "Ovation",
+		"channelId": "15807",
+		"channelIdTvGuide": "1220",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/2/2e/Official_Ovation_Logo_2014.jpg",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/ovation?cmpid=livetv_ovation"
 		}
 		]
 	},
@@ -2129,6 +2216,10 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pivot_Logo_%2B_Tagline.png/200px-Pivot_Logo_%2B_Tagline.png",
 		"urls": [
 		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/pivot?cmpid=livetv_pivot"
+		},
+		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/pivot"
 		}
@@ -2156,7 +2247,7 @@
 		"channelIdTvGuide": "20971",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/48/QVC.svg/200px-QVC.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/QVC.svg/200px-QVC.svg.png",
 		"urls": [
 		{
 			"source": "DirecTV",
@@ -2192,6 +2283,10 @@
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Revolt_TV_logo.png/260px-Revolt_TV_logo.png",
 		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/revolt?cmpid=livetv_revolt"
+		},
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=83098"
@@ -2382,7 +2477,7 @@
 		"channelIdTvGuide": "23458",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tcm.svg/225px-Tcm.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/TCM_logo_2009.svg/225px-TCM_logo_2009.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2551,6 +2646,21 @@
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/vh1?cmpid=livetv_vh1"
+		}
+		]
+	},
+	{
+		"name": "viceland",
+		"alt": "Viceland",
+		"channelId": "65732",
+		"channelIdTvGuide": "21716",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Viceland_Logo.png/200px-Viceland_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/HDTV?cmpid=livetv_viceland"
 		}
 		]
 	},
