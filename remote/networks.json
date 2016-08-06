@@ -2608,6 +2608,10 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/usa"
+		},
+		{
+			"source": "USA Live",
+			"url": "http://www.usanetwork.com/videos/live"
 		}
 		]
 	},

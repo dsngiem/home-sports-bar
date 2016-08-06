@@ -6,17 +6,122 @@
     <script src="browser.js"></script>
     <script src="canvas-test.js"></script>
 	<style>
-		iframe {
+		iframe.screens-1 {
 			width: 100%;
 			height: 100%;
 			margin: 0px 0px;
 			padding: 0px;
 			border: 0px none transparent;
 			display: inline;
-			overflow: hidden;
+			overflow: auto;
+			overflow-x: hidden;
+			overflow-y: hidden;
 		}
 
-		#webview-1-overlay {
+		#webview-1.screens-1 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 100%;
+			display: inline;
+		}
+		#webview-2.screens-1 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-3.screens-1 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-4.screens-1 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+
+
+
+		#webview-1.screens-2 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-2.screens-2 {
+			position: fixed;
+			top: 0px;
+			left: 50%;
+			height: 100%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-3.screens-2 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-4.screens-2 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+
+
+
+		#webview-1.screens-4 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-2.screens-4 {
+			position: fixed;
+			top: 0px;
+			left: 50%;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-3.screens-4 {
+			position: fixed;
+			top: 50%;
+			left: 0px;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-4.screens-4 {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+
+		#webview-1-overlay.screens-1 {
 			position: absolute;
 			top: 0%;
 			left: 0%;
@@ -24,7 +129,7 @@
 			z-index: 10000000;
 		}
 
-		#webview-1-title {
+		#webview-1-title.screens-1 {
 			position: absolute;
 			top: 0%;
 			right: 0%;
@@ -38,9 +143,28 @@
 			text-shadow: 0px 0px 3px #111111;
 		}
 
+
+
+
+
 		#webview-1::-webkit-scrollbar {
 			display: none;
 		}
+
+		#webview-2::-webkit-scrollbar {
+			display: none;
+		}
+
+		#webview-3::-webkit-scrollbar {
+			display: none;
+		}
+
+		#webview-4::-webkit-scrollbar {
+			display: none;
+		}
+
+
+
 	</style>
 
   <body>
@@ -50,7 +174,10 @@
 	<!--<div id="webview-1-overlay">
 		<a href="index.html" target="webview-1">&#215;</a>
 	</div>	-->
-    <webview id="webview-1" src="http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1" style="width:1280px; height:720px"></webview>
+    <webview id="webview-1" src="http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1" style="" class="screens-1"></webview>
+	<webview id="webview-2" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1"></webview>
+	<webview id="webview-3"" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1"></webview>
+	<webview id="webview-4" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1"></webview>
     <!--<webview id="webview-2" src="http://watch.foodnetwork.com/live.html" style="width:640px; height:720px; left:640px"></webview>-->
 
   </body>

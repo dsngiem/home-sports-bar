@@ -3,7 +3,9 @@ var isLoading = false;
 
 onload = function() {
   var webview1 = document.querySelector('#webview-1');
-  //var webview2 = document.querySelector('#webview-2');
+  var webview2 = document.querySelector('#webview-2');
+  var webview3 = document.querySelector('#webview-3');
+  var webview4 = document.querySelector('#webview-4');
   doLayout();
 
   var version = navigator.appVersion.substr(navigator.appVersion.lastIndexOf('Chrome/') + 7);
@@ -37,6 +39,33 @@ onload = function() {
       }
 
       webview1.addContentScripts([
+        {
+          name: 'rule'+index,
+          matches: element.matches,
+          css: { files: webviewCss },
+          js: { files: webviewJs },
+          run_at: 'document_start'
+        }
+      ]);
+      webview2.addContentScripts([
+        {
+          name: 'rule'+index,
+          matches: element.matches,
+          css: { files: webviewCss },
+          js: { files: webviewJs },
+          run_at: 'document_start'
+        }
+      ]);
+      webview3.addContentScripts([
+        {
+          name: 'rule'+index,
+          matches: element.matches,
+          css: { files: webviewCss },
+          js: { files: webviewJs },
+          run_at: 'document_start'
+        }
+      ]);
+      webview4.addContentScripts([
         {
           name: 'rule'+index,
           matches: element.matches,
@@ -89,14 +118,14 @@ function navigateTo(url) {
 }
 
 function doLayout() {
-  var webview = document.querySelector('#webview-1');
-  var windowWidth = document.documentElement.clientWidth;
-  var windowHeight = document.documentElement.clientHeight;
-  var webviewWidth = windowWidth;
-  var webviewHeight = windowHeight;
+  var webview1 = document.querySelector('#webview-1');
+  //var windowWidth = document.documentElement.clientWidth;
+  //var windowHeight = document.documentElement.clientHeight;
+  //var webviewWidth = windowWidth;
+  //var webviewHeight = windowHeight;
 
-  webview.style.width = webviewWidth + 'px';
-  webview.style.height = webviewHeight + 'px';
+  //webview1.style.width = webviewWidth + 'px';
+  //webview1.style.height = webviewHeight + 'px';
 
   testCanvas();
 }
@@ -156,6 +185,7 @@ function handleKeyDown(event) {
   if (event.ctrlKey) {
     switch (event.keyCode) {
       case 70: // Ctrl+F.
+      case 16:
         event.preventDefault();
         fullscreenWindow();
         break;
@@ -292,6 +322,41 @@ function closeBoxes() {
   closeFindBox();
 }
 
+function webview1() {
+  var webview1 = document.querySelector("#webview-1");
+  var webview2 = document.querySelector("#webview-2");
+  var webview3 = document.querySelector("#webview-3");
+  var webview4 = document.querySelector("#webview-4");
+
+  webview1.setAttribute("class","screens-1");
+  webview2.setAttribute("class","screens-1");
+  webview3.setAttribute("class","screens-1");
+  webview4.setAttribute("class","screens-1");
+}
+
+function webview2() {
+  var webview1 = document.querySelector("#webview-1");
+  var webview2 = document.querySelector("#webview-2");
+  var webview3 = document.querySelector("#webview-3");
+  var webview4 = document.querySelector("#webview-4");
+
+  webview1.setAttribute("class","screens-2");
+  webview2.setAttribute("class","screens-2");
+  webview3.setAttribute("class","screens-2");
+  webview4.setAttribute("class","screens-2");
+}
+
+function webview4() {
+  var webview1 = document.querySelector("#webview-1");
+  var webview2 = document.querySelector("#webview-2");
+  var webview3 = document.querySelector("#webview-3");
+  var webview4 = document.querySelector("#webview-4");
+
+  webview1.setAttribute("class","screens-4");
+  webview2.setAttribute("class","screens-4");
+  webview3.setAttribute("class","screens-4");
+  webview4.setAttribute("class","screens-4");
+}
 
     var _frames = 1
 
@@ -330,17 +395,18 @@ function closeBoxes() {
 
                 switch (frames) {
                   case 1:
-                    window.location.href = "/player/one.html"
+                    webview1();
                     break
                   case 2:
-                    window.location.href = "/player/two-across.html"
+                    webview2();
                     break
                   case 4:
-                    window.location.href = "/player/four.html"
+                    webview4();
                     break
                   default:
-
                 }
+
+                console.log("response received\nframes: " + response["frames"])
               }
 
               var frame = response["frame"]
