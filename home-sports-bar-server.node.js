@@ -327,6 +327,9 @@ var server = HTTP.createServer(
 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn") {
 					return fetchGuideNbcsn(response)
 
+				}  else if (parsedUrl["pathname"] == "/api/guide/nbcolympics") {
+					return fetchGuideNbcOlympics(response)
+
 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn/url") {
 					return fetchGuideNbcsnUrl(response, parameters)
 
@@ -942,6 +945,78 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 
 	return scheduleRequest.end()
 }
+
+
+var fetchGuideNbcOlympics = function(response, channel) {
+	console.log("Requesting program guide for NBC Olympics...")
+
+	var schedulePath = "/live-stream-schedule"
+	var scheduleRequest = HTTP.request({
+		host: 'www.nbcolympics.com',
+		path: schedulePath,
+
+	}, function(scheduleResponse) {
+		//scheduleResponse.setEncoding('binary')
+
+		var scheduleBody = ""
+		scheduleResponse.on('data', function(chunk) {
+			scheduleBody += chunk
+		})
+
+		scheduleResponse.on('end', function() {
+			console.log("Program guide for nbcolympics")
+
+			programs = []
+
+			cheerioBox = Cheerio.load(scheduleBody);
+			programItems = cheerioBox(".list-item-row.on-now-row");
+
+			var pushProgram = function(pItem) {
+				console.log(pItem);
+				title = cheerioBox('.sport-roofline-text', pItem).text().trim();
+				episode = cheerioBox('.event-data h3', pItem).text().trim();
+
+				url = cheerioBox('.schedule-item-link', pItem).attr('href');
+
+				programs.push({
+					"title": title,
+					"episode": episode,
+					"url": url
+				})
+			}
+
+			programItems.each(function(index, element) {
+				programItem = cheerioBox(element)
+
+				pushProgram(programItem)
+			})
+
+			result = {"programs": programs};
+
+			if (response != null) {
+				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
+				return response.end(JSON.stringify(result))
+			}
+		})
+
+		scheduleResponse.on('error', function(scheduleError) {
+			console.log("schedule error")
+
+			if (response) {
+				response.writeHead(200)
+				return response.end(scheduleError.error)
+			}
+		})
+	})
+
+	scheduleRequest.on('error', function(scheduleRequestError) {
+		console.log("schedule request error".red)
+		console.log("error: ".red + scheduleRequestError.message)
+	})
+
+	return scheduleRequest.end()
+}
+
 
 var fetchGuideNhl = function(response, parameters) {
 	var scheduleDate = parameters["date"]
