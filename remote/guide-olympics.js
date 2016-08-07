@@ -448,7 +448,7 @@ $(document).ready(function() {
 
 				if ($.isArray(response.programs)) {
 					response.programs.forEach( function(currentValue, index, array) {
-						var name = "nbcolympics"
+						var name = "NBC Olympics"
 						var source = index
 						var url = currentValue.url
 
