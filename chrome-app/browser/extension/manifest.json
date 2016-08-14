@@ -7,6 +7,11 @@
 
     "content_scripts": [
     {
+        "matches": ["http*://*.com/*", "http*://*.net/*", "http*://*.org/*"],
+        "css": ["all.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://xfinitytv.comcast.net/live/network/*","http://tvgo.xfinity.com/live/network/*"],
         "css": ["xfinity.css"],
         "js": ["xfinity.js"],
@@ -44,6 +49,12 @@
     {
         "matches": ["http://www.foxsports.com/foxsportsgo/*"],
         "js": ["foxsportsgo.js"],
+        "css": ["foxsportsgo.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*"],
+        "js": ["fsgo.js"],
         "css": ["foxsportsgo.css"],
         "all_frames": true
     },
@@ -148,7 +159,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.bravotv.com/live", "http://www.cnbc.com/live-tv/", "http://www.eonline.com/now/live", "http://tv.esquire.com/now/live", "http://www.msnbc.com/now", "http://www.nbcuniverso.com/now/live", "http://www.oxygen.com/live"],
+        "matches": ["http://www.bravotv.com/live", "http://www.cnbc.com/live-tv/", "http://www.eonline.com/now/live", "http://tv.esquire.com/now/live", "http://www.msnbc.com/now", "http://www.nbcuniverso.com/now/live", "http://www.oxygen.com/live", "http://www.usanetwork.com/videos/live"],
         "css": ["bravo.css"],
         "all_frames": true
     },

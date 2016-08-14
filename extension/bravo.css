@@ -1,4 +1,4 @@
-#pdk-player, div.playerColumn, #frametve0 {
+#pdk-player, div.playerColumn, #frametve0, #videoplayer {
 	width: 100% !important;
     height: 100% !important;
     position: fixed !important;
@@ -13,5 +13,5 @@
 }
 
 body {
-    overflow: hidden;
+    overflow: hidden !important;
 }

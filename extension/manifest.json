@@ -8,7 +8,7 @@
     "content_scripts": [
     {
         "matches": ["http://xfinitytv.comcast.net/live/network/*","http://tvgo.xfinity.com/live/network/*"],
-        "css": ["xfinity.css"],
+        "css": ["xfinity.css", "all.css"],
         "js": ["xfinity.js"],
         "all_frames": true
     },
@@ -44,6 +44,12 @@
     {
         "matches": ["http://www.foxsports.com/foxsportsgo/*"],
         "js": ["foxsportsgo.js"],
+        "css": ["foxsportsgo.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*"],
+        "js": ["fsgo.js"],
         "css": ["foxsportsgo.css"],
         "all_frames": true
     },

@@ -1,4 +1,5 @@
 window.onresize = doLayout;
+
 var isLoading = false;
 
 onload = function() {
@@ -109,6 +110,7 @@ onload = function() {
   // ]);
 
   window.addEventListener('keydown', handleKeyDown);
+  webview1.addEventListener('mouseover', testCanvas);
   //fullscreenWindow();
 };
 

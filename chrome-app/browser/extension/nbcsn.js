@@ -6,14 +6,14 @@ setTimeout(function () {
 					document.getElementById("accessEnablerLogin").click()
 
 					setTimeout(function() {
-						checkElementsByClassNameExists('Verizon')
+						checkElementsByClassNameExists('Verizon')			
 					}, 1000)
 				}
 			} else {
 				setTimeout(function() {
-					checkElementByIdExists(id)
+					checkElementByIdExists(id)			
 				}, 1000)
-			}
+			}	
 		}
 
 		var checkElementsByClassNameExists = function(id) {
@@ -21,9 +21,9 @@ setTimeout(function () {
 				document.getElementsByClassName("Verizon")[0].click()
 			} else {
 				setTimeout(function() {
-					checkElementsByClassNameExists(id)
+					checkElementsByClassNameExists(id)			
 				}, 1000)
-			}
+			}	
 		}
 
 		setTimeout(function () {
