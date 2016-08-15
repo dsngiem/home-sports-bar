@@ -25,7 +25,7 @@ onload = function() {
   $.getJSON('/extension/manifest.json', function( extensionManifest ) {
     extensionManifest.content_scripts.forEach( function(element, index, array) {
 
-      var webviewCss = []
+      var webviewCss = ["extension/all.css"]
       if(element.css) {
         element.css.forEach( function(element, index, array) {
           webviewCss.push("extension/" + element);
