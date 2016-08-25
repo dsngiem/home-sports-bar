@@ -1242,7 +1242,7 @@ var fetchGuideWatchEspn = function(response) {
 	var schedulePath = "/watchespn/index"
 	console.log("Requesting program guide for watchEspn " + scheduleDate + "...")
 	var scheduleRequest = HTTP.request({
-		host: 'espn.go.com',
+		host: 'www.espn.com',
 		path: schedulePath
 
 	}, function(scheduleResponse) {
