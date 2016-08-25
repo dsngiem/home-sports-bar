@@ -7,7 +7,13 @@
 		"channelIdTvGuide": "11129",
 		"baseIdTvGuide": "901078",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/FOX_wordmark.svg/230px-FOX_wordmark.svg.png"
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/FOX_wordmark.svg/230px-FOX_wordmark.svg.png",
+		"urls": [
+		{
+			"source": "FOX Primetime",
+			"url": "http://www.fox.com/live"
+		}
+		]
 	},
 	{
 		"name": "fs1",
@@ -385,7 +391,13 @@
 		"channelIdTvGuide": "11116",
 		"baseIdTvGuide": "20517",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png"
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png",
+		"urls": [
+		{
+			"source": "CBS Sports Network",
+			"url": "http://www.cbs.com/live-tv/stream/"
+		}
+		]
 	},
 	{
 		"name": "cbssn",

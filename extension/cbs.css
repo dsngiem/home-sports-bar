@@ -1,0 +1,8 @@
+.bonus {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 999999 !important;
+    width: 100% !important;
+    height: 100% !important;
+}

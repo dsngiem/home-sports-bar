@@ -42,6 +42,12 @@
         "all_frames": true
     },
     {
+        "matches": ["http://www.cbs.com/live-tv/stream*", "https://www.cbs.com/live-tv/stream*"],
+        "js": ["cbs.js"],
+        "css": ["cbs.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://www.foxsports.com/foxsportsgo/*"],
         "js": ["foxsportsgo.js"],
         "css": ["foxsportsgo.css"],
@@ -51,6 +57,12 @@
         "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/channel/*", "https://www.foxsportsgo.com/channel/*"],
         "js": ["fsgo.js"],
         "css": ["fsgo.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.fox.com/live*"],
+        "js": ["fox.js"],
+        "css": ["fox.css"],
         "all_frames": true
     },
     {
