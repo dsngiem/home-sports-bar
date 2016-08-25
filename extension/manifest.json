@@ -66,13 +66,13 @@
         "all_frames": true
     },
     {
-        "matches": ["http://espn.go.com/watchespn/player/*"],
+        "matches": ["http://espn.go.com/watchespn/player/*", "http://www.espn.com/watchespn/player/*"],
         "js": ["espn.js"],
         "css": ["espn.css"],
         "all_frames": true
     },
     {
-        "matches": ["http://espn.go.com/watchespn/index/*"],
+        "matches": ["http://espn.go.com/watchespn/index/*", "http://www.espn.com/watchespn/index/*"],
         "js": ["watchespn.js"],
         "all_frames": true
     },

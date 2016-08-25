@@ -226,7 +226,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://espn.go.com/watchespn/player/_/channel/espn1/"
+			"url": "http://www.espn.com/watchespn/player/_/channel/espn1/"
 		},
 		{
 			"source": "xfinity",
@@ -253,7 +253,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://espn.go.com/watchespn/player/_/channel/espn2/"
+			"url": "http://www.espn.com/watchespn/player/_/channel/espn2/"
 		},
 		{
 			"source": "xfinity",
@@ -280,7 +280,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://espn.go.com/watchespn/player/_/channel/espnews/"
+			"url": "http://www.espn.com/watchespn/player/_/channel/espnews/"
 		},
 		{
 			"source": "xfinity",
@@ -307,7 +307,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://espn.go.com/watchespn/player/_/channel/espnu/"
+			"url": "http://www.espn.com/watchespn/player/_/channel/espnu/"
 		},
 		{
 			"source": "xfinity",
@@ -349,7 +349,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://espn.go.com/watchespn/player/_/channel/sec/"
+			"url": "http://www.espn.com/watchespn/player/_/channel/sec/"
 		},
 		{
 			"source": "xfinity",

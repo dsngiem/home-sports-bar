@@ -1274,7 +1274,7 @@ var fetchGuideWatchEspn = function(response) {
 				events.push({
 					"eventName": eventName,
 					"eventId": eventId,
-					"url": "http://espn.go.com/watchespn/player/_/id/" + eventId + "/",
+					"url": "http://www.espn.com/watchespn/player/_/id/" + eventId + "/",
 					"time": eventTime,
 					"channel": eventChannel
 				})

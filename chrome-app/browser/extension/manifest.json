@@ -8,7 +8,7 @@
     "content_scripts": [
     {
         "matches": ["http://xfinitytv.comcast.net/live/network/*","http://tvgo.xfinity.com/live/network/*"],
-        "css": ["xfinity.css"],
+        "css": ["xfinity.css", "all.css"],
         "js": ["xfinity.js"],
         "all_frames": true
     },
@@ -48,6 +48,12 @@
         "all_frames": true
     },
     {
+        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/channel/*", "https://www.foxsportsgo.com/channel/*"],
+        "js": ["fsgo.js"],
+        "css": ["fsgo.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://live.mlssoccer.com/mlsmdl/match/*"],
         "js": ["mls.js"],
         "css": ["mls.css"],
@@ -60,13 +66,13 @@
         "all_frames": true
     },
     {
-        "matches": ["http://espn.go.com/watchespn/player/*"],
+        "matches": ["http://espn.go.com/watchespn/player/*", "http://www.espn.com/watchespn/player/*"],
         "js": ["espn.js"],
         "css": ["espn.css"],
         "all_frames": true
     },
     {
-        "matches": ["http://espn.go.com/watchespn/index/*"],
+        "matches": ["http://espn.go.com/watchespn/index/*", "http://www.espn.com/watchespn/index/*"],
         "js": ["watchespn.js"],
         "all_frames": true
     },
