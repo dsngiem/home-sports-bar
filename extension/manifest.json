@@ -207,7 +207,7 @@
         "all_frames": true
     },
     {
-        "matches": ["https://www.discoverygo.com/watch/*"],
+        "matches": ["https://www.discoverygo.com/watch/*", "https://www.ahctvgo.com/watch/ahc/*", "https://www.animalplanetgo.com/watch/animal-planet/*"],
         "css": ["discovery.css"],
         "all_frames": true
     },
@@ -287,7 +287,7 @@
     },
     {
         "matches": ["https://video2.timewarnercable.com/liveTv*", "https://video2.timewarnercable.com/auth*"],
-        "js": ["twc.js"],
+        "js": ["twc.js", "logins/twc-live.js"],
         "css": ["twc.css"],
         "all_frames": true
     },
@@ -309,7 +309,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://abc.go.com/watch-live*"],
+        "matches": ["http://abc.go.com/watch-live*", "http://freeform.go.com/watch-live*"],
         "js": ["abc-live.js"],
         "css": ["abc-live.css"],
         "all_frames": true
