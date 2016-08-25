@@ -29,7 +29,7 @@
 		},
 		{
 			"source": "FSGO",
-			"url": "http://www.foxsports.com/foxsportsgo/"
+			"url": "https://www.foxsportsgo.com/channel/49070/fox-sports-1"
 		},
 		{
 			"source": "DirecTV",
@@ -52,11 +52,69 @@
 		},
 		{
 			"source": "FSGO",
-			"url": "http://www.foxsports.com/foxsportsgo/"
+			"url": "https://www.foxsportsgo.com/channel/36770/fox-sports-2"
 		},
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=59305"
+		}
+		]
+	},
+	{
+		"name": "yes",
+		"alt": "YES",
+		"channelId": "46275",
+		"channelIdTvGuide": "29044",
+		"baseIdTvGuide": "85061",
+		"color": "#00285A",
+		"image": "https://upload.wikimedia.org/wikipedia/en/0/06/YES_Network_logo.png",
+		"urls": [
+		{
+			"source": "FSGO",
+			"url": "https://www.foxsportsgo.com/channel/35800/yes"
+		}
+		]
+	},
+	{
+		"name": "fswest",
+		"alt": "Fox Sports West",
+		"channelId": "59627",
+		"channelIdTvGuide": "29044",
+		"baseIdTvGuide": "85061",
+		"color": "#00285A",
+		"image": "https://upload.wikimedia.org/wikipedia/en/0/02/Fox_Sports_West_2012_logo.png",
+		"urls": [
+		{
+			"source": "FSGO",
+			"url": "https://www.foxsportsgo.com/channel/31433/fsw"
+		}
+		]
+	},
+	{
+		"name": "prime",
+		"alt": "Prime Ticket",
+		"channelId": "59625",
+		"channelIdTvGuide": "29044",
+		"baseIdTvGuide": "85061",
+		"color": "#00285A",
+		"image": "/images/primeticket.png",
+		"urls": [
+		{
+			"source": "FSGO",
+			"url": "https://www.foxsportsgo.com/channel/33127/prime-ticket"
+		}
+		]
+	},
+	{
+		"name": "fsgo",
+		"alt": "FSGO",
+		"channelId": "fsgo-0",
+		"color": "#00285A",
+		"image": "/images/fsgo.jpg",
+		"urls": [
+		{
+			"source": "FSGO",
+			"url": "https://www.foxsportsgo.com/"
 		}
 		]
 	},
@@ -321,6 +379,28 @@
 		]
 	},
 	{
+		"name": "wcbs",
+		"alt": "CBS",
+		"channelId": "11331",
+		"channelIdTvGuide": "11116",
+		"baseIdTvGuide": "20517",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png"
+	},
+	{
+		"name": "cbssn",
+		"alt": "CBS Sports Network",
+		"channelId": "59250",
+		"color": "#000033",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/CBS_Sports_Network_2016.png",
+		"urls": [
+		{
+			"source": "CBS Sports Network",
+			"url": "http://www.cbssports.com/watch/cbssportsnetwork/"
+		}
+		]
+	},
+	{
 		"name": "tnt",
 		"alt": "TNT",
 		"channelId": "42642",
@@ -530,15 +610,6 @@
 			"url": "http://www.btn2go.com/channel/btnlive"
 		}
 		]
-	},
-	{
-		"name": "wcbs",
-		"alt": "CBS",
-		"channelId": "11331",
-		"channelIdTvGuide": "11116",
-		"baseIdTvGuide": "20517",
-		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png"
 	},
 	{
 		"name": "wwor",
@@ -2738,19 +2809,6 @@
 		]
 	},
 	{
-		"name": "blank",
-		"alt": "Blank Screen",
-		"channelId": "blank-0",
-		"color": "#000000",
-		"image": "",
-		"urls": [
-		{
-			"source": "",
-			"url": "index.html"
-		}
-		]
-	},
-	{
 		"name": "twc",
 		"alt": "Time Warner Cable",
 		"channelId": "twc-0",
@@ -2762,7 +2820,19 @@
 			"url": "https://video2.timewarnercable.com/liveTv"
 		}
 		]
+	},
+	{
+		"name": "blank",
+		"alt": "Blank Screen",
+		"channelId": "blank-0",
+		"color": "#000000",
+		"image": "",
+		"urls": [
+		{
+			"source": "",
+			"url": "index.html"
+		}
+		]
 	}
-
 	]
 }

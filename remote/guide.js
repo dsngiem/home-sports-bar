@@ -455,7 +455,11 @@ $(document).ready(function() {
 
 				$("li[id^=NHL-]").detach()
 
-				var games = response.dates[0].games
+				var games = undefined;
+
+				if (response.dates[0] != undefined) {
+					var games = response.dates[0].games;
+				}
 
 				if ($.isArray(games)) {
 					games.reverse()
@@ -766,7 +770,7 @@ $(document).ready(function() {
 
 							alt = alt.split(" ").join('</span><span class="programTitle">')
 							html += '<span class="programTitle">' + alt + '</span> '
-							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z')
+							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + ' - ' + endTime.format('hh:mm A z')
 							 + (moment().isDST() ? ' EDT' : ' EST') + ' '
 							  + (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
 							html += '<span class="episodeTitle"></span>'
@@ -924,7 +928,7 @@ $(document).ready(function() {
 
 							html += '<li class="channel" id="FSGO-' + source + '" onclick = "void(0)">'
 
-							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://a2.mzstatic.com/us/r30/Purple7/v4/21/68/bd/2168bd8a-484c-bfab-0f22-8f6e022923fc/icon175x175.png" alt="' + alt + '"/></div></div></a>'
+							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="/images/fsgo.jpg" alt="' + alt + '"/></div></div></a>'
 
 							html += '<div class="sources" style="display: none;">'
 							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
@@ -944,14 +948,14 @@ $(document).ready(function() {
 
 							programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
 							html += '<span class="programTitle">' + programTitle + '</span> '
-							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
+							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 							html += '<span class="episodeTitle">' + episodeTitle + '</span>'
 							//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 							html += '<span class="description">' + '<span class="flags">[' + name + ']</span> ' + currentValue.fsmobile$shortDescription + '</span>'
 
 							html += '</div></li>'
 
-							$(html).insertAfter("#59305")
+							$(html).insertAfter("#fsgo-0")
 						}
 
 					})
