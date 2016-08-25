@@ -417,7 +417,7 @@ $(document).ready(function() {
 							var programTitle = currentValue.EventTitle
 							programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
 							html += '<span class="programTitle">' + programTitle + '</span> '
-							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
+							html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 							html += '<span class="episodeTitle"></span>'
 							//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
 							html += '<span class="description">' + '<span class="flags">[' + name + ']</span> ' + alt + '</span>'
