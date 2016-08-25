@@ -48,9 +48,9 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*"],
+        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/channel/*", "https://www.foxsportsgo.com/channel/*"],
         "js": ["fsgo.js"],
-        "css": ["foxsportsgo.css"],
+        "css": ["fsgo.css"],
         "all_frames": true
     },
     {

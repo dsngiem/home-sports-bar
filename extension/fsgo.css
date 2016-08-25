@@ -1,0 +1,4 @@
+#video-player.bonus object {
+    position: fixed !important;
+    z-index: 9999 !important;
+}
