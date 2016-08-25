@@ -156,6 +156,12 @@
         "all_frames": true
     },
     {
+        "matches": ["http://www.univision.com/deportes/udn*"],
+        "css": ["udn.css"],
+        "js": ["udn.js"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://www.fxnetworks.com/live-tv/*", "http://www.ifc.com/livestream"],
         "css": ["fxnetworks.css"],
         "all_frames": true
@@ -226,9 +232,9 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.tbs.com/watchtbs/*"],
-        "js": ["tbs.js"],
-        "css": ["tbs.css"],
+        "matches": ["http://www.tntdrama.com/watchtnt/*", "http://www.tbs.com/watchtbs/*"],
+        "js": ["tnt.js"],
+        "css": ["tnt.css"],
         "all_frames": true
     },
     {
@@ -304,6 +310,7 @@
     },
     {
         "matches": ["http://abc.go.com/watch-live*"],
+        "js": ["abc-live.js"],
         "css": ["abc-live.css"],
         "all_frames": true
     },

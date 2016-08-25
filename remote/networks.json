@@ -394,7 +394,7 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/CBS_logo.svg/250px-CBS_logo.svg.png",
 		"urls": [
 		{
-			"source": "CBS Sports Network",
+			"source": "CBS",
 			"url": "http://www.cbs.com/live-tv/stream/"
 		}
 		]
@@ -556,6 +556,10 @@
 		"color": "#004887",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Univision_Deportes_Network_2013.png/200px-Univision_Deportes_Network_2013.png",
 		"urls": [
+		{
+			"source": "Univision",
+			"url": "http://www.univision.com/deportes/udn"
+		},
 		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/univisiondeportes?cmpid=livetv_univision-deportes-network"
