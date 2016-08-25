@@ -398,12 +398,15 @@ function webview4() {
                 switch (frames) {
                   case 1:
                     webview1();
+                    _frames = 1;
                     break
                   case 2:
                     webview2();
+                    _frames = 2;
                     break
                   case 4:
                     webview4();
+                    _frames = 4;
                     break
                   default:
                 }
