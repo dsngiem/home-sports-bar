@@ -142,7 +142,7 @@ var clearProgramGuideCache = function() {
 }
 
 var checkActiveConnections = function() {
-	console.log("checking active connections... " + ons.yellow)
+	console.log("checking active connections... ".yellow)
 	if (activeConnections == 0) {
 		console.log("active connections == 0, firing precache titles".yellow)
 		fetchPreCacheProgramsTitle()
