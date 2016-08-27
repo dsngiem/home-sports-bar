@@ -667,8 +667,8 @@ var fetchGuideChannelTitle = function(response, channel) {
 				programs.push({
 					"time": time,
 					"title": title,
-					"episode": episode,
-					"icons": icons
+					//"episode": episode,
+					//"icons": icons
 				})
 			}
 
