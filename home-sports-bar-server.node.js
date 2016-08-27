@@ -775,7 +775,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 				programs.push({
 					"time": time,
-					"duration": duration,
+					//"duration": duration,
 					"genre": genre,
 					"title": title,
 					"episode": episode,
