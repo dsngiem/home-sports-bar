@@ -984,8 +984,8 @@ $(document).ready(function() {
 					} else {
 						getGuideChannel(channelId)
 					}
-
 				})
+
 			}
 
 			var getGuideProgramsTimeout = null;
@@ -994,18 +994,18 @@ $(document).ready(function() {
 			}, 60000)
 		}
 
-		var queue = [];
-		var fired = [];
+		var queueChannel = Array(0);
+		var firedChannel = [];
 		var queueTitle = [];
 		var firedTitle = [];
 
 		var getGuideChannel = function(channel, title) {
 			if (title === undefined) {
-				if (fired.length >= 10) {
-					queue.push(channel);
+				if (firedChannel.length >= 10) {
+					queueChannel.push(channel);
 
 				} else {
-					fired.push(channel);
+					firedChannel.push(channel);
 
 					post_data = {
 						"channel": channel
@@ -1018,10 +1018,10 @@ $(document).ready(function() {
 						postCurrentProgram(response.channel)
 
 					}).always(function(response) {
-						fired.splice(fired.indexOf(channel), 1);
+						firedChannel.splice(firedChannel.indexOf(channel), 1);
 
-						if (queue.length > 0) {
-							var queuedChannel = queue.shift();
+						if (queueChannel.length > 0) {
+							var queuedChannel = queueChannel.shift();
 							getGuideChannel(queuedChannel);
 						}
 					});

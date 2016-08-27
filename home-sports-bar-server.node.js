@@ -131,9 +131,9 @@ var clearProgramGuideCache = function() {
 	console.log("Program guide cleared".yellow)
 	fetchPreCachePrograms()
 
-	checkActiveConnectionsTimeout = setTimeout(function() {
-		checkActiveConnections();
-	}, 30000) //first check thirty seconds
+	// checkActiveConnectionsTimeout = setTimeout(function() {
+	// 	checkActiveConnections();
+	// }, 30000) //first check thirty seconds
 
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
@@ -702,7 +702,9 @@ var fetchGuideChannelTitle = function(response, channel) {
 					first = false
 				}
 
-				pushProgram(programItem)
+				if (programs.length <= 24) {
+					pushProgram(programItem)
+				}
 			})
 
 			programGuideTitle[channel] = programs
@@ -817,7 +819,9 @@ var fetchGuideChannelGrid = function(response, channel) {
 					first = false
 				}
 
-				pushProgram(programItem)
+				if (programs.length <= 24) {
+					pushProgram(programItem)
+				}
 			})
 
 
