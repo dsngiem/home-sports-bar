@@ -86,17 +86,19 @@ $(document).ready(function() {
 
 			var networkUrl = $(this).attr('src')
 			var alt = $(this).attr('alt')
+			var channelId = $(this).attr('id')
 
 			if (alt == "custom") {
 				networkUrl = $("input:text[name=url]").val();
 				alt = $("input:text[name=url]").val();
+				channelId = "custom"
 
 				if (networkUrl == null) {
 					return false;
 				}
 			}
 
-			publishMessage(selectedFrame, networkUrl, alt, subscriberID)
+			publishMessage(selectedFrame, networkUrl, alt, subscriberID, channelId)
 		})
 
 		function startsWith(str, prefix) {
@@ -121,11 +123,11 @@ $(document).ready(function() {
 
 			// }
 
-			publishMessage(selectedFrame, networkUrl, networkUrl, subscriberID)
+			publishMessage(selectedFrame, networkUrl, networkUrl, subscriberID, "custom")
 
 		})
 
-		var publishMessage = function(selectedFrame, networkUrl, alt, subscriberID) {
+		var publishMessage = function(selectedFrame, networkUrl, alt, subscriberID, channelId) {
 			if (!subscriberID) {
 				statusMessage("Player not selected.")
 				return
@@ -134,7 +136,8 @@ $(document).ready(function() {
 				"frame": selectedFrame,
 				"url": networkUrl,
 				"alt": alt,
-				"subscriberID": subscriberID
+				"subscriberID": subscriberID,
+				"channelId": channelId
 			}
 
 			console.log(post_data)
@@ -320,6 +323,8 @@ $(document).ready(function() {
 
 		var channelGuide = {}
 		var channelGuideFetchDate = {}
+		var channelGuideTitle = {}
+		var channelGuideTitleFetchDate = {}
 		var getGuide = function(offset, count) {
 			if (typeof(offset)==='undefined') offset = "";
 			if (typeof(count)==='undefined') count = 200;
@@ -991,36 +996,73 @@ $(document).ready(function() {
 
 		var queue = [];
 		var fired = [];
+		var queueTitle = [];
+		var firedTitle = [];
 
-		var getGuideChannel = function(channel) {
-			if (fired.length >= 10) {
-				queue.push(channel);
+		var getGuideChannel = function(channel, title) {
+			if (title === undefined) {
+				if (fired.length >= 10) {
+					queue.push(channel);
 
-			} else {
-				fired.push(channel);
+				} else {
+					fired.push(channel);
 
-				post_data = {
-					"channel": channel
+					post_data = {
+						"channel": channel
+					}
+
+					$.post("/api/guide/channel", post_data).done(function (response) {
+						console.log(response)
+						channelGuide[response.channel] = response.programs
+						channelGuideFetchDate[response.channel] = response.fetchDate
+						postCurrentProgram(response.channel)
+
+					}).always(function(response) {
+						fired.splice(fired.indexOf(channel), 1);
+
+						if (queue.length > 0) {
+							var queuedChannel = queue.shift();
+							getGuideChannel(queuedChannel);
+						}
+					});
+
+					getGuideChannel(channel, true);
 				}
 
-				$.post("/api/guide/channel", post_data).done(function (response) {
-					console.log(response)
-					channelGuide[response.channel] = response.programs
-					channelGuideFetchDate[response.channel] = response.fetchDate
-					postCurrentProgram(response.channel)
+			} else {
+				if (firedTitle.length >= 10) {
+					queueTitle.push(channel);
 
-				}).always(function(response) {
-					fired.splice(fired.indexOf(channel), 1);
+				} else {
+					firedTitle.push(channel);
 
-					if (queue.length > 0) {
-						var queuedChannel = queue.shift();
-						getGuideChannel(queuedChannel);
+					post_data = {
+						"channel": channel
 					}
-				});
+
+					$.post("/api/guide/channel/title", post_data).done(function (response) {
+						console.log(response)
+						channelGuideTitle[response.channel] = response.programs
+						channelGuideTitleFetchDate[response.channel] = response.fetchDate
+						postCurrentProgram(response.channel)
+
+					}).always(function(response) {
+						firedTitle.splice(firedTitle.indexOf(channel), 1);
+
+						if (queueTitle.length > 0) {
+							var queuedChannel = queueTitle.shift();
+							getGuideChannel(queuedChannel, true);
+						}
+					});
+				}
 			}
 		}
 
 		var postCurrentProgram = function (channel) {
+			if (!(channelGuide[channel] && channelGuideTitle[channel])) {
+				return;
+			}
+
 			var baseDate = moment(channelGuideFetchDate[channel]).format('YYYY-MM-DD')
 			var currentTime = moment()
 			var endTime = false
@@ -1053,12 +1095,38 @@ $(document).ready(function() {
 				var currentProgram = channelGuide[channel][i]
 				var nextProgram = channelGuide[channel][i + 1]
 
+
+				for (var i = 0; i < channelGuideTitle[channel].length - 1; i++) {
+					var thisChannelTime = channelGuideTitle[channel][i].time
+					var nextChannelTime = channelGuideTitle[channel][i + 1].time
+
+					if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && moment(channelGuideTitleFetchDate[channel]).format('A') == "AM") {
+						newDay = -1
+					}
+
+					//if (thisChannelTime.indexOf("AM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "PM") {
+					//	newDay = -1
+					//}
+
+					if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
+						newDay += 1
+					}
+
+					if (moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days') > currentTime) {
+						endTime = moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
+						break
+					}
+				};
+
+				var currentProgramTitle = channelGuideTitle[channel][i]
+				var nextProgramTitle = channelGuideTitle[channel][i + 1]
+
 				if (!endTime) {
 					console.log("no time end time for " + channel)
 					endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
 				}
 
-				var programTitle = currentProgram.title
+				var programTitle = currentProgramTitle.title
 				//programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
 				var startTimeDisplay = currentProgram.time
 				var endTimeDisplay = endTime ? endTime.format("h:mm A") : nextProgram.time
@@ -1069,7 +1137,7 @@ $(document).ready(function() {
 				var timeLeft = moment.duration(endTime.diff(currentTime))
 				// var duration = currentProgram.duration;
 				if (nextProgram) {
-					var nextEventTitle = endTime ? nextProgram.title : ""
+					var nextEventTitle = endTime ? nextProgramTitle.title : ""
 					var nextEventEpisode = endTime ? nextProgram.episode : ""
 					nextEventEpisode = nextEventEpisode == "" ? "" : " - " + nextEventEpisode
 					var nextFlags = nextProgram.icons == "" ? [] : nextProgram.icons.split(" ")

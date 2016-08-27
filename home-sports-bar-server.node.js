@@ -60,6 +60,8 @@ Moment().tz("America/New_York").format();
 var subscribers = {}
 var programGuide = {}
 var programGuideFetchDate = {}
+var programGuideTitle = {}
+var programGuideTitleFetchDate = {}
 
 var clearSubscribersTimeout;
 var clearProgramGuideCacheTimeout;
@@ -119,8 +121,12 @@ var clearSubscribers = function() {
 var clearProgramGuideCache = function() {
 	delete programGuide
 	delete programGuideFetchDate
+	delete programGuideTitle
+	delete programGuideTitleFetchDate
 	programGuide = {}
 	programGuideFetchDate = {}
+	programGuideTitle = {}
+	programGuideTitleFetchDate = {}
 	console.log("Program guide cleared".yellow)
 	fetchPreCachePrograms()
 
@@ -323,6 +329,10 @@ var server = HTTP.createServer(
 				} else if (parsedUrl["pathname"] == "/api/guide/channel") {
 					var channel = parameters["channel"]
 					return fetchGuideChannelGrid(response, channel)
+
+				}  else if (parsedUrl["pathname"] == "/api/guide/channel/title") {
+					var channel = parameters["channel"]
+					return fetchGuideChannelTitle(response, channel)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn") {
 					return fetchGuideNbcsn(response)
@@ -611,17 +621,17 @@ var fetchGuide = function(response) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideChannel = function(response, channel) {
-	console.log("Requesting program guide for channel " + channel + "...")
+var fetchGuideChannelTitle = function(response, channel) {
+	console.log("Requesting program guide for channel titles " + channel + "...")
 
 	//check if program guide exists
-	if (channel in programGuide) {
+	if (channel in programGuideTitle) {
 		result = {"channel": channel,
-				  "fetchDate": programGuideFetchDate[channel],
-				  "programs": programGuide[channel]}
+				  "fetchDate": programGuideTitleFetchDate[channel],
+				  "programs": programGuideTitle[channel]}
 
 
-		console.log("Send program guide for channel " + channel + " from cache...")
+		console.log("Send program guide for channel titles " + channel + " from cache...")
 
 		response.writeHead(200, {'Content-Type': 'application/json'});
 		return response.end(JSON.stringify(result))
@@ -641,7 +651,7 @@ var fetchGuideChannel = function(response, channel) {
 		})
 
 		scheduleResponse.on('end', function() {
-			console.log("Program guide for channel " + channel + " fetched.")
+			console.log("Program guide for channel title " + channel + " fetched.")
 
 			programs = []
 
@@ -679,12 +689,12 @@ var fetchGuideChannel = function(response, channel) {
 				pushProgram(programItem)
 			})
 
-			programGuide[channel] = programs
-			programGuideFetchDate[channel] = new Date()
+			programGuideTitle[channel] = programs
+			programGuideTitleFetchDate[channel] = new Date()
 
 			result = {"channel": channel,
-					  "fetchDate": programGuideFetchDate[channel],
-					  "programs": programGuide[channel]}
+					  "fetchDate": programGuideTitleFetchDate[channel],
+					  "programs": programGuideTitle[channel]}
 
 			if (response != null) {
 				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
@@ -1417,16 +1427,18 @@ var fetchPreCachePrograms = function() {
 		networks.networks.forEach(function(currentValue, index, array) {
 			channelId = currentValue.channelId;
 			fetchGuideChannelGrid(null, channelId);
+
+			fetchGuideChannelTitle(null, channelId);
 		})
 
-		console.log('Guide prefetched.'.yellow)
+		console.log('Guide prefetched.'.yellow);
 	})
 }
 
 
 /** START SERVER **/
-server.listen(port)
-console.log("Server successfully created on port ".green + port.toString().green)
+server.listen(port);
+console.log("Server successfully created on port ".green + port.toString().green);
 
 // serverHttps.listen(4433)
 // console.log("HTTPS Server successfully created on port 4433")
