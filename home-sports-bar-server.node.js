@@ -65,6 +65,7 @@ var programGuideTitleFetchDate = {}
 
 var clearSubscribersTimeout;
 var clearProgramGuideCacheTimeout;
+var checkActiveConnectionsTimeout;
 
 
 
@@ -130,12 +131,27 @@ var clearProgramGuideCache = function() {
 	console.log("Program guide cleared".yellow)
 	fetchPreCachePrograms()
 
+	checkActiveConnectionsTimeout = setTimeout(function() {
+		checkActiveConnections();
+	}, 30000) //first check thirty seconds
+
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
 		clearProgramGuideCache()
 	}, 43200000) //every twelve hours
 }
 
+var checkActiveConnections = function() {
+	console.log("checking active connections... " + ons.yellow)
+	if (activeConnections == 0) {
+		console.log("active connections == 0, firing precache titles".yellow)
+		fetchPreCacheProgramsTitle()
+	} else {
+		checkActiveConnectionsTimeout = setTimeout(function() {
+			checkActiveConnections()
+		}, 10000) //every ten seconds
+	}
+}
 
 /** SERVER FUNCTIONS **/
 var file = new(NS.Server)();
@@ -667,8 +683,8 @@ var fetchGuideChannelTitle = function(response, channel) {
 				programs.push({
 					"time": time,
 					"title": title,
-					//"episode": episode,
-					//"icons": icons
+					"episode": episode,
+					"icons": icons
 				})
 			}
 
@@ -720,6 +736,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 	return scheduleRequest.end()
 }
 
+var activeConnections = 0;
 var fetchGuideChannelGrid = function(response, channel) {
 	console.log("Requesting program guide for channel " + channel + "...")
 
@@ -736,6 +753,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 		return response.end(JSON.stringify(result))
 	}
 
+	activeConnections++;
 	var schedulePath = "/tvlistings/ZCSGrid.do?fromTimeInMillis=0&sgt=grid&aid=zap2it&stnNum=" + channel
 	var scheduleRequest = HTTP.request({
 		host: 'tvlistings.zap2it.com',
@@ -751,6 +769,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for channel " + channel + " fetched.")
+			activeConnections--;
 
 			programs = []
 
@@ -775,7 +794,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 				programs.push({
 					"time": time,
-					//"duration": duration,
+					"duration": duration,
 					"genre": genre,
 					"title": title,
 					"episode": episode,
@@ -835,6 +854,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 		scheduleResponse.on('error', function(scheduleError) {
 			console.log("schedule error")
+			activeConnections--;
 
 			if (response) {
 				response.writeHead(200)
@@ -1427,7 +1447,21 @@ var fetchPreCachePrograms = function() {
 		networks.networks.forEach(function(currentValue, index, array) {
 			channelId = currentValue.channelId;
 			fetchGuideChannelGrid(null, channelId);
+		})
 
+		console.log('Guide prefetched.'.yellow);
+	})
+}
+
+var fetchPreCacheProgramsTitle = function() {
+	FS.readFile('./remote/networks.json', function(error, data) {
+		if (error) {
+			return console.log('error fetching networks: '.red + error.message)
+		}
+
+		networks = JSON.parse(data)
+		networks.networks.forEach(function(currentValue, index, array) {
+			channelId = currentValue.channelId;
 			fetchGuideChannelTitle(null, channelId);
 		})
 
