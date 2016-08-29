@@ -133,12 +133,12 @@ var clearProgramGuideCache = function() {
 
 	// checkActiveConnectionsTimeout = setTimeout(function() {
 	// 	checkActiveConnections();
-	// }, 30000) //first check thirty seconds
+	// }, 21600000) //first check thirty seconds
 
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
 		clearProgramGuideCache()
-	}, 43200000) //every twelve hours
+	}, 21600000) //every 6 hours
 }
 
 var checkActiveConnections = function() {
