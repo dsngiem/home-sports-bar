@@ -702,7 +702,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 					first = false
 				}
 
-				if (programs.length <= 24) {
+				if (programs.length <= 32) {
 					pushProgram(programItem)
 				}
 			})
@@ -819,7 +819,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 					first = false
 				}
 
-				if (programs.length <= 24) {
+				if (programs.length <= 36) {
 					pushProgram(programItem)
 				}
 			})
@@ -840,7 +840,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 					first = false
 				}
 
-				if (programs.length <= 24) {
+				if (programs.length <= 36) {
 					pushProgram(programItem)
 				}
 			})
