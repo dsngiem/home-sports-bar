@@ -702,9 +702,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 					first = false
 				}
 
-				if (programs.length <= 32) {
-					pushProgram(programItem)
-				}
+				pushProgram(programItem)
 			})
 
 			programGuideTitle[channel] = programs
@@ -819,9 +817,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 					first = false
 				}
 
-				if (programs.length <= 36) {
-					pushProgram(programItem)
-				}
+				pushProgram(programItem)
 			})
 
 
