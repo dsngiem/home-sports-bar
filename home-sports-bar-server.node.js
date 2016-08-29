@@ -840,7 +840,9 @@ var fetchGuideChannelGrid = function(response, channel) {
 					first = false
 				}
 
-				pushProgram(programItem)
+				if (programs.length <= 24) {
+					pushProgram(programItem)
+				}
 			})
 
 			programGuide[channel] = programs
