@@ -830,9 +830,8 @@ var fetchGuideChannelGrid = function(response, channel) {
 				if (first) {
 					pushProgram(programItem)
 					first = false
-				}
 
-				if (programs.length <= 36) {
+				} else if (programs.length <= 36) {
 					pushProgram(programItem)
 				}
 			})
