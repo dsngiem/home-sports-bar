@@ -1092,16 +1092,25 @@ $(document).ready(function() {
 					}
 				};
 
+				if (!endTime) {
+					console.log("no time end time for " + channel)
+					endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
+				}
+
 				var currentProgram = channelGuide[channel][i]
 				var nextProgram = channelGuide[channel][i + 1]
 
+				var baseDateTitle = moment(channelGuideTitleFetchDate[channel]).format('YYYY-MM-DD')
+				var currentTimeTitle = moment()
+				var endTimeTitle = false
+				var newDayTitle = 0
 
 				for (var i = 0; i < channelGuideTitle[channel].length - 1; i++) {
 					var thisChannelTime = channelGuideTitle[channel][i].time
 					var nextChannelTime = channelGuideTitle[channel][i + 1].time
 
 					if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && moment(channelGuideTitleFetchDate[channel]).format('A') == "AM") {
-						newDay = -1
+						newDayTitle = -1
 					}
 
 					//if (thisChannelTime.indexOf("AM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "PM") {
@@ -1109,22 +1118,17 @@ $(document).ready(function() {
 					//}
 
 					if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
-						newDay += 1
+						newDayTitle += 1
 					}
 
-					if (moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days') > currentTime) {
-						endTime = moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
+					if (moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days') > currentTime) {
+						endTimeTitle = moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days')
 						break
 					}
 				};
 
 				var currentProgramTitle = channelGuideTitle[channel][i]
 				var nextProgramTitle = channelGuideTitle[channel][i + 1]
-
-				if (!endTime) {
-					console.log("no time end time for " + channel)
-					endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
-				}
 
 				var programTitle = currentProgramTitle.title
 				//programTitle = programTitle.split(" ").join('</span><span class="programTitle">')

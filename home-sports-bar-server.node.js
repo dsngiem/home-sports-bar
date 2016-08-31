@@ -647,7 +647,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 				  "programs": programGuideTitle[channel]}
 
 
-		console.log("Send program guide for channel titles " + channel + " from cache...")
+		console.log("Sending program guide for channel titles " + channel + " from cache...")
 
 		response.writeHead(200, {'Content-Type': 'application/json'});
 		return response.end(JSON.stringify(result))
@@ -747,7 +747,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 				  "programs": programGuide[channel]}
 
 
-		console.log("Send program guide for channel " + channel + " from cache...")
+		console.log("Sending program guide for channel " + channel + " from cache...")
 
 		response.writeHead(200, {'Content-Type': 'application/json'});
 		return response.end(JSON.stringify(result))
@@ -823,15 +823,10 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 			programItems = cheerioBox("div[id^=2_]")
 
-			first = true;
 			programItems.each(function(index, element) {
 				programItem = cheerioBox(element)
 
-				if (first) {
-					pushProgram(programItem)
-					first = false
-
-				} else if (programs.length <= 36) {
+				if (programs.length <= 36) {
 					pushProgram(programItem)
 				}
 			})
