@@ -823,16 +823,12 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 			programItems = cheerioBox("div[id^=2_]")
 
+			first = true;
 			programItems.each(function(index, element) {
 				programItem = cheerioBox(element)
 
 				if (first) {
-					previousItem = programItem.prev()
-					if (previousItem.attr('class') == "zc-ssl-sp") {
-						previousItem = previousItem.prev()
-					}
-
-					pushProgram(previousItem)
+					pushProgram(programItem)
 					first = false
 				}
 

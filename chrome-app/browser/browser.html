@@ -163,7 +163,15 @@
 			display: none;
 		}
 
-
+		#webview-modal {
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 50;
+		}
 
 	</style>
 
@@ -178,7 +186,7 @@
 	<webview id="webview-2" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1"></webview>
 	<webview id="webview-3"" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1"></webview>
 	<webview id="webview-4" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1"></webview>
-    <!--<webview id="webview-2" src="http://watch.foodnetwork.com/live.html" style="width:640px; height:720px; left:640px"></webview>-->
+    <webview id="webview-modal" src="about:blank" style="display: none;"></webview>
 
   </body>
 </html>
