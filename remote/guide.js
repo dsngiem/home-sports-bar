@@ -1092,13 +1092,13 @@ $(document).ready(function() {
 					}
 				};
 
+				var currentProgram = channelGuide[channel][i]
+				var nextProgram = channelGuide[channel][i + 1]
+
 				if (!endTime) {
 					console.log("no time end time for " + channel)
 					endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
 				}
-
-				var currentProgram = channelGuide[channel][i]
-				var nextProgram = channelGuide[channel][i + 1]
 
 				var baseDateTitle = moment(channelGuideTitleFetchDate[channel]).format('YYYY-MM-DD')
 				var currentTimeTitle = moment()
