@@ -23,6 +23,7 @@ onload = function () {
 	webview1.addEventListener('loadcommit', handleLoadCommit);
 	webview1.addEventListener('newwindow', handleNewWindow);
 
+
 	webviewModal.addEventListener('close', handleCloseModal);
 	webviewModal.addEventListener('loadredirect', handleLoadRedirectModal);
 	webviewModal.addEventListener('newwindow', handleNewWindowModal);
@@ -241,10 +242,24 @@ function handleLoadStart(event) {
 	document.body.classList.add('loading');
 	isLoading = true;
 
+	if ((event.url.indexOf("foxsportsgo") != -1 || event.url.indexOf("mlssoccer") != -1) && document.querySelector("#scale") == null) {
+		var style = document.createElement("style");
+		style.id = "scale"
+
+		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(1.6);}#webview-1.screens-1:hover {	transform: scale(1);}"))
+
+		document.querySelector('head').appendChild(style);
+	} else {
+		if (document.querySelector("#scale")) {
+			document.querySelector('head').removeChild(document.querySelector("#scale"));
+		}
+	}
+
 	resetExitedState();
 	if (!event.isTopLevel) {
 		return;
 	}
+
 
 	// document.querySelector('#location').value = event.url;
 }
@@ -478,24 +493,28 @@ $(document).ready(function () {
 					var frame = response["frame"]
 					var url = response["url"]
 					var alt = response["alt"]
+					var alt = response["channelId"]
 
 					if (frame !== undefined) {
 						$("#webview-" + frame).attr('src', url);
+						$("#webview-" + frame).attr('name', url);
+
 						$("#webview-modal").attr('src', "about:blank");
 						$("#webview-modal").attr('style', "display: none");
 						console.log("response received\nframe: " + response["frame"] + "\nurl: " + response["url"] + "\nalt: " + response["alt"])
+
+						clearTimeout(titleTimeout)
+						$("#webview-" + frame + "-title").html(alt).show();
+						titleTimeout = setTimeout(function () {
+							$("#webview-" + frame + "-title").fadeOut();
+						}, 2000)
+
+						$("#startup").hide();
 					}
 
 					errorCount = 0
 					timeout = 700;
 
-					clearTimeout(titleTimeout)
-					$("#webview-" + frame + "-title").html(alt).show();
-					titleTimeout = setTimeout(function () {
-						$("#webview-" + frame + "-title").fadeOut();
-					}, 2000)
-
-					$("#startup").hide();
 				})
 				.fail(function (jqXHR, textStatus, errorThrown) {
 					errorCount++

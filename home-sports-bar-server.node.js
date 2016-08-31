@@ -447,6 +447,7 @@ var handleMessage = function(response, parameters) {
 	result["frame"] = Number(parameters["frame"])
 	result["alt"] = parameters["alt"]
 	result["url"] = parameters["url"]
+	result["channelId"] = parameters["channelId"]
 
 	//parse given url
 	var paramUrl = URL.parse(parameters["url"])
