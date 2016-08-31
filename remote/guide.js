@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 			var networkUrl = $(this).attr('src')
 			var alt = $(this).attr('alt')
-			var channelId = $(this).attr('id')
+			var channelId = $(this.offsetParent).attr('id')
 
 			if (alt == "custom") {
 				networkUrl = $("input:text[name=url]").val();

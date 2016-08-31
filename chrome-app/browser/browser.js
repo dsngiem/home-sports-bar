@@ -493,15 +493,15 @@ $(document).ready(function () {
 					var frame = response["frame"]
 					var url = response["url"]
 					var alt = response["alt"]
-					var alt = response["channelId"]
+					var channelId = response["channelId"]
 
 					if (frame !== undefined) {
 						$("#webview-" + frame).attr('src', url);
-						$("#webview-" + frame).attr('name', url);
+						$("#webview-" + frame).attr('name', channelId);
 
 						$("#webview-modal").attr('src', "about:blank");
 						$("#webview-modal").attr('style', "display: none");
-						console.log("response received\nframe: " + response["frame"] + "\nurl: " + response["url"] + "\nalt: " + response["alt"])
+						console.log("response received\nframe: " + response["frame"] + "\nurl: " + response["url"] + "\nalt: " + response["alt"] + "\nchannelId: " + response["alt"])
 
 						clearTimeout(titleTimeout)
 						$("#webview-" + frame + "-title").html(alt).show();
