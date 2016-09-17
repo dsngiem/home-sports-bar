@@ -18,6 +18,6 @@ var clickLogin = function() {
 	document.getElementsByClassName("login-submit")[0].disabled = false;
 	document.getElementsByClassName("login-submit")[0].click()
 		setTimeout(function() {
-			clickLogin()
+			//clickLogin()
 		}, 3000)
 }

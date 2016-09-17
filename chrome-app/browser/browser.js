@@ -242,11 +242,18 @@ function handleLoadStart(event) {
 	document.body.classList.add('loading');
 	isLoading = true;
 
-	if ((event.url.indexOf("foxsportsgo") != -1 || event.url.indexOf("mlssoccer") != -1) && document.querySelector("#scale") == null) {
+	if ((event.url.indexOf("foxsportsgo") != -1) && document.querySelector("#scale") == null && _frames == 1) {
 		var style = document.createElement("style");
 		style.id = "scale"
 
-		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(1.6);}#webview-1.screens-1:hover {	transform: scale(1);}"))
+		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(1.56);} #webview-1.screens-1:hover {transform: scale(1);}"))
+
+		document.querySelector('head').appendChild(style);
+	} else if ((event.url.indexOf("mlssoccer") != -1) && document.querySelector("#scale") == null && _frames == 1) {
+		var style = document.createElement("style");
+		style.id = "scale"
+
+		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(2);} #webview-1.screens-1:hover {transform: scale(1);}"))
 
 		document.querySelector('head').appendChild(style);
 	} else {

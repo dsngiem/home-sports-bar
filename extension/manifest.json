@@ -42,6 +42,11 @@
         "all_frames": true
     },
     {
+        "matches": ["http://www.cbssports.com/video/player/cbssportsnetworklive*"],
+        "css": ["cbssn-iframe.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://www.cbs.com/live-tv/stream*", "https://www.cbs.com/live-tv/stream*"],
         "js": ["cbs.js"],
         "css": ["cbs.css"],

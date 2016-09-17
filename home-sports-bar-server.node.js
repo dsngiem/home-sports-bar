@@ -95,20 +95,20 @@ function getKeys(dictionary) {
 
 
 /** CACHE CLEARING FUNCTIONS **/
-var clearOldSubscriber = function(subscriberID) {
+var clearOldSubscriber = function(subscriberId) {
 	console.log("Clearing old subscriber...".yellow)
-	var lastSubscriberResponse = subscribers[subscriberID].response
+	var lastSubscriberResponse = subscribers[subscriberId].response
 
 	if (lastSubscriberResponse) {
 		lastSubscriberResponse.end()
 	}
 
-	delete subscribers[subscriberID]
+	delete subscribers[subscriberId]
 }
 
 var clearSubscribers = function() {
-	for (var subscriberID in subscribers) {
-		clearOldSubscriber(subscriberID)
+	for (var subscriberId in subscribers) {
+		clearOldSubscriber(subscriberId)
 	}
 
 	console.log("Subscribers cleared".yellow)
@@ -409,13 +409,13 @@ var playVideo = function(response, parsedUrl) {
 
 /** PUBLISHER FUNCTIONS **/
 var addPublisher = function(response, parameters) {
-	var subscriberID = parameters["subscriberID"]
+	var subscriberId = parameters["subscriberId"]
 	console.log("Publisher connected.".cyan)
 
 	result = {}
 
-	if (subscribers[subscriberID]) {
-		var lastSubscriberFrames = subscribers[subscriberID].frames
+	if (subscribers[subscriberId]) {
+		var lastSubscriberFrames = subscribers[subscriberId].frames
 
 		if (lastSubscriberFrames) {
 			result["frames"] = lastSubscriberFrames
@@ -426,22 +426,22 @@ var addPublisher = function(response, parameters) {
 	}
 
 	result["frames"] = 0
-	result["subscriberIDs"] = getKeys(subscribers)
+	result["subscriberIds"] = getKeys(subscribers)
 
 	response.writeHead(200, {"Content-Type": "application/json"})
 	return response.end(JSON.stringify(result))
 }
 
 var handleMessage = function(response, parameters) {
-	var subscriberID = parameters["subscriberID"]
+	var subscriberId = parameters["subscriberId"]
 
 	// take request and push response to subscriber
-	if (!subscriberID) {
+	if (!subscriberId) {
 		console.log("No player subscriber selected.".bold.cyan)
 		return response.end("No player subscriber selected.")
 	}
 
-	console.log("Publisher sent message to ".cyan + subscriberID)
+	console.log("Publisher sent message to ".cyan + subscriberId)
 
 	result = {}
 	result["frame"] = Number(parameters["frame"])
@@ -463,17 +463,17 @@ var handleMessage = function(response, parameters) {
 	//console.log(result)
 	console.log(JSON.stringify(result).grey)
 
-	if (subscribers[subscriberID]) {
-		var lastSubscriberResponse = subscribers[subscriberID].response
-		var lastSubscriberRequest = subscribers[subscriberID].request
-		var lastSubscriberFrames = subscribers[subscriberID].frames
+	if (subscribers[subscriberId]) {
+		var lastSubscriberResponse = subscribers[subscriberId].response
+		var lastSubscriberRequest = subscribers[subscriberId].request
+		var lastSubscriberFrames = subscribers[subscriberId].frames
 
 		if (lastSubscriberResponse) {
 			lastSubscriberResponse.setHeader('Content-Type', 'application/json')
 			lastSubscriberResponse.writeHead(200)
 			lastSubscriberResponse.end(JSON.stringify(result))
 
-			console.log("Message sent to subscriber ".cyan + subscriberID)
+			console.log("Message sent to subscriber ".cyan + subscriberId)
 		} else {
 			console.log("No player subscriber available.".bold.cyan)
 
@@ -481,9 +481,9 @@ var handleMessage = function(response, parameters) {
 			return response.end("No player subscriber available.");
 		}
 
-		subscribers[subscriberID].frames = lastSubscriberFrames
-		subscribers[subscriberID].request = null
-		subscribers[subscriberID].response = null
+		subscribers[subscriberId].frames = lastSubscriberFrames
+		subscribers[subscriberId].request = null
+		subscribers[subscriberId].response = null
 
 		response.writeHead(200)
 		return response.end("Message published to server.");
@@ -496,15 +496,15 @@ var handleMessage = function(response, parameters) {
 }
 
 var sendFrames = function(response, parameters) {
-	var subscriberID = parameters["subscriberID"]
+	var subscriberId = parameters["subscriberId"]
 
 	// take request and push response to subscriber
-	if (!subscriberID) {
+	if (!subscriberId) {
 		console.log("No player subscriber selected.".bold.cyan)
 		return response.end("No player subscriber selected.")
 	}
 
-	console.log("Publisher sent message to ".cyan + subscriberID)
+	console.log("Publisher sent message to ".cyan + subscriberId)
 
 	result = {}
 	result["frames"] = Number(parameters["frames"])
@@ -512,17 +512,17 @@ var sendFrames = function(response, parameters) {
 	//console.log(result)
 	console.log(JSON.stringify(result).grey)
 
-	if (subscribers[subscriberID]) {
-		var lastSubscriberResponse = subscribers[subscriberID].response
-		var lastSubscriberRequest = subscribers[subscriberID].request
-		var lastSubscriberFrames = subscribers[subscriberID].frames
+	if (subscribers[subscriberId]) {
+		var lastSubscriberResponse = subscribers[subscriberId].response
+		var lastSubscriberRequest = subscribers[subscriberId].request
+		var lastSubscriberFrames = subscribers[subscriberId].frames
 
 		if (lastSubscriberResponse) {
 			lastSubscriberResponse.setHeader('Content-Type', 'application/json')
 			lastSubscriberResponse.writeHead(200);
 			lastSubscriberResponse.end(JSON.stringify(result))
 
-			console.log("Message sent to subscriber ".cyan + subscriberID)
+			console.log("Message sent to subscriber ".cyan + subscriberId)
 
 		} else {
 			console.log("No player subscriber available.".bold.cyan)
@@ -550,46 +550,46 @@ var sendFrames = function(response, parameters) {
 
 /** SUBSCRIBER FUNCTIONS **/
 var addSubscriber = function(request, response, parameters) {
-	var subscriberID = parameters["subscriberID"]
-	if (!subscribers[subscriberID]) {
-		subscribers[subscriberID] = {}
+	var subscriberId = parameters["subscriberId"]
+	if (!subscribers[subscriberId]) {
+		subscribers[subscriberId] = {}
 	}
 
-	var lastSubscriberResponse = subscribers[subscriberID].response
+	var lastSubscriberResponse = subscribers[subscriberId].response
 	if (lastSubscriberResponse) {
-		clearOldSubscriber(subscriberID)
+		clearOldSubscriber(subscriberId)
 	}
 
-	subscribers[subscriberID] = {}
-	subscribers[subscriberID]["frames"] = Number(parameters["frames"])
-	subscribers[subscriberID]["request"] = request
-	subscribers[subscriberID]["response"] = response
+	subscribers[subscriberId] = {}
+	subscribers[subscriberId]["frames"] = Number(parameters["frames"])
+	subscribers[subscriberId]["request"] = request
+	subscribers[subscriberId]["response"] = response
 
 	response.setTimeout(25000, function(){
 		response.writeHead(200);
 		response.write("{}");
-		clearOldSubscriber(subscriberID);
+		clearOldSubscriber(subscriberId);
 	});
 
-	//console.log(subscribers[subscriberID])
-	console.log("Subscriber ".yellow + subscriberID +" waiting for message.".yellow)
+	//console.log(subscribers[subscriberId])
+	console.log("Subscriber ".yellow + subscriberId +" waiting for message.".yellow)
 	return;
 }
 
 var deleteSubscriber = function(response, parameters) {
-	var subscriberID = parameters["subscriberID"]
+	var subscriberId = parameters["subscriberId"]
 
-	if (!subscribers[subscriberID]) {
-		subscribers[subscriberID] = {}
+	if (!subscribers[subscriberId]) {
+		subscribers[subscriberId] = {}
 	}
 
-	var lastSubscriberResponse = subscribers[subscriberID].response
+	var lastSubscriberResponse = subscribers[subscriberId].response
 
 	if (lastSubscriberResponse) {
-		clearOldSubscriber(subscriberID)
+		clearOldSubscriber(subscriberId)
 	}
 
-	console.log("Subscriber ".yellow + subscriberID +" deleted.".yellow)
+	console.log("Subscriber ".yellow + subscriberId +" deleted.".yellow)
 
 	return response.end("Subscriber removed.");
 }
