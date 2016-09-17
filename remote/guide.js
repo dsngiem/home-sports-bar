@@ -232,7 +232,17 @@ $(document).ready(function () {
 		});
 
 		$("select[name=channel]").change();
+
+		adjustScheduleTime();
 	};
+
+	var adjustScheduleTime = function() {
+		var time = moment();
+		var minute = time.minute() + 5 - (time.minute() % 5)
+		minute = minute == 60 ? 0 : minute
+		$("select[name=hour] option[value=" + time.hour() + "]").prop("selected", true);
+		$("select[name=minute] option[value=" + minute + "]").prop("selected", true);
+	}
 
 	var removePastScheduledChannelChange = function() {
 		var removals = 0;
@@ -1089,6 +1099,7 @@ $(document).ready(function () {
 		var getGuideProgramsTimeout = null;
 		var getGuideProgramsTimeout = setTimeout(function () {
 			getGuidePrograms()
+			adjustScheduleTime()
 		}, 60000)
 	}
 

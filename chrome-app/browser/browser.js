@@ -449,19 +449,19 @@ $(document).ready(function () {
 	var errorCount = 0;
 	var timeout = 1;
 	var titleTimeout;
-	var subscriberID = "HSB";
+	var subscriberId = "HSB";
 
 	if (_frames == 1) {
-        //$("#webview-1-title").html(subscriberID)
+        //$("#webview-1-title").html(subscriberId)
 	} else {
-        $("#webview-2-title").html(subscriberID)
+        $("#webview-2-title").html(subscriberId)
 	}
 
-	$("#subscriberID").html(subscriberID)
+	$("#subscriberId").html(subscriberId)
 	$("#location").html(window.location.host)
 
 	var subscribe = function () {
-        var post_data = { "frames": _frames, "subscriberID": subscriberID }
+        var post_data = { "frames": _frames, "subscriberId": subscriberId }
 
         console.log(post_data);
 
