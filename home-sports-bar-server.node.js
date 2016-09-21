@@ -63,6 +63,7 @@ var programGuide = {}
 var programGuideFetchDate = {}
 var programGuideTitle = {}
 var programGuideTitleFetchDate = {}
+var networksByChannelId = {}
 
 var clearSubscribersTimeout;
 var clearProgramGuideCacheTimeout;
@@ -998,6 +999,7 @@ var fetchCurrentProgram = function(response, channelId) {
 		result['timeLeft'] = timeLeft;
 		result['genre'] = genre;
 		result['flags'] = flags;
+		result['image'] = networksByChannelId[channelId].image;
 
 		console.log(result);
 
@@ -1592,6 +1594,8 @@ var fetchPreCacheProgramsTitle = function() {
 	networks.networks.forEach(function(currentValue, index, array) {
 		channelId = currentValue.channelId;
 		fetchGuideChannelTitle(null, channelId);
+
+		networksByChannelId[channelId] = currentValue;
 	})
 
 	console.log('Guide titles prefetched.'.yellow);

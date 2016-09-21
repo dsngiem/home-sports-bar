@@ -215,6 +215,9 @@ function handleKeyDown(event) {
 					webview1.reload();
 				}
 				break;
+			case 32:
+				event.preventDefault();
+				testCanvas();
 		}
 	}
 }

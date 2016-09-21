@@ -148,7 +148,7 @@ var drawImageSrc = function (src, x, y, bwidth, bheight, center) {
     }
 }
 
-var drawUpperThird = function () {
+var drawUpperThird = function (image) {
     var context = canvas.getContext("2d");
 
     var canvasWidth = canvas.width;
@@ -178,7 +178,7 @@ var drawUpperThird = function () {
     context.fillRect(0, 0, widthBackFill, heightBackFill);
 
     //channel logo
-    drawImageSrc("fox.png", leftMargin, topMargin, canvasHeight / 4 - topMargin, canvasHeight / 4 - topMargin, true)
+    drawImageSrc(image, leftMargin, topMargin, canvasHeight / 4 - topMargin, canvasHeight / 4 - topMargin, true)
 
     //advertisement
     var widthAdPlaceholder = 728;
@@ -325,8 +325,19 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, r
 
     context.fillStyle = "white";
     context.font = fontSizeCurrentTime + "pt Helvetica";
-    context.textAlign = "center"
     var widthCurrentTime = context.measureText(currentTime).width;
+
+    context.textAlign = "center"
+    if ((widthCurrentTime / 2 + leftMargin) > xCurrentTime) {
+        context.textAlign = "left"
+        xCurrentTime = leftMargin;
+    }
+
+    if ((widthCurrentTime + xCurrentTime) > (canvasWidth * .90 + leftMargin)) {
+        context.textAlign = "right"
+        xCurrentTime = leftMargin + canvasWidth * .90;
+    }
+
 
     context.fillText(currentTime, xCurrentTime, yCurrentTime);
 
@@ -372,6 +383,7 @@ var testCanvas = function () {
         }
         var startTimeDisplay = response.startTimeDisplay;
         var endTimeDisplay = response.endTimeDisplay;
+        var image = response.image;
 
         setTimeout(function () {
             canvas = document.getElementById("canvas-test");
@@ -380,7 +392,7 @@ var testCanvas = function () {
                 canvas.height = window.innerHeight;
 
                 canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-                //drawUpperThird();
+                drawUpperThird(image);
                 drawLowerThird(programTitle, episodeTitle, startTimeDisplay, endTimeDisplay, response);
                 //drawDebugGridLines();
 
