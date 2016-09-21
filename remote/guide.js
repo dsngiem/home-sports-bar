@@ -1099,7 +1099,6 @@ $(document).ready(function () {
 		var getGuideProgramsTimeout = null;
 		var getGuideProgramsTimeout = setTimeout(function () {
 			getGuidePrograms()
-			adjustScheduleTime()
 		}, 60000)
 	}
 
@@ -1426,5 +1425,6 @@ $(document).ready(function () {
 		console.log("Window on focus");
 		getGuidePrograms();
 		getGuideNbcsn();
+		adjustScheduleTime()
 	}
 })

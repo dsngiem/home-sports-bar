@@ -252,7 +252,7 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, r
 
     //var xEpisodeTitle = leftMargin + widthProgramTitle + Math.floor(20 * scaleFactor);
     var xEpisodeTitle = leftMargin;
-    var yEpisodeTitle = (canvasHeight * 0.75) + (canvasHeight / 4 * 0.05) + (fontSizeEpisodeTitle * 2.5);
+    var yEpisodeTitle = (canvasHeight * 0.75) + (canvasHeight / 4 * 0.05) + (fontSizeProgramTitle * 1.33) + (fontSizeEpisodeTitle);
 
 
     context.fillStyle = "white";
@@ -344,7 +344,7 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, r
 
     //progress bar
     var xProgressBar = leftMargin;
-    var yProgressBar = bottomMargin - (canvasHeight * .0167 * 2) - Math.floor(24 * scaleFactor);
+    var yProgressBar = bottomMargin - (canvasHeight * .0167 * 2) - Math.floor(21 * scaleFactor);
 
     var widthProgressBar = canvasWidth * .9;
     var heightProgressBar = canvasHeight * .0167;
@@ -355,7 +355,7 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, r
 
     //elapsed bar
     var xElapsedBar = leftMargin;
-    var yElapsedBar = bottomMargin - (canvasHeight * .0167 * 2) - Math.floor(24 * scaleFactor);
+    var yElapsedBar = bottomMargin - (canvasHeight * .0167 * 2) - Math.floor(21 * scaleFactor);
 
     var widthElapsedBar = canvasWidth * .9 * percentComplete;
     var heightElapsedBar = canvasHeight * .0167;
@@ -381,31 +381,40 @@ var testCanvas = function () {
         if (response.episodeTitle !== undefined) {
             episodeTitle = response.episodeTitle.trim();
         }
+        var description = response.description;
         var startTimeDisplay = response.startTimeDisplay;
         var endTimeDisplay = response.endTimeDisplay;
-        var image = response.image;
 
-        setTimeout(function () {
-            canvas = document.getElementById("canvas-test");
-            if (canvas) {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', response.image, true);
+        xhr.responseType = 'blob';
+        xhr.onload = function(e) {
+            var image = window.URL.createObjectURL(this.response);
 
-                canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-                drawUpperThird(image);
-                drawLowerThird(programTitle, episodeTitle, startTimeDisplay, endTimeDisplay, response);
-                //drawDebugGridLines();
+            setTimeout(function () {
+                canvas = document.getElementById("canvas-test");
+                if (canvas) {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
 
-                $(canvas).fadeIn(100);
+                    canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+                    drawUpperThird(image);
+                    drawLowerThird(programTitle, description, startTimeDisplay, endTimeDisplay, response);
+                    //drawDebugGridLines();
 
-                setTimeout(function () {
-                    $(canvas).fadeOut(800);
-                }, 5000);
+                    $(canvas).fadeIn(100);
 
-            } else {
-                testCanvas();
-            }
-        }, 500);
+                    setTimeout(function () {
+                        $(canvas).fadeOut(800);
+                    }, 5000);
+
+                } else {
+                    testCanvas();
+                }
+            }, 500);
+        };
+
+        xhr.send();
     })
 
 }

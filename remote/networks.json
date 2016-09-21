@@ -2628,6 +2628,10 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/100px-The_Weather_Channel_logo_2005-present.svg.png",
 		"urls": [
 		{
+			"source": "The Weather Channel",
+			"url": "https://weather.com/tv/the-weather-channel-live/video/watch-the-weather-channel-live"
+		},
+		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/theweatherchannel?cmpid=livetv_the-weather-channel"
 		},
