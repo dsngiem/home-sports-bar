@@ -801,7 +801,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 					"duration": duration,
 					"genre": genre,
 					"title": title,
-					"episode": episode.trim,
+					"episode": episode.trim(),
 					"description": description,
 					"icons": icons
 				})
