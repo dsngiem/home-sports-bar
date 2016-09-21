@@ -999,6 +999,8 @@ var fetchCurrentProgram = function(response, channelId) {
 		result['genre'] = genre;
 		result['flags'] = flags;
 
+		console.log(result);
+
 		response.writeHead(200, {"Content-Type": "application/json"})
 		return response.end(JSON.stringify(result))
 

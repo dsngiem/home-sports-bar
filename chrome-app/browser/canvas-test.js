@@ -192,7 +192,7 @@ var drawUpperThird = function () {
     context.fillRect(xAdPlaceholder, yAdPlaceholder, widthAdPlaceholder, heightAdPlaceholder);
 };
 
-var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime) {
+var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, response) {
     var context = canvas.getContext("2d");
 
     var canvasWidth = canvas.width;
@@ -281,7 +281,14 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime) {
     var fontSizeBaseStatusTime = 24;
     var fontSizeStatusTime = Math.floor(fontSizeBaseStatusTime * scaleFactor);
 
-    var statusTime = "15 minutes left | 75% complete";
+    var startTimeMoment = moment(response.startTime);
+    var currentTimeMoment = moment();
+    var endTimeMoment = moment(response.endTime);
+
+    var timeLeft = moment.duration(endTimeMoment.diff(currentTimeMoment))
+    var percentComplete = moment.duration(currentTimeMoment.diff(startTimeMoment)) / moment.duration(endTimeMoment.diff(startTimeMoment))
+
+    var statusTime = timeLeft.humanize() + " left | " + Math.round(percentComplete * 100) + "% complete";
 
     context.fillStyle = "white";
     context.font = fontSizeStatusTime + "pt Helvetica";
@@ -308,13 +315,13 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime) {
 
 
     //current time
-    var xCurrentTime = leftMargin + (canvasWidth * 0.90 * .75);
+    var xCurrentTime = leftMargin + (canvasWidth * 0.90 * percentComplete);
     var yCurrentTime = bottomMargin - (canvasHeight * .0167 * 2) - (Math.floor(25 * scaleFactor) * 1.5);
 
     var fontSizeBaseCurrentTime = 24;
     var fontSizeCurrentTime = Math.floor(fontSizeBaseCurrentTime * scaleFactor);
 
-    var currentTime = "1:45 AM";
+    var currentTime = currentTimeMoment.format("h:mm A");
 
     context.fillStyle = "white";
     context.font = fontSizeCurrentTime + "pt Helvetica";
@@ -339,7 +346,7 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime) {
     var xElapsedBar = leftMargin;
     var yElapsedBar = bottomMargin - (canvasHeight * .0167 * 2) - Math.floor(24 * scaleFactor);
 
-    var widthElapsedBar = canvasWidth * .9 * .75;
+    var widthElapsedBar = canvasWidth * .9 * percentComplete;
     var heightElapsedBar = canvasHeight * .0167;
 
     context.fillStyle = "rgba(109, 0, 25, .8)";
@@ -349,13 +356,20 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime) {
 
 
 var testCanvas = function () {
+    var channelId = parseInt($("#webview-1").attr('name'));
+
     var post_data = {
-        'channel': 82547
+        'channel': channelId
     };
 
     $.post("https://peaceful-forest-5547.herokuapp.com/api/guide/channel/program", post_data).done(function (response) {
+        console.log(response);
+
         var programTitle = response.programTitle;
-        var episodeTitle = response.episodeTitle;
+        var episodeTitle = "";
+        if (response.episodeTitle !== undefined) {
+            episodeTitle = response.episodeTitle.trim();
+        }
         var startTimeDisplay = response.startTimeDisplay;
         var endTimeDisplay = response.endTimeDisplay;
 
@@ -366,12 +380,14 @@ var testCanvas = function () {
                 canvas.height = window.innerHeight;
 
                 canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-                drawUpperThird();
-                drawLowerThird(programTitle, episodeTitle.trim(), startTimeDisplay, endTimeDisplay);
-                drawDebugGridLines();
+                //drawUpperThird();
+                drawLowerThird(programTitle, episodeTitle, startTimeDisplay, endTimeDisplay, response);
+                //drawDebugGridLines();
+
+                $(canvas).fadeIn(100);
 
                 setTimeout(function () {
-                    //$(canvas).fadeOut(800);
+                    $(canvas).fadeOut(800);
                 }, 5000);
 
             } else {

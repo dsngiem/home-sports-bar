@@ -126,7 +126,7 @@ onload = function () {
 	// ]);
 
 	window.addEventListener('keydown', handleKeyDown);
-	webview1.addEventListener('mouseover', testCanvas);
+	//webview1.addEventListener('mouseover', testCanvas);
 	//fullscreenWindow();
 };
 
@@ -510,13 +510,14 @@ $(document).ready(function () {
 						$("#webview-modal").attr('style', "display: none");
 						console.log("response received\nframe: " + response["frame"] + "\nurl: " + response["url"] + "\nalt: " + response["alt"] + "\nchannelId: " + response["alt"])
 
-						clearTimeout(titleTimeout)
-						$("#webview-" + frame + "-title").html(alt).show();
-						titleTimeout = setTimeout(function () {
-							$("#webview-" + frame + "-title").fadeOut();
-						}, 2000)
+						//clearTimeout(titleTimeout)
+						//$("#webview-" + frame + "-title").html(alt).show();
+						//titleTimeout = setTimeout(function () {
+						//	$("#webview-" + frame + "-title").fadeOut();
+						//}, 2000)
+						testCanvas();
 
-						$("#startup").hide();
+						//$("#startup").hide();
 					}
 
 					errorCount = 0
