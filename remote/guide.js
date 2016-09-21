@@ -1209,6 +1209,20 @@ $(document).ready(function () {
 				endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
 			}
 
+			if (endTime.isSame(moment().add(1, 'day').startOf('day'))) {
+				if (currentProgram.title == nextProgram.title) {
+					endTime = channelGuide[channel][i + 2].time
+				}
+			}
+
+			// if (currentProgram.time.isSame(moment().add(1, 'day').startOf('day'))) {
+			// 	var lastProgram = channelGuide[channel][i - 1]
+
+			// 	if (currentProgram.title == nextProgram.title) {
+			// 		endTime = channelGuide[channel][i + 2].time
+			// 	}
+			// }
+
 			var baseDateTitle = moment(channelGuideTitleFetchDate[channel]).format('YYYY-MM-DD')
 			var currentTimeTitle = moment()
 			var endTimeTitle = false

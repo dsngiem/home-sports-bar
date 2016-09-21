@@ -5,42 +5,13 @@
 	$(document).ready(function() {
 		var channelGuide = {}
 
-		$.post("/api/guide").done(function (response) {
+		var post_data = {
+			'channel': 82547
+		};
+
+		$.post("/api/guide/channel/program", post_data).done(function (response) {
 			console.log(response)
-			$("#test_results").html("")
-
-			response.data.results.stations.forEach( function(currentValue, index, array) {
-				if (!currentValue.ad) {
-
-					var i = 0
-					var currentTime = new Date()
-					var startTime = new Date(currentValue.events[i].startTime)
-					var endTime = new Date(startTime).setMinutes(startTime.getMinutes() + currentValue.events[i].duration)
-
-					while (!(startTime < currentTime && currentTime < endTime) && i + 1 < currentValue.events.length) {
-						i++;
-						
-						startTime = new Date(currentValue.events[i].startTime)
-						endTime = new Date(startTime).setMinutes(startTime.getMinutes() + currentValue.events[i].duration)
-					
-					}
-
-					$("#test_results").append("<li><img src=\"" + 	currentValue.thumbnail + "\" /><p>" + currentValue.callSign + "</p><p>" + currentValue.channelId + "</p><p>" + currentValue.events[i].prgtitle + " (" + currentValue.events[i].startTimeDisplay + " - " + currentValue.events[i].endTimeDisplay + ")</p><p style=\"font-style: italic;\">" + currentValue.events[i].eptitle + "</p></li>")
-
-					channelGuide[currentValue.channelId] = {
-						"callSign": currentValue.callSign,
-						"programTitle": currentValue.events[i].program.title,
-						"episodeTitle": currentValue.events[i].program.episodeTitle,
-						"description": currentValue.events[i].program.description,
-						"startTimeDisplay": currentValue.events[i].startTimeDisplay,
-						"endTimeDisplay": currentValue.events[i].endTimeDisplay,
-						"flags": currentValue.events[i].flags,
-						"genre": currentValue.events[i].program.genres
-					}
-				};
-			})
-
-			console.log(channelGuide)	
+			$("#test_results").html(JSON.stringify(response))
 		})
 	})
 	</script>

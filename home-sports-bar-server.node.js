@@ -131,10 +131,6 @@ var clearProgramGuideCache = function() {
 	console.log("Program guide cleared".yellow)
 	fetchPreCachePrograms()
 
-	// checkActiveConnectionsTimeout = setTimeout(function() {
-	// 	checkActiveConnections();
-	// }, 21600000) //first check thirty seconds
-
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
 		clearProgramGuideCache()
@@ -349,6 +345,12 @@ var server = HTTP.createServer(
 				}  else if (parsedUrl["pathname"] == "/api/guide/channel/title") {
 					var channel = parameters["channel"]
 					return fetchGuideChannelTitle(response, channel)
+
+				}  else if (parsedUrl["pathname"] == "/api/guide/channel/program") {
+					var channel = parameters["channel"]
+					return fetchCurrentProgram(response, channel)
+
+
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nbcsn") {
 					return fetchGuideNbcsn(response)
@@ -869,6 +871,141 @@ var fetchGuideChannelTvGuide = function(response, channelId, baseId) {
 // http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/80001/start/1460817000/duration/20160?channelsourceids=423%7C*&formattype=json
 // http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/{base id -- cable 80001, broadcast 901078}/start/{current unix timestamp}/duration/{duration in minutes}}?channelsourceids={channel source ids separated by | (%7c) }}%7C*&formattype=json
 };
+
+var fetchCurrentProgram = function(response, channelId) {
+	//channelId = parseInt(channelId);
+
+	if (!(programGuide[channelId] && programGuideTitle[channelId])) {
+		response.writeHead(200)
+		return response.end('Program guide unavailable.')
+	}
+
+	var baseDate = Moment(programGuideFetchDate[channelId]).format('YYYY-MM-DD')
+	var currentTime = Moment()
+	var startTime = false;
+	var endTime = false
+
+	var newDay = 0
+
+	//if (!$.isEmptyObject(programGuide) && programGuide[channelId].length > 0) {
+	if (programGuide[channelId].length > 0) {
+		for (var i = 0; i < programGuide[channelId].length - 1; i++) {
+			var thisChannelTime = programGuide[channelId][i].time
+			var nextChannelTime = programGuide[channelId][i + 1].time
+
+			if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && Moment(programGuideFetchDate[channelId]).format('A') == "AM") {
+				newDay = -1
+			}
+
+			//if (thisChannelTime.indexOf("AM") >= 0 && Moment(programGuideFetchDate[channel]).format('A') == "PM") {
+			//	newDay = -1
+			//}
+
+			if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
+				newDay += 1
+			}
+
+			if (Moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days') > currentTime) {
+				if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
+					startTime = Moment(thisChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay - 1, 'days')
+				} else {
+					startTime = Moment(thisChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
+				}
+
+				endTime = Moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
+				break
+			}
+		};
+
+		var currentProgram = programGuide[channelId][i]
+		var nextProgram = programGuide[channelId][i + 1]
+
+		if (!endTime) {
+			console.log("no time end time for " + channelId)
+			endTime = Moment(currentProgram.time, "h:mm A").add(1, 'hours')
+		}
+
+		if (endTime.isSame(Moment().add(1, 'day').startOf('day'))) {
+			if (currentProgram.title == nextProgram.title) {
+				endTime = programGuide[channelId][i + 2].time
+			}
+		}
+
+		// if (currentProgram.time.isSame(Moment().add(1, 'day').startOf('day'))) {
+		// 	var lastProgram = programGuide[channel][i - 1]
+
+		// 	if (currentProgram.title == nextProgram.title) {
+		// 		endTime = programGuide[channel][i + 2].time
+		// 	}
+		// }
+
+		var baseDateTitle = Moment(programGuideTitleFetchDate[channelId]).format('YYYY-MM-DD')
+		var currentTimeTitle = Moment()
+		var endTimeTitle = false
+		var newDayTitle = 0
+
+		for (var i = 0; i < programGuideTitle[channelId].length - 1; i++) {
+			var thisChannelTime = programGuideTitle[channelId][i].time
+			var nextChannelTime = programGuideTitle[channelId][i + 1].time
+
+			if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && Moment(programGuideTitleFetchDate[channelId]).format('A') == "AM") {
+				newDayTitle = -1
+			}
+
+			//if (thisChannelTime.indexOf("AM") >= 0 && Moment(programGuideFetchDate[channel]).format('A') == "PM") {
+			//	newDay = -1
+			//}
+
+			if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
+				newDayTitle += 1
+			}
+
+			if (Moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days') > currentTime) {
+				endTimeTitle = Moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days')
+				break
+			}
+		};
+
+		var currentProgramTitle = programGuideTitle[channelId][i]
+		var nextProgramTitle = programGuideTitle[channelId][i + 1]
+
+		var programTitle = currentProgramTitle.title
+		//programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
+		var startTimeDisplay = currentProgram.time
+		var endTimeDisplay = endTime ? endTime.format("h:mm A") : nextProgram.time
+		var episodeTitle = currentProgram.episode
+		var flags = currentProgram.icons == "" ? [] : currentProgram.icons.split(" ")
+		var genre = currentProgram.genre
+		var description = currentProgram.description
+		var timeLeft = Moment.duration(endTime.diff(currentTime))
+		// var duration = currentProgram.duration;
+		if (nextProgram) {
+			var nextEventTitle = endTime ? nextProgramTitle.title : ""
+			var nextEventEpisode = endTime ? nextProgram.episode : ""
+			nextEventEpisode = nextEventEpisode == "" ? "" : " - " + nextEventEpisode
+			var nextFlags = nextProgram.icons == "" ? [] : nextProgram.icons.split(" ")
+		}
+
+		result = {}
+		result['programTitle'] = programTitle;
+		result['episodeTitle'] = episodeTitle;
+		result['description'] = description;
+		result['startTimeDisplay'] = startTimeDisplay;
+		result['endTimeDisplay'] = endTimeDisplay;
+		result['startTime'] = startTime;
+		result['endTime'] = endTime;
+		result['timeLeft'] = timeLeft;
+		result['genre'] = genre;
+		result['flags'] = flags;
+
+		response.writeHead(200, {"Content-Type": "application/json"})
+		return response.end(JSON.stringify(result))
+
+	} else {
+		response.writeHead(200)
+		return response.end('Program guide unavailable.')
+	}
+}
 
 var fetchGuideNbcsn = function(response) {
 	console.log("Requesting program guide for nbcsn...")
@@ -1443,23 +1580,18 @@ var fetchPreCachePrograms = function() {
 		})
 
 		console.log('Guide prefetched.'.yellow);
+
+		fetchPreCacheProgramsTitle();
 	})
 }
 
 var fetchPreCacheProgramsTitle = function() {
-	FS.readFile('./remote/networks.json', function(error, data) {
-		if (error) {
-			return console.log('error fetching networks: '.red + error.message)
-		}
-
-		networks = JSON.parse(data)
-		networks.networks.forEach(function(currentValue, index, array) {
-			channelId = currentValue.channelId;
-			fetchGuideChannelTitle(null, channelId);
-		})
-
-		console.log('Guide prefetched.'.yellow);
+	networks.networks.forEach(function(currentValue, index, array) {
+		channelId = currentValue.channelId;
+		fetchGuideChannelTitle(null, channelId);
 	})
+
+	console.log('Guide titles prefetched.'.yellow);
 }
 
 
