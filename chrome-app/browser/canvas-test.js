@@ -367,11 +367,11 @@ var testCanvas = function () {
 
                 canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
                 drawUpperThird();
-                drawLowerThird(programTitle, episodeTitle, startTimeDisplay, endTimeDisplay);
-                //drawDebugGridLines();
+                drawLowerThird(programTitle, episodeTitle.trim(), startTimeDisplay, endTimeDisplay);
+                drawDebugGridLines();
 
                 setTimeout(function () {
-                    $(canvas).fadeOut(800);
+                    //$(canvas).fadeOut(800);
                 }, 5000);
 
             } else {

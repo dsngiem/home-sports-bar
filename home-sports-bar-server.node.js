@@ -54,6 +54,7 @@ var Moment = require('moment-timezone')
 
 //set default time zone to New York
 Moment().tz("America/New_York").format();
+Moment.tz.setDefault("America/New_York");
 
 
 /** GLOBAL VARIABLES **/
@@ -800,7 +801,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 					"duration": duration,
 					"genre": genre,
 					"title": title,
-					"episode": episode,
+					"episode": episode.trim,
 					"description": description,
 					"icons": icons
 				})
