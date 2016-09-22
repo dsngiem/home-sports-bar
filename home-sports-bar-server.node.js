@@ -831,8 +831,10 @@ var fetchGuideChannelGrid = function(response, channel) {
 			programItems.each(function(index, element) {
 				programItem = cheerioBox(element)
 
-				if (programs.length <= 36) {
+				if (programs.length <= 24) {
 					pushProgram(programItem)
+				} else {
+					break;
 				}
 			})
 
