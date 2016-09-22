@@ -148,7 +148,7 @@ var drawImageSrc = function (src, x, y, bwidth, bheight, center) {
     }
 }
 
-var drawUpperThird = function (image) {
+var drawUpperThird = function (image, channelName) {
     var context = canvas.getContext("2d");
 
     var canvasWidth = canvas.width;
@@ -178,21 +178,45 @@ var drawUpperThird = function (image) {
     context.fillRect(0, 0, widthBackFill, heightBackFill);
 
     //channel logo
-    drawImageSrc(image, leftMargin, topMargin, canvasHeight / 4 - topMargin, canvasHeight / 4 - topMargin, true)
+    var imageWidthBoundingBox = canvasHeight / 4 - topMargin;
+    var imageHeightBoundingBox = imageWidthBoundingBox;
+
+    drawImageSrc(image, leftMargin, topMargin, imageWidthBoundingBox, imageHeightBoundingBox, true)
+
 
     //advertisement
     var widthAdPlaceholder = 728;
     var heightAdPlaceholder = 90;
 
     var xAdPlaceholder = rightMargin - widthAdPlaceholder;
-    var yAdPlaceholder = topMargin + (canvasHeight / 4 - topMargin - heightAdPlaceholder) / 2;
+    var yAdPlaceholder = topMargin + (imageHeightBoundingBox - heightAdPlaceholder) / 2;
 
 
     context.fillStyle = "rgba(109, 0, 25, 1.0)";
     context.fillRect(xAdPlaceholder, yAdPlaceholder, widthAdPlaceholder, heightAdPlaceholder);
+
+
+    //channel name
+    var fontSizeBaseChannelName = 36 * scaleFactor;
+    //var fontSizeChannelName = Math.floor(fontSizeBaseChannelName * scaleFactor);
+
+    var widthBoundingBoxChannelName = canvasWidth * 0.9 - imageWidthBoundingBox - widthAdPlaceholder;
+
+    //var channelName = 'FS1';
+
+    var fontSizeChannelName = fitTextBoundingBox(channelName, fontSizeBaseChannelName, 18, "bold", "Helvetica", widthBoundingBoxChannelName, 0);
+
+    var xChannelName = leftMargin + imageWidthBoundingBox * 1.25;
+    var yChannelName = topMargin + (imageHeightBoundingBox / 2) + (fontSizeChannelName / 2);
+
+    context.fillStyle = "white";
+    context.font = "bold " + fontSizeChannelName + "pt Helvetica";
+    context.fillText(channelName, xChannelName, yChannelName);
+
+
 };
 
-var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, response) {
+var drawLowerThird = function (programTitle, episodeTitle, description, startTime, endTime, response) {
     var context = canvas.getContext("2d");
 
     var canvasWidth = canvas.width;
@@ -248,16 +272,36 @@ var drawLowerThird = function (programTitle, episodeTitle, startTime, endTime, r
     // var episodeTitle = '';
 
     //var fontSizeEpisodeTitle = Math.floor(fontSizeBaseEpisodeTitle * scaleFactor);
-    var fontSizeEpisodeTitle = fitTextBoundingBox(episodeTitle, fontSizeBaseEpisodeTitle, 18, "", "Helvetica", widthBoundingBoxProgramTitle, 0);
+    var fontSizeEpisodeTitle = fitTextBoundingBox(episodeTitle, fontSizeBaseEpisodeTitle, 18, "", "Helvetica", widthBoundingBoxProgramTitle - widthProgramTitle, 0);
 
-    //var xEpisodeTitle = leftMargin + widthProgramTitle + Math.floor(20 * scaleFactor);
-    var xEpisodeTitle = leftMargin;
-    var yEpisodeTitle = (canvasHeight * 0.75) + (canvasHeight / 4 * 0.05) + (fontSizeProgramTitle * 1.33) + (fontSizeEpisodeTitle);
+    var xEpisodeTitle = leftMargin + widthProgramTitle + Math.floor(20 * scaleFactor);
+    //var xEpisodeTitle = leftMargin;
+    var yEpisodeTitle = (canvasHeight * 0.75) + (canvasHeight / 4 * 0.05) + (fontSizeEpisodeTitle) + (fontSizeBaseEpisodeTitle - fontSizeEpisodeTitle);
 
 
     context.fillStyle = "white";
-    context.font = fontSizeEpisodeTitle + "pt Helvetica";
+    context.font = "italic " + fontSizeEpisodeTitle + "pt Helvetica";
     context.fillText(episodeTitle, xEpisodeTitle, yEpisodeTitle);
+
+
+    //description
+    var widthProgramTitle = context.measureText(programTitle).width;
+
+    var fontSizeBaseDescription = fontSizeProgramTitle * .75;
+
+    // var episodeTitle = '';
+
+    //var fontSizeEpisodeTitle = Math.floor(fontSizeBaseEpisodeTitle * scaleFactor);
+    var fontSizeDescription = fitTextBoundingBox(description, fontSizeBaseDescription, 18, "", "Helvetica", widthBoundingBoxProgramTitle, 0);
+
+    //var xEpisodeTitle = leftMargin + widthProgramTitle + Math.floor(20 * scaleFactor);
+    var xDescription = leftMargin;
+    var yDescription = (canvasHeight * 0.75) + (canvasHeight / 4 * 0.05) + (fontSizeProgramTitle * 1.33) + (fontSizeDescription);
+
+
+    context.fillStyle = "white";
+    context.font = fontSizeDescription + "pt Helvetica";
+    context.fillText(description, xDescription, yDescription);
 
 
     //start time
@@ -384,6 +428,7 @@ var testCanvas = function () {
         var description = response.description;
         var startTimeDisplay = response.startTimeDisplay;
         var endTimeDisplay = response.endTimeDisplay;
+        var channelName = response.channelName;
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', response.image, true);
@@ -398,8 +443,8 @@ var testCanvas = function () {
                     canvas.height = window.innerHeight;
 
                     canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-                    drawUpperThird(image);
-                    drawLowerThird(programTitle, description, startTimeDisplay, endTimeDisplay, response);
+                    drawUpperThird(image, channelName);
+                    drawLowerThird(programTitle, episodeTitle, description, startTimeDisplay, endTimeDisplay, response);
                     //drawDebugGridLines();
 
                     $(canvas).fadeIn(100);

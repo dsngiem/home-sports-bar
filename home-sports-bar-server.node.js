@@ -990,6 +990,7 @@ var fetchCurrentProgram = function(response, channelId) {
 		result['genre'] = genre;
 		result['flags'] = flags;
 		result['image'] = networksByChannelId[channelId].image;
+		result['channelName'] = networksByChannelId[channelId].alt;
 
 		console.log(result);
 
