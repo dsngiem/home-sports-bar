@@ -647,7 +647,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 
 	//check if program guide exists
 	if (channel in programGuideTitle) {
-		result = {"channel": channel,
+		var result = {"channel": channel,
 				  "fetchDate": programGuideTitleFetchDate[channel],
 				  "programs": programGuideTitle[channel]}
 
@@ -672,18 +672,16 @@ var fetchGuideChannelTitle = function(response, channel) {
 		})
 
 		scheduleResponse.on('end', function() {
-			console.log("Program guide for channel title " + channel + " fetched.")
+			var programs = []
 
-			programs = []
-
-			cheerioBox = Cheerio.load(scheduleBody)
-			programItems = cheerioBox("li[id^=row1-]")
+			var cheerioBox = Cheerio.load(scheduleBody)
+			var programItems = cheerioBox("li[id^=row1-]")
 
 			var pushProgram = function(pItem) {
-				time = cheerioBox('.zc-ssl-pg-time', pItem).text()
-				title = cheerioBox('.zc-ssl-pg-title', pItem).text()
-				episode = cheerioBox('.zc-ssl-pg-ep', pItem).text().replace('"', "").replace('"', "").replace('"', "")
-				icons = cheerioBox('.zc-icons', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ")
+				var time = cheerioBox('.zc-ssl-pg-time', pItem).text()
+				var title = cheerioBox('.zc-ssl-pg-title', pItem).text()
+				var episode = cheerioBox('.zc-ssl-pg-ep', pItem).text().replace('"', "").replace('"', "").replace('"', "")
+				var icons = cheerioBox('.zc-icons', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ")
 
 				programs.push({
 					"time": time,
@@ -695,10 +693,10 @@ var fetchGuideChannelTitle = function(response, channel) {
 
 			var first = true
 			programItems.each(function(index, element) {
-				programItem = cheerioBox(element)
+				var programItem = cheerioBox(element)
 
 				if (first) {
-					previousItem = programItem.prev()
+					var previousItem = programItem.prev()
 					if (previousItem.attr('class') == "zc-ssl-sp") {
 						previousItem = previousItem.prev()
 					}
@@ -713,10 +711,12 @@ var fetchGuideChannelTitle = function(response, channel) {
 			programGuideTitle[channel] = programs
 			programGuideTitleFetchDate[channel] = new Date()
 
-			result = {"channel": channel,
+			var result = {"channel": channel,
 					  "fetchDate": programGuideTitleFetchDate[channel],
 					  "programs": programGuideTitle[channel]}
 
+
+			console.log("Program guide for channel title " + channel + " fetched.")
 			if (response != null) {
 				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
 				return response.end(JSON.stringify(result))
@@ -741,13 +741,13 @@ var fetchGuideChannelTitle = function(response, channel) {
 	return scheduleRequest.end()
 }
 
-var activeConnections = 0;
+
 var fetchGuideChannelGrid = function(response, channel) {
 	console.log("Requesting program guide for channel " + channel + "...")
 
 	//check if program guide exists
 	if (channel in programGuide) {
-		result = {"channel": channel,
+		var result = {"channel": channel,
 				  "fetchDate": programGuideFetchDate[channel],
 				  "programs": programGuide[channel]}
 
@@ -758,7 +758,6 @@ var fetchGuideChannelGrid = function(response, channel) {
 		return response.end(JSON.stringify(result))
 	}
 
-	activeConnections++;
 	var schedulePath = "/tvlistings/ZCSGrid.do?fromTimeInMillis=0&sgt=grid&aid=zap2it&stnNum=" + channel
 	var scheduleRequest = HTTP.request({
 		host: 'tvlistings.zap2it.com',
@@ -773,29 +772,27 @@ var fetchGuideChannelGrid = function(response, channel) {
 		})
 
 		scheduleResponse.on('end', function() {
-			console.log("Program guide for channel " + channel + " fetched.")
-			activeConnections--;
 
-			programs = []
+			var programs = []
 
-			cheerioBox = Cheerio.load(scheduleBody)
-			programItems = cheerioBox("div[id^=1_]")
+			var cheerioBox = Cheerio.load(scheduleBody)
+			var programItems = cheerioBox("div[id^=1_]")
 
 			var heightToMinuteRatio = 4
 			var runningHeight = 0
 			var pushProgram = function(pItem) {
-				height = parseInt(cheerioBox(pItem).attr('style').replace("height: ", "").replace("px;", ""));
+				var height = parseInt(cheerioBox(pItem).attr('style').replace("height: ", "").replace("px;", ""));
 
-				time = Moment().startOf('day').add(runningHeight / heightToMinuteRatio, 'minutes').format("h:mm A");
+				var time = Moment().startOf('day').add(runningHeight / heightToMinuteRatio, 'minutes').format("h:mm A");
 				runningHeight += height;
 
-				duration = height / heightToMinuteRatio;
+				var duration = height / heightToMinuteRatio;
 
-				genre = cheerioBox(pItem).attr('class').replace("zc-program zc-genre-", "");
-				title = cheerioBox('.zc-program-title', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
-				episode = cheerioBox('.zc-program-episode', pItem).text().replace('"', "").replace('"', "").replace('"', "");
-				description = cheerioBox('.zc-program-description', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ").replace('"', "").replace('"', "").replace('"', "");
-				icons = cheerioBox('.zc-icons', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
+				var genre = cheerioBox(pItem).attr('class').replace("zc-program zc-genre-", "");
+				var title = cheerioBox('.zc-program-title', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
+				var episode = cheerioBox('.zc-program-episode', pItem).text().replace('"', "").replace('"', "").replace('"', "");
+				var description = cheerioBox('.zc-program-description', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ").replace('"', "").replace('"', "").replace('"', "");
+				var icons = cheerioBox('.zc-icons', pItem).text().trim().replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g, " ");
 
 				programs.push({
 					"time": time,
@@ -810,17 +807,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 			var first = false
 			programItems.each(function(index, element) {
-				programItem = cheerioBox(element)
-
-				if (first) {
-					previousItem = programItem.prev()
-					if (previousItem.attr('class') == "zc-ssl-sp") {
-						previousItem = previousItem.prev()
-					}
-
-					pushProgram(previousItem)
-					first = false
-				}
+				var programItem = cheerioBox(element)
 
 				pushProgram(programItem)
 			})
@@ -828,21 +815,25 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 			programItems = cheerioBox("div[id^=2_]")
 
-			programItems.each(function(index, element) {
-				programItem = cheerioBox(element)
+			for (var i = 0; i < programItems.length; i++) {
+				var element = programItems[i];
+				var programItem = cheerioBox(element)
 
 				if (programs.length <= 36) {
 					pushProgram(programItem)
+				} else {
+					break;
 				}
-			})
+			}
 
 			programGuide[channel] = programs
 			programGuideFetchDate[channel] = new Date()
 
-			result = {"channel": channel,
+			var result = {"channel": channel,
 					  "fetchDate": programGuideFetchDate[channel],
 					  "programs": programGuide[channel]}
 
+			console.log("Program guide for channel " + channel + " fetched.")
 			if (response != null) {
 				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
 				return response.end(JSON.stringify(result))
@@ -851,7 +842,6 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 		scheduleResponse.on('error', function(scheduleError) {
 			console.log("schedule error")
-			activeConnections--;
 
 			if (response) {
 				response.writeHead(200)
@@ -988,7 +978,7 @@ var fetchCurrentProgram = function(response, channelId) {
 			var nextFlags = nextProgram.icons == "" ? [] : nextProgram.icons.split(" ")
 		}
 
-		result = {}
+		var result = {}
 		result['programTitle'] = programTitle;
 		result['episodeTitle'] = episodeTitle;
 		result['description'] = description;
@@ -1131,17 +1121,17 @@ var fetchGuideNbcOlympics = function(response, channel) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nbcolympics")
 
-			programs = []
+			var programs = []
 
-			cheerioBox = Cheerio.load(scheduleBody);
-			programItems = cheerioBox(".list-item-row.on-now-row");
+			var cheerioBox = Cheerio.load(scheduleBody);
+			var programItems = cheerioBox(".list-item-row.on-now-row");
 
 			var pushProgram = function(pItem) {
 				console.log(pItem);
-				title = cheerioBox('.sport-roofline-text', pItem).text().trim();
-				episode = cheerioBox('.event-data h3', pItem).text().trim();
+				var title = cheerioBox('.sport-roofline-text', pItem).text().trim();
+				var episode = cheerioBox('.event-data h3', pItem).text().trim();
 
-				url = cheerioBox('.schedule-item-link', pItem).attr('href');
+				var url = cheerioBox('.schedule-item-link', pItem).attr('href');
 
 				programs.push({
 					"title": title,
@@ -1151,12 +1141,12 @@ var fetchGuideNbcOlympics = function(response, channel) {
 			}
 
 			programItems.each(function(index, element) {
-				programItem = cheerioBox(element)
+				var programItem = cheerioBox(element)
 
 				pushProgram(programItem)
 			})
 
-			result = {"programs": programs};
+			var result = {"programs": programs};
 
 			if (response != null) {
 				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
@@ -1322,13 +1312,13 @@ var fetchGuideMls = function(response) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for mls sent.")
 
-			games = []
+			var games = []
 
-			cheerioBox = Cheerio.load(scheduleBody)
-			gameItems = cheerioBox('game')
+			var cheerioBox = Cheerio.load(scheduleBody)
+			var gameItems = cheerioBox('game')
 			gameItems.each(function(index, element) {
-				gameItem = cheerioBox(element)
-				liveTime = cheerioBox('result', gameItem).text()
+				var gameItem = cheerioBox(element)
+				var liveTime = cheerioBox('result', gameItem).text()
 				// teams = gameItem.attr('class').split(/\s+/)
 
 				// var live = false
@@ -1342,19 +1332,19 @@ var fetchGuideMls = function(response) {
 				// 	live = true
 				// }
 
-				homeTeam = cheerioBox('homeTeamName', gameItem).text()
-				awayTeam = cheerioBox('awayTeamName', gameItem).text()
+				var homeTeam = cheerioBox('homeTeamName', gameItem).text()
+				var awayTeam = cheerioBox('awayTeamName', gameItem).text()
 
-				gameId = cheerioBox('gid', gameItem).text()
-				url = "match/" + gameId
+				var gameId = cheerioBox('gid', gameItem).text()
+				var url = "match/" + gameId
 
-				gameDate = cheerioBox('gameTime', gameItem).text()
-				gameTime = cheerioBox('gameTime', gameItem).text()
+				var gameDate = cheerioBox('gameTime', gameItem).text()
+				var gameTime = cheerioBox('gameTime', gameItem).text()
 
-				live = cheerioBox('isLive', gameItem).text() == "true"
+				var live = cheerioBox('isLive', gameItem).text() == "true"
 
-				homeScore = cheerioBox('homeScore', gameItem).text()
-				awayScore = cheerioBox('awayScore', gameItem).text()
+				var homeScore = cheerioBox('homeScore', gameItem).text()
+				var awayScore = cheerioBox('awayScore', gameItem).text()
 
 				//console.log(gameItem.html().magenta)
 
@@ -1375,7 +1365,7 @@ var fetchGuideMls = function(response) {
 				}
 			})
 
-			result = {"games": games}
+			var result = {"games": games}
 
 			//console.log(result)
 
@@ -1421,18 +1411,18 @@ var fetchGuideWatchEspn = function(response) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for watchEspn sent.")
 
-			events = []
+			var events = []
 
-			cheerioBox = Cheerio.load(scheduleBody)
-			eventItems = cheerioBox('li[id^=eid-]')
+			var cheerioBox = Cheerio.load(scheduleBody)
+			var eventItems = cheerioBox('li[id^=eid-]')
 			eventItems.each(function(index, element) {
-				eventItem = cheerioBox(element)
+				var eventItem = cheerioBox(element)
 
-				eventName = cheerioBox('.event', eventItem).text().replace("(Blacked out on ESPN3 - View Map)", "").replace("Closed captioning available", "").trim()
-				eventId = eventItem.attr('id').split("-")[1]
+				var eventName = cheerioBox('.event', eventItem).text().replace("(Blacked out on ESPN3 - View Map)", "").replace("Closed captioning available", "").trim()
+				var eventId = eventItem.attr('id').split("-")[1]
 
-				eventTime = cheerioBox('.time', eventItem).text()
-				eventChannel = cheerioBox('.channel-logo', eventItem).text()
+				var eventTime = cheerioBox('.time', eventItem).text()
+				var eventChannel = cheerioBox('.channel-logo', eventItem).text()
 
 				//console.log(eventItem.html().magenta)
 
@@ -1445,7 +1435,7 @@ var fetchGuideWatchEspn = function(response) {
 				})
 			})
 
-			result = {"events": events}
+			var result = {"events": events}
 
 			//console.log(result)
 
@@ -1579,15 +1569,17 @@ var fetchPreCachePrograms = function() {
 		}
 
 		var networks = JSON.parse(data)
-		networks.networks.forEach(function(currentValue, index, array) {
-			channelId = currentValue.channelId;
+		for (var i = 0; i < networks.networks.length; i++) {
+			var currentValue = networks.networks[i];
+			var channelId = currentValue.channelId;
 
 			networksByChannelId[channelId] = currentValue;
 			fetchGuideChannelGrid(null, channelId);
-		})
+			fetchGuideChannelTitle(null, channelId);
+		}
 
 		console.log('Guide prefetched.'.yellow);
-		fetchPreCacheProgramsTitle();
+		//fetchPreCacheProgramsTitle();
 	})
 }
 
