@@ -833,8 +833,6 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 				if (programs.length <= 24) {
 					pushProgram(programItem)
-				} else {
-					break;
 				}
 			})
 
