@@ -707,7 +707,9 @@ var fetchGuideChannelTitle = function(response, channel) {
 					first = false
 				}
 
-				pushProgram(programItem)
+				if (programs.length <= 24) {
+					pushProgram(programItem)
+				}
 			})
 
 			programGuideTitle[channel] = programs
