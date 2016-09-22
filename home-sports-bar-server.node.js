@@ -707,9 +707,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 					first = false
 				}
 
-				if (programs.length <= 24) {
-					pushProgram(programItem)
-				}
+				pushProgram(programItem)
 			})
 
 			programGuideTitle[channel] = programs
@@ -833,7 +831,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 			programItems.each(function(index, element) {
 				programItem = cheerioBox(element)
 
-				if (programs.length <= 24) {
+				if (programs.length <= 20) {
 					pushProgram(programItem)
 				}
 			})
