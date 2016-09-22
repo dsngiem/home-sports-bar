@@ -831,7 +831,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 			programItems.each(function(index, element) {
 				programItem = cheerioBox(element)
 
-				if (programs.length <= 20) {
+				if (programs.length <= 36) {
 					pushProgram(programItem)
 				}
 			})
@@ -1578,25 +1578,25 @@ var fetchPreCachePrograms = function() {
 			return console.log('error fetching networks: '.red + error.message)
 		}
 
-		networks = JSON.parse(data)
+		var networks = JSON.parse(data)
 		networks.networks.forEach(function(currentValue, index, array) {
 			channelId = currentValue.channelId;
+
+			networksByChannelId[channelId] = currentValue;
 			fetchGuideChannelGrid(null, channelId);
 		})
 
 		console.log('Guide prefetched.'.yellow);
-
 		fetchPreCacheProgramsTitle();
 	})
 }
 
 var fetchPreCacheProgramsTitle = function() {
-	networks.networks.forEach(function(currentValue, index, array) {
-		channelId = currentValue.channelId;
+	for (var key in networksByChannelId) {
+		var currentValue = networksByChannelId[key];
+		var channelId = currentValue.channelId;
 		fetchGuideChannelTitle(null, channelId);
-
-		networksByChannelId[channelId] = currentValue;
-	})
+	}
 
 	console.log('Guide titles prefetched.'.yellow);
 }
