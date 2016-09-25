@@ -1,12 +1,10 @@
-#myExperience {	
-	position: fixed !important;
-    top: 0px !important;
-    left: 0px !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 1 !important;
+.bonus .header-navigation-wrapper {
+	display: none !important;
 }
 
-.header-navigation-wrapper {
-	display: none !important;
+.bonus .platform-container object {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
 }

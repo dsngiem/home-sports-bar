@@ -597,13 +597,15 @@ $(document).ready(function () {
 
 					html += '<div class="sources" style="display: none;">'
 
-					var epgArray = currentValue.content.media.epg
-					var nhlTv = epgArray[0]
-					var tvItems = nhlTv.items
-					for (var i = 0; i < tvItems.length; i++) {
-						var currentValueMedia = tvItems[i]
-						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '/' + currentValueMedia.eventId + '/' + currentValueMedia.mediaPlaybackId + '" alt="' + alt + '"><div><p style="color: #000000">' + (currentValueMedia.callLetters == "" ? currentValueMedia.feedName : currentValueMedia.callLetters) + ' (' + toTitleCase(currentValueMedia.mediaFeedType) + ')</p>'
-						html += '</div></a>  '
+					if (epgArray !== undefined) {
+						var epgArray = currentValue.content.media.epg
+						var nhlTv = epgArray[0]
+						var tvItems = nhlTv.items
+						for (var i = 0; i < tvItems.length; i++) {
+							var currentValueMedia = tvItems[i]
+							html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '/' + currentValueMedia.eventId + '/' + currentValueMedia.mediaPlaybackId + '" alt="' + alt + '"><div><p style="color: #000000">' + (currentValueMedia.callLetters == "" ? currentValueMedia.feedName : currentValueMedia.callLetters) + ' (' + toTitleCase(currentValueMedia.mediaFeedType) + ')</p>'
+							html += '</div></a>  '
+						}
 					}
 
 					html += '</div><div class="info" style="">'
@@ -619,7 +621,7 @@ $(document).ready(function () {
 					}
 					html += '<span class="episodeTitle"></span>'
 					//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
-					if (currentValue.content.media.epg[0].items.length > 0) {
+					if (currentValue.content.media !== undefined && currentValue.content.media.epg[0].items.length > 0) {
 						isNational = currentValue.content.media.epg[0].items[0].mediaFeedType == "NATIONAL"
 					} else {
 						isNational = false
@@ -1208,11 +1210,11 @@ $(document).ready(function () {
 				endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
 			}
 
-			if (endTime.isSame(moment().add(1, 'day').startOf('day'))) {
-				if (currentProgram.title == nextProgram.title) {
-					endTime = channelGuide[channel][i + 2].time
-				}
-			}
+			//if (endTime.isSame(moment().add(1, 'day').startOf('day'))) {
+			//	if (currentProgram.title == nextProgram.title) {
+			//		endTime = moment(channelGuide[channel][i + 2].time + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
+			//	}
+			//}
 
 			// if (currentProgram.time.isSame(moment().add(1, 'day').startOf('day'))) {
 			// 	var lastProgram = channelGuide[channel][i - 1]
@@ -1267,6 +1269,7 @@ $(document).ready(function () {
 				var nextEventEpisode = endTime ? nextProgram.episode : ""
 				nextEventEpisode = nextEventEpisode == "" ? "" : " - " + nextEventEpisode
 				var nextFlags = nextProgram.icons == "" ? [] : nextProgram.icons.split(" ")
+				var nextGenre = nextProgram.genre === undefined ? "" : nextProgram.genre;
 			}
 
 			var html = ''
@@ -1275,7 +1278,7 @@ $(document).ready(function () {
 			html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 			html += '<span class="episodeTitle">' + episodeTitle + '</span>'
 			html += '<span class="description"><span class="genre">' + (genre && genre.length > 0 ? "[" + genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "") + '</span> ' + description + '</span>'
-			html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' <span class="genre">' + (nextProgram.genre && nextProgram.genre.length > 0 ? "[" + nextProgram.genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(nextFlags) && nextFlags.length > 0 ? "[" + nextFlags.join(" &#8226 ") + "]" : "") + '</span>' //' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
+			html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' <span class="genre">' + (nextGenre && nextGenre.length > 0 ? "[" + nextGenre + "]" : "") + ' </span><span class="flags">' + ($.isArray(nextFlags) && nextFlags.length > 0 ? "[" + nextFlags.join(" &#8226 ") + "]" : "") + '</span>' //' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
 
 
 			$("#" + channel + " .info").html(html)

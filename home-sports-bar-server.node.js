@@ -917,11 +917,11 @@ var fetchCurrentProgram = function(response, channelId) {
 			endTime = Moment(currentProgram.time, "h:mm A").add(1, 'hours')
 		}
 
-		if (endTime.isSame(Moment().add(1, 'day').startOf('day'))) {
-			if (currentProgram.title == nextProgram.title) {
-				endTime = programGuide[channelId][i + 2].time
-			}
-		}
+		//if (endTime.isSame(Moment().add(1, 'day').startOf('day'))) {
+		//	if (currentProgram.title == nextProgram.title) {
+		//		endTime = programGuide[channelId][i + 2].time
+		//	}
+		//}
 
 		// if (currentProgram.time.isSame(Moment().add(1, 'day').startOf('day'))) {
 		// 	var lastProgram = programGuide[channel][i - 1]

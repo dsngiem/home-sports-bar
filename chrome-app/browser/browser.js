@@ -8,7 +8,21 @@ onload = function () {
 	var webview3 = document.querySelector('#webview-3');
 	var webview4 = document.querySelector('#webview-4');
 	var webviewModal = document.querySelector('#webview-modal');
-	doLayout();
+
+	chrome.storage.sync.get('src', function(items) {
+		var src = $(webview1).attr('src');
+		var itemsrc = items.src
+		if ($(webview1).attr('src') != items.src) {
+			$(webview1).attr('src', items.src);
+
+			chrome.storage.sync.get('name', function(items){
+				$(webview1).attr('name', items.name);
+
+				doLayout();
+			});
+		}
+	});
+
 
 	var version = navigator.appVersion.substr(navigator.appVersion.lastIndexOf('Chrome/') + 7);
 	var match = /([0-9]*)\.([0-9]*)\.([0-9]*)\.([0-9]*)/.exec(version);
@@ -266,10 +280,15 @@ function handleLoadStart(event) {
 	}
 
 	resetExitedState();
+
+
 	if (!event.isTopLevel) {
 		return;
 	}
 
+	chrome.storage.sync.set({'src': event.url}, function(){
+		console.log("set src to: " + event.url);
+	});
 
 	// document.querySelector('#location').value = event.url;
 }
@@ -290,6 +309,12 @@ function handleLoadAbort(event) {
 function handleLoadRedirect(event) {
 	if (!event.isTopLevel) {
 		return;
+	}
+
+	if (event.newUrl !== undefined) {
+		chrome.storage.sync.set({'src': event.newUrl}, function(){
+			console.log("set src to: " + event.newUrl);
+		});
 	}
 
 	document.querySelector('#webview-modal').src = "about:blank";
@@ -518,7 +543,14 @@ $(document).ready(function () {
 						//titleTimeout = setTimeout(function () {
 						//	$("#webview-" + frame + "-title").fadeOut();
 						//}, 2000)
-						testCanvas();
+						if (frame == 1) {
+							chrome.storage.sync.set({'src': url, 'name': channelId}, function(){
+								console.log("set src to: " + url);
+								console.log("set name to: " + channelId);
+							});
+
+							testCanvas();
+						}
 
 						//$("#startup").hide();
 					}

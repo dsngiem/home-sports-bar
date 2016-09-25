@@ -212,8 +212,9 @@
         "all_frames": true
     },
     {
-        "matches": ["https://www.discoverygo.com/watch/*", "https://www.ahctvgo.com/watch/ahc/*", "https://www.animalplanetgo.com/watch/animal-planet/*"],
+        "matches": ["https://www.discoverygo.com/watch/*", "https://www.ahctvgo.com/watch/ahc/*", "https://www.animalplanetgo.com/watch/animal-planet/*", "https://www.discoverylifego.com/watch/discovery-life/*", "https://www.destinationamericago.com/watch/destination-america/*"],
         "css": ["discovery.css"],
+        "js": ["discovery.js"],
         "all_frames": true
     },
     {
