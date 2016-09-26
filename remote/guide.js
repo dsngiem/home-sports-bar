@@ -597,7 +597,8 @@ $(document).ready(function () {
 
 					html += '<div class="sources" style="display: none;">'
 
-					if (epgArray !== undefined) {
+
+					if (currentValue.content.media !== undefined) {
 						var epgArray = currentValue.content.media.epg
 						var nhlTv = epgArray[0]
 						var tvItems = nhlTv.items
