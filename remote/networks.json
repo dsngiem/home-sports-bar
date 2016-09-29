@@ -31,7 +31,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1"
+			"url": "https://tv.xfinity.com/live/Watch/5628918118244997105/FS1HD"
 		},
 		{
 			"source": "FSGO",
@@ -154,7 +154,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
+			"url": "https://tv.xfinity.com/live/Watch/8955280399622974105/NBCSP"
 		},
 		{
 			"source": "NBCSN",
@@ -236,7 +236,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/espn?cmpid=livetv_espn"
+			"url": "https://tv.xfinity.com/live/Watch/7642769970651506105/ESPND"
 		},
 		{
 			"source": "FiOS",
@@ -263,7 +263,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/espn2?cmpid=livetv_espn2"
+			"url": "https://tv.xfinity.com/live/Watch/7642769970651506105/ES2HD"
 		},
 		{
 			"source": "FiOS",
@@ -290,7 +290,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/espnews?cmpid=livetv_espnews"
+			"url": "https://tv.xfinity.com/live/Watch/7642769970651506105/ESWHD"
 		},
 		{
 			"source": "FiOS",
@@ -317,7 +317,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/espnu?cmpid=livetv_espnews"
+			"url": "https://tv.xfinity.com/live/Watch/5604884968876724105/ESPNU"
 		},
 		{
 			"source": "FiOS",
@@ -359,7 +359,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/sec?cmpid=chrome_ext_1"
+			"url": "https://tv.xfinity.com/live/Watch/7065457953075682105/SECN"
 		},
 		{
 			"source": "DirecTV",
@@ -376,7 +376,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/espn3?cmpid=livetv_espn3"
+			"url": "https://tv.xfinity.com/live/Watch/5907416794197822105/ESPN3"
 		},
 		{
 			"source": "FiOS",
@@ -423,7 +423,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/tnt?cmpid=livetv_tnt"
+			"url": "https://tv.xfinity.com/live/Watch/5966517083150279105/TNTHD"
 		},
 		{
 			"source": "TNT",
@@ -450,7 +450,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/tbs?cmpid=livetv_tbs"
+			"url": "https://tv.xfinity.com/live/Watch/6937726884423880105/TBSHD"
 		},
 		{
 			"source": "TBS",
@@ -562,7 +562,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/univisiondeportes?cmpid=livetv_univision-deportes-network"
+			"url": "https://tv.xfinity.com/live/Watch/8005530728268789105/UNIDH"
 		},
 		{
 			"source": "DirecTV (Ch. 455)",
@@ -590,6 +590,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76950"
+		},
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7694766219825906105/BEIND"
 		}
 		]
 	},
@@ -605,6 +609,10 @@
 		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=76955"
+		},
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/8557215415904422105/beIN"
 		}
 		]
 	},
@@ -624,6 +632,10 @@
 		{
 			"source": "BTN2Go",
 			"url": "http://www.btn2go.com/channel/btnlive"
+		},
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7916016111854078105/BTNHD"
 		}
 		]
 	},
@@ -734,7 +746,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/ae?cmpid=livetv_a&e"
+			"url": "https://tv.xfinity.com/live/Watch/6842223630374944105/A&E-IP"
 		},
 		{
 			"source": "A&E",
@@ -753,7 +765,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/abcfamily?cmpid=livetv_abc-family"
+			"url": "https://tv.xfinity.com/live/Watch/4754737483925103105/FREE"
 		},
 		{
 			"source": "FiOS",
@@ -780,7 +792,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/americanheroes?cmpid=livetv_american-heroes"
+			"url": "https://tv.xfinity.com/live/Watch/8573484588337477105/AHCHD"
 		},
 		{
 			"source": "American Heroes Channel",
@@ -799,7 +811,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/amc?cmpid=livetv_amc"
+			"url": "https://tv.xfinity.com/live/Watch/8004546766543596105/AMCHD"
 		},
 		{
 			"source": "AMC",
@@ -822,7 +834,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/animalplanet"
+			"url": "https://tv.xfinity.com/live/Watch/6959041982342423105/APHD"
 		}
 		]
 	},
@@ -880,7 +892,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/bbcamerica?cmpid=livetv_bbc-america"
+			"url": "https://tv.xfinity.com/live/Watch/7159950156799115105/BBCAM"
 		},
 		{
 			"source": "DirecTV",
@@ -916,7 +928,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/bbcworldnews?cmpid=livetv_bbc-world-news"
+			"url": "https://tv.xfinity.com/live/Watch/9172023819619664105/BBCW"
 		},
 		{
 			"source": "DirecTV",
@@ -934,12 +946,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/90/BET_Logo.svg/250px-BET_Logo.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/BET-HD-329?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7878962607247849105/BETD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/bet?cmpid=livetv_bet"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/BET-HD-329?format=HD"
 		}
 		]
 	},
@@ -973,7 +985,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/bravo?cmpid=livetv_bravo"
+			"url": "https://tv.xfinity.com/live/Watch/5861782758316682105/BRVOD"
 		},
 		{
 			"source": "FiOS",
@@ -1044,7 +1056,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/centric?cmpid=livetv_centric"
+			"url": "https://tv.xfinity.com/live/Watch/7878962607247849105/CTRCH"
 		}
 		]
 	},
@@ -1058,12 +1070,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Comedy_Central_2011_Logo.svg/200px-Comedy_Central_2011_Logo.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Comedy-Central-HD-249?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/6281117796995900105/CMDYD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/comedycentral"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Comedy-Central-HD-249?format=HD"
 		}
 		]
 	},
@@ -1093,7 +1105,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
+			"url": "https://tv.xfinity.com/live/Watch/6491592537536118105/CNBCD"
 		},
 		{
 			"source": "CNBC",
@@ -1116,7 +1128,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/cnn?cmpid=livetv_cnn"
+			"url": "https://tv.xfinity.com/live/Watch/7551018075264600105/CNNHD"
 		},
 		{
 			"source": "FiOS",
@@ -1143,7 +1155,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/cookingchannel?cmpid=livetv_cooking-channel"
+			"url": "https://tv.xfinity.com/live/Watch/5687967590429447105/COOKD"
 		},
 		{
 			"source": "DirecTV",
@@ -1170,15 +1182,15 @@
 		"urls": [
 		{
 			"source": "1",
-			"url": "http://xfinitytv.comcast.net/live/network/cspan?cmpid=livetv_cspan"
+			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN1H"
 		},
 		{
 			"source": "2",
-			"url": "http://xfinitytv.comcast.net/live/network/cspan2?cmpid=livetv_cspan2"
+			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN2D"
 		},
 		{
 			"source": "3",
-			"url": "http://xfinitytv.comcast.net/live/network/cspan3?cmpid=livetv_cspan3"
+			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN3H"
 		}
 		]
 	},
@@ -1193,7 +1205,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/destinationamerica?cmpid=livetv_destination-america"
+			"url": "https://tv.xfinity.com/live/Watch/5276837144715238105/DESTD"
 		},
 		{
 			"source": "Destination America",
@@ -1220,7 +1232,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/discovery"
+			"url": "https://tv.xfinity.com/live/Watch/5021535813287038105/DSCHD"
 		}
 		]
 	},
@@ -1250,7 +1262,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/disneychannel?cmpid=livetv_disney-channel"
+			"url": "https://tv.xfinity.com/live/Watch/7281389938284733105/DISHD"
 		},
 		{
 			"source": "FiOS",
@@ -1277,7 +1289,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/disneyjunior?cmpid=livetv_disney-junior"
+			"url": "https://tv.xfinity.com/live/Watch/7202045367195151105/DISJr"
 		},
 		{
 			"source": "FiOS",
@@ -1304,7 +1316,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/disneyxd?cmpid=livetv_disney-xd"
+			"url": "https://tv.xfinity.com/live/Watch/8891398920630634105/DXDHD"
 		},
 		{
 			"source": "FiOS",
@@ -1331,7 +1343,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/diy?cmpid=livetv_diy"
+			"url": "https://tv.xfinity.com/live/Watch/5630229262392509105/DIYHD"
 		},
 		{
 			"source": "DirecTV",
@@ -1358,7 +1370,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/e?cmpid=livetv_e!"
+			"url": "https://tv.xfinity.com/live/Watch/6944445220105035105/E!%20HD"
 		},
 		{
 			"source": "FiOS",
@@ -1394,7 +1406,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/encore?cmpid=livetv_encore"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/ENCHD"
 		}
 		]
 	},
@@ -1409,7 +1421,22 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/encoreaction_dark?cmpid=livetv_encore-action"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/ENCA"
+		}
+		]
+	},
+	{
+		"name": "encorefamily",
+		"alt": "encore Family",
+		"channelId": "14886",
+		"channelIdTvGuide": "2002",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Starz_Encore_Family.svg/125px-Starz_Encore_Family.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/ENCFA"
 		}
 		]
 	},
@@ -1424,7 +1451,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/encoresuspense_dark?cmpid=livetv_encore-suspense"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/ENCSU"
 		}
 		]
 	},
@@ -1439,7 +1466,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/encoreblack_dark?cmpid=livetv_encore-black"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZBK"
 		}
 		]
 	},
@@ -1454,7 +1481,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/encoreenespanol_dark?cmpid=livetv_encore-en-espanol"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/ENCES"
 		}
 		]
 	},
@@ -1469,7 +1496,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/espndeportes?cmpid=livetv_espn-deportes"
+			"url": "https://tv.xfinity.com/live/Watch/5747227772200246105/ESNDP"
 		},
 		{
 			"source": "FiOS",
@@ -1507,7 +1534,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/foodnetwork?cmpid=livetv_food-network"
+			"url": "https://tv.xfinity.com/live/Watch/8508532143941403105/FOODD"
 		},
 		{
 			"source": "DirecTV",
@@ -1543,7 +1570,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/foxbusiness?cmpid=livetv_fox-business"
+			"url": "https://tv.xfinity.com/live/Watch/7615660758761926105/FBNHD"
 		},
 		{
 			"source": "FiOS",
@@ -1570,7 +1597,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://tvgo.xfinity.com/live/network/foxdeportes?cmpid=livetv_fox-deportes"
+			"url": "https://tv.xfinity.com/live/Watch/6796056476188164105/FXDED"
 		},
 		{
 			"source": "TWC",
@@ -1589,7 +1616,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/foxnews?cmpid=livetv_fox-news"
+			"url": "https://tv.xfinity.com/live/Watch/5714049700463145105/FNCHD"
 		},
 		{
 			"source": "FiOS",
@@ -1663,7 +1690,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/fx?cmpid=livetv_fx"
+			"url": "https://tv.xfinity.com/live/Watch/7345767321554762105/FXHD"
 		},
 		{
 			"source": "DirecTV",
@@ -1726,7 +1753,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/fxx?cmpid=livetv_fxx"
+			"url": "https://tv.xfinity.com/live/Watch/6464688077787938105/FXX"
 		},
 		{
 			"source": "DirecTV",
@@ -1766,7 +1793,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/fyi?cmpid=livetv_fyi"
+			"url": "https://tv.xfinity.com/live/Watch/5354346705419806105/FYIHD"
 		}
 		]
 	},
@@ -1781,7 +1808,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/gsn?cmpid=livetv_gsn_onnow"
+			"url": "https://tv.xfinity.com/live/Watch/6421526418422963105/GSNHD"
 		}
 		]
 	},
@@ -1796,7 +1823,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/golfchannel?cmpid=livetv_golf-channel"
+			"url": "https://tv.xfinity.com/live/Watch/7547469904399748105/GOLFD"
 		},
 		{
 			"source": "FiOS",
@@ -1818,12 +1845,12 @@
 		"image": "https://www.directv.com/images/logos/channels/light/medium/927.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Hallmark-Channel-HD-312?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7889068523651137105/HCHD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/hallmark"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Hallmark-Channel-HD-312?format=HD"
 		}
 		]
 	},
@@ -1838,7 +1865,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/hgtv?cmpid=livetv_hgtv"
+			"url": "https://tv.xfinity.com/live/Watch/7324914394959750105/HGTVD"
 		},
 		{
 			"source": "DirecTV",
@@ -1874,7 +1901,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/hln?cmpid=livetv_hln"
+			"url": "https://tv.xfinity.com/live/Watch/8431048223467924105/HLNHD"
 		},
 		{
 			"source": "FiOS",
@@ -1901,7 +1928,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/history?cmpid=livetv_history-channel"
+			"url": "https://tv.xfinity.com/live/Watch/8456573520636503105/HISHD"
 		},
 		{
 			"source": "History",
@@ -1920,7 +1947,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/ifc?cmpid=livetv_ifc"
+			"url": "https://tv.xfinity.com/live/Watch/8822799240044474105/IFCHD"
 		},
 		{
 			"source": "IFC",
@@ -1939,7 +1966,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/investigationdiscovery?cmpid=livetv_investigation-discovery"
+			"url": "https://tv.xfinity.com/live/Watch/8027895734418552105/IDHD"
 		},
 		{
 			"source": "Investigation Discovery",
@@ -1958,7 +1985,22 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/lifetime?cmpid=livetv_lifetime"
+			"url": "https://tv.xfinity.com/live/Watch/6886139786859842105/LIFED"
+		}
+		]
+	},
+	{
+		"name": "lmn",
+		"alt": "Lifetime Movie Network",
+		"channelId": "18480",
+		"channelIdTvGuide": "20995",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/LMN_logo_2016.svg/200px-LMN_logo_2016.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/6886139786859842105/LMNHD"
 		}
 		]
 	},
@@ -1971,7 +2013,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/movieplex?cmpid=livetv_movieplex"
+			"url": "https://tv.xfinity.com/live/Watch/5596388634105521105/PLEXD"
 		}
 		]
 	},
@@ -1986,7 +2028,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/msnbc?cmpid=livetv_msnbc"
+			"url": "https://tv.xfinity.com/live/Watch/5064998174375437105/MSNBC"
 		},
 		{
 			"source": "FiOS",
@@ -2008,12 +2050,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/MTV_Logo_2010.svg/200px-MTV_Logo_2010.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/MTV-HD-331?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7330732356665270105/MTVHD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/mtv?cmpid=livetv_mtv"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/MTV-HD-331?format=HD"
 		}
 		]
 	},
@@ -2043,7 +2085,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/palladia?cmpid=livetv_palladia_onnow"
+			"url": "https://tv.xfinity.com/live/Watch/7839360299554010105/MTVL"
 		}
 		]
 	},
@@ -2056,7 +2098,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nbcuniverso?cmpid=livetv_nbc-universo"
+			"url": "https://tv.xfinity.com/live/Watch/7105001527376402105/UNVSO"
 		},
 		{
 			"source": "FiOS",
@@ -2079,7 +2121,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/natgeo?cmpid=livetv_nat-geo"
+			"url": "https://tv.xfinity.com/live/Watch/5289429020038037105/NGCHD"
 		},
 		{
 			"source": "DirecTV",
@@ -2111,7 +2153,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/natgeowild?cmpid=livetv_nat-geo-wild"
+			"url": "https://tv.xfinity.com/live/Watch/9049389469014021105/WILDH"
 		},
 		{
 			"source": "DirecTV",
@@ -2133,12 +2175,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nickelodeon_logo_new.svg/245px-Nickelodeon_logo_new.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7294331549102474105/NICHD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nickelodeon?cmpid=livetv_nickelodeon"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Nickelodeon-East-HD-299?format=HD"
 		}
 		]
 	},
@@ -2153,7 +2195,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nickjr?cmpid=livetv_nick-jr."
+			"url": "https://tv.xfinity.com/live/Watch/8763340561752910105/NJRHD"
 		},
 		{
 			"source": "DirecTV",
@@ -2172,7 +2214,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nicktoons?cmpid=livetv_nicktoons-network"
+			"url": "https://tv.xfinity.com/live/Watch/7294331549102474105/NTOON"
 		}
 		]
 	},
@@ -2192,6 +2234,21 @@
 		]
 	},
 	{
+		"name": "onetv",
+		"alt": "TV One",
+		"channelId": "35513",
+		"channelIdTvGuide": "21716",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/TVOne_2016.png/220px-TVOne_2016.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/8573424887155026105/TVONE"
+		}
+		]
+	},
+	{
 		"name": "outdoor",
 		"alt": "Outdoor Channel",
 		"channelId": "14776",
@@ -2202,7 +2259,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/outdoorchannel?cmpid=livetv_outdoor-channel"
+			"url": "https://tv.xfinity.com/live/Watch/4722987516767773105/OUTHD"
 		}
 		]
 	},
@@ -2217,7 +2274,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/ovation?cmpid=livetv_ovation"
+			"url": "https://tv.xfinity.com/live/Watch/5708379846966999105/OVAHD"
 		}
 		]
 	},
@@ -2231,12 +2288,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oprah_Winfrey_Network.png/250px-Oprah_Winfrey_Network.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/OWN-HD-279?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/5538810831399914105/OWNHD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/own"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/OWN-HD-279?format=HD"
 		}
 		]
 	},
@@ -2251,7 +2308,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/oxygen?cmpid=livetv_oxygen"
+			"url": "https://tv.xfinity.com/live/Watch/7830015244833547105/OXYHD"
 		},
 		{
 			"source": "FiOS",
@@ -2272,7 +2329,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/pac12network?cmpid=livetv_pac-12"
+			"url": "https://tv.xfinity.com/live/Watch/7657805856798105105/PAC12"
 		}
 		]
 	},
@@ -2289,7 +2346,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/pac12networklosangeles?cmpid=livetv_pac-12-los-angeles"
+			"url": "https://tv.xfinity.com/live/Watch/7657805856798105105/PACLA"
 		}
 		]
 	},
@@ -2304,7 +2361,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/pivot?cmpid=livetv_pivot"
+			"url": "https://tv.xfinity.com/live/Watch/5041254751115210105/PIVOT"
 		},
 		{
 			"source": "FiOS",
@@ -2372,7 +2429,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/revolt?cmpid=livetv_revolt"
+			"url": "https://tv.xfinity.com/live/Watch/8807857965719248105/RVLTD"
 		},
 		{
 			"source": "TWC",
@@ -2395,7 +2452,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/science"
+			"url": "https://tv.xfinity.com/live/Watch/8701205536934875105/SCIHD"
 		}
 		]
 	},
@@ -2409,12 +2466,12 @@
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Spike_logo_2015.svg/200px-Spike_logo_2015.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/Spike-HD-241?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7314538681861287105/SPKHD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/spike"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/Spike-HD-241?format=HD"
 		}
 		]
 	},
@@ -2429,7 +2486,37 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/sprout?cmpid=livetv_sprout"
+			"url": "https://tv.xfinity.com/live/Watch/5327793616829112105/SPRHD"
+		}
+		]
+	},
+	{
+		"name": "babyfirstespanol",
+		"alt": "Baby First Español",
+		"channelId": "78831",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/d/d0/Babyfirst-logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7016141132294661105/BABY1"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=78831"
+		}
+		]
+	},
+	{
+		"name": "babyfirst",
+		"alt": "Baby First",
+		"channelId": "50338",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/d/d0/Babyfirst-logo.png",
+		"urls": [
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=50338"
 		}
 		]
 	},
@@ -2444,7 +2531,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/starz?cmpid=livetv_starz"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZHD"
 		}
 		]
 	},
@@ -2459,7 +2546,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/starzedge?cmpid=livetv_starz-edge"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZE"
 		}
 		]
 	},
@@ -2474,7 +2561,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/starzinblack?cmpid=livetv_starz-in-black"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZB"
 		}
 		]
 	},
@@ -2489,7 +2576,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/starzkidsfamily?cmpid=livetv_starz-kids-&-family"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZK"
 		}
 		]
 	},
@@ -2504,7 +2591,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/starzcinema?cmpid=livetv_starz-cinema"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZCI"
 		}
 		]
 	},
@@ -2519,7 +2606,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/starzcomedy?cmpid=livetv_starz-comedy"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZC"
 		}
 		]
 	},
@@ -2534,7 +2621,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/sundancetv?cmpid=livetv_sundancetv"
+			"url": "https://tv.xfinity.com/live/Watch/5277244023965631105/SUNTV"
 		}
 		]
 	},
@@ -2549,7 +2636,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/syfy?cmpid=livetv_syfy"
+			"url": "https://tv.xfinity.com/live/Watch/4940667029051783105/SyfyD"
 		},
 		{
 			"source": "FiOS",
@@ -2568,7 +2655,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/tcm?cmpid=livetv_tcm"
+			"url": "https://tv.xfinity.com/live/Watch/6021433943437966105/TCMHD"
 		},
 		{
 			"source": "FiOS",
@@ -2590,16 +2677,16 @@
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/TLC_USA_logo.png/200px-TLC_USA_logo.png",
 		"urls": [
 		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/6615637330030433105/TLCHD"
+		},
+		{
 			"source": "TWC",
 			"url": "https://video2.timewarnercable.com/liveTv?tmsid=79911"
 		},
 		{
 			"source": "TLC",
 			"url": "https://www.discoverygo.com/watch/tlc/"
-		},
-		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/tlc?cmpid=livetv_tlc_onnow"
 		}
 		]
 	},
@@ -2612,6 +2699,10 @@
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/0b/TV_Land_2012.svg/250px-TV_Land_2012.svg.png",
 		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/8543437118259964105/TVLND"
+		},
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/TV-Land-HD-304?format=HD"
@@ -2633,7 +2724,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/theweatherchannel?cmpid=livetv_the-weather-channel"
+			"url": "https://tv.xfinity.com/live/Watch/7461624676228958105/WEAHD"
 		},
 		{
 			"source": "DirecTV",
@@ -2652,7 +2743,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/travelchannel?cmpid=livetv_travel-channel"
+			"url": "https://tv.xfinity.com/live/Watch/7082603579644414105/TRAVD"
 		},
 		{
 			"source": "DirecTV",
@@ -2671,7 +2762,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/trutv?cmpid=livetv_trutv"
+			"url": "https://tv.xfinity.com/live/Watch/5197383487287436105/TRTVD"
 		},
 		{
 			"source": "FiOS",
@@ -2694,7 +2785,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/usa?cmpid=livetv_usa"
+			"url": "https://tv.xfinity.com/live/Watch/6198908101479551105/USAHD"
 		},
 		{
 			"source": "FiOS",
@@ -2721,7 +2812,7 @@
 		},
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/velocity"
+			"url": "https://tv.xfinity.com/live/Watch/7937378356785770105/VELOC"
 		}
 		]
 	},
@@ -2735,12 +2826,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/VH1_logonew.svg/220px-VH1_logonew.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/VH1-HD-335?format=HD"
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/6961539087493247105/VH1HD"
 		},
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/vh1?cmpid=livetv_vh1"
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/VH1-HD-335?format=HD"
 		}
 		]
 	},
@@ -2755,7 +2846,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/HDTV?cmpid=livetv_viceland"
+			"url": "https://tv.xfinity.com/live/Watch/7913625805010596105/VICEH"
 		}
 		]
 	},
@@ -2785,7 +2876,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/we?cmpid=livetv_we-tv"
+			"url": "https://tv.xfinity.com/live/Watch/6890122293828367105/WE%20HD"
 		}
 		]
 	},
