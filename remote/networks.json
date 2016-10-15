@@ -128,6 +128,7 @@
 		"name": "ssn",
 		"alt": "Spectrum Sportsnet",
 		"channelId": "77375",
+		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Spectrum_Sportsnet_logo.png/240px-Spectrum_Sportsnet_logo.png",
 		"urls": [
 			{
