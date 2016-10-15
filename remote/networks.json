@@ -127,8 +127,8 @@
 	{
 		"name": "ssn",
 		"alt": "Spectrum Sportsnet",
-		"channelId": "",
-		"image": "",
+		"channelId": "77375",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/Spectrum_Sportsnet_logo.png/240px-Spectrum_Sportsnet_logo.png",
 		"urls": [
 			{
 				"source": "Spectrum",
