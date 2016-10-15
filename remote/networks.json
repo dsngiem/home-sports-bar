@@ -26,12 +26,12 @@
 		"urls": [
 
 		{
-			"source": "TWC",
-			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82547"
-		},
-		{
 			"source": "xfinity",
 			"url": "https://tv.xfinity.com/live/Watch/5628918118244997105/FS1HD"
+		},
+		{
+			"source": "TWC",
+			"url": "https://video2.timewarnercable.com/liveTv?tmsid=82547"
 		},
 		{
 			"source": "FSGO",
@@ -53,12 +53,12 @@
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",
 		"urls": [
 		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618?format=HD"
-		},
-		{
 			"source": "FSGO",
 			"url": "https://www.foxsportsgo.com/channel/36770/fox-sports-2"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/FOX-Sports-2-HD-618?format=HD"
 		},
 		{
 			"source": "TWC",
@@ -122,6 +122,18 @@
 			"source": "FSGO",
 			"url": "https://www.foxsportsgo.com/"
 		}
+		]
+	},
+	{
+		"name": "ssn",
+		"alt": "Spectrum Sportsnet",
+		"channelId": "",
+		"image": "",
+		"urls": [
+			{
+				"source": "Spectrum",
+				"url": "http://www.spectrumsportsnet.com/videos/livetv/player"
+			}
 		]
 	},
 	{
@@ -640,6 +652,56 @@
 		]
 	},
 	{
+		"name": "cnn",
+		"alt": "CNN",
+		"channelId": "58646",
+		"channelIdTvGuide": "19994",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/230px-Cnn.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7551018075264600105/CNNHD"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/cnn"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/CNN-HD-202?format=HD"
+		},
+		{
+			"source": "CNN",
+			"url": "http://go.cnn.com/?stream=cnn"
+		}
+		]
+	},
+	{
+		"name": "msnbc",
+		"alt": "MSNBC",
+		"channelId": "64241",
+		"channelIdTvGuide": "23408",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/5064998174375437105/MSNBC"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/msnbc"
+		},
+		{
+			"source": "MSNBC",
+			"url": "http://www.msnbc.com/now"
+		}
+		]
+	},
+	{
 		"name": "wwor",
 		"alt": "My9",
 		"channelId": "26566",
@@ -1114,33 +1176,6 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/cnbc"
-		}
-		]
-	},
-	{
-		"name": "cnn",
-		"alt": "CNN",
-		"channelId": "58646",
-		"channelIdTvGuide": "19994",
-		"baseIdTvGuide": "889066",
-		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/230px-Cnn.svg.png",
-		"urls": [
-		{
-			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/Watch/7551018075264600105/CNNHD"
-		},
-		{
-			"source": "FiOS",
-			"url": "http://tv.verizon.com/livetv/cnn"
-		},
-		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/CNN-HD-202?format=HD"
-		},
-		{
-			"source": "CNN",
-			"url": "http://go.cnn.com/?stream=cnn"
 		}
 		]
 	},
@@ -2014,29 +2049,6 @@
 		{
 			"source": "xfinity",
 			"url": "https://tv.xfinity.com/live/Watch/5596388634105521105/PLEXD"
-		}
-		]
-	},
-	{
-		"name": "msnbc",
-		"alt": "MSNBC",
-		"channelId": "64241",
-		"channelIdTvGuide": "23408",
-		"baseIdTvGuide": "889066",
-		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
-		"urls": [
-		{
-			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/Watch/5064998174375437105/MSNBC"
-		},
-		{
-			"source": "FiOS",
-			"url": "http://tv.verizon.com/livetv/msnbc"
-		},
-		{
-			"source": "MSNBC",
-			"url": "http://www.msnbc.com/now"
 		}
 		]
 	},
