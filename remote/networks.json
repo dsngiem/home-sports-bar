@@ -189,7 +189,7 @@
 	},
 	{
 		"name": "nhl",
-		"alt": "NHL GameCenter",
+		"alt": "NHL.TV",
 		"channelId": "58690",
 		"channelIdTvGuide": "20236",
 		"baseIdTvGuide": "85061",
@@ -197,8 +197,8 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/3/3a/05_NHL_Shield.svg/150px-05_NHL_Shield.svg.png",
 		"urls": [
 		{
-			"source": "NHL GameCenter",
-			"url": "http://www.nhl.com/gamecenter/"
+			"source": "NHL.TV",
+			"url": "http://www.nhl.com/tv/"
 		}
 		]
 	},

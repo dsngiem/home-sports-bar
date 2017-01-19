@@ -43,7 +43,7 @@ onload = function () {
 	webviewModal.addEventListener('newwindow', handleNewWindowModal);
 
 	var baseExtensionUrl = "/extension/";
-	$.getJSON('/extension/manifest.json', function (extensionManifest) {
+	$.getJSON('/extension/manifest-extension.json', function (extensionManifest) {
 		extensionManifest.content_scripts.forEach(function (element, index, array) {
 
 			var webviewCss = ["extension/all.css"]
@@ -259,18 +259,25 @@ function handleLoadStart(event) {
 	document.body.classList.add('loading');
 	isLoading = true;
 
-	if ((event.url.indexOf("foxsportsgo") != -1) && document.querySelector("#scale") == null && _frames == 1) {
+	if ((event.url.indexOf("foxsportsgo.com") != -1) && document.querySelector("#scale") == null && _frames == 1) {
 		var style = document.createElement("style");
 		style.id = "scale"
 
 		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(1.56);} #webview-1.screens-1:hover {transform: scale(1);}"))
 
 		document.querySelector('head').appendChild(style);
-	} else if ((event.url.indexOf("mlssoccer") != -1) && document.querySelector("#scale") == null && _frames == 1) {
+	} else if ((event.url.indexOf("mlssoccer.com") != -1) && document.querySelector("#scale") == null && _frames == 1) {
 		var style = document.createElement("style");
 		style.id = "scale"
 
 		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(2);} #webview-1.screens-1:hover {transform: scale(1);}"))
+
+		document.querySelector('head').appendChild(style);
+	} else if ((event.url.indexOf("nhl.com") != -1) && document.querySelector("#scale") == null && (_frames == 1 || _frames == 4)) {
+		var style = document.createElement("style");
+		style.id = "scale"
+
+		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(1.5);} #webview-1.screens-1:hover {transform: scale(1);} #webview-1.screens-4, #webview-2.screens-4, #webview-3.screens-4, #webview-4.screens-4 {transform-origin: top left;transform: scale(1.1);} #webview-1.screens-4:hover, #webview-2.screens-4:hover, #webview-3.screens-4:hover, #webview-4.screens-4:hover {transform: scale(1);}"))
 
 		document.querySelector('head').appendChild(style);
 	} else {

@@ -489,36 +489,64 @@ var testCanvas = function () {
         var endTimeDisplay = response.endTimeDisplay;
         var channelName = response.channelName;
 
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', response.image, true);
-        xhr.responseType = 'blob';
-        xhr.onload = function(e) {
-            var image = window.URL.createObjectURL(this.response);
+        if (response.image !== undefined) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', response.image, true);
+            xhr.responseType = 'blob';
+            xhr.onload = function(e) {
+                var image = window.URL.createObjectURL(this.response);
 
-            setTimeout(function () {
+                setTimeout(function () {
+                    canvas = document.getElementById("canvas-test");
+                    if (canvas) {
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight;
+
+                        canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+                        drawUpperThird(image, channelName);
+                        drawLowerThird(programTitle, episodeTitle, description, startTimeDisplay, endTimeDisplay, response);
+                        //drawDebugGridLines();
+
+                        $(canvas).fadeIn(100);
+
+                        setTimeout(function () {
+                            $(canvas).fadeOut(800);
+                        }, 5000);
+
+                    } else {
+                        testCanvas();
+                    }
+                }, 500);
+            };
+
+            xhr.onerror = function(e){
                 canvas = document.getElementById("canvas-test");
                 if (canvas) {
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
-
-                    canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
-                    drawUpperThird(image, channelName);
-                    drawLowerThird(programTitle, episodeTitle, description, startTimeDisplay, endTimeDisplay, response);
-                    //drawDebugGridLines();
-
-                    $(canvas).fadeIn(100);
-
-                    setTimeout(function () {
-                        $(canvas).fadeOut(800);
-                    }, 5000);
-
+                    $(canvas).fadeOut(800);
                 } else {
                     testCanvas();
                 }
-            }, 500);
-        };
+            };
 
-        xhr.send();
+            xhr.send();
+        } else {
+            canvas = document.getElementById("canvas-test");
+            if (canvas) {
+                $(canvas).fadeOut(800);
+            } else {
+                testCanvas();
+            }
+        }
+    })
+
+    .fail(function(response){
+
+        canvas = document.getElementById("canvas-test");
+        if (canvas) {
+            $(canvas).fadeOut(800);
+        } else {
+            testCanvas();
+        }
     })
 
 }

@@ -315,6 +315,11 @@
         "all_frames": true
     },
     {
+        "matches": ["http://www.spectrumsportsnet.com/videos/livetv/player*"],
+        "css": ["spectrum.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://abc.go.com/watch-live*", "http://freeform.go.com/watch-live*"],
         "js": ["abc-live.js"],
         "css": ["abc-live.css"],

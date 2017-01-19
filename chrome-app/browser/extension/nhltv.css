@@ -1,8 +1,13 @@
 #video-player.bonus object {
-	position: fixed !important; 
-	left: calc(50% - 480px) !important; 
-	top: 0px !important; 
-	width: 100% !important; 
-	height: 100% !important;
+	position: fixed !important;
+	left: 0px !important;
+	top: 0px !important;
+	z-index: 100;
+}
+
+#video-player object {
+	position: fixed !important;
+	left: 0px !important;
+	top: -55px !important;
 	z-index: 100;
 }
