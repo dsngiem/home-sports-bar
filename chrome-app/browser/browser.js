@@ -266,14 +266,16 @@ function handleLoadStart(event) {
 		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(1.56);} #webview-1.screens-1:hover {transform: scale(1);}"))
 
 		document.querySelector('head').appendChild(style);
-	} else if ((event.url.indexOf("mlssoccer.com") != -1) && document.querySelector("#scale") == null && _frames == 1) {
-		var style = document.createElement("style");
-		style.id = "scale"
+	}
+	//  else if ((event.url.indexOf("mlssoccer.com") != -1) && document.querySelector("#scale") == null && _frames == 1) {
+	// 	var style = document.createElement("style");
+	// 	style.id = "scale"
 
-		style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(2);} #webview-1.screens-1:hover {transform: scale(1);}"))
+	// 	style.appendChild(document.createTextNode("#webview-1.screens-1 {transform-origin: top left;transform: scale(2);} #webview-1.screens-1:hover {transform: scale(1);}"))
 
-		document.querySelector('head').appendChild(style);
-	} else if ((event.url.indexOf("nhl.com") != -1) && document.querySelector("#scale") == null && (_frames == 1 || _frames == 4)) {
+	// 	document.querySelector('head').appendChild(style);
+	// }
+	else if ((event.url.indexOf("nhl.com") != -1) && document.querySelector("#scale") == null && (_frames == 1 || _frames == 4)) {
 		var style = document.createElement("style");
 		style.id = "scale"
 

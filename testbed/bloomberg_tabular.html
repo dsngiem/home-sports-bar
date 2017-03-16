@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <link rel=stylesheet type="text/css" href="./css/jquery-ui.min.css">
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./addTooltips.js"></script>
+  <title>test page</title>
+
+
+<script type="text/javascript">
+ function PageReady() {
+  $(function() { $( "#accordion" ).accordion({active: 0}); });
+  InitializeDateTime();
+  $("#dateto").datepicker("setDate", "<!--RENDER DATETO-->");
+  $("#datefrom").datepicker("setDate", "<!--RENDER DATEFROM-->");
+  <!--RENDER SELECTEDFILTERS-->
+  ChangeFilter1Type(false);
+  ChangeFilter2Type(false);
+  ChangeFilter3Type(false);
+  ChangeBulkType();
+  requestPageMap("http://peaceful-forest-5547.herokuapp.com/tooltips.json");
+ }
+
+ function ChangeBulkType() {
+  if (document.getElementById('BulkType').value == 0) {
+   // Filters
+   document.getElementById('Filter1Type').disabled = false;
+   document.getElementById('Filter1Comp').disabled = false;
+   document.getElementById('Filter1Val').disabled = false;
+   document.getElementById('Filter1Select').disabled = false;
+   document.getElementById('Filter2Type').disabled = false;
+   document.getElementById('Filter2Comp').disabled = false;
+   document.getElementById('Filter2Val').disabled = false;
+   document.getElementById('Filter2Select').disabled = false;
+   document.getElementById('Filter3Type').disabled = false;
+   document.getElementById('Filter3Comp').disabled = false;
+   document.getElementById('Filter3Val').disabled = false;
+   document.getElementById('Filter3Select').disabled = false;
+  } else {
+   // Bulk Type
+   document.getElementById('Filter1Type').disabled = true;
+   document.getElementById('Filter1Comp').disabled = true;
+   document.getElementById('Filter1Val').disabled = true;
+   document.getElementById('Filter1Select').disabled = true;
+   document.getElementById('Filter2Type').disabled = true;
+   document.getElementById('Filter2Comp').disabled = true;
+   document.getElementById('Filter2Val').disabled = true;
+   document.getElementById('Filter2Select').disabled = true;
+   document.getElementById('Filter3Type').disabled = true;
+   document.getElementById('Filter3Comp').disabled = true;
+   document.getElementById('Filter3Val').disabled = true;
+   document.getElementById('Filter3Select').disabled = true;
+  }
+ }
+
+ function ChangeFilter1Type(bClear) {
+   if (bClear)
+     document.getElementById('Filter1Val').value = '';
+   $.ajax({url: '/reportwriter/filter_type.html?AgentTypeID=1&type='+document.getElementById('Filter1Type').value,
+           dataType: 'json',
+           cache: false,
+           contentType: "application/json",
+           success: function(data) {
+             obj = document.getElementById('Filter1Select');
+             obj.innerHTML = data.message;
+             obj.outerHTML = obj.outerHTML;
+           }
+   });
+ }
+
+ function ChangeFilter1Val() {
+   var obj = document.getElementById('Filter1Select');
+   if (obj.selectedIndex > 0)
+     document.getElementById('Filter1Val').value = obj.options[obj.selectedIndex].text;
+   ChangeFilter2Type(false);
+   ChangeFilter3Type(false);
+ }
+
+ function ChangeFilter2Type(bClear) {
+   if (bClear)
+     document.getElementById('Filter2Val').value = '';
+   $.ajax({url: '/reportwriter/filter_type.html?AgentTypeID=1&type='+document.getElementById('Filter2Type').value +
+          '&filter1=' + document.getElementById('Filter1Type').value +
+          '&val1=' + document.getElementById('Filter1Val').value +
+          '&comp1=' + document.getElementById('Filter1Comp').value,
+           dataType: 'json',
+           cache: false,
+           contentType: "application/json",
+           success: function(data) {
+             obj = document.getElementById('Filter2Select');
+             obj.innerHTML = data.message;
+             obj.outerHTML = obj.outerHTML;
+           }
+   });
+ }
+
+ function ChangeFilter2Val() {
+   var obj = document.getElementById('Filter2Select');
+   if (obj.selectedIndex > 0)
+     document.getElementById('Filter2Val').value = obj.options[obj.selectedIndex].text;
+   ChangeFilter3Type(false);
+ }
+
+ function ChangeFilter3Type(bClear) {
+   if (bClear)
+     document.getElementById('Filter3Val').value = '';
+   $.ajax({url: '/reportwriter/filter_type.html?AgentTypeID=1&type='+document.getElementById('Filter3Type').value +
+          '&filter1=' + document.getElementById('Filter1Type').value +
+          '&val1=' + document.getElementById('Filter1Val').value +
+          '&comp1=' + document.getElementById('Filter1Comp').value +
+          '&filter2=' + document.getElementById('Filter2Type').value +
+          '&val2=' + document.getElementById('Filter2Val').value +
+          '&comp2=' + document.getElementById('Filter2Comp').value,
+           dataType: 'json',
+           cache: false,
+           contentType: "application/json",
+           success: function(data) {
+             obj = document.getElementById('Filter3Select');
+             obj.innerHTML = data.message;
+             obj.outerHTML = obj.outerHTML;
+           }
+   });
+ }
+
+ function ChangeFilter3Val() {
+   var obj = document.getElementById('Filter3Select');
+   if (obj.selectedIndex > 0)
+     document.getElementById('Filter3Val').value = obj.options[obj.selectedIndex].text;
+ }
+
+</script>
+ </head>
+ <body>
+  <table border=0 width="100%" class=mmgheader>
+   <tr>
+    <td align=left style="padding-left:10px;"><img src="/images/mmglogo.png" border=0 height=40 width=150></td>
+    <td align=right style="padding-right:10px;">
+     <div class=mmgitalbold><!--RENDER USERNAME--></div>
+     <div class=mmgital><!--RENDER DBNAME--><!--RENDER LASTLOGIN--></div>
+    </td>
+   </tr>
+  </table>
+  <table border=0 width="100%"><tr><td class=mainlinks><!--RENDER MAINLINKS--></td></tr></table>
+  <table border=0 width="100%" cellspacing=0>
+   <tr valign=top>
+    <td class=mmgspacerleft>&nbsp;</td>
+    <td style="padding:0px;width:200px;">
+      <div class="mmgtree rounded">
+       <ul id=treemenu1 class=treeview>
+        <!--RENDER TREEMENU-->
+       </ul>
+      </div>
+    </td>
+    <td class=mmgspacercenter></td>
+    <td>
+     <div class="mmgbody rounded" style="padding-top:5px;">
+
+         <!--PARTIAL BODY-->
+<form method=post action="/reportwriter/bloomberg_dashboard.html">
+<input type=hidden name=SubmitType id=SubmitType value="Generate">
+<input type=hidden name=AgentTypeID id=SubmitType value=1>
+<input type=hidden name=custom_id value="<!--RENDER CUSTOMID-->">
+<input type=hidden name=custom_user_id value="<!--RENDER CUSTOMUSERID-->">
+<table border=0 width="100%">
+ <tr>
+  <td class=bodypadding>&nbsp;</td>
+  <td class=fieldheader><!--RENDER TITLE--></td>
+  <td align=right>
+   <input type="image" border=0 height=40 width=150
+      src="/images/generate_up.png"
+      onMouseOver="return document.getElementById('GenerateButton').src='/images/generate_over.png';"
+      onMouseOut= "return document.getElementById('GenerateButton').src='/images/generate_up.png';"
+      onMouseDown="return document.getElementById('GenerateButton').src='/images/generate_down.png';"
+      onMouseUp="return document.getElementById('GenerateButton').src='/images/generate_over.png';"
+      id=GenerateButton>
+  </td>
+ </tr>
+ <tr valign=top>
+  <td>&nbsp;</td>
+  <td colspan=2 class=fieldvalue>
+   <div id=accordion>
+   <!--RENDER DASHBOARDCRITERIA-->
+
+
+   <div class=fieldcaption><a href="#">Tabular Reports</a></div>
+<div>
+ <table border=0>
+  <tr>
+   <td>&nbsp;</td>
+   <td align=center class=fieldcaption>Summary</td>
+   <td align=center class=fieldcaption>Details</td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Screen Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report15 id=Report15></td>
+   <td align=center><input type=radio name=TabularReport Value=Report14 id=Report14></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Launchpad Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report7 id=Report7></td>
+   <td align=center><input type=radio name=TabularReport Value=Report6 id=Report6></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Messaging Usage (Agent)</td>
+   <td align=center><input type=radio name=TabularReport Value=Report11 id=Report11></td>
+   <td align=center><input type=radio name=TabularReport Value=Report10 id=Report10></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>IB Chat Usage (Agent)</td>
+   <td align=center><input type=radio name=TabularReport Value=Report5 id=Report5></td>
+   <td align=center><input type=radio name=TabularReport Value=Report4 id=Report4></td>
+  </tr>
+  <!--RENDER TABULARCOMPLIANCE-->
+  <tr>
+   <td class=fieldcaption>News Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report13 id=Report13></td>
+   <td align=center><input type=radio name=TabularReport Value=Report12 id=Report12></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Terminal Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report22 id=Report22></td>
+   <td align=center><input type=radio name=TabularReport Value=Report21 id=Report21></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Logged In Time</td>
+   <td align=center><input type=radio name=TabularReport Value=Report30 id=Report30></td>
+   <td align=center><input type=radio name=TabularReport Value=Report29 id=Report29></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Entitlements Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report1 id=Report1></td>
+   <td align=center><input type=radio name=TabularReport Value=Report0 id=Report0></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Exchange Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report3 id=Report3></td>
+   <td align=center><input type=radio name=TabularReport Value=Report2 id=Report2></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Terminal Instances</td>
+   <td align=center><input type=radio name=TabularReport Value=Report20 id=Report20></td>
+   <td align=center>&nbsp;</td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Non-Reporting</td>
+   <td>&nbsp;</td>
+   <td align=center><input type=radio name=TabularReport Value=Report28 id=Report28></td>
+  </tr>
+ </table>
+</div>
+<!--IF ISMMGADMIN-->
+<div class=fieldcaption><a href=\"#\">Tabular Reports (Continued)</a></div>
+<div>
+ <table>
+  <tr>
+   <td>&nbsp;</td>
+   <td align=center class=fieldcaption>Summary</td>
+   <td align=center class=fieldcaption>Details</td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Screen Usage Days</td>
+   <td align=center><input type=radio name=TabularReport Value=Report32 id=Report32></td>
+   <td align=center><input type=radio name=TabularReport Value=Report31 id=Report31></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Launchpad Usage Days</td>
+   <td align=center><input type=radio name=TabularReport Value=Report34 id=Report34></td>
+   <td align=center><input type=radio name=TabularReport Value=Report33 id=Report33></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Terminal Audit</td>
+   <td align=center><input type=radio name=TabularReport Value=Report17 id=Report17></td>
+   <td align=center><input type=radio name=TabularReport Value=Report16 id=Report16></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Messaging Addresses</td>
+   <td align=center><input type=radio name=TabularReport Value=Report9 id=Report9></td>
+   <td align=center><input type=radio name=TabularReport Value=Report8 id=Report8></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>TSAPI Usage</td>
+   <td align=center><input type=radio name=TabularReport Value=Report26 id=Report26></td>
+   <td align=center><input type=radio name=TabularReport Value=Report25 id=Report25></td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Ticker Counts</td>
+   <td align=center><input type=radio name=TabularReport Value=Report23 id=Report23></td>
+   <td align=center>&nbsp;</td>
+  </tr>
+  <tr>
+   <td class=fieldcaption>Unmatched Tickers</td>
+   <td align=center>&nbsp;</td>
+   <td align=center><input type=radio name=TabularReport Value=Report27 id=Report27></td>
+  </tr>
+</table>
+</div>
+<!--ENDIF-->
+
+
+   <!--RENDER REPORTCRITERIA-->
+   <div class=fieldcaption><a href="#">Report Criteria</a></div>
+<div class=fieldcaption>
+ <table width="100%">
+  <tr>
+   <td align=right class=fieldcaption>Report Name:&nbsp;</td>
+   <td class=fieldvalue>
+      <input type=text id=reportname name=reportname size=40 value="<!--RENDER REPORTNAME-->"></td>
+  </tr>
+  <tr>
+   <td align=right class=fieldcaption>Date Range:&nbsp;</td>
+   <td class=fieldvalue>
+    <input type=text id=datefrom name=DateFrom size=10>
+    to
+    <input type=text id=dateto name=DateTo size=10>
+    <input type=checkbox name=ThroughToday value=1 <!--RENDER THROUGHTODAY-->>Through Today
+   </td>
+  </tr>
+  <tr>
+   <td align=right class=fieldcaption>Exclude Weekends:&nbsp;</td>
+   <td><input type=checkbox name=ExcludeWeekends value=1 <!--RENDER EXCLUDEWEEKENDS-->></td>
+  </tr>
+  <tr>
+   <td align=right class=fieldcaption>Include Report Criteria:&nbsp;</td>
+   <td class=fieldcaption><input type=checkbox name=IncludeCriteria value=1 <!--RENDER INCLUDECRITERIA-->></td>
+  </tr>
+  <tr>
+   <td align=right class=fieldcaption>Show Group Captions:&nbsp;</td>
+   <td class=fieldcaption><input type=checkbox name=ShowGroupCaptions value=1 <!--RENDER SHOWGROUPCAPTIONS-->></td>
+  </tr>
+  <tr>
+   <td nowrap align=right class=fieldcaption>Show All Grouping Columns (Tabular):&nbsp;</td>
+   <td class=fieldcaption><input type=checkbox name=ShowAllGroups value=1 <!--RENDER SHOWALLGROUPS-->></td>
+  </tr>
+  <tr>
+   <td nowrap align=right class=fieldcaption>Include Locked/Min. in Days Used:&nbsp;</td>
+   <td class=fieldcaption><input type=checkbox name=DaysUsedIncludeLocked value=1 <!--RENDER DAYSUSEDINCLUDELOCKED-->></td>
+  </tr>
+  <tr>
+   <td align=right class=fieldcaption>Output Format:&nbsp;</td>
+   <td class=fieldvalue><select id=OutputXLS name=OutputXLS><!--RENDER OUTPUTXLS--></select></td>
+  </tr>
+  <tr>
+   <td align=right class=fieldcaption>Grouping Columns:&nbsp;</td>
+   <td class=fieldcaption>
+    <select size=1 name=GroupColumn1><!--RENDER GROUPCOLUMN1--></select>&nbsp;
+    <select size=1 name=GroupColumn2><!--RENDER GROUPCOLUMN2--></select>&nbsp;
+    <select size=1 name=GroupColumn3><!--RENDER GROUPCOLUMN3--></select>&nbsp;
+    <select size=1 name=GroupColumn4><!--RENDER GROUPCOLUMN4--></select>
+  </td>
+  <tr>
+   <td align=right class=fieldcaption>User Column:&nbsp;</td>
+   <td class=fieldcaption><select size=1 name=UserColumn><!--RENDER USERCOLUMN--></select></td>
+  </tr>
+</table>
+</div>
+<div class=fieldcaption><a href="#">Report Filters</a></div>
+<div class=fieldcaption>
+ <table width="100%">
+  <tr valign=top>
+   <td align=right class=fieldcaption>Filter 1:&nbsp;</td>
+   <td class=fieldvalue>
+    <select size=1 style="width:140px;" onChange="ChangeFilter1Type(true)" id=Filter1Type name=Filter1Type><!--RENDER FILTER1TYPE--></select>
+    <select size=1 style="width:90px;" id=Filter1Comp name=Filter1Comp><!--RENDER FILTER1COMP--></select>
+    <select size=1 onChange="ChangeFilter1Val()" id=Filter1Select name=Filter1Select><option>-- Select --</option></select>
+    <input type=text id=Filter1Val name=Filter1Val size=17 value="<!--RENDER FILTER1VAL-->">
+   </td>
+  </tr>
+  <tr valign=top>
+   <td align=right class=fieldcaption>Filter 2:&nbsp;</td>
+   <td class=fieldvalue>
+    <select size=1 style="width:140px;" onChange="ChangeFilter2Type(true)" id=Filter2Type name=Filter2Type><!--RENDER FILTER2TYPE--></select>
+    <select size=1 style="width:90px;" id=Filter2Comp name=Filter2Comp><!--RENDER FILTER2COMP--></select>
+    <select size=1 onChange="ChangeFilter2Val()" id=Filter2Select name=Filter2Select><option>-- Select --</option></select>
+    <input type=text id=Filter2Val name=Filter2Val size=17 value="<!--RENDER FILTER2VAL-->">
+   </td>
+  </tr>
+  <tr valign=top>
+   <td align=right class=fieldcaption>Filter 3:&nbsp;</td>
+   <td class=fieldvalue>
+    <select size=1 style="width:140px;" onChange="ChangeFilter3Type(true)" id=Filter3Type name=Filter3Type><!--RENDER FILTER3TYPE--></select>
+    <select size=1 style="width:90px;" id=Filter3Comp name=Filter3Comp><!--RENDER FILTER3COMP--></select>
+    <select size=1 onChange="ChangeFilter3Val()" id=Filter3Select name=Filter3Select><option>-- Select --</option></select>
+    <input type=text id=Filter3Val name=Filter3Val size=17 value="<!--RENDER FILTER3VAL-->">
+   </td>
+  </tr>
+  <tr valign=top>
+   <td nowrap align=right class=fieldcaption>Bulk Data:&nbsp;</td>
+   <td class=fieldcaption>
+    <select size=1 onChange="ChangeBulkType();" id=BulkType name=BulkType><!--RENDER BULKTYPE--></select><br>
+    <textarea rows=4 cols=42 name=BulkData><!--RENDER BULKDATA--></textarea>
+   </td>
+  </tr>
+</table>
+</div>
+
+   </div>
+  </td>
+ </tr>
+ <tr valign=top>
+  <td>&nbsp;</td>
+  <td colspan=2 class=fielderror><!--RENDER ERRORMSG--></td>
+ </tr>
+</table>
+</form>
+<!--ENDPARTIAL-->
+
+
+
+     </div>
+    </td>
+    <td class=mmgspacerright>&nbsp;</td>
+   </tr>
+   <tr>
+    <td>&nbsp;</td>
+    <td colspan=4 class=footer><!--RENDER COPYRIGHT--></td>
+   </tr>
+  </table>
+ </body>
+</html>

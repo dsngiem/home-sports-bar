@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <link rel=stylesheet type="text/css" href="/css/mmg.css">
+  <title><!--RENDER TITLE--></title>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.corner.js"></script>
+  <script type="text/javascript">
+    var myheight;
+    var mywidth;
+    $(document).ready(function(){
+      $('.rounded').corner();
+      document.getElementById('Prev').style.display='none';
+      document.getElementById('Next').style.display='none';
+      myheight = $(document).height();
+      mywidth = $(document).width();
+      PageReady();
+    });
+  </script>
+  <!--RENDER HEADERSCRIPTS-->
+ </head>
+ <body style="background-color:white;">
+  <table border=0 width="100%" class="mmgheader" cellspacing=0 cellpadding=0>
+   <tr><td colspan=4><!--RENDER BODY--></td></tr>
+   <tr id=footerrow>
+    <td width="40%">&nbsp;</td>
+    <td class=fieldvalue align=center width=80><input type=button value=Prev id=Prev onClick="DoPage('direction=prev');"></td>
+    <td class=fieldvalue align=center width=80><div id=pageofpage></div></td>
+    <td class=fieldvalue align=center width=80><input type=button value=Next id=Next onClick="DoPage('direction=next');"></td>
+    <td align=right width="40%"><img src="/images/mmglogo.png" border=0 height=40 width=150></td>
+   </tr>
+  </table>
+ </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <link rel=stylesheet type="text/css" href="/css/mmg.css">
+  <link rel=stylesheet type="text/css" href="/css/simpletree.css">
+  <link rel=stylesheet type="text/css" href="/css/jquery-ui.min.css">
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.corner.js"></script>
+  <script type="text/javascript" src="/js/simpletreemenu.js">
+     /***********************************************
+      * Simple Tree Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+      * This notice MUST stay intact for legal use
+      * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+      ***********************************************/
+  </script>
+  <title><!--RENDER TITLE--></title>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.rounded').corner();
+      ddtreemenu.createTree("treemenu1");
+      PageReady();
+    });
+  </script>
+  <!--RENDER HEADERSCRIPTS-->
+ </head>
+ <body>
+  <table border=0 width="100%" class=mmgheader>
+   <tr>
+    <td align=left style="padding-left:10px;"><img src="/images/mmglogo.png" border=0 height=40 width=150></td>
+    <td align=right style="padding-right:10px;">
+     <div class=mmgitalbold><!--RENDER USERNAME--></div>
+     <div class=mmgital><!--RENDER DBNAME--><!--RENDER LASTLOGIN--></div>
+    </td>
+   </tr>
+  </table>
+  <table border=0 width="100%"><tr><td class=mainlinks><!--RENDER MAINLINKS--></td></tr></table>
+  <table border=0 width="100%" cellspacing=0>
+   <tr valign=top>
+    <td class=mmgspacerleft>&nbsp;</td>
+    <td style="padding:0px;width:200px;">
+      <div class="mmgtree rounded">
+       <ul id=treemenu1 class=treeview>
+        <!--RENDER TREEMENU-->
+       </ul>
+      </div>
+    </td>
+    <td class=mmgspacercenter></td>
+    <td>
+     <div class="mmgbody rounded" style="padding-top:5px;"><!--RENDER BODY--></div>
+    </td>
+    <td class=mmgspacerright>&nbsp;</td>
+   </tr>
+   <tr>
+    <td>&nbsp;</td>
+    <td colspan=4 class=footer><!--RENDER COPYRIGHT--></td>
+   </tr>
+  </table>
+ </body>
+</html>

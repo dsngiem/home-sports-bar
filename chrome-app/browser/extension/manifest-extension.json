@@ -77,6 +77,12 @@
         "all_frames": true
     },
     {
+        "matches": ["http://live.mlssoccer.com/video/live/*", "https://live.mlssoccer.com/video/live/*"],
+        "js": ["mls2.js"],
+        "css": ["mls2.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://live.mlssoccer.com/mlsmdl/matchembed/*", "https://live.mlssoccer.com/mlsmdl/secure/*"],
         "js": ["mlsembed.js"],
         "css": ["mlsembed.css"],
@@ -238,7 +244,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.tntdrama.com/watchtnt/*", "http://www.tbs.com/watchtbs/*"],
+        "matches": ["http://www.tntdrama.com/watchtnt/*", "http://www.tbs.com/watchtbs/*", "http://www.trutv.com/live/*"],
         "js": ["tnt.js"],
         "css": ["tnt.css"],
         "all_frames": true

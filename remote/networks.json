@@ -2778,6 +2778,10 @@
 			"url": "https://tv.xfinity.com/live/Watch/5197383487287436105/TRTVD"
 		},
 		{
+			"source": "truTV",
+			"url": "http://www.trutv.com/live/index.html"
+		},
+		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/trutv"
 		},

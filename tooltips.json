@@ -1,1151 +1,1154 @@
-[{
-    "page": "criteria_bbg.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"DateFrom",
-            "helpText":"Indicate the desired starting date for the report"
-        },
-        {
-            "name":"DateTo",
-            "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
-        },
-        {
-            "name":"ThroughToday",
-            "helpText":"Include all records through the current date"
-        },
-        {
-            "name":"ExcludeWeekends",
-            "helpText":"Exclude weekends in the reports if checked"
-        },
-        {
-            "name":"IncludeCriteria",
-            "helpText":"Include a column containing report criteria in tabular reports if checked"
-        },
-        {
-            "name":"ShowGroupCaptions",
-            "helpText":"Show the roll-up/grouping captions (e.g. Cost Code, Department, etc)"
-        },
-        {
-            "name":"ShowAllGroups",
-            "helpText":"Show all mapped columns from the imported inventory when running tabular reports"
-        },
-        {
-            "name":"DaysUsedIncludeLocked",
-            "helpText":"Include locked and minimized usage in the calculation for Days Used"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "name":"GroupColumn4",
-            "helpText":"Inventory columns to display on reports. These values are ignored in tabular reports if Show All Grouping Columns is checked"
-        },
-        {
-            "name":"UserColumn",
-            "helpText":"Indicates whether data should be per user/terminal (User Level Reporting) or summed together based upon the values in the grouping columns (Roll-Up Reporting)"
-        },
-        {
-            "name":"Filter1Type",
-            "helpText":"Data classification type"
-        },
-        {
-            "name":"Filter1Comp",
-            "helpText":"Comparison operator"
-        },
-        {
-            "name":"Filter1Select",
-            "helpText":"Avaialble selections"
-        },
-        {
-            "name":"Filter1Val",
-            "helpText":"Selected or entered value"
-        },
-        {
-            "name":"BulkType",
-            "helpText":"Filter category type"
-        },
-        {
-            "name":"BulkData",
-            "helpText":"Once the type of data is selected, enter the specific IDs of the individuals to pull data for. Separate entries by a new line. There is a limit of about 400 entries in the Bulk Data field. Note: if the Bulk Data is set to anything other than “None” it will override any active filters."
-        }
-    ]
-},
 {
-    "page": "criteria_fst.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"DateFrom",
-            "helpText":"Indicate the desired starting date for the report"
-        },
-        {
-            "name":"DateTo",
-            "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
-        },
-        {
-            "name":"ThroughToday",
-            "helpText":"Include all records through the current date"
-        },
-        {
-            "name":"ExcludeWeekends",
-            "helpText":"Exclude weekends in the reports if checked"
-        },
-        {
-            "name":"IncludeCriteria",
-            "helpText":"Include a column containing report criteria in tabular reports if checked"
-        },
-        {
-            "name":"ShowGroupCaptions",
-            "helpText":"Show the roll-up/grouping captions (e.g. Cost Code, Department, etc)"
-        },
-        {
-            "name":"ShowAllGroups",
-            "helpText":"Show all mapped columns from the imported inventory when running tabular reports"
-        },
-        {
-            "name":"DaysUsedIncludeLocked",
-            "helpText":"Include locked and minimized usage in the calculation for Days Used"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "name":"GroupColumn4",
-            "helpText":"Inventory columns to display on reports. These values are ignored in tabular reports if Show All Grouping Columns is checked"
-        },
-        {
-            "name":"UserColumn",
-            "helpText":"Indicates whether data should be per user/terminal (User Level Reporting) or summed together based upon the values in the grouping columns (Roll-Up Reporting)"
-        },
-        {
-            "name":"Filter1Type",
-            "helpText":"Data classification type"
-        },
-        {
-            "name":"Filter1Comp",
-            "helpText":"Comparison operator"
-        },
-        {
-            "name":"Filter1Select",
-            "helpText":"Avaialble selections"
-        },
-        {
-            "name":"Filter1Val",
-            "helpText":"Selected or entered value"
-        },
-        {
-            "name":"BulkType",
-            "helpText":"Filter category type"
-        },
-        {
-            "name":"BulkData",
-            "helpText":"Once the type of data is selected, enter the specific IDs of the individuals to pull data for. Separate entries by a new line. There is a limit of about 400 entries in the Bulk Data field. Note: if the Bulk Data is set to anything other than “None” it will override any active filters."
-        }
-    ]
-},
-{
-    "page": "criteria_gen.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"DateFrom",
-            "helpText":"Indicate the desired starting date for the report"
-        },
-        {
-            "name":"DateTo",
-            "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
-        },
-        {
-            "name":"ThroughToday",
-            "helpText":"Include all records through the current date"
-        },
-        {
-            "name":"ExcludeWeekends",
-            "helpText":"Exclude weekends in the reports if checked"
-        },
-        {
-            "name":"IncludeCriteria",
-            "helpText":"Include a column containing report criteria in tabular reports if checked"
-        },
-        {
-            "name":"ShowGroupCaptions",
-            "helpText":"Show the roll-up/grouping captions (e.g. Cost Code, Department, etc)"
-        },
-        {
-            "name":"ShowAllGroups",
-            "helpText":"Show all mapped columns from the imported inventory when running tabular reports"
-        },
-        {
-            "name":"DaysUsedIncludeLocked",
-            "helpText":"Include locked and minimized usage in the calculation for Days Used"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "name":"GroupColumn4",
-            "helpText":"Inventory columns to display on reports. These values are ignored in tabular reports if Show All Grouping Columns is checked"
-        },
-        {
-            "name":"UserColumn",
-            "helpText":"Indicates whether data should be per user/terminal (User Level Reporting) or summed together based upon the values in the grouping columns (Roll-Up Reporting)"
-        },
-        {
-            "name":"Filter1Type",
-            "helpText":"Data classification type"
-        },
-        {
-            "name":"Filter1Comp",
-            "helpText":"Comparison operator"
-        },
-        {
-            "name":"Filter1Select",
-            "helpText":"Avaialble selections"
-        },
-        {
-            "name":"Filter1Val",
-            "helpText":"Selected or entered value"
-        },
-        {
-            "name":"BulkType",
-            "helpText":"Filter category type"
-        },
-        {
-            "name":"BulkData",
-            "helpText":"Once the type of data is selected, enter the specific IDs of the individuals to pull data for. Separate entries by a new line. There is a limit of about 400 entries in the Bulk Data field. Note: if the Bulk Data is set to anything other than “None” it will override any active filters."
-        }
-    ]
-},
-{
-    "page": "criteria_dashboard_bbg.html",
-    "map":
-    [
-        {
-            "name":"screengraphscaletime",
-            "helpText":""
-        },
-        {
-            "name":"screengraphscalehits",
-            "helpText":""
-        },
-        {
-            "name":"messagingscale",
-            "helpText":""
-        },
-        {
-            "name":"newsscale",
-            "helpText":""
-        },
-        {
-            "name":"entitlementsscale",
-            "helpText":""
-        },
-        {
-            "name":"pagesort1",
-            "helpText":""
-        },
-        {
-            "name":"pagesort2",
-            "helpText":""
-        },
-        {
-            "name":"pagesort3",
-            "helpText":""
-        },
-        {
-            "name":"pagesort4",
-            "helpText":""
-        },
-        {
-            "name":"showib",
-            "helpText":""
-        },
-        {
-            "name":"maxminutes",
-            "helpText":""
-        },
-        {
-            "name":"userlistsort",
-            "helpText":""
-        },
-        {
-            "name":"screensort",
-            "helpText":"Determines the variable according to which the Top 20 Screens and Launchpad subreports will be sorted—choose between Foreground Minutes, Background Minutes, Total Minutes (Foreground + Background), and Hits"
-        },
-        {
-            "name":"entitlementsort",
-            "helpText":"Determines the sort order for the Entitlement sub-report graph—choose to sort from high to low or low to high"
-        },
-        {
-            "name":"exchangesort",
-            "helpText":"Determines the sort order for the Exchange sub-report graph—choose to sort from high to low or low to high"
-        },
-        {
-            "name":"includeminlock",
-            "helpText":"Determines whether minimized minutes or locked minutes are included in the report (minutes during which the computer is locked or in screen-saver mode)"
-        },
-        {
-            "name":"italicize",
-            "helpText":"Italicize any screen names that are part of the screen group selected"
-        },
-        {
-            "name":"exclude",
-            "helpText":"Exclude any screens that are part of the screen group selected"
-        },
-        {
-            "name":"includeonly",
-            "helpText":"Only include screens that are part of the screen group selected"
-        },
-        {
-            "name":"alternatelayout",
-            "helpText":"Determines the screen layout of the dashboard (Standard vs Alternate vs Custom)"
-        },
-        {
-            "name":"denominator",
-            "helpText":""
-        },
-        {
-            "name":"fixeddenom",
-            "helpText":""
-        },
-        {
-            "name":"dashboardformat",
-            "helpText":""
-        },
-        {
-            "name":"subreport1",
-            "helpText":""
-        },
-        {
-            "name":"subreport2",
-            "helpText":""
-        },
-        {
-            "name":"subreport3",
-            "helpText":""
-        },
-        {
-            "name":"subreport4",
-            "helpText":""
-        },
-        {
-            "name":"subreport5",
-            "helpText":""
-        },
-        {
-            "name":"subreport6",
-            "helpText":""
-        }
-    ]
-},
-{
-    "page": "criteria_dashboard_fst.html",
-    "map":
-    [
-        {
-            "name":"screengraphscaletime",
-            "helpText":""
-        },
-        {
-            "name":"screengraphscalehits",
-            "helpText":""
-        },
-        {
-            "name":"entitlementsscale",
-            "helpText":""
-        },
-        {
-            "name":"pagesort1",
-            "helpText":""
-        },
-        {
-            "name":"pagesort2",
-            "helpText":""
-        },
-        {
-            "name":"pagesort3",
-            "helpText":""
-        },
-        {
-            "name":"pagesort4",
-            "helpText":""
-        },
-        {
-            "name":"maxminutes",
-            "helpText":""
-        },
-        {
-            "name":"screensort",
-            "helpText":"Determines the variable according to which the Top 20 Screens and Launchpad subreports will be sorted—choose between Foreground Minutes, Background Minutes, Total Minutes (Foreground + Background), and Hits"
-        },
-        {
-            "name":"includeminlock",
-            "helpText":"Determines whether minimized minutes or locked minutes are included in the report (minutes during which the computer is locked or in screen-saver mode)"
-        },
-        {
-            "name":"alternatelayout",
-            "helpText":"Determines the screen layout of the dashboard (Standard vs Alternate vs Custom)"
-        },
-        {
-            "name":"denominator",
-            "helpText":""
-        },
-        {
-            "name":"fixeddenom",
-            "helpText":""
-        },
-        {
-            "name":"dashboardformat",
-            "helpText":""
-        },
-        {
-            "name":"subreport1",
-            "helpText":""
-        },
-        {
-            "name":"subreport2",
-            "helpText":""
-        },
-        {
-            "name":"subreport3",
-            "helpText":""
-        },
-        {
-            "name":"subreport4",
-            "helpText":""
-        },
-        {
-            "name":"subreport5",
-            "helpText":""
-        },
-        {
-            "name":"subreport6",
-            "helpText":""
-        }
-    ]
-},
-{
-    "page": "criteria_dashboard_gen.html",
-    "map":
-    [
-        {
-            "name":"screengraphscaletime",
-            "helpText":""
-        },
-        {
-            "name":"screengraphscalehits",
-            "helpText":""
-        },
-        {
-            "name":"entitlementsscale",
-            "helpText":""
-        },
-        {
-            "name":"pagesort1",
-            "helpText":""
-        },
-        {
-            "name":"pagesort2",
-            "helpText":""
-        },
-        {
-            "name":"pagesort3",
-            "helpText":""
-        },
-        {
-            "name":"pagesort4",
-            "helpText":""
-        },
-        {
-            "name":"maxminutes",
-            "helpText":""
-        },
-        {
-            "name":"applicationname",
-            "helpText":"Selects the market data application for which data will be shown on this report"
-        },
-        {
-            "name":"screensort",
-            "helpText":"Determines the variable according to which the Top 20 Screens and Launchpad sub-reports will be sorted—choose between Foreground Minutes, Background Minutes, Total Minutes (Foreground + Background), and Hits"
-        },
-        {
-            "name":"includeminlock",
-            "helpText":"Determines whether minimized minutes or locked minutes are included in the report (minutes during which the computer is locked or in screen-saver mode)"
-        },
-        {
-            "name":"alternatelayout",
-            "helpText":"Determines the screen layout of the dashboard (Standard vs Alternate vs Custom)"
-        },
-        {
-            "name":"denominator",
-            "helpText":""
-        },
-        {
-            "name":"fixeddenom",
-            "helpText":""
-        },
-        {
-            "name":"dashboardformat",
-            "helpText":""
-        },
-        {
-            "name":"subreport1",
-            "helpText":""
-        },
-        {
-            "name":"subreport2",
-            "helpText":""
-        },
-        {
-            "name":"subreport3",
-            "helpText":""
-        },
-        {
-            "name":"subreport4",
-            "helpText":""
-        },
-        {
-            "name":"subreport5",
-            "helpText":""
-        },
-        {
-            "name":"subreport6",
-            "helpText":""
-        }
-    ]
-},
-{
-    "page": "criteria_heatmap.html",
-    "map":
-    [
-        {
-            "name":"xaxis",
-            "helpText":"Determines the variable to be displayed on the X-Axis. Choose User Name, Subscription SID, UUID, Access Point ID, Region, Country, Cost Code, Department, or Desk "
-        },
-        {
-            "name":"xaxistop",
-            "helpText":"Allows X-Axis to be grouped by Region, Country, Cost Code, Department, or Desk, or to have no grouping (None)"
-        },
-        {
-            "name":"swapxy",
-            "helpText":"Allows axes to be swapped so that dates display along the X-Axis instead of the YAxis"
-        },
-        {
-            "name":"datasource",
-            "helpText":"Determines the data source used to create the heat map. Choose to use Foreground+Background Minutes, Foreground Minutes, Background Minutes, Total Minutes (includes Locked and Minimized Minutes), or Hits as the data source to create the heat map"
-        },
-        {
-            "name":"lowval",
-            "helpText":"Set the lower cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"mediumval",
-            "helpText":"Set the lower-middle cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"medium2val",
-            "helpText":"Set the upper-middle cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"highval",
-            "helpText":"Set the upper cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"showwhitespace",
-            "helpText":""
-        },
-        {
-            "name":"shownocapture",
-            "helpText":""
-        },
-        {
-            "name":"showfulldaterange",
-            "helpText":"Allows for the option to display the full date range selected (leaving this box unchecked will result in a heat map covering one month of usage)"
-        },
-        {
-            "name":"sortbygraphdata",
-            "helpText":"Allows for data to be sorted and displayed according to usage"
-        },
-        {
-            "name":"cutoff",
-            "helpText":"Number of days to include in the report. Days after the cutoff will not be displayed"
-        },
-        {
-            "name":"highlow",
-            "helpText":"Users with the most total usage over the selected date range are listed first if checked"
-        }
-    ]
-},
-{
-    "page": "criteria_heatmap_gen.html",
-    "map":
-    [
-        {
-            "name":"applicationname",
-            "helpText":"Name of the market data application for which data will be displayed on this report"
-        },
-        {
-            "name":"xaxis",
-            "helpText":"Determines the variable to be displayed on the X-Axis. Choose User Name, Inventory ID, Region, Country, Cost Code, Department, or Desk. "
-        },
-        {
-            "name":"xaxistop",
-            "helpText":"Allows X-Axis to be grouped by Region, Country, Cost Code, Department, or Desk, or to have no grouping (None)"
-        },
-        {
-            "name":"swapxy",
-            "helpText":"Allows axes to be swapped so that dates display along the X-Axis instead of the Y-Axis"
-        },
-        {
-            "name":"datasource",
-            "helpText":"Determines the data source used to create the heat map. Choose to use Foreground+Background Minutes, Foreground Minutes, Background Minutes, Total Minutes (includes Locked and Minimized Minutes), or Hits as the data source to create the heat map"
-        },
-        {
-            "name":"lowval",
-            "helpText":"Set the lower cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"mediumval",
-            "helpText":"Set the lower-middle cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"medium2val",
-            "helpText":"Set the upper-middle cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"highval",
-            "helpText":"Set the upper cutoff values for light blue to dark blue fills"
-        },
-        {
-            "name":"showwhitespace",
-            "helpText":""
-        },
-        {
-            "name":"shownocapture",
-            "helpText":""
-        },
-        {
-            "name":"showfulldaterange",
-            "helpText":"Allows for the option to display the full date range selected (leaving this box unchecked will result in a heat map covering one month of usage)"
-        },
-        {
-            "name":"sortbygraphdata",
-            "helpText":"Allows for data to be sorted and displayed according to usage"
-        },
-        {
-            "name":"cutoff",
-            "helpText":"Number of days to include in the report. Days after the cutoff will not be displayed"
-        },
-        {
-            "name":"highlow",
-            "helpText":"Users with the most total usage over the selected date range are listed first if checked"
-        }
-    ]
-},
-{
-    "page": "criteria_tabular_bbg.html",
-    "map":
-    [
-        {
-            "id":"Report15",
-            "reportName":"Screen Usage Summary",
-            "helpText":"Lists the screens accessed by each user along with time and hits. This report contains the details that are used to create the Dashboard Top 20 Screens sub-report."
-        },
-        {
-            "id":"Report14",
-            "reportName":"Screen Usage Details",
-            "helpText":"Lists the screens accessed by each user per day along with time and hits."
-        },
-        {
-            "id":"Report7",
-            "reportName":"Launchpad Usage Summary",
-            "helpText":" Lists the Launchpad windows accessed by each user along with time and hits. This report contains the details used to create the Dashboard Launchpad sub-report."
-        },
-        {
-            "id":"Report6",
-            "reportName":"Launchpad Usage Details",
-            "helpText":" Lists the Launchpad windows accessed by each user per day along with time and hits."
-        },
-        {
-            "id":"Report11",
-            "reportName":"Messaging Usage (Agent) Summary",
-            "helpText":"Lists the number and types of incoming and outgoing Bloomberg messages."
-        },
-        {
-            "id":"Report10",
-            "reportName":"Messaging Usage (Agent) Details",
-            "helpText":"Lists the number and types of incoming and outgoing Bloomberg messages per day."
-        },
-        {
-            "id":"Report5",
-            "reportName":"IB Chat Usage (Agent) Summary",
-            "helpText":"Lists the counts of Instant Bloomberg sessions"
-        },
-        {
-            "id":"Report4",
-            "reportName":"IB Chat Usage (Agent) Details",
-            "helpText":"Lists the counts of Instant Bloomberg sessions per day"
-        },
-        {
-            "id":"Report13",
-            "reportName":"News Usage Summary",
-            "helpText":"Lists the counts of news services accessed. This provides the details behind the Dashboard News sub-report"
-        },
-        {
-            "id":"Report12",
-            "reportName":"News Usage Details",
-            "helpText":"Lists the counts of news services accessed per day"
-        },
-        {
-            "id":"Report22",
-            "reportName":"Terminal Usage Summary",
-            "helpText":"Lists the log file collection and usage statistics by terminal. This providesthe details behind the Dashboard Status sub-reports."
-        },
-        {
-            "id":"Report21",
-            "reportName":"Terminal Usage Details",
-            "helpText":"Lists the log file collection and usage statistics by terminal per day"
-        },
-        {
-            "id":"Report30",
-            "reportName":"Logged In Time Summary",
-            "helpText":"Time the user was logged in to Bloomberg"
-        },
-        {
-            "id":"Report29",
-            "reportName":"Logged In Time Details",
-            "helpText":"Time the user was logged in to Bloomberg per day"
-        },
-        {
-            "id":"Report1",
-            "reportName":"Entitlements Usage Summary",
-            "helpText":" Lists entitlement hits"
-        },
-        {
-            "id":"Report0",
-            "reportName":"Entitlements Usage Details",
-            "helpText":" Lists entitlement hits per day"
-        },
-        {
-            "id":"Report3",
-            "reportName":"Exchange Usage Summary",
-            "helpText":"Lists exchange hits"
-        },
-        {
-            "id":"Report2",
-            "reportName":"Exchange Usage Details",
-            "helpText":"Lists exchange hits per day"
-        },
-        {
-            "id":"Report20",
-            "reportName":"Terminal Instances Summary",
-            "helpText":"Lists the Access Point SID and SID Inst Numbers for all data collected"
-        },
-        {
-            "id":"Report28",
-            "reportName":"Non-Reporting Details",
-            "helpText":"Lists terminals not reporting data"
-        },
-        {
-            "id":"Report32",
-            "reportName":"Screen Usage Days Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report31",
-            "reportName":"Screen Usage Days Details",
-            "helpText":""
-        },
-        {
-            "id":"Report34",
-            "reportName":"Launchpad Usage Days Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report33",
-            "reportName":"Launchpad Usage Days Details",
-            "helpText":""
-        },
-        {
-            "id":"Report17",
-            "reportName":"Terminal Audit Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report16",
-            "reportName":"Terminal Audit Details",
-            "helpText":""
-        },
-        {
-            "id":"Report9",
-            "reportName":"Messaging Addresses Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report8",
-            "reportName":"Messaging Addresses Details",
-            "helpText":""
-        },
-        {
-            "id":"Report26",
-            "reportName":"TSAPI Usage Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report25",
-            "reportName":"TSAPI Usage Details",
-            "helpText":""
-        },
-        {
-            "id":"Report23",
-            "reportName":"Ticker Counts Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report27",
-            "reportName":"Unmatched Tickers Details",
-            "helpText":""
-        }
-    ]
-},
-{
-    "page": "criteria_tabular_fst.html",
-    "map":
-    [
-        {
-            "id":"Report6",
-            "reportName":"Screen Usage Summary",
-            "helpText":"Lists the screens accessed by each user along with time and hits. This report contains the details that are used to create the Dashboard Top 20 Screens sub-report. "
-        },
-        {
-            "id":"Report5",
-            "reportName":"Screen Usage Details",
-            "helpText":"Lists the screens accessed by each user per day along with time and hits."
-        },
-        {
-            "id":"Report2",
-            "reportName":"Company Usage Summary",
-            "helpText":"Lists the companies searched, and the number of hits on each company. This report contains the details used to create the Dashboard Company sub-report."
-        },
-        {
-            "id":"Report1",
-            "reportName":"Company Usage Details",
-            "helpText":"Lists the companies searched, and the number of hits on each company per day"
-        },
-        {
-            "id":"Report4",
-            "reportName":"Download Usage Summary",
-            "helpText":"Lists the download count. This report provides the details behind the Dashboard Download sub-report."
-        },
-        {
-            "id":"Report3",
-            "reportName":"Download Usage Details",
-            "helpText":"Lists the download count per day."
-        },
-        {
-            "id":"Report14",
-            "reportName":"Entitlement Usage Summary",
-            "helpText":"Lists the entitlements used. This report contains the details used to create the Dashboard Entitlement sub-report."
-        },
-        {
-            "id":"Report13",
-            "reportName":"Entitlement Usage Details",
-            "helpText":"Lists the entitlements used per day."
-        },
-        {
-            "id":"Report12",
-            "reportName":"Terminal Usage Summary",
-            "helpText":"Lists the log file collection and usage statistics by terminal. This provides the details behind the Dashboard Status sub-reports."
-        },
-        {
-            "id":"Report11",
-            "reportName":"Terminal Usage Details",
-            "helpText":"Lists the log file collection and usage statistics by terminal per day"
-        },
-        {
-            "id":"Report17",
-            "reportName":"Logged In Time Summary",
-            "helpText":"Time the user was logged in to Bloomberg"
-        },
-        {
-            "id":"Report16",
-            "reportName":"Logged In Time Details",
-            "helpText":"Time the user was logged in to Bloomberg per day"
-        },
-        {
-            "id":"Report8",
-            "reportName":"Terminal Audit Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report7",
-            "reportName":"Terminal Audit Details",
-            "helpText":""
-        },
-        {
-            "id":"Report10",
-            "reportName":"Computer Audit Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report9",
-            "reportName":"Computer Audit Details",
-            "helpText":""
-        },
-        {
-            "id":"Report15",
-            "reportName":"Non-Reporting Summary",
-            "helpText":"Lists terminals not reporting data"
-        }
-    ]
-},
-{
-    "page": "criteria_tabular_gen.html",
-    "map":
-    [
-        {
-            "id":"Report6",
-            "reportName":"Screen Usage Summary",
-            "helpText":"Lists the screens accessed by each user along with time and hits. This report contains the details that are used to create the Dashboard Top 20 Screens sub-report. "
-        },
-        {
-            "id":"Report5",
-            "reportName":"Screen Usage Details",
-            "helpText":"Lists the screens accessed by each user along with time and hits per day"
-        },
-        {
-            "id":"Report3",
-            "reportName":"Exchange Usage Summary",
-            "helpText":"Lists exchange hits"
-        },
-        {
-            "id":"Report2",
-            "reportName":"Exchange Usage Details",
-            "helpText":"Lists exchange hits per day"
-        },
-        {
-            "id":"Report12",
-            "reportName":"Terminal Usage Summary",
-            "helpText":"Lists the log file collection and usage statistics by terminal. This provides the details behind the Dashboard Status sub-reports."
-        },
-        {
-            "id":"Report11",
-            "reportName":"Terminal Usage Details",
-            "helpText":" Lists the log file collection and usage statistics by terminal per day."
-        },
-        {
-            "id":"Report8",
-            "reportName":"Terminal Audit Summary",
-            "helpText":""
-        },
-        {
-            "id":"Report7",
-            "reportName":"Terminal Audit Details",
-            "helpText":""
-        },
-        {
-            "id":"Report15",
-            "reportName":"Non-Reporting Summary",
-            "helpText":"Lists terminals not reporting data"
-        }
-    ]
-},
-{
-    "page": "dailydash_criteria.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"DateFrom",
-            "helpText":"Indicate the desired starting date for the report"
-        },
-        {
-            "name":"DateTo",
-            "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
-        },
-        {
-            "name":"ThroughToday",
-            "helpText":"When checked, the report will cover the past seven weeks"
-        },
-        {
-            "name":"fromlogs",
-            "helpText":"Days with fewer logs processed than this first value will be marked red, others will be marked yellow or green."
-        },
-        {
-            "name":"tologs",
-            "helpText":"Days with more logs processed than this second value will be marked green, others will be marked red or yellow."
-        },
-        {
-            "name":"fromsec",
-            "helpText":"Days with processing less than this first value will be marked green, others will be marked yellow or red."
-        },
-        {
-            "name":"tosec",
-            "helpText":"Days with processing more than this second value will be marked red, others will be marked yellow or green."
-        },
-        {
-            "name":"versions",
-            "helpText":"A comma separated list of allowable MMG Agent versions (without the dots)."
-        },
-        {
-            "name":"fromver",
-            "helpText":"Days with fewer valid agents than this first value will be marked red, others will be marked yellow or green."
-        },
-        {
-            "name":"tover",
-            "helpText":"Days with more valid agents than this second value will be marked green, others will be marked red or yellow."
-        }
-    ]
-},
-{
-    "page": "adhoc_criteria.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "name":"sql",
-            "helpText":"Create specialized reports by connecting directly to the database. Please contact MMG Partners for more information about Ad-Hoc reporting."
-        }
-    ]
-},
-{
-    "page": "audit_criteria.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "name":"DateFrom",
-            "helpText":"Indicate the desired starting date for the report"
-        },
-        {
-            "name":"DateTo",
-            "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
-        },
-        {
-            "name":"ErrorsOnly",
-            "helpText":""
-        }
-    ]
-},
-{
-    "page": "bloomberg_inventory.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "id":"Report0",
-            "reportName":"Inventory Mismatch",
-            "helpText":"The Bloomberg Inventory Mismatch Report lists the differences between the monthly SID and Entitlements files from Bloomberg and the Inventory (FITS, MDM) output."
-        },
-        {
-            "id":"Report1",
-            "reportName":"SID File Usage",
-            "helpText":"The SID File Usage Report lists all terminals in the Bloomberg SID file and information about recent data capture for each of them."
-        }
-    ]
-},
-{
-    "page": "bloomberg_messaging.html",
-    "map":
-    [
-        {
-            "name":"MessageCount",
-            "helpText":"Specify the number of messaging addresses to display for each Bloomberg message type. Typing in a value of 0 will select the top 1 message of each message type."
-        }
-    ]
-},
-{
-    "page": "health_criteria.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        }
-    ]
-},
-{
-    "page": "status_criteria.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        },
-        {
-            "name":"rptyear",
-            "helpText":""
-        },
-        {
-            "name":"rptmonth",
-            "helpText":""
-        },
-        {
-            "name":"rpttype",
-            "helpText":""
-        }
-    ]
-},
-{
-    "page": "user_list_report.html",
-    "map":
-    [
-        {
-            "name":"reportname",
-            "helpText":"Name for reference under custom reports"
-        },
-        {
-            "name":"OutputXLS",
-            "helpText":"Select tabular report export format"
-        }
+    "pageMap:":
+    [{
+        "page": "criteria_bbg.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"DateFrom",
+                "helpText":"Indicate the desired starting date for the report"
+            },
+            {
+                "name":"DateTo",
+                "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
+            },
+            {
+                "name":"ThroughToday",
+                "helpText":"Include all records through the current date"
+            },
+            {
+                "name":"ExcludeWeekends",
+                "helpText":"Exclude weekends in the reports if checked"
+            },
+            {
+                "name":"IncludeCriteria",
+                "helpText":"Include a column containing report criteria in tabular reports if checked"
+            },
+            {
+                "name":"ShowGroupCaptions",
+                "helpText":"Show the roll-up/grouping captions (e.g. Cost Code, Department, etc)"
+            },
+            {
+                "name":"ShowAllGroups",
+                "helpText":"Show all mapped columns from the imported inventory when running tabular reports"
+            },
+            {
+                "name":"DaysUsedIncludeLocked",
+                "helpText":"Include locked and minimized usage in the calculation for Days Used"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "name":"GroupColumn4",
+                "helpText":"Inventory columns to display on reports. These values are ignored in tabular reports if Show All Grouping Columns is checked"
+            },
+            {
+                "name":"UserColumn",
+                "helpText":"Indicates whether data should be per user/terminal (User Level Reporting) or summed together based upon the values in the grouping columns (Roll-Up Reporting)"
+            },
+            {
+                "name":"Filter1Type",
+                "helpText":"Data classification type"
+            },
+            {
+                "name":"Filter1Comp",
+                "helpText":"Comparison operator"
+            },
+            {
+                "name":"Filter1Select",
+                "helpText":"Avaialble selections"
+            },
+            {
+                "name":"Filter1Val",
+                "helpText":"Selected or entered value"
+            },
+            {
+                "name":"BulkType",
+                "helpText":"Filter category type"
+            },
+            {
+                "name":"BulkData",
+                "helpText":"Once the type of data is selected, enter the specific IDs of the individuals to pull data for. Separate entries by a new line. There is a limit of about 400 entries in the Bulk Data field. Note: if the Bulk Data is set to anything other than “None” it will override any active filters."
+            }
+        ]
+    },
+    {
+        "page": "criteria_fst.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"DateFrom",
+                "helpText":"Indicate the desired starting date for the report"
+            },
+            {
+                "name":"DateTo",
+                "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
+            },
+            {
+                "name":"ThroughToday",
+                "helpText":"Include all records through the current date"
+            },
+            {
+                "name":"ExcludeWeekends",
+                "helpText":"Exclude weekends in the reports if checked"
+            },
+            {
+                "name":"IncludeCriteria",
+                "helpText":"Include a column containing report criteria in tabular reports if checked"
+            },
+            {
+                "name":"ShowGroupCaptions",
+                "helpText":"Show the roll-up/grouping captions (e.g. Cost Code, Department, etc)"
+            },
+            {
+                "name":"ShowAllGroups",
+                "helpText":"Show all mapped columns from the imported inventory when running tabular reports"
+            },
+            {
+                "name":"DaysUsedIncludeLocked",
+                "helpText":"Include locked and minimized usage in the calculation for Days Used"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "name":"GroupColumn4",
+                "helpText":"Inventory columns to display on reports. These values are ignored in tabular reports if Show All Grouping Columns is checked"
+            },
+            {
+                "name":"UserColumn",
+                "helpText":"Indicates whether data should be per user/terminal (User Level Reporting) or summed together based upon the values in the grouping columns (Roll-Up Reporting)"
+            },
+            {
+                "name":"Filter1Type",
+                "helpText":"Data classification type"
+            },
+            {
+                "name":"Filter1Comp",
+                "helpText":"Comparison operator"
+            },
+            {
+                "name":"Filter1Select",
+                "helpText":"Avaialble selections"
+            },
+            {
+                "name":"Filter1Val",
+                "helpText":"Selected or entered value"
+            },
+            {
+                "name":"BulkType",
+                "helpText":"Filter category type"
+            },
+            {
+                "name":"BulkData",
+                "helpText":"Once the type of data is selected, enter the specific IDs of the individuals to pull data for. Separate entries by a new line. There is a limit of about 400 entries in the Bulk Data field. Note: if the Bulk Data is set to anything other than “None” it will override any active filters."
+            }
+        ]
+    },
+    {
+        "page": "criteria_gen.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"DateFrom",
+                "helpText":"Indicate the desired starting date for the report"
+            },
+            {
+                "name":"DateTo",
+                "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
+            },
+            {
+                "name":"ThroughToday",
+                "helpText":"Include all records through the current date"
+            },
+            {
+                "name":"ExcludeWeekends",
+                "helpText":"Exclude weekends in the reports if checked"
+            },
+            {
+                "name":"IncludeCriteria",
+                "helpText":"Include a column containing report criteria in tabular reports if checked"
+            },
+            {
+                "name":"ShowGroupCaptions",
+                "helpText":"Show the roll-up/grouping captions (e.g. Cost Code, Department, etc)"
+            },
+            {
+                "name":"ShowAllGroups",
+                "helpText":"Show all mapped columns from the imported inventory when running tabular reports"
+            },
+            {
+                "name":"DaysUsedIncludeLocked",
+                "helpText":"Include locked and minimized usage in the calculation for Days Used"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "name":"GroupColumn4",
+                "helpText":"Inventory columns to display on reports. These values are ignored in tabular reports if Show All Grouping Columns is checked"
+            },
+            {
+                "name":"UserColumn",
+                "helpText":"Indicates whether data should be per user/terminal (User Level Reporting) or summed together based upon the values in the grouping columns (Roll-Up Reporting)"
+            },
+            {
+                "name":"Filter1Type",
+                "helpText":"Data classification type"
+            },
+            {
+                "name":"Filter1Comp",
+                "helpText":"Comparison operator"
+            },
+            {
+                "name":"Filter1Select",
+                "helpText":"Avaialble selections"
+            },
+            {
+                "name":"Filter1Val",
+                "helpText":"Selected or entered value"
+            },
+            {
+                "name":"BulkType",
+                "helpText":"Filter category type"
+            },
+            {
+                "name":"BulkData",
+                "helpText":"Once the type of data is selected, enter the specific IDs of the individuals to pull data for. Separate entries by a new line. There is a limit of about 400 entries in the Bulk Data field. Note: if the Bulk Data is set to anything other than “None” it will override any active filters."
+            }
+        ]
+    },
+    {
+        "page": "criteria_dashboard_bbg.html",
+        "map":
+        [
+            {
+                "name":"screengraphscaletime",
+                "helpText":""
+            },
+            {
+                "name":"screengraphscalehits",
+                "helpText":""
+            },
+            {
+                "name":"messagingscale",
+                "helpText":""
+            },
+            {
+                "name":"newsscale",
+                "helpText":""
+            },
+            {
+                "name":"entitlementsscale",
+                "helpText":""
+            },
+            {
+                "name":"pagesort1",
+                "helpText":""
+            },
+            {
+                "name":"pagesort2",
+                "helpText":""
+            },
+            {
+                "name":"pagesort3",
+                "helpText":""
+            },
+            {
+                "name":"pagesort4",
+                "helpText":""
+            },
+            {
+                "name":"showib",
+                "helpText":""
+            },
+            {
+                "name":"maxminutes",
+                "helpText":""
+            },
+            {
+                "name":"userlistsort",
+                "helpText":""
+            },
+            {
+                "name":"screensort",
+                "helpText":"Determines the variable according to which the Top 20 Screens and Launchpad subreports will be sorted—choose between Foreground Minutes, Background Minutes, Total Minutes (Foreground + Background), and Hits"
+            },
+            {
+                "name":"entitlementsort",
+                "helpText":"Determines the sort order for the Entitlement sub-report graph—choose to sort from high to low or low to high"
+            },
+            {
+                "name":"exchangesort",
+                "helpText":"Determines the sort order for the Exchange sub-report graph—choose to sort from high to low or low to high"
+            },
+            {
+                "name":"includeminlock",
+                "helpText":"Determines whether minimized minutes or locked minutes are included in the report (minutes during which the computer is locked or in screen-saver mode)"
+            },
+            {
+                "name":"italicize",
+                "helpText":"Italicize any screen names that are part of the screen group selected"
+            },
+            {
+                "name":"exclude",
+                "helpText":"Exclude any screens that are part of the screen group selected"
+            },
+            {
+                "name":"includeonly",
+                "helpText":"Only include screens that are part of the screen group selected"
+            },
+            {
+                "name":"alternatelayout",
+                "helpText":"Determines the screen layout of the dashboard (Standard vs Alternate vs Custom)"
+            },
+            {
+                "name":"denominator",
+                "helpText":""
+            },
+            {
+                "name":"fixeddenom",
+                "helpText":""
+            },
+            {
+                "name":"dashboardformat",
+                "helpText":""
+            },
+            {
+                "name":"subreport1",
+                "helpText":""
+            },
+            {
+                "name":"subreport2",
+                "helpText":""
+            },
+            {
+                "name":"subreport3",
+                "helpText":""
+            },
+            {
+                "name":"subreport4",
+                "helpText":""
+            },
+            {
+                "name":"subreport5",
+                "helpText":""
+            },
+            {
+                "name":"subreport6",
+                "helpText":""
+            }
+        ]
+    },
+    {
+        "page": "criteria_dashboard_fst.html",
+        "map":
+        [
+            {
+                "name":"screengraphscaletime",
+                "helpText":""
+            },
+            {
+                "name":"screengraphscalehits",
+                "helpText":""
+            },
+            {
+                "name":"entitlementsscale",
+                "helpText":""
+            },
+            {
+                "name":"pagesort1",
+                "helpText":""
+            },
+            {
+                "name":"pagesort2",
+                "helpText":""
+            },
+            {
+                "name":"pagesort3",
+                "helpText":""
+            },
+            {
+                "name":"pagesort4",
+                "helpText":""
+            },
+            {
+                "name":"maxminutes",
+                "helpText":""
+            },
+            {
+                "name":"screensort",
+                "helpText":"Determines the variable according to which the Top 20 Screens and Launchpad subreports will be sorted—choose between Foreground Minutes, Background Minutes, Total Minutes (Foreground + Background), and Hits"
+            },
+            {
+                "name":"includeminlock",
+                "helpText":"Determines whether minimized minutes or locked minutes are included in the report (minutes during which the computer is locked or in screen-saver mode)"
+            },
+            {
+                "name":"alternatelayout",
+                "helpText":"Determines the screen layout of the dashboard (Standard vs Alternate vs Custom)"
+            },
+            {
+                "name":"denominator",
+                "helpText":""
+            },
+            {
+                "name":"fixeddenom",
+                "helpText":""
+            },
+            {
+                "name":"dashboardformat",
+                "helpText":""
+            },
+            {
+                "name":"subreport1",
+                "helpText":""
+            },
+            {
+                "name":"subreport2",
+                "helpText":""
+            },
+            {
+                "name":"subreport3",
+                "helpText":""
+            },
+            {
+                "name":"subreport4",
+                "helpText":""
+            },
+            {
+                "name":"subreport5",
+                "helpText":""
+            },
+            {
+                "name":"subreport6",
+                "helpText":""
+            }
+        ]
+    },
+    {
+        "page": "criteria_dashboard_gen.html",
+        "map":
+        [
+            {
+                "name":"screengraphscaletime",
+                "helpText":""
+            },
+            {
+                "name":"screengraphscalehits",
+                "helpText":""
+            },
+            {
+                "name":"entitlementsscale",
+                "helpText":""
+            },
+            {
+                "name":"pagesort1",
+                "helpText":""
+            },
+            {
+                "name":"pagesort2",
+                "helpText":""
+            },
+            {
+                "name":"pagesort3",
+                "helpText":""
+            },
+            {
+                "name":"pagesort4",
+                "helpText":""
+            },
+            {
+                "name":"maxminutes",
+                "helpText":""
+            },
+            {
+                "name":"applicationname",
+                "helpText":"Selects the market data application for which data will be shown on this report"
+            },
+            {
+                "name":"screensort",
+                "helpText":"Determines the variable according to which the Top 20 Screens and Launchpad sub-reports will be sorted—choose between Foreground Minutes, Background Minutes, Total Minutes (Foreground + Background), and Hits"
+            },
+            {
+                "name":"includeminlock",
+                "helpText":"Determines whether minimized minutes or locked minutes are included in the report (minutes during which the computer is locked or in screen-saver mode)"
+            },
+            {
+                "name":"alternatelayout",
+                "helpText":"Determines the screen layout of the dashboard (Standard vs Alternate vs Custom)"
+            },
+            {
+                "name":"denominator",
+                "helpText":""
+            },
+            {
+                "name":"fixeddenom",
+                "helpText":""
+            },
+            {
+                "name":"dashboardformat",
+                "helpText":""
+            },
+            {
+                "name":"subreport1",
+                "helpText":""
+            },
+            {
+                "name":"subreport2",
+                "helpText":""
+            },
+            {
+                "name":"subreport3",
+                "helpText":""
+            },
+            {
+                "name":"subreport4",
+                "helpText":""
+            },
+            {
+                "name":"subreport5",
+                "helpText":""
+            },
+            {
+                "name":"subreport6",
+                "helpText":""
+            }
+        ]
+    },
+    {
+        "page": "criteria_heatmap.html",
+        "map":
+        [
+            {
+                "name":"xaxis",
+                "helpText":"Determines the variable to be displayed on the X-Axis. Choose User Name, Subscription SID, UUID, Access Point ID, Region, Country, Cost Code, Department, or Desk "
+            },
+            {
+                "name":"xaxistop",
+                "helpText":"Allows X-Axis to be grouped by Region, Country, Cost Code, Department, or Desk, or to have no grouping (None)"
+            },
+            {
+                "name":"swapxy",
+                "helpText":"Allows axes to be swapped so that dates display along the X-Axis instead of the YAxis"
+            },
+            {
+                "name":"datasource",
+                "helpText":"Determines the data source used to create the heat map. Choose to use Foreground+Background Minutes, Foreground Minutes, Background Minutes, Total Minutes (includes Locked and Minimized Minutes), or Hits as the data source to create the heat map"
+            },
+            {
+                "name":"lowval",
+                "helpText":"Set the lower cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"mediumval",
+                "helpText":"Set the lower-middle cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"medium2val",
+                "helpText":"Set the upper-middle cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"highval",
+                "helpText":"Set the upper cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"showwhitespace",
+                "helpText":""
+            },
+            {
+                "name":"shownocapture",
+                "helpText":""
+            },
+            {
+                "name":"showfulldaterange",
+                "helpText":"Allows for the option to display the full date range selected (leaving this box unchecked will result in a heat map covering one month of usage)"
+            },
+            {
+                "name":"sortbygraphdata",
+                "helpText":"Allows for data to be sorted and displayed according to usage"
+            },
+            {
+                "name":"cutoff",
+                "helpText":"Number of days to include in the report. Days after the cutoff will not be displayed"
+            },
+            {
+                "name":"highlow",
+                "helpText":"Users with the most total usage over the selected date range are listed first if checked"
+            }
+        ]
+    },
+    {
+        "page": "criteria_heatmap_gen.html",
+        "map":
+        [
+            {
+                "name":"applicationname",
+                "helpText":"Name of the market data application for which data will be displayed on this report"
+            },
+            {
+                "name":"xaxis",
+                "helpText":"Determines the variable to be displayed on the X-Axis. Choose User Name, Inventory ID, Region, Country, Cost Code, Department, or Desk. "
+            },
+            {
+                "name":"xaxistop",
+                "helpText":"Allows X-Axis to be grouped by Region, Country, Cost Code, Department, or Desk, or to have no grouping (None)"
+            },
+            {
+                "name":"swapxy",
+                "helpText":"Allows axes to be swapped so that dates display along the X-Axis instead of the Y-Axis"
+            },
+            {
+                "name":"datasource",
+                "helpText":"Determines the data source used to create the heat map. Choose to use Foreground+Background Minutes, Foreground Minutes, Background Minutes, Total Minutes (includes Locked and Minimized Minutes), or Hits as the data source to create the heat map"
+            },
+            {
+                "name":"lowval",
+                "helpText":"Set the lower cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"mediumval",
+                "helpText":"Set the lower-middle cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"medium2val",
+                "helpText":"Set the upper-middle cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"highval",
+                "helpText":"Set the upper cutoff values for light blue to dark blue fills"
+            },
+            {
+                "name":"showwhitespace",
+                "helpText":""
+            },
+            {
+                "name":"shownocapture",
+                "helpText":""
+            },
+            {
+                "name":"showfulldaterange",
+                "helpText":"Allows for the option to display the full date range selected (leaving this box unchecked will result in a heat map covering one month of usage)"
+            },
+            {
+                "name":"sortbygraphdata",
+                "helpText":"Allows for data to be sorted and displayed according to usage"
+            },
+            {
+                "name":"cutoff",
+                "helpText":"Number of days to include in the report. Days after the cutoff will not be displayed"
+            },
+            {
+                "name":"highlow",
+                "helpText":"Users with the most total usage over the selected date range are listed first if checked"
+            }
+        ]
+    },
+    {
+        "page": "criteria_tabular_bbg.html",
+        "map":
+        [
+            {
+                "id":"Report15",
+                "reportName":"Screen Usage Summary",
+                "helpText":"Lists the screens accessed by each user along with time and hits. This report contains the details that are used to create the Dashboard Top 20 Screens sub-report."
+            },
+            {
+                "id":"Report14",
+                "reportName":"Screen Usage Details",
+                "helpText":"Lists the screens accessed by each user per day along with time and hits."
+            },
+            {
+                "id":"Report7",
+                "reportName":"Launchpad Usage Summary",
+                "helpText":" Lists the Launchpad windows accessed by each user along with time and hits. This report contains the details used to create the Dashboard Launchpad sub-report."
+            },
+            {
+                "id":"Report6",
+                "reportName":"Launchpad Usage Details",
+                "helpText":" Lists the Launchpad windows accessed by each user per day along with time and hits."
+            },
+            {
+                "id":"Report11",
+                "reportName":"Messaging Usage (Agent) Summary",
+                "helpText":"Lists the number and types of incoming and outgoing Bloomberg messages."
+            },
+            {
+                "id":"Report10",
+                "reportName":"Messaging Usage (Agent) Details",
+                "helpText":"Lists the number and types of incoming and outgoing Bloomberg messages per day."
+            },
+            {
+                "id":"Report5",
+                "reportName":"IB Chat Usage (Agent) Summary",
+                "helpText":"Lists the counts of Instant Bloomberg sessions"
+            },
+            {
+                "id":"Report4",
+                "reportName":"IB Chat Usage (Agent) Details",
+                "helpText":"Lists the counts of Instant Bloomberg sessions per day"
+            },
+            {
+                "id":"Report13",
+                "reportName":"News Usage Summary",
+                "helpText":"Lists the counts of news services accessed. This provides the details behind the Dashboard News sub-report"
+            },
+            {
+                "id":"Report12",
+                "reportName":"News Usage Details",
+                "helpText":"Lists the counts of news services accessed per day"
+            },
+            {
+                "id":"Report22",
+                "reportName":"Terminal Usage Summary",
+                "helpText":"Lists the log file collection and usage statistics by terminal. This providesthe details behind the Dashboard Status sub-reports."
+            },
+            {
+                "id":"Report21",
+                "reportName":"Terminal Usage Details",
+                "helpText":"Lists the log file collection and usage statistics by terminal per day"
+            },
+            {
+                "id":"Report30",
+                "reportName":"Logged In Time Summary",
+                "helpText":"Time the user was logged in to Bloomberg"
+            },
+            {
+                "id":"Report29",
+                "reportName":"Logged In Time Details",
+                "helpText":"Time the user was logged in to Bloomberg per day"
+            },
+            {
+                "id":"Report1",
+                "reportName":"Entitlements Usage Summary",
+                "helpText":" Lists entitlement hits"
+            },
+            {
+                "id":"Report0",
+                "reportName":"Entitlements Usage Details",
+                "helpText":" Lists entitlement hits per day"
+            },
+            {
+                "id":"Report3",
+                "reportName":"Exchange Usage Summary",
+                "helpText":"Lists exchange hits"
+            },
+            {
+                "id":"Report2",
+                "reportName":"Exchange Usage Details",
+                "helpText":"Lists exchange hits per day"
+            },
+            {
+                "id":"Report20",
+                "reportName":"Terminal Instances Summary",
+                "helpText":"Lists the Access Point SID and SID Inst Numbers for all data collected"
+            },
+            {
+                "id":"Report28",
+                "reportName":"Non-Reporting Details",
+                "helpText":"Lists terminals not reporting data"
+            },
+            {
+                "id":"Report32",
+                "reportName":"Screen Usage Days Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report31",
+                "reportName":"Screen Usage Days Details",
+                "helpText":""
+            },
+            {
+                "id":"Report34",
+                "reportName":"Launchpad Usage Days Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report33",
+                "reportName":"Launchpad Usage Days Details",
+                "helpText":""
+            },
+            {
+                "id":"Report17",
+                "reportName":"Terminal Audit Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report16",
+                "reportName":"Terminal Audit Details",
+                "helpText":""
+            },
+            {
+                "id":"Report9",
+                "reportName":"Messaging Addresses Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report8",
+                "reportName":"Messaging Addresses Details",
+                "helpText":""
+            },
+            {
+                "id":"Report26",
+                "reportName":"TSAPI Usage Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report25",
+                "reportName":"TSAPI Usage Details",
+                "helpText":""
+            },
+            {
+                "id":"Report23",
+                "reportName":"Ticker Counts Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report27",
+                "reportName":"Unmatched Tickers Details",
+                "helpText":""
+            }
+        ]
+    },
+    {
+        "page": "criteria_tabular_fst.html",
+        "map":
+        [
+            {
+                "id":"Report6",
+                "reportName":"Screen Usage Summary",
+                "helpText":"Lists the screens accessed by each user along with time and hits. This report contains the details that are used to create the Dashboard Top 20 Screens sub-report. "
+            },
+            {
+                "id":"Report5",
+                "reportName":"Screen Usage Details",
+                "helpText":"Lists the screens accessed by each user per day along with time and hits."
+            },
+            {
+                "id":"Report2",
+                "reportName":"Company Usage Summary",
+                "helpText":"Lists the companies searched, and the number of hits on each company. This report contains the details used to create the Dashboard Company sub-report."
+            },
+            {
+                "id":"Report1",
+                "reportName":"Company Usage Details",
+                "helpText":"Lists the companies searched, and the number of hits on each company per day"
+            },
+            {
+                "id":"Report4",
+                "reportName":"Download Usage Summary",
+                "helpText":"Lists the download count. This report provides the details behind the Dashboard Download sub-report."
+            },
+            {
+                "id":"Report3",
+                "reportName":"Download Usage Details",
+                "helpText":"Lists the download count per day."
+            },
+            {
+                "id":"Report14",
+                "reportName":"Entitlement Usage Summary",
+                "helpText":"Lists the entitlements used. This report contains the details used to create the Dashboard Entitlement sub-report."
+            },
+            {
+                "id":"Report13",
+                "reportName":"Entitlement Usage Details",
+                "helpText":"Lists the entitlements used per day."
+            },
+            {
+                "id":"Report12",
+                "reportName":"Terminal Usage Summary",
+                "helpText":"Lists the log file collection and usage statistics by terminal. This provides the details behind the Dashboard Status sub-reports."
+            },
+            {
+                "id":"Report11",
+                "reportName":"Terminal Usage Details",
+                "helpText":"Lists the log file collection and usage statistics by terminal per day"
+            },
+            {
+                "id":"Report17",
+                "reportName":"Logged In Time Summary",
+                "helpText":"Time the user was logged in to Bloomberg"
+            },
+            {
+                "id":"Report16",
+                "reportName":"Logged In Time Details",
+                "helpText":"Time the user was logged in to Bloomberg per day"
+            },
+            {
+                "id":"Report8",
+                "reportName":"Terminal Audit Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report7",
+                "reportName":"Terminal Audit Details",
+                "helpText":""
+            },
+            {
+                "id":"Report10",
+                "reportName":"Computer Audit Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report9",
+                "reportName":"Computer Audit Details",
+                "helpText":""
+            },
+            {
+                "id":"Report15",
+                "reportName":"Non-Reporting Summary",
+                "helpText":"Lists terminals not reporting data"
+            }
+        ]
+    },
+    {
+        "page": "criteria_tabular_gen.html",
+        "map":
+        [
+            {
+                "id":"Report6",
+                "reportName":"Screen Usage Summary",
+                "helpText":"Lists the screens accessed by each user along with time and hits. This report contains the details that are used to create the Dashboard Top 20 Screens sub-report. "
+            },
+            {
+                "id":"Report5",
+                "reportName":"Screen Usage Details",
+                "helpText":"Lists the screens accessed by each user along with time and hits per day"
+            },
+            {
+                "id":"Report3",
+                "reportName":"Exchange Usage Summary",
+                "helpText":"Lists exchange hits"
+            },
+            {
+                "id":"Report2",
+                "reportName":"Exchange Usage Details",
+                "helpText":"Lists exchange hits per day"
+            },
+            {
+                "id":"Report12",
+                "reportName":"Terminal Usage Summary",
+                "helpText":"Lists the log file collection and usage statistics by terminal. This provides the details behind the Dashboard Status sub-reports."
+            },
+            {
+                "id":"Report11",
+                "reportName":"Terminal Usage Details",
+                "helpText":" Lists the log file collection and usage statistics by terminal per day."
+            },
+            {
+                "id":"Report8",
+                "reportName":"Terminal Audit Summary",
+                "helpText":""
+            },
+            {
+                "id":"Report7",
+                "reportName":"Terminal Audit Details",
+                "helpText":""
+            },
+            {
+                "id":"Report15",
+                "reportName":"Non-Reporting Summary",
+                "helpText":"Lists terminals not reporting data"
+            }
+        ]
+    },
+    {
+        "page": "dailydash_criteria.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"DateFrom",
+                "helpText":"Indicate the desired starting date for the report"
+            },
+            {
+                "name":"DateTo",
+                "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
+            },
+            {
+                "name":"ThroughToday",
+                "helpText":"When checked, the report will cover the past seven weeks"
+            },
+            {
+                "name":"fromlogs",
+                "helpText":"Days with fewer logs processed than this first value will be marked red, others will be marked yellow or green."
+            },
+            {
+                "name":"tologs",
+                "helpText":"Days with more logs processed than this second value will be marked green, others will be marked red or yellow."
+            },
+            {
+                "name":"fromsec",
+                "helpText":"Days with processing less than this first value will be marked green, others will be marked yellow or red."
+            },
+            {
+                "name":"tosec",
+                "helpText":"Days with processing more than this second value will be marked red, others will be marked yellow or green."
+            },
+            {
+                "name":"versions",
+                "helpText":"A comma separated list of allowable MMG Agent versions (without the dots)."
+            },
+            {
+                "name":"fromver",
+                "helpText":"Days with fewer valid agents than this first value will be marked red, others will be marked yellow or green."
+            },
+            {
+                "name":"tover",
+                "helpText":"Days with more valid agents than this second value will be marked green, others will be marked red or yellow."
+            }
+        ]
+    },
+    {
+        "page": "adhoc_criteria.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "name":"sql",
+                "helpText":"Create specialized reports by connecting directly to the database. Please contact MMG Partners for more information about Ad-Hoc reporting."
+            }
+        ]
+    },
+    {
+        "page": "audit_criteria.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "name":"DateFrom",
+                "helpText":"Indicate the desired starting date for the report"
+            },
+            {
+                "name":"DateTo",
+                "helpText":"Indicate the desired ending date for the report. Ignored if \"Through Today\" is checked."
+            },
+            {
+                "name":"ErrorsOnly",
+                "helpText":""
+            }
+        ]
+    },
+    {
+        "page": "bloomberg_inventory.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "id":"Report0",
+                "reportName":"Inventory Mismatch",
+                "helpText":"The Bloomberg Inventory Mismatch Report lists the differences between the monthly SID and Entitlements files from Bloomberg and the Inventory (FITS, MDM) output."
+            },
+            {
+                "id":"Report1",
+                "reportName":"SID File Usage",
+                "helpText":"The SID File Usage Report lists all terminals in the Bloomberg SID file and information about recent data capture for each of them."
+            }
+        ]
+    },
+    {
+        "page": "bloomberg_messaging.html",
+        "map":
+        [
+            {
+                "name":"MessageCount",
+                "helpText":"Specify the number of messaging addresses to display for each Bloomberg message type. Typing in a value of 0 will select the top 1 message of each message type."
+            }
+        ]
+    },
+    {
+        "page": "health_criteria.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            }
+        ]
+    },
+    {
+        "page": "status_criteria.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            },
+            {
+                "name":"rptyear",
+                "helpText":""
+            },
+            {
+                "name":"rptmonth",
+                "helpText":""
+            },
+            {
+                "name":"rpttype",
+                "helpText":""
+            }
+        ]
+    },
+    {
+        "page": "user_list_report.html",
+        "map":
+        [
+            {
+                "name":"reportname",
+                "helpText":"Name for reference under custom reports"
+            },
+            {
+                "name":"OutputXLS",
+                "helpText":"Select tabular report export format"
+            }
+        ]
+    }
     ]
 }
-]

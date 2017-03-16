@@ -1,0 +1,69 @@
+<!--PARTIAL BODY-->
+<form method=post action="/controlpanel/bloomberg_groups.html" id=configform>
+<input type=hidden id=SaveType name=SaveType value=Add>
+<table border=0 width="100%">
+ <tr>
+  <td class=bodypadding>&nbsp;</td>
+  <td colspan=3 class="fieldheader"><!--RENDER TITLE--></td>
+ </tr>
+ <tr><td colspan=4>&nbsp;</td></tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td width="45%" class=fieldcaption>Bloomberg Screens</td>
+  <td>&nbsp;</td>
+  <td class=fieldcaption width="45%"><select style="width:95%;" onChange="ChangeItem();" id=GroupID name=GroupID size=1><!--RENDER GROUPID--></select></td>
+ </tr>
+ <tr valign=center>
+  <td>&nbsp;</td>
+  <td class=fieldvalue align=left><select style="width:95%;" multiple name=Valid size=16><!--RENDER VALID--></select></td>
+  <td align=center style="padding-right:15px;">
+   <input type=button name=Add id=Add value="-->" onClick="AddItems();"><br><br>
+   <input type=button name=Remove id=Remove value="<--" onClick="RemoveItems();">
+  </td>
+  <td class=fieldvalue align=left><select style="width:95%;" multiple name=Invalid size=16><!--RENDER INVALID--></select></td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td class=fieldvalue colspan=2><input type=text size=23 name=NewGroup> <input type=button onClick="NewItem();" value="Add Group"></td>
+  <td class=fieldvalue><input type=button onClick="DeleteItem();" value="Delete Selected Group"></td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td colspan=3 class=fielderror><!--RENDER MESSAGE--></td>
+ </tr>
+</table>
+</form>
+<!--ENDPARTIAL-->
+<!--PARTIAL HEADERSCRIPTS-->
+<script>
+function PageReady() {
+}
+
+function AddItems() {
+ document.getElementById("SaveType").value="Add";
+ document.forms["configform"].submit();
+}
+function ChangeItem() {
+ document.getElementById("SaveType").value="Change";
+ document.forms["configform"].submit();
+}
+function DeleteItem() {
+ var msg = 'Are you sure you want to delete ';
+ var elem = document.getElementById('GroupID');
+ msg += elem.options[elem.selectedIndex].text;
+ msg += '?';
+ if (confirm(msg)) {
+  document.getElementById("SaveType").value="Delete";
+  document.forms["configform"].submit();
+ }
+}
+function NewItem() {
+ document.getElementById("SaveType").value="New";
+ document.forms["configform"].submit();
+}
+function RemoveItems() {
+ document.getElementById("SaveType").value="Remove";
+ document.forms["configform"].submit();
+}
+</script>
+<!--ENDPARTIAL-->
