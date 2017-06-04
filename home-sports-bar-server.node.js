@@ -1006,9 +1006,9 @@ var fetchCurrentProgram = function(response, channelId) {
 var fetchGuideNbcsn = function(response) {
 	console.log("Requesting program guide for nbcsn...")
 
-	var schedulePath = "/data/splash_data.json"
+	var schedulePath = "/api/v1/events_schedule/1188966"
 	var scheduleRequest = HTTP.request({
-		host: 'stream.nbcsports.com',
+		host: 'www.nbcsports.com',
 		path: schedulePath,
 
 		// headers: {
@@ -1395,7 +1395,7 @@ var fetchGuideWatchEspn = function(response) {
 	var currentDay = currentDate.getDate()
 	var scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
 
-	var schedulePath = "/watchespn/index"
+	var schedulePath = "/watch/schedule"
 	console.log("Requesting program guide for watchEspn " + scheduleDate + "...")
 	var scheduleRequest = HTTP.request({
 		host: 'www.espn.com',
@@ -1415,25 +1415,28 @@ var fetchGuideWatchEspn = function(response) {
 			var events = []
 
 			var cheerioBox = Cheerio.load(scheduleBody)
-			var eventItems = cheerioBox('li[id^=eid-]')
+			var eventItems = cheerioBox('tr')
 			eventItems.each(function(index, element) {
 				var eventItem = cheerioBox(element)
+				var eventName = cheerioBox('.schedule__competitors a', eventItem).text().trim()
+				var eventId = cheerioBox('.collection_item--one', eventItem).attr("data-id")
 
-				var eventName = cheerioBox('.event', eventItem).text().replace("(Blacked out on ESPN3 - View Map)", "").replace("Closed captioning available", "").trim()
-				var eventId = eventItem.attr('id').split("-")[1]
+				var eventUrl = cheerioBox('a', eventItem).attr("href")
 
-				var eventTime = cheerioBox('.time', eventItem).text()
-				var eventChannel = cheerioBox('.channel-logo', eventItem).text()
+				var eventTime = cheerioBox('.schedule__time', eventItem).text()
+				var eventChannel = cheerioBox('.schedule__network img', eventItem).attr("alt")
 
 				//console.log(eventItem.html().magenta)
 
-				events.push({
-					"eventName": eventName,
-					"eventId": eventId,
-					"url": "http://www.espn.com/watchespn/player/_/id/" + eventId + "/",
-					"time": eventTime,
-					"channel": eventChannel
-				})
+				if (eventName.length != 0) {
+					events.push({
+						"eventName": eventName,
+						"eventId": eventId,
+						"url": "http://www.espn.com/" + eventUrl,
+						"time": eventTime,
+						"channel": eventChannel
+					})
+				}
 			})
 
 			var result = {"events": events}

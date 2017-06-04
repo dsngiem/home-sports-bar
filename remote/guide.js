@@ -914,25 +914,25 @@ $(document).ready(function () {
 	}
 
 	var espnChannelRank = {
-		"ESPN": 1,
-		"ESPN2": 2,
-		"ESPNU": 3,
-		"ESPNEWS": 4,
-		"SEC": 5,
-		"LONGHORN": 6,
-		"ESPNDEPORTES": 7,
-		"ESPN3": 8
+		"espn1": 1,
+		"espn2": 2,
+		"espnu": 3,
+		"espnews": 4,
+		"sec": 5,
+		"longhorn": 6,
+		"espndeportes": 7,
+		"espn3": 8
 	}
 
 	var espnChannelMap = {
-		"ESPN": "ESPN",
-		"ESPN2": "ESPN2",
-		"ESPNU": "ESPNU",
-		"ESPNEWS": "ESPNews",
-		"SEC": "SEC Network",
-		"LONGHORN": "Longhorn Network",
-		"ESPNDEPORTES": "ESPN Deportes",
-		"ESPN3": "ESPN3"
+		"espn1": "ESPN",
+		"espn2": "ESPN2",
+		"espnu": "ESPNU",
+		"espnews": "ESPNews",
+		"sec": "SEC Network",
+		"longhorn": "Longhorn Network",
+		"espndeportes": "ESPN Deportes",
+		"espn3": "ESPN3"
 	}
 
 	var getGuideWatchEspn = function () {
@@ -972,6 +972,7 @@ $(document).ready(function () {
 
 					alt = alt.split(" ").join('</span><span class="programTitle">')
 					html += '<span class="programTitle">' + alt + '</span> '
+					//html += '<span class="timeDisplay"> ' + "" + '</span>'
 					html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + '</span>'
 					html += '<span class="episodeTitle"></span>'
 					html += '<span class="flags">' + (espnChannelMap[currentValue.channel] != undefined ? espnChannelMap[currentValue.channel] : currentValue.channel) + '</span>'

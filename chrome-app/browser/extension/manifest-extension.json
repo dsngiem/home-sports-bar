@@ -309,7 +309,7 @@
         "all_frames": true
     },
     {
-        "matches": ["https://video2.timewarnercable.com/liveTv*", "https://video2.timewarnercable.com/auth*"],
+        "matches": ["https://video2.timewarnercable.com/liveTv*", "https://watch.spectrum.net/livetv*", "https://video2.timewarnercable.com/auth*", "https://watch.spectrum.net/auth*"],
         "js": ["twc.js", "logins/twc-live.js"],
         "css": ["twc.css"],
         "all_frames": true
