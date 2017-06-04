@@ -1432,7 +1432,7 @@ var fetchGuideWatchEspn = function(response) {
 					events.push({
 						"eventName": eventName,
 						"eventId": eventId,
-						"url": "http://www.espn.com/" + eventUrl,
+						"url": "http://www.espn.com" + eventUrl,
 						"time": eventTime,
 						"channel": eventChannel
 					})
