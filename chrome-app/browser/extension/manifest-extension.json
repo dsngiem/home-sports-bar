@@ -95,6 +95,11 @@
         "all_frames": true
     },
     {
+        "matches": ["http://www.espn.com/watch/player?*"],
+        "css": ["watchespn.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://espn.go.com/watchespn/index/*", "http://www.espn.com/watchespn/index/*"],
         "js": ["watchespn.js"],
         "all_frames": true
@@ -247,6 +252,12 @@
         "matches": ["http://www.tntdrama.com/watchtnt/*", "http://www.tbs.com/watchtbs/*", "http://www.trutv.com/live/*"],
         "js": ["tnt.js"],
         "css": ["tnt.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["https://chaturbate.com/*", "https://www.chaturbate.com/*"],
+        "js": ["chaturbate.js"],
+        "css": ["chaturbate.css"],
         "all_frames": true
     },
     {

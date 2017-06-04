@@ -50,7 +50,7 @@
 		"channelIdTvGuide": "29044",
 		"baseIdTvGuide": "85061",
 		"color": "#00285A",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/FS2_logo_2015.svg/200px-FS2_logo_2015.svg.png",
 		"urls": [
 		{
 			"source": "FSGO",
@@ -598,7 +598,7 @@
 		"channelIdTvGuide": "37293",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/06/BeIN_SPORTS_logo.png/200px-BeIN_SPORTS_logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/BeIN_Sports.png/220px-BeIN_Sports.png",
 		"urls": [
 		{
 			"source": "TWC",
@@ -617,7 +617,7 @@
 		"channelIdTvGuide": "36938",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/0/06/BeIN_SPORTS_logo.png/200px-BeIN_SPORTS_logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/BeIN_Sports.png/220px-BeIN_Sports.png",
 		"urls": [
 		{
 			"source": "TWC",
@@ -742,7 +742,7 @@
 		"channelIdTvGuide": "14597",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/IONTelevision.svg/100px-IONTelevision.svg.png"
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/IMN_logo_final.svg/100px-IMN_logo_final.svg.png"
 	},
 	{
 		"name": "wnju",
@@ -760,7 +760,7 @@
 		"channelIdTvGuide": "14479",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Univision_2013_logo.png/200px-Univision_2013_logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/3/38/Univision41NY.png",
 		"urls": [
 		{
 			"source": "DirecTV",
@@ -921,7 +921,7 @@
 		"channelIdTvGuide": "22057",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/5/5e/Aunet.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Audience.png/200px-Audience.png",
 		"urls": [
 		{
 			"source": "DirecTV",
@@ -1006,7 +1006,7 @@
 		"channelIdTvGuide": "23186",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/9/90/BET_Logo.svg/250px-BET_Logo.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/BET_Logo.svg/250px-BET_Logo.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -1158,6 +1158,21 @@
 		]
 	},
 	{
+		"name": "cmt-music",
+		"alt": "CMT Music",
+		"channelId": "10138",
+		"channelIdTvGuide": "20732",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/f/fa/CMT_Music_Channel_Logo.png",
+		"urls": [
+		{
+			"source": "DirecTV",
+			"url": "https://tv.xfinity.com/live/5510196310798077105/CMTM"
+		}
+		]
+	},
+	{
 		"name": "cnbc",
 		"alt": "CNBC",
 		"channelId": "58780",
@@ -1219,11 +1234,33 @@
 		{
 			"source": "1",
 			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN1H"
-		},
+		}
+		]
+	},
+	{
+		"name": "cspan-2",
+		"alt": "CSPAN2",
+		"channelId": "10162",
+		"channelIdTvGuide": "442",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
+		"urls": [
 		{
 			"source": "2",
 			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN2D"
-		},
+		}
+		]
+	},
+	{
+		"name": "cspan-3",
+		"alt": "CSPAN3",
+		"channelId": "17665",
+		"channelIdTvGuide": "442",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
+		"urls": [
 		{
 			"source": "3",
 			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN3H"
@@ -1256,7 +1293,7 @@
 		"channelIdTvGuide": "19978",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Discovery_Channel_International.svg/190px-Discovery_Channel_International.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Discovery_logo_2013.png/150px-Discovery_logo_2013.png",
 		"urls": [
 		{
 			"source": "TWC",
@@ -1891,6 +1928,21 @@
 		]
 	},
 	{
+		"name": "hallmarkmoviesmysteries",
+		"alt": "Hallmark Movies & Mysteries",
+		"channelId": "46710",
+		"channelIdTvGuide": "24329",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Hallmark_movies_mysteries.png/220px-Hallmark_movies_mysteries.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/7889068523651137105/HMMHD"
+		}
+		]
+	},
+	{
 		"name": "hgtv",
 		"alt": "HGTV",
 		"channelId": "49788",
@@ -2042,7 +2094,7 @@
 	},
 	{
 		"name": "movieplex",
-		"alt": "Movieplex",
+		"alt": "MoviePlex",
 		"channelId": "15295",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Movieplex_logo.svg/250px-Movieplex_logo.svg.png",
@@ -2050,6 +2102,32 @@
 		{
 			"source": "xfinity",
 			"url": "https://tv.xfinity.com/live/Watch/5596388634105521105/PLEXD"
+		}
+		]
+	},
+	{
+		"name": "retroplex",
+		"alt": "RetroPlex",
+		"channelId": "49767",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Retroplex_logo.svg/125px-Retroplex_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7828172597900264105/RETHD"
+		}
+		]
+	},
+	{
+		"name": "indieplex",
+		"alt": "IndiePlex",
+		"channelId": "49751",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Indieplex_logo.svg/125px-Indieplex_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/4843993438465076105/INDHD"
 		}
 		]
 	},
@@ -2084,6 +2162,21 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/MTV2-HD-333?format=HD"
+		}
+		]
+	},
+	{
+		"name": "tres",
+		"alt": "tr3s",
+		"channelId": "18715",
+		"channelIdTvGuide": "33898",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tr3%CC%81s_TV_Network_2010.svg/200px-Tr3%CC%81s_TV_Network_2010.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/5099759802973064105/TR3s"
 		}
 		]
 	},
@@ -2198,6 +2291,21 @@
 		]
 	},
 	{
+		"name": "nickmusic",
+		"alt": "Nick Music",
+		"channelId": "30418",
+		"channelIdTvGuide": "20730",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/NickMusic.svg/256px-NickMusic.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/7294331549102474105/NICM"
+		}
+		]
+	},
+	{
 		"name": "nickjr",
 		"alt": "Nick Jr.",
 		"channelId": "19211",
@@ -2268,7 +2376,7 @@
 		"channelIdTvGuide": "1220",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/89/Outdoor_Channel.svg/199px-Outdoor_Channel.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Outdoor_Channel_2017.png/220px-Outdoor_Channel_2017.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2426,6 +2534,10 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Reelz_Channel_Logo.png/200px-Reelz_Channel_Logo.png",
 		"urls": [
 		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/4964028528928906105/RLZHD"
+		},
+		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/ReelzChannel-HD-238?format=HD"
 		}
@@ -2534,6 +2646,19 @@
 		]
 	},
 	{
+		"name": "primotv",
+		"alt": "primo TV",
+		"channelId": "101879",
+		"color": "#000000",
+		"image": "https://en.wikipedia.org/wiki/File:Primo_TV_logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/4801348007321041105/PRIMO"
+		}
+		]
+	},
+	{
 		"name": "starz",
 		"alt": "starz",
 		"channelId": "12719",
@@ -2555,7 +2680,7 @@
 		"channelIdTvGuide": "19916",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/4696354068600397163?width=121&height=87&bg=WHITE",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Starz_Edge_2016.svg/125px-Starz_Edge_2016.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2570,7 +2695,7 @@
 		"channelIdTvGuide": "24600",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/8869618193667289163?width=121&height=87&bg=WHITE",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Starz_In_Black_2016.svg/125px-Starz_In_Black_2016.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2585,7 +2710,7 @@
 		"channelIdTvGuide": "19917",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/6263871685002421163?width=121&height=87&bg=WHITE",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Starz_Kids_%26_Family_2016.svg/125px-Starz_Kids_%26_Family_2016.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2600,7 +2725,7 @@
 		"channelIdTvGuide": "24589",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/6892846710612644163?width=121&height=87&bg=WHITE",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Starz_Cinema_2016.svg/125px-Starz_Cinema_2016.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2615,7 +2740,7 @@
 		"channelIdTvGuide": "19915",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://xfinitytv.comcast.net/xtvapi/tve/image/logo/8666528165464630163?width=121&height=87&bg=WHITE",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Starz_Comedy_2016.svg/125px-Starz_Comedy_2016.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2788,6 +2913,21 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/truTV-HD-246?format=HD"
+		}
+		]
+	},
+	{
+		"name": "up",
+		"alt": "Up",
+		"channelId": "44940",
+		"channelIdTvGuide": "23561",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/WeGetFamily_UPlogo_Orange_reduced.png/200px-WeGetFamily_UPlogo_Orange_reduced.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7858241742464108105/UPHD"
 		}
 		]
 	},

@@ -1,9 +1,8 @@
-#mml_falcon_swf {	
+.video-player-controls-content {
+	z-index: 9999 !important;
+}
+
+.main-player {
 	position: fixed !important;
-	top: 0px !important;
-	left: 0px !important;
-	margin: 0px !important;
-	z-index: 1000 !important;
-	width: 100% !important;
-	height: 100% !important;
+    z-index: 99 !important;
 }
