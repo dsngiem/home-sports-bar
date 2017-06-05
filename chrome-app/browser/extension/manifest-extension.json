@@ -208,11 +208,6 @@
         "all_frames": true
     },
     {
-        "matches": ["http://watchdisneychannel.go.com/live", "http://watchdisneyjunior.go.com/live", "http://watchdisneyxd.go.com/live"],
-        "css": ["disneychannel.css"],
-        "all_frames": true
-    },
-    {
         "matches": ["http://watch.cookingchanneltv.com/live.html", "http://watch.diynetwork.com/live.html", "http://watch.foodnetwork.com/live.html", "http://watch.hgtv.com/live.html"],
         "css": ["cooking.css"],
         "all_frames": true
@@ -337,7 +332,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://abc.go.com/watch-live*", "http://freeform.go.com/watch-live*"],
+        "matches": ["http://abc.go.com/watch-live*", "http://freeform.go.com/watch-live*", "http://watchdisneychannel.go.com/live", "http://watchdisneyjunior.go.com/live", "http://watchdisneyxd.go.com/live"],
         "js": ["abc-live.js"],
         "css": ["abc-live.css"],
         "all_frames": true
