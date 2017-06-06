@@ -493,26 +493,26 @@ $(document).ready(function () {
 
 			if ($.isArray(response.events)) {
 				response.events.forEach(function (currentValue, index, array) {
-					var startTime = moment(currentValue.event_date_time).add(moment().isDST() ? 4 : 5, 'h')
+					var startTime = moment(currentValue.event_date_time)
 					//var durationMin = parseInt(currentValue.EventDuration)
 
 					var currentTime = moment()
-					var endTime = moment(currentValue.expiration_date_time).add(moment().isDST() ? 4 : 5, 'h')
+					//var endTime = moment(currentValue.expiration_date_time)
 
-					if (startTime < currentTime && currentTime < endTime && currentValue.network_display_name == "NBCSN") {
-						console.log(startTime.format("hh:mm"))
-						console.log(currentTime.format("hh:mm"))
-						console.log(endTime.format("hh:mm"))
+					if (currentValue.event_type == "Live") {
+						//console.log(startTime.format("hh:mm"))
+						//console.log(currentTime.format("hh:mm"))
+						//console.log(endTime.format("hh:mm"))
 						//console.log(durationMin)
-						console.log(currentValue)
+						//console.log(currentValue)
 
-						var name = currentValue.event_title
+						var name = currentValue.sport_display_name
 						var source = currentValue.event_id
 						var url = currentValue.destination_url
 
 						var alt = currentValue.event_description
 
-						var timeLeft = moment.duration(endTime.diff(currentTime))
+						//var timeLeft = moment.duration(endTime.diff(currentTime))
 
 						var html = ""
 
@@ -530,10 +530,11 @@ $(document).ready(function () {
 						var programTitle = currentValue.event_title
 						programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + programTitle + '</span> '
-						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
+						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A')
+						// + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 						html += '<span class="episodeTitle"></span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
-						html += '<span class="description">' + '<span class="flags">[' + name + ']</span> ' + alt + '</span>'
+						html += '<span class="description">' + '<span class="flags">[' + currentValue.sport + ']</span> ' + alt + '</span>'
 
 						html += '</div></li>'
 
