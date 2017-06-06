@@ -491,26 +491,26 @@ $(document).ready(function () {
 
 			$("li[id^=NBCSN-]").detach()
 
-			if ($.isArray(response.eventListings)) {
-				response.eventListings.forEach(function (currentValue, index, array) {
-					var startTime = moment(currentValue.EventDateAndTime).add(moment().isDST() ? 4 : 5, 'h')
-					var durationMin = parseInt(currentValue.EventDuration)
+			if ($.isArray(response.events)) {
+				response.events.forEach(function (currentValue, index, array) {
+					var startTime = moment(currentValue.event_date_time).add(moment().isDST() ? 4 : 5, 'h')
+					//var durationMin = parseInt(currentValue.EventDuration)
 
 					var currentTime = moment()
-					var endTime = moment(currentValue.EventDateAndTime).add(moment().isDST() ? 4 : 5, 'h').add(durationMin, 'm')
+					var endTime = moment(currentValue.expiration_date_time).add(moment().isDST() ? 4 : 5, 'h')
 
-					if (startTime < currentTime && currentTime < endTime && currentValue.RSNName == "") {
+					if (startTime < currentTime && currentTime < endTime && currentValue.network_display_name == "NBCSN") {
 						console.log(startTime.format("hh:mm"))
 						console.log(currentTime.format("hh:mm"))
 						console.log(endTime.format("hh:mm"))
-						console.log(durationMin)
+						//console.log(durationMin)
 						console.log(currentValue)
 
-						var name = currentValue.Sport
-						var source = currentValue.EventID
-						var url = currentValue.DestinationURL
+						var name = currentValue.event_title
+						var source = currentValue.event_id
+						var url = currentValue.destination_url
 
-						var alt = currentValue.EventDescription
+						var alt = currentValue.event_description
 
 						var timeLeft = moment.duration(endTime.diff(currentTime))
 
@@ -527,7 +527,7 @@ $(document).ready(function () {
 
 						html += '</div><div class="info" style="">'
 
-						var programTitle = currentValue.EventTitle
+						var programTitle = currentValue.event_title
 						programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + programTitle + '</span> '
 						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'

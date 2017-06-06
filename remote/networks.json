@@ -1787,7 +1787,7 @@
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/220px-FXM_Logo.svg.png",
 		"urls": [
 		{
-			"source": "FX Networks",
+			"source": "FX Networks (Eastern)",
 			"url": "http://www.fxnetworks.com/live-tv/fxm/Eastern"
 		},
 		{
@@ -1795,7 +1795,7 @@
 			"url": "https://watch.spectrum.net/livetv?tmsid=70253"
 		},
 		{
-			"source": "FX Networks",
+			"source": "FX Networks (Pacific)",
 			"url": "http://www.fxnetworks.com/live-tv/fxm/Pacific"
 		}
 		]
@@ -1811,7 +1811,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/Watch/6464688077787938105/FXX"
+			"url": "https://tv.xfinity.com/live/6464688077787938105/FXXHD"
 		},
 		{
 			"source": "DirecTV",
