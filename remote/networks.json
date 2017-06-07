@@ -1168,7 +1168,7 @@
 		"urls": [
 		{
 			"source": "DirecTV",
-			"url": "https://tv.xfinity.com/live/5510196310798077105/CMTM"
+			"url": "https://tv.xfinity.com/live/Watch/5510196310798077105/CMTM"
 		}
 		]
 	},
@@ -1479,7 +1479,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/8536701771102691105/STZEH"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZEH"
 		}
 		]
 	},
@@ -1494,7 +1494,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/8536701771102691105/STZAH"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZAH"
 		}
 		]
 	},
@@ -1509,7 +1509,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/8536701771102691105/EncrFmly"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/EncrFmly"
 		}
 		]
 	},
@@ -1524,7 +1524,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/8536701771102691105/STZSH"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZSH"
 		}
 		]
 	},
@@ -1539,7 +1539,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/8536701771102691105/STZBH"
+			"url": "https://tv.xfinity.com/live/Watch/8536701771102691105/STZBH"
 		}
 		]
 	},
@@ -1811,7 +1811,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/6464688077787938105/FXXHD"
+			"url": "https://tv.xfinity.com/live/Watch/6464688077787938105/FXXHD"
 		},
 		{
 			"source": "DirecTV",
@@ -1923,7 +1923,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/7889068523651137105/HMMHD"
+			"url": "https://tv.xfinity.com/live/Watch/7889068523651137105/HMMHD"
 		}
 		]
 	},
@@ -2161,7 +2161,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/5099759802973064105/TR3s"
+			"url": "https://tv.xfinity.com/live/Watch/5099759802973064105/TR3s"
 		}
 		]
 	},
@@ -2286,7 +2286,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/7294331549102474105/NICM"
+			"url": "https://tv.xfinity.com/live/Watch/7294331549102474105/NICM"
 		}
 		]
 	},
@@ -2501,7 +2501,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/4964028528928906105/RLZHD"
+			"url": "https://tv.xfinity.com/live/Watch/4964028528928906105/RLZHD"
 		},
 		{
 			"source": "DirecTV",
@@ -2620,7 +2620,7 @@
 		"urls": [
 		{
 			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/4801348007321041105/PRIMO"
+			"url": "https://tv.xfinity.com/live/Watch/4801348007321041105/PRIMO"
 		}
 		]
 	},
