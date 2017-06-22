@@ -818,6 +818,21 @@
 		]
 	},
 	{
+		"name": "alj",
+		"alt": "Al Jazeera English",
+		"channelId": "",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Aljazeera_eng.svg/200px-Aljazeera_eng.svg.png",
+		"urls": [
+		{
+			"source": "YouTube",
+			"url": "https://www.youtube.com/watch?v=dp6W0ZcYwE4"
+		}
+		]
+	},
+	{
 		"name": "freeform",
 		"alt": "Freeform",
 		"channelId": "59615",
@@ -1027,6 +1042,10 @@
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Bloomberg_Television_logo.svg/220px-Bloomberg_Television_logo.svg.png",
 		"urls": [
+		{
+			"source": "YouTube",
+			"url": "https://www.youtube.com/watch?v=Ga3maNZ0x0w"
+		},
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Bloomberg-HD-353?format=HD"
@@ -2621,6 +2640,21 @@
 		{
 			"source": "xfinity",
 			"url": "https://tv.xfinity.com/live/Watch/4801348007321041105/PRIMO"
+		}
+		]
+	},
+	{
+		"name": "skynews",
+		"alt": "Sky News",
+		"channelId": "",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sky_News_2015_Logo.svg/250px-Sky_News_2015_Logo.svg.png",
+		"urls": [
+		{
+			"source": "YouTube",
+			"url": "https://www.youtube.com/watch?v=y60wDzZt8yg"
 		}
 		]
 	},

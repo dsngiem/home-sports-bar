@@ -530,7 +530,7 @@ $(document).ready(function () {
 						var programTitle = currentValue.event_title
 						programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
 						html += '<span class="programTitle">' + programTitle + '</span> '
-						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A')
+						html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + '</span>'
 						// + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 						html += '<span class="episodeTitle"></span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
