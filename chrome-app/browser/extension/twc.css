@@ -9,7 +9,5 @@
 	bottom: 0px !important;
 	z-index: 1000 !important;
 	width: 100% !important;
-	height: calc(100% + 45px) !important;
-	height: -moz-calc(100% + 45px) !important;
-	height: -webkit-calc(100% + 45px) !important;
+	height: 100% !important;
 }

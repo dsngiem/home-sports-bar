@@ -332,8 +332,10 @@ function handleLoadRedirect(event) {
 
 function handleNewWindow(event) {
 	event.preventDefault();
+	event.window.attach(document.querySelector('#webview-modal'));
+
 	document.querySelector('#webview-modal').style = "display: block";
-	document.querySelector('#webview-modal').src = event.targetUrl;
+	//document.querySelector('#webview-modal').src = event.targetUrl;
 }
 
 function handleCloseModal(event) {
@@ -347,7 +349,7 @@ function handleLoadRedirectModal(event) {
 	document.querySelector('#webview-modal').style = "display: block";
 	document.querySelector('#webview-modal').src = event.newUrl;
 
-	document.querySelector('#webview-modal').addEventListener('contentload', onContentLoaded);
+	//document.querySelector('#webview-modal').addEventListener('contentload', onContentLoaded);
 }
 
 function onContentLoaded(event) {
@@ -486,7 +488,7 @@ $(document).ready(function () {
 	var errorCount = 0;
 	var timeout = 1;
 	var titleTimeout;
-	var subscriberId = "HSB";
+	var subscriberId = "HSB-JQ";
 
 	if (_frames == 1) {
         //$("#webview-1-title").html(subscriberId)

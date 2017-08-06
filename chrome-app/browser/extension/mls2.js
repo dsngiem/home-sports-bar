@@ -16,12 +16,12 @@ setTimeout(function() {
 
 
 setTimeout(function() {
-	var p0 = document.getElementById('playerObject');
+	var p0 = document.getElementById('video_index');
 	p0.classList.add("bonus");
 }, 5000)
 
 document.documentElement.onmouseover = function() {
-	var p0 = document.getElementById('playerObject');
+	var p0 = document.getElementById('video_index');
 	if (p0.classList.contains("bonus")) {
 		p0.classList.remove("bonus")
 	}
@@ -29,7 +29,7 @@ document.documentElement.onmouseover = function() {
 }
 
 document.documentElement.onmouseout = function() {
-	var p0 = document.getElementById('playerObject');
+	var p0 = document.getElementById('video_index');
 	if (!p0.classList.contains("bonus")) {
 			p0.classList.add("bonus")
 			clearTimeout(mousemoveTimer)
@@ -38,14 +38,14 @@ document.documentElement.onmouseout = function() {
 
 var mousemoveTimer;
 document.documentElement.addEventListener('mousemove', function() {
-	var p0 = document.getElementById('playerObject');
+	var p0 = document.getElementById('video_index');
 	if (p0.classList.contains("bonus")) {
 		p0.classList.remove("bonus")
 	}
 
 	clearTimeout(mousemoveTimer)
 	mousemoveTimer = setTimeout( function() {
-		var p0 = document.getElementById('playerObject');
+		var p0 = document.getElementById('video_index');
 		if (!p0.classList.contains("bonus")) {
 				p0.classList.add("bonus")
 		}
@@ -59,7 +59,7 @@ document.documentElement.addEventListener('mousemove', function() {
 
 
 var reloadFlash = function() {
-	var videoPlayerContainer = document.getElementById('playerContent')
+	var videoPlayerContainer = document.getElementById('video_index')
 	var flashObject = videoPlayerContainer.children[0].cloneNode(true)
 
 	videoPlayerContainer.removeChild(videoPlayerContainer.children[0])
@@ -92,7 +92,7 @@ var windowOnload = function(event) {
 	var w = constraint[0]
 	var h = constraint[1]
 
-	var videoPlayer = document.getElementById('playerObject')
+	var videoPlayer = document.getElementById('video_index')
 	videoPlayer.setAttribute('width', w)
 	videoPlayer.setAttribute('height', h)
 

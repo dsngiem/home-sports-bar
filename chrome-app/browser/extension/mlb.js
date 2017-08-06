@@ -31,7 +31,7 @@ var windowOnload = function(event) {
 	var h = constraint[1]
 
 	var flashvars = document.getElementsByName('flashvars')[0].getAttribute('value')
-	
+
 	var parseFlashvars = function(fv) {
 		var kvPairs = fv.split("&");
 		var kvDictionary = {}
@@ -71,9 +71,9 @@ var checkElementsByNameExists = function(name) {
 		windowOnload()
 	} else {
 		setTimeout(function() {
-			checkElementsByNameExists(name)			
+			checkElementsByNameExists(name)
 		}, 1000)
-	}	
+	}
 }
 
 
