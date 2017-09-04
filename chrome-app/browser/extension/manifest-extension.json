@@ -343,6 +343,16 @@
         "all_frames": true
     },
     {
+        "matches": ["http://cricfree.sc/update/*"],
+        "css": ["cricfree.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://saracatunga.bid/embeds/*"],
+        "css": ["saracatunga.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["https://idp.optimum.net/idp.optimum.net/SSOPOST/metaAlias/realm4/idpv2"],
         "js": ["logins/optimum.js"],
         "all_frames": true

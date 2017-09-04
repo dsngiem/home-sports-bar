@@ -653,6 +653,36 @@
 		]
 	},
 	{
+		"name": "tsn",
+		"alt": "TSN",
+		"channelId": "34313",
+		"channelIdTvGuide": "19695",
+		"baseIdTvGuide": "85061",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/TSN_Logo.svg/181px-TSN_Logo.svg.png",
+		"urls": [
+		{
+			"source": "CricFree",
+			"url": "http://cricfree.sc/update/tsn1.php"
+		}
+		]
+	},
+	{
+		"name": "tsn2",
+		"alt": "TSN2",
+		"channelId": "61474",
+		"channelIdTvGuide": "19695",
+		"baseIdTvGuide": "85061",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/TSN2.svg/180px-TSN2.svg.png",
+		"urls": [
+		{
+			"source": "CricFree",
+			"url": "http://cricfree.sc/update/tsn2.php"
+		}
+		]
+	},
+	{
 		"name": "cnn",
 		"alt": "CNN",
 		"channelId": "58646",
