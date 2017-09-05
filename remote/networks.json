@@ -144,7 +144,7 @@
 		"channelIdTvGuide": "11293",
 		"baseIdTvGuide": "20517",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/NBC_2014_Indent.svg/200px-NBC_2014_Indent.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/WNBC_4_NY.svg/150px-WNBC_4_NY.svg.png",
 		"urls": [
 		{
 			"source": "NBC Live",
@@ -295,7 +295,7 @@
 		"channelIdTvGuide": "20777",
 		"baseIdTvGuide": "85061",
 		"color": "#FF0033",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/ESPN_ews.svg/250px-ESPN_ews.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ESPNews.svg/250px-ESPNews.svg.png",
 		"urls": [
 		{
 			"source": "WatchESPN",
@@ -664,6 +664,10 @@
 		{
 			"source": "CricFree",
 			"url": "http://cricfree.sc/update/tsn1.php"
+		},
+		{
+			"source": "Ustream YX",
+			"url": "http://ustreamyx.com/stream.php?id=tsn1"
 		}
 		]
 	},
@@ -679,6 +683,55 @@
 		{
 			"source": "CricFree",
 			"url": "http://cricfree.sc/update/tsn2.php"
+		},
+		{
+			"source": "Ustream YX",
+			"url": "http://ustreamyx.com/stream.php?id=tsn2"
+		}
+		]
+	},
+	{
+		"name": "tsn3",
+		"alt": "TSN3",
+		"channelId": "90138",
+		"channelIdTvGuide": "19695",
+		"baseIdTvGuide": "85061",
+		"color": "#000000",
+		"image": "https://vignette4.wikia.nocookie.net/logopedia/images/0/0b/TSN3_svg.png/revision/latest/scale-to-width-down/250?cb=20150709183134",
+		"urls": [
+		{
+			"source": "Ustream YX",
+			"url": "http://ustreamyx.com/stream.php?id=tsn3"
+		}
+		]
+	},
+	{
+		"name": "tsn4",
+		"alt": "TSN4",
+		"channelId": "90122",
+		"channelIdTvGuide": "19695",
+		"baseIdTvGuide": "85061",
+		"color": "#000000",
+		"image": "https://vignette3.wikia.nocookie.net/logopedia/images/5/50/Tsn_4_ca.png/revision/latest/scale-to-width-down/250?cb=20150906015754",
+		"urls": [
+		{
+			"source": "Ustream YX",
+			"url": "http://ustreamyx.com/stream.php?id=tsn4"
+		}
+		]
+	},
+	{
+		"name": "tsn5",
+		"alt": "TSN5",
+		"channelId": "90124",
+		"channelIdTvGuide": "19695",
+		"baseIdTvGuide": "85061",
+		"color": "#000000",
+		"image": "https://vignette.wikia.nocookie.net/logopedia/images/a/ac/TSN5_svg.png/revision/latest/scale-to-width-down/250?cb=20150709183505",
+		"urls": [
+		{
+			"source": "Ustream YX",
+			"url": "http://ustreamyx.com/stream.php?id=tsn5"
 		}
 		]
 	},
@@ -915,7 +968,7 @@
 		"channelIdTvGuide": "20419",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/2/2d/AMC_logo_2013.png/200px-AMC_logo_2013.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/AMC_logo_2016.svg/200px-AMC_logo_2016.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -951,7 +1004,7 @@
 		"alt": "ASPiRE",
 		"channelId": "76126",
 		"color": "#000000",
-		"image": "http://www.aspire.tv/wp-content/themes/tvcore/assets/images/logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6a/Aspire_%28TV_network%29_Logo.png/220px-Aspire_%28TV_network%29_Logo.png",
 		"urls": [
 		{
 			"source": "TWC",
@@ -2907,7 +2960,7 @@
 		"channelIdTvGuide": "20519",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Travel_Channel_%28International%29_logo.png/170px-Travel_Channel_%28International%29_logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Travel_Channel_-_Logo.svg/200px-Travel_Channel_-_Logo.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
