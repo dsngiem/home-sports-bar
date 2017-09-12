@@ -131,7 +131,7 @@ var clearProgramGuideCache = function() {
 	programGuideTitle = {}
 	programGuideTitleFetchDate = {}
 	console.log("Program guide cleared".yellow)
-	fetchPreCachePrograms()
+	//fetchPreCachePrograms()
 
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
@@ -143,7 +143,7 @@ var checkActiveConnections = function() {
 	console.log("checking active connections... ".yellow)
 	if (activeConnections == 0) {
 		console.log("active connections == 0, firing precache titles".yellow)
-		fetchPreCacheProgramsTitle()
+		//fetchPreCacheProgramsTitle()
 	} else {
 		checkActiveConnectionsTimeout = setTimeout(function() {
 			checkActiveConnections()
@@ -400,8 +400,12 @@ var playVideo = function(response, parsedUrl) {
 	var video_html = "Ill defined parameters."
 
 	if (video_url) {
+		var video_type = "video/mp4";
+		if (endsWith(URL.parse(video_url).pathname, ".m3u8")) {
+			video_type = "application/x-mpegURL"
+		}
 		video_html = '<!DOCTYPE html><html><head><title>' + video_title + '</title>'
-		video_html += '<!-- Change URLs to wherever Video.js files will be hosted --><link href="/js/video-js/video-js.css" rel="stylesheet" type="text/css"><!-- video.js must be in the <head> for older IEs to work. --><script src="/js/video-js/video.js"></script><!-- Unless using the CDN hosted version, update the URL to the Flash SWF --><script>videojs.options.flash.swf = "/js/video-js/video-js.swf";</script><style type="text/css">body {  margin: 0px;  background-color: black;}.video-js {  position: fixed;}</style></head><body><video id="videoplayer" class="video-js vjs-default-skin" width="100%" height="100%" autoplay controls preload data-setup="{}"><source src="' + video_url + '" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video></body></html>'
+		video_html += '<!-- Change URLs to wherever Video.js files will be hosted --><link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet" type="text/css"><!-- video.js must be in the <head> for older IEs to work. --><script src="https://unpkg.com/video.js/dist/video.js"></script><script src="/js/video-js/videojs-contrib-hls.min.js"></script><!-- Unless using the CDN hosted version, update the URL to the Flash SWF --><script>videojs.options.flash.swf = "/js/video-js/video-js.swf";</script><style type="text/css">body {  margin: 0px;  background-color: black;} .video-js, .vjs-control-bar {  position: fixed !important; }</style></head><body><video id="videoplayer" class="video-js vjs-default-skin" width="100%" height="100%" autoplay controls preload data-setup="{}" style="position: fixed"><source src="' + video_url + '" type="'+ video_type + '" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video></body></html>'
 	} else {
 		console.log(parsedUrl.query)
 		console.log("No url defined.")
