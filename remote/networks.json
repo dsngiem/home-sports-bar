@@ -653,14 +653,18 @@
 		]
 	},
 	{
-		"name": "tsn",
-		"alt": "TSN",
+		"name": "tsn1",
+		"alt": "TSN1",
 		"channelId": "34313",
 		"channelIdTvGuide": "19695",
 		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/TSN_Logo.svg/181px-TSN_Logo.svg.png",
 		"urls": [
+		{
+			"source": "m3u8",
+			"url": "http://peaceful-forest-5547.herokuapp.com/player/video/?url=http%3A%2F%2Fenv-9584212.jl.serv.net.mx%2Ftmg.m3u8%3Fstream%3Dtsn1%26expired%3D842feb507b9107d706bfef6c58bf2e4f%26token%3De7ab6b316fe4f6a4895d7db78355a0cc&title=TSN1"
+		},
 		{
 			"source": "CricFree",
 			"url": "http://cricfree.sc/update/tsn1.php"
@@ -681,6 +685,10 @@
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/TSN2.svg/180px-TSN2.svg.png",
 		"urls": [
 		{
+			"source": "m3u8",
+			"url": "http://peaceful-forest-5547.herokuapp.com/player/video/?url=http%3A%2F%2Fenv-9584212.jl.serv.net.mx%2Ftmg.m3u8%3Fstream%3Dtsn-2%26expired%3D14432262e47e046e8a790850fb674ec3%26token%3De7ab6b316fe4f6a4895d7db78355a0cc&title=TSN2"
+		},
+		{
 			"source": "CricFree",
 			"url": "http://cricfree.sc/update/tsn2.php"
 		},
@@ -700,6 +708,10 @@
 		"image": "https://vignette4.wikia.nocookie.net/logopedia/images/0/0b/TSN3_svg.png/revision/latest/scale-to-width-down/250?cb=20150709183134",
 		"urls": [
 		{
+			"source": "m3u8",
+			"url": "http://peaceful-forest-5547.herokuapp.com/player/video/?url=http%3A%2F%2Fenv-9584212.jl.serv.net.mx%2Ftmg.m3u8%3Fstream%3Dtsn3%26expired%3De4352f8c999327d7a220925b5a22bfef%26token%3De7ab6b316fe4f6a4895d7db78355a0cc&title=TSN3"
+		},
+		{
 			"source": "Ustream YX",
 			"url": "http://ustreamyx.com/stream.php?id=tsn3"
 		}
@@ -715,6 +727,10 @@
 		"image": "https://vignette3.wikia.nocookie.net/logopedia/images/5/50/Tsn_4_ca.png/revision/latest/scale-to-width-down/250?cb=20150906015754",
 		"urls": [
 		{
+			"source": "m3u8",
+			"url": "http://peaceful-forest-5547.herokuapp.com/player/video/?url=http%3A%2F%2Fenv-9584212.jl.serv.net.mx%2Ftmg.m3u8%3Fstream%3Dtsn4%26expired%3Ddf91ba801f2fafded43dfe94c820453b%26token%3De7ab6b316fe4f6a4895d7db78355a0cc&title=TSN4"
+		},
+		{
 			"source": "Ustream YX",
 			"url": "http://ustreamyx.com/stream.php?id=tsn4"
 		}
@@ -729,6 +745,10 @@
 		"color": "#000000",
 		"image": "https://vignette.wikia.nocookie.net/logopedia/images/a/ac/TSN5_svg.png/revision/latest/scale-to-width-down/250?cb=20150709183505",
 		"urls": [
+		{
+			"source": "m3u8",
+			"url": "http://peaceful-forest-5547.herokuapp.com/player/video/?url=http%3A%2F%2Fenv-9584212.jl.serv.net.mx%2Ftmg.m3u8%3Fstream%3Dtsn5%26expired%3De51b3d2fc14b57bdee926ccdd051a9fb%26token%3De7ab6b316fe4f6a4895d7db78355a0cc&title=TSN5"
+		},
 		{
 			"source": "Ustream YX",
 			"url": "http://ustreamyx.com/stream.php?id=tsn5"
