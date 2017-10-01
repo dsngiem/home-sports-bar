@@ -281,8 +281,8 @@
     },
     {
         "matches": ["http://m.mlb.com/network/*"],
-        "js": ["mlb.js"],
-        "css": ["mlb.css"],
+        "js": ["mlb1.js"],
+        "css": ["mlb1.css"],
         "all_frames": true
     },
     {
@@ -345,6 +345,11 @@
     {
         "matches": ["http://cricfree.sc/update/*"],
         "css": ["cricfree.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://sportsarefree.xyz/*/*", "http://sportsarefree.xyz/*"],
+        "css": ["sportsarefree.css"],
         "all_frames": true
     },
     {

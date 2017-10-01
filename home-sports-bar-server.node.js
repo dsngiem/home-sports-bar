@@ -1010,7 +1010,7 @@ var fetchCurrentProgram = function(response, channelId) {
 var fetchGuideNbcsn = function(response) {
 	console.log("Requesting program guide for nbcsn...")
 
-	var schedulePath = "/api/v1/events_schedule/1188966"
+	var schedulePath = "/api/v1/events_schedule/1188966/0"
 	var scheduleRequest = HTTP.request({
 		host: 'www.nbcsports.com',
 		path: schedulePath,

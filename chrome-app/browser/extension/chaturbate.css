@@ -9,3 +9,9 @@
 body {
     overflow: hidden !important;
 }
+
+.chat-box {
+    position: fixed !important;
+    top: 0px !important;
+    right: 0px !important;
+}

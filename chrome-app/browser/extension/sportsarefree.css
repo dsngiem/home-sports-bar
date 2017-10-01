@@ -1,0 +1,38 @@
+[data-player] {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 99999999 !important;
+    background-color: #000000 !important;
+}
+
+
+.container[data-container] {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 99999999 !important;
+    background-color: #000000 !important;
+}
+
+[data-player] div.pointer-enabled {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 99999999 !important;
+    background-color: #000000 !important;
+}
+
+body {
+    overflow: hidden !important;
+}
+
+.media-control[data-media-control] {
+    z-index: 99999999999999 !important;
+}
