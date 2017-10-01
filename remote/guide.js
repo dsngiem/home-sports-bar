@@ -519,7 +519,7 @@ $(document).ready(function () {
 
 						html += '<li class="channel" id="NBCSN-' + source + '" onclick = "void(0)">'
 
-						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="' + image + '" alt="' + alt + '"/></div></div></a>'
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://nbcsports.com' + image + '" alt="' + alt + '"/></div></div></a>'
 
 						html += '<div class="sources" style="display: none;">'
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
