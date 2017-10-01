@@ -486,7 +486,7 @@
 		"channelIdTvGuide": "14796",
 		"baseIdTvGuide": "85061",
 		"color": "#1B3067",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/12/National_Football_League_2008.svg/196px-National_Football_League_2008.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/8/8f/NFL_Network_logo.svg",
 		"urls": [
 		{
 			"source": "NFL Network",
@@ -762,7 +762,7 @@
 		"channelIdTvGuide": "19994",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cnn.svg/230px-Cnn.svg.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/200px-CNN.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -1453,7 +1453,7 @@
 		"channelIdTvGuide": "20708",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Disney_Channel_2014.png/200px-Disney_Channel_2014.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Disney_Channel_2014.svg/800px-Disney_Channel_2014.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -1480,7 +1480,7 @@
 		"channelIdTvGuide": "34384",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/8/83/Disney_Junior_Logo.png/250px-Disney_Junior_Logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Disney_Junior.svg/800px-Disney_Junior.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2498,7 +2498,7 @@
 		"channelIdTvGuide": "1220",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/2/2e/Official_Ovation_Logo_2014.jpg",
+		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Ovation_2013.svg/800px-Ovation_2013.svg.png",
 		"urls": [
 		{
 			"source": "xfinity",
@@ -2657,7 +2657,7 @@
 		"channelIdTvGuide": "19977",
 		"baseIdTvGuide": "889066",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Science_chanell_2011logo.png/150px-Science_chanell_2011logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/6/6d/SCI-network-logo-192x192-v2.png",
 		"urls": [
 		{
 			"source": "Science Channel",

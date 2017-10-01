@@ -509,6 +509,7 @@ $(document).ready(function () {
 						var name = currentValue.sport_display_name
 						var source = currentValue.event_id
 						var url = currentValue.destination_url
+						var image = currentValue.network_image
 
 						var alt = currentValue.event_description
 
@@ -518,7 +519,7 @@ $(document).ready(function () {
 
 						html += '<li class="channel" id="NBCSN-' + source + '" onclick = "void(0)">'
 
-						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png" alt="' + alt + '"/></div></div></a>'
+						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="' + image + '" alt="' + alt + '"/></div></div></a>'
 
 						html += '<div class="sources" style="display: none;">'
 						html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
@@ -791,7 +792,7 @@ $(document).ready(function () {
 
 					html += '<li class="channel" id="' + source + '" onclick = "void(0)">'
 
-					html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/07/NBALogo.svg/100px-NBALogo.svg.png" alt="' + alt + '"/></div></div></a>'
+					html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/NBA_TV.svg" alt="' + alt + '"/></div></div></a>'
 
 					html += '<div class="sources" style="display: none;">'
 					html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
