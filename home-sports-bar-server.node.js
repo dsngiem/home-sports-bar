@@ -42,7 +42,7 @@ port = process.env.PORT || port
 
 /** MODULES **/
 var HTTP = require('http')
-//var HTTPS = require('https')
+var HTTPS = require('https')
 var URL = require('url')
 var FS = require('fs')
 var QS = require('querystring')
@@ -1293,14 +1293,14 @@ var fetchGuideMls = function(response) {
 	var currentDay = currentDate.getDate()
 	var scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
 
-	var schedulePath = "/mlsmdl/schedule?format=xml&year=2016&month=" + currentMonth + "&checksubscription=true"
+	var schedulePath = '/graphql?query=%7B%20%20Schedule(startDate%3A%20"' + scheduleDate + '"%2C%20endDate%3A%20"' + scheduleDate + '")%20%7B%20%20type%20%20copyright%20%20totalItems%20%20totalEvents%20%20totalGames%20%20dates%20%7B%20%20date%20%20totalItems%20%20totalEvents%20%20totalGames%20%20games%20%7B%20%20gamePk%20%20link%20%20gameType%20%20season%20%20gameDate%20%20status%20%7B%20%20abstractGameState%20%20codedGameState%20%20detailedState%20%20statusCode%20%20startTimeTBD%20%20%7D%20%20teams%20%7B%20%20away%20%7B%20%20score%20%20leagueRecord%20%7B%20%20wins%20%20losses%20%20%7D%20%20team%20%7B%20%20id%20%20name%20%20link%20%20abbreviation%20%20shortName%20%20optaId%20%20%7D%20%20%7D%20%20home%20%7B%20%20score%20%20leagueRecord%20%7B%20%20wins%20%20losses%20%20%7D%20%20team%20%7B%20%20id%20%20name%20%20link%20%20abbreviation%20%20shortName%20%20optaId%20%20%7D%20%20%7D%20%20%7D%20%20venue%20%7B%20%20id%20%20name%20%20link%20%20%7D%20%20linescore%20%7B%20%20currentPeriod%20%20minute%20%20time%20%20shootoutInfo%20%7B%20%20home%20%7B%20%20scores%20%20%7D%20%20away%20%7B%20%20scores%20%20%7D%20%20%7D%20%20%7D%20%20broadcasts%20%7B%20%20name%20%20%7D%20%20media%20%7B%20%20name%20%20videos%20%7B%20%20runTime%20%20...%20on%20Airing%20%7B%20%20mediaId%20%20contentId%20%20eventId%20%20programId%20%20type%20%20displayRunTime%20%20linear%20%20feedType%20%20partnerProgramId%20%20genres%20%20keywords%20%7B%20%20promos%20%20%7D%20%20titles%20%7B%20%20language%20%20title%20%20episodeName%20%20descriptionShort%20%20descriptionLong%20%20%7D%20%20mediaConfig%20%7B%20%20state%20%20productType%20%20type%20%20%7D%20%20milestones%20%7B%20%20id%20%20title%20%20milestoneType%20%20keywords%20%7B%20%20type%20%20value%20%20%7D%20%20milestoneTime%20%7B%20%20type%20%20startDatetime%20%20start%20%20%7D%20%20%7D%20%20playbackUrls%20%7B%20%20href%20%20%7D%20%20%7D%20%20...%20on%20Video%20%7B%20%20contentId%20%20type%20%20displayRunTime%20%20description%20%20media%20%7B%20%20playbackUrls%20%7B%20%20href%20%20%7D%20%20%7D%20%20%7D%20%20%7D%20%20%7D%20%20content%20%7B%20%20link%20%20%7D%20%20%7D%20%20%7D%20%20%7D%20%7D%20'
 	console.log("Requesting program guide for mls " + scheduleDate + "...")
-	var scheduleRequest = HTTP.request({
-		host: 'live.mlssoccer.com',
+	var scheduleRequest = HTTPS.request({
+		host: 'cops-prod.live-svcs.mlssoccer.com',
 		path: schedulePath,
 		headers: {
-			'Cookie': 'showScore=true'
 		}
+		//'Cookie': 'showScore=true'
 		// 	'content-type': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 		// 	'connection': 'keep-alive',
 		// 	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:35.0) Gecko/20100101 Firefox/35.0',
@@ -1317,13 +1317,16 @@ var fetchGuideMls = function(response) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for mls sent.")
 
-			var games = []
+			response.writeHead(200, {'Content-Type': 'application/json'});
+			return response.end(scheduleBody)
 
-			var cheerioBox = Cheerio.load(scheduleBody)
-			var gameItems = cheerioBox('game')
-			gameItems.each(function(index, element) {
-				var gameItem = cheerioBox(element)
-				var liveTime = cheerioBox('result', gameItem).text()
+			// var games = []
+
+			// var cheerioBox = Cheerio.load(scheduleBody)
+			// var gameItems = cheerioBox('game')
+			// gameItems.each(function(index, element) {
+			// 	var gameItem = cheerioBox(element)
+			// 	var liveTime = cheerioBox('result', gameItem).text()
 				// teams = gameItem.attr('class').split(/\s+/)
 
 				// var live = false
@@ -1337,45 +1340,45 @@ var fetchGuideMls = function(response) {
 				// 	live = true
 				// }
 
-				var homeTeam = cheerioBox('homeTeamName', gameItem).text()
-				var awayTeam = cheerioBox('awayTeamName', gameItem).text()
+			// 	var homeTeam = cheerioBox('homeTeamName', gameItem).text()
+			// 	var awayTeam = cheerioBox('awayTeamName', gameItem).text()
 
-				var gameId = cheerioBox('gid', gameItem).text()
-				var url = "match/" + gameId
+			// 	var gameId = cheerioBox('gid', gameItem).text()
+			// 	var url = "match/" + gameId
 
-				var gameDate = cheerioBox('gameTime', gameItem).text()
-				var gameTime = cheerioBox('gameTime', gameItem).text()
+			// 	var gameDate = cheerioBox('gameTime', gameItem).text()
+			// 	var gameTime = cheerioBox('gameTime', gameItem).text()
 
-				var live = cheerioBox('isLive', gameItem).text() == "true"
+			// 	var live = cheerioBox('isLive', gameItem).text() == "true"
 
-				var homeScore = cheerioBox('homeScore', gameItem).text()
-				var awayScore = cheerioBox('awayScore', gameItem).text()
+			// 	var homeScore = cheerioBox('homeScore', gameItem).text()
+			// 	var awayScore = cheerioBox('awayScore', gameItem).text()
 
-				//console.log(gameItem.html().magenta)
+			// 	//console.log(gameItem.html().magenta)
 
-				if (awayTeam != "" && homeTeam != "") {
-					games.push({
-						"match": homeTeam + " vs. " + awayTeam,
-						"gameId": gameId,
-						"url": "http://live.mlssoccer.com/mlsmdl/" + url,
-						"date": gameDate,
-						"time": gameTime,
-						"liveTime": liveTime,
-						"homeTeam": homeTeam,
-						"awayTeam": awayTeam,
-						"homeScore": homeScore,
-						"awayScore": awayScore,
-						"live": live
-					})
-				}
-			})
+			// 	if (awayTeam != "" && homeTeam != "") {
+			// 		games.push({
+			// 			"match": homeTeam + " vs. " + awayTeam,
+			// 			"gameId": gameId,
+			// 			"url": "http://live.mlssoccer.com/mlsmdl/" + url,
+			// 			"date": gameDate,
+			// 			"time": gameTime,
+			// 			"liveTime": liveTime,
+			// 			"homeTeam": homeTeam,
+			// 			"awayTeam": awayTeam,
+			// 			"homeScore": homeScore,
+			// 			"awayScore": awayScore,
+			// 			"live": live
+			// 		})
+			// 	}
+			// })
 
-			var result = {"games": games}
+			// var result = {"games": games}
 
-			//console.log(result)
+			// //console.log(result)
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
-			return response.end(JSON.stringify(result))
+			// response.writeHead(200, {'Content-Type': 'application/json'});
+			// return response.end(JSON.stringify(result))
 		})
 
 		scheduleResponse.on('error', function(scheduleError) {
@@ -1609,4 +1612,4 @@ console.log("Server successfully created on port ".green + port.toString().green
 // serverHttps.listen(4433)
 // console.log("HTTPS Server successfully created on port 4433")
 clearSubscribers()
-clearProgramGuideCache()
+//clearProgramGuideCache()

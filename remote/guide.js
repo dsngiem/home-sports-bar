@@ -846,14 +846,15 @@ $(document).ready(function () {
 
 			$("li[id^=MLS-]").detach()
 
-			if ($.isArray(response.games)) {
-				response.games.reverse()
-				response.games.forEach(function (currentValue, index, array) {
-					var startTime = moment(currentValue.date, "YYYY-MM-DD HH:mm:ss.S")
+			if ($.isArray(response.data.Schedule.dates)) {
+				var games = response.data.Schedule.dates[0].games
+				games.reverse()
+				games.forEach(function (currentValue, index, array) {
+					var startTime = moment(currentValue.gameDate)
 					var durationMin = 120
 
 					var currentTime = moment()
-					var endTime = moment(currentValue.date, "YYYY-MM-DD HH:mm:ss.S").add(durationMin, 'm')
+					var endTime = moment(startTime).add(durationMin, 'm')
 
 					var timeUntil = moment.duration(startTime.diff(currentTime))
 					var timeLeft = moment.duration(endTime.diff(currentTime))
@@ -869,9 +870,9 @@ $(document).ready(function () {
 
 
 						var name = "MLS"
-						var source = "MLS-" + currentValue.gameId
-						var url = currentValue.url
-						var alt = currentValue.match
+						var source = "MLS-" + currentValue.gamePk
+						var url = "https://live.mlssoccer.com/video/live/" + currentValue.gamePk
+						var alt = currentValue.media[0].videos[0].titles[0].title
 
 						var html = ""
 
@@ -893,8 +894,8 @@ $(document).ready(function () {
 							+ (moment().isBefore(startTime) ? "(starts in " + timeUntil.humanize() + ")" : (currentTime.isBefore(endTime) ? '(' + timeLeft.humanize() + ' left)' : '')) + '</span>'
 						html += '<span class="episodeTitle"></span>'
 						//html += '<span class="flags">' + flags.join(" &#8226 ") + '</span>'
-						if (currentValue.live == true) {
-							html += '<span class="description">' + '<span class="flags">' + currentValue.homeTeam + " " + currentValue.homeScore + " - " + currentValue.awayScore + " " + currentValue.awayTeam + (currentTime.isBefore(endTime) ? "" : ' FINAL') + '</span>'
+						if (currentValue.linescore.currentPeriod == "SecondHalf" || currentValue.linescore.currentPeriod == "FirstHalf") {
+							html += '<span class="description">' + '<span class="flags">' + currentValue.teams.home.team.name + " " + currentValue.teams.home.score + " - " + currentValue.teams.away.score + " " + currentValue.teams.away.team.name + " " + (currentTime.isBefore(endTime) ? currentValue.linescore.minute : ' FINAL') + '</span>'
 						} else {
 							html += '<span class="description">'// + '<span class="flags">' + currentValue.date + " " + currentValue.time + '</span>'
 						}

@@ -639,6 +639,10 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Big_Ten_Network.png/240px-Big_Ten_Network.png",
 		"urls": [
 		{
+			"source": "FSGO",
+			"url": "https://www.foxsportsgo.com/channel/41547/big-ten-network"
+		},
+		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Big-Ten-Network-HD-610-610?format=HD"
 		},
