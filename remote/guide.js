@@ -846,7 +846,7 @@ $(document).ready(function () {
 
 			$("li[id^=MLS-]").detach()
 
-			if ($.isArray(response.data.Schedule.dates)) {
+			if ($.isArray(response.data.Schedule.dates) && response.data.Schedule.dates.length > 0) {
 				var games = response.data.Schedule.dates[0].games
 				games.reverse()
 				games.forEach(function (currentValue, index, array) {
