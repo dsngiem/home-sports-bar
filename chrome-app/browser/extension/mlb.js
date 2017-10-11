@@ -78,9 +78,9 @@ var checkElementsByNameExists = function(name) {
 
 
 window.addEventListener('resize', function(event) {
-	//windowOnload();
+	windowOnload();
 })
 
 window.addEventListener('load', function() {
-	//checkElementsByNameExists('flashvars')
+	checkElementsByNameExists('flashvars')
 })

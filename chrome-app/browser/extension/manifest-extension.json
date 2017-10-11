@@ -281,8 +281,8 @@
     },
     {
         "matches": ["http://m.mlb.com/network/*"],
-        "js": ["mlb1.js"],
-        "css": ["mlb1.css"],
+        "js": ["mlb.js"],
+        "css": ["mlb.css"],
         "all_frames": true
     },
     {
