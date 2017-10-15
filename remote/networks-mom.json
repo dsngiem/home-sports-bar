@@ -1,0 +1,66 @@
+{
+	"networks": [
+
+	{
+		"name": "wnbc",
+		"alt": "NBC",
+		"channelId": "11705",
+		"channelIdTvGuide": "11293",
+		"baseIdTvGuide": "20517",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/WNBC_4_NY.svg/150px-WNBC_4_NY.svg.png",
+		"urls": [
+		{
+			"source": "NBC Live",
+			"url": "http://www.nbc.com/live"
+		}
+		]
+    },
+
+	{
+		"name": "hgtv",
+		"alt": "HGTV",
+		"channelId": "49788",
+		"channelIdTvGuide": "17119",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Hgtv-2010.png/200px-Hgtv-2010.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/7324914394959750105/HGTVD"
+		}
+		]
+	},
+	{
+		"name": "food",
+		"alt": "Food Network",
+		"channelId": "50747",
+		"channelIdTvGuide": "17546",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Food_Network_New_Logo.png/130px-Food_Network_New_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/8508532143941403105/FOODD"
+		}
+		]
+	},
+	{
+		"name": "msnbc",
+		"alt": "MSNBC",
+		"channelId": "64241",
+		"channelIdTvGuide": "23408",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/5064998174375437105/MSNBC"
+		}
+		]
+	}
+	]
+}
