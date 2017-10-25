@@ -339,7 +339,7 @@ var server = HTTP.createServer(
 
 
 				} else if (parsedUrl["pathname"] == "/api/guide") {
-					return fetchGuide(response)
+					return fetchGuide(response, parameters)
 
 				} else if (parsedUrl["pathname"] == "/api/guide/channel") {
 					var channel = parameters["channel"]
@@ -605,15 +605,17 @@ var deleteSubscriber = function(response, parameters) {
 
 
 /** GUIDE FUNCTIONS **/
-var fetchGuide = function(response) {
+var fetchGuide = function(response, parameters) {
 	console.log("Requesting program guide...")
 
 	var post_count = parameters["count"]
 	var post_offset = parameters["offset"]
+	var post_time = Moment().unix()
 
-	var schedulePath = "/tvgrid/_xhr/schedule?time=&lineupid=USA-DITV-DEFAULT&zip=10001&tz=US%2FEastern&searchId=&count=" + post_count + "&offset=" + post_offset
+	//var schedulePath = "/tvgrid/_xhr/schedule?time=&lineupid=USA-DITV-DEFAULT&zip=10001&tz=US%2FEastern&searchId=&count=" + post_count + "&offset=" + post_offset
+	var schedulePath = "/api/grid?lineupId=USA-DITV-DEFAULT&timespan=3&headendId=DITV&country=USA&device=-&postalCode=10027&time=" + post_time + "&pref=-&userId=-"
 	var scheduleRequest = HTTP.request({
-		host: 'www.zap2it.com',
+		host: 'tvlistings.gracenote.com',
 		path: schedulePath
 
 	}, function(scheduleResponse) {
@@ -1586,8 +1588,8 @@ var fetchPreCachePrograms = function() {
 			var channelId = currentValue.channelId;
 
 			networksByChannelId[channelId] = currentValue;
-			fetchGuideChannelGrid(null, channelId);
-			fetchGuideChannelTitle(null, channelId);
+			fetchGuide(null, channelId);
+			//fetchGuideChannelTitle(null, channelId);
 		}
 
 		console.log('Guide prefetched.'.yellow);

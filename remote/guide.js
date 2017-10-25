@@ -1409,6 +1409,7 @@ $(document).ready(function () {
 		var offset = 100;
 
 		console.log("Getting all channels...")
+		//getGuide();
 		getGuidePrograms()
 	}
 
@@ -1432,6 +1433,7 @@ $(document).ready(function () {
 	window.onfocus = function () {
 		console.log("Window on focus");
 		getGuidePrograms();
+		//getGuide();
 		getGuideNbcsn();
 		adjustScheduleTime()
 	}
