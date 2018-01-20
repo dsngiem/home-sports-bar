@@ -131,7 +131,8 @@ var clearProgramGuideCache = function() {
 	programGuideTitle = {}
 	programGuideTitleFetchDate = {}
 	console.log("Program guide cleared".yellow)
-	//fetchPreCachePrograms()
+	fetchNetworks()
+	fetchGuide(null, null)
 
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
@@ -348,6 +349,12 @@ var server = HTTP.createServer(
 				}  else if (parsedUrl["pathname"] == "/api/guide/channel/title") {
 					var channel = parameters["channel"]
 					return fetchGuideChannelTitle(response, channel)
+
+				}  else if (parsedUrl["pathname"] == "/api/guide/channel/tvguide") {
+					var channel = parameters["channel"]
+					var channelId = parameters["channelId"]
+					var baseId = parameters["baseId"]
+					return fetchGuideChannelTvGuide(response, channel, channelId, baseId)
 
 				}  else if (parsedUrl["pathname"] == "/api/guide/channel/program") {
 					var channel = parameters["channel"]
@@ -608,8 +615,8 @@ var deleteSubscriber = function(response, parameters) {
 var fetchGuide = function(response, parameters) {
 	console.log("Requesting program guide...")
 
-	var post_count = parameters["count"]
-	var post_offset = parameters["offset"]
+	//var post_count = parameters["count"]
+	//var post_offset = parameters["offset"]
 	var post_time = Moment().unix()
 
 	//var schedulePath = "/tvgrid/_xhr/schedule?time=&lineupid=USA-DITV-DEFAULT&zip=10001&tz=US%2FEastern&searchId=&count=" + post_count + "&offset=" + post_offset
@@ -627,11 +634,57 @@ var fetchGuide = function(response, parameters) {
 		})
 
 		scheduleResponse.on('end', function() {
+			var channels = JSON.parse(scheduleBody).channels
+
+			channels.forEach(function(element, index, array) {
+				var channel = element.channelId
+				var programs = []
+				var programItems = element.events
+
+				var pushProgram = function(pItem) {
+					var time = pItem.startTime
+					var title = pItem.program.title
+					var description = pItem.program.shortDesc
+					var episode = pItem.program.episodeTitle
+					var icons = pItem.flag.join(' ')
+					var duration = pItem.duration
+					var genre = pItem.filter
+
+					programs.push({
+						"time": time,
+						"title": title,
+						"episode": episode,
+						"icons": icons,
+						"duration": duration,
+						"genre": genre,
+						"episode": episode,
+						"description": description
+					})
+				}
+
+				programItems.forEach(function(element, index, array) {
+					var programItem = element
+
+					pushProgram(programItem)
+				})
+
+				programGuideTitle[channel] = programs
+				programGuideTitleFetchDate[channel] = post_time
+				programGuide[channel] = programs
+				programGuideFetchDate[channel] = post_time
+
+				var result = {"channel": channel,
+						"fetchDate": programGuideTitleFetchDate[channel],
+						"programs": programGuideTitle[channel]
+				}
+			})
+
 			console.log("Program guide sent.")
-			console.log(scheduleRequest.headers)
-			console.log(scheduleResponse.headers)
-			response.writeHead(200, {'Content-Type': 'application/json'});
-			return response.end(scheduleBody)
+			//console.log(scheduleRequest.headers)
+			//console.log(scheduleResponse.headers)
+			//response.writeHead(200, {'Content-Type': 'application/json'});
+
+			//return response.end(scheduleBody)
 		})
 
 		scheduleResponse.on('error', function(scheduleError) {
@@ -763,6 +816,11 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 		response.writeHead(200, {'Content-Type': 'application/json'});
 		return response.end(JSON.stringify(result))
+	} else if (typeof networksByChannelId[channel].channelIdTvGuide !== undefined) {
+		var channelIdTvGuide = networksByChannelId[channel].channelIdTvGuide
+		var baseIdTvGuide = networksByChannelId[channel].baseIdTvGuide
+
+		return fetchGuideChannelTvGuide(response, channel, channelIdTvGuide, baseIdTvGuide)
 	}
 
 	var schedulePath = "/tvlistings/ZCSGrid.do?fromTimeInMillis=0&sgt=grid&aid=zap2it&stnNum=" + channel
@@ -865,10 +923,95 @@ var fetchGuideChannelGrid = function(response, channel) {
 	return scheduleRequest.end()
 }
 
-var fetchGuideChannelTvGuide = function(response, channelId, baseId) {
+var fetchGuideChannelTvGuide = function(response, channel, channelId, baseId) {
 // format
 // http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/80001/start/1460817000/duration/20160?channelsourceids=423%7C*&formattype=json
 // http://mobilelistings.tvguide.com/Listingsweb/ws/rest/airings/{base id -- cable 80001, broadcast 901078}/start/{current unix timestamp}/duration/{duration in minutes}}?channelsourceids={channel source ids separated by | (%7c) }}%7C*&formattype=json
+	var post_time = Moment().unix()
+	if (baseId === undefined || baseId == "") {
+		baseId = "85061"
+	}
+
+	var schedulePath = '/Listingsweb/ws/rest/airings/' + baseId + '/start/' + post_time + '/duration/1440?channelsourceids=' + channelId + '%7C*&formattype=json'
+	console.log("Requesting program guide for tvguide " + post_time + "...")
+	var scheduleRequest = HTTP.request({
+		host: 'mobilelistings.tvguide.com',
+		path: schedulePath
+
+	}, function(scheduleResponse) {
+		scheduleResponse.setEncoding('binary')
+
+		var scheduleBody = ""
+		scheduleResponse.on('data', function(chunk) {
+			scheduleBody += chunk
+		})
+
+		scheduleResponse.on('end', function() {
+			console.log("Program guide for tvguide sent.")
+
+			var events = []
+
+			var responseResult = JSON.parse(scheduleBody)
+
+			var programs = []
+			var programItems = responseResult
+
+			var pushProgram = function(pItem) {
+				var time = Moment.unix(pItem.StartTime).format()
+				var title = pItem.Title
+				var description = pItem.CopyText
+				var episode = pItem.EpisodeTitle
+				var icons = pItem.Rating
+				var duration = (pItem.EndTime - pItem.StartTime) / 60
+				var genre = pItem.IsSportsEvent ? "Sports" : ""
+
+				programs.push({
+					"time": time,
+					"title": title,
+					"episode": episode,
+					"icons": icons,
+					"duration": duration,
+					"genre": genre,
+					"episode": episode,
+					"description": description
+				})
+			}
+
+			programItems.forEach(function(element, index, array) {
+				var programItem = element.ProgramSchedule
+
+				pushProgram(programItem)
+			})
+
+			programGuideTitle[channel] = programs
+			programGuideTitleFetchDate[channel] = post_time
+			programGuide[channel] = programs
+			programGuideFetchDate[channel] = post_time
+
+			var result = {"channel": channel,
+					"fetchDate": programGuideTitleFetchDate[channel],
+					"programs": programGuideTitle[channel]
+			}
+
+			response.writeHead(200, {'Content-Type': 'application/json'});
+			return response.end(JSON.stringify(result))
+		})
+
+		scheduleResponse.on('error', function(scheduleError) {
+			console.log("schedule error for tvguide")
+			response.writeHead(200)
+			return response.end(scheduleError.error)
+		})
+	})
+
+	scheduleRequest.on('error', function(scheduleRequestError) {
+		console.log("schedule request error for tvguide".red)
+		console.log("error: ".red + scheduleRequestError.message)
+		response.writeHead(200)
+		return response.end(scheduleRequestError.error)
+	})
+
+	return scheduleRequest.end()
 };
 
 var fetchCurrentProgram = function(response, channelId) {
@@ -1405,10 +1548,10 @@ var fetchGuideWatchEspn = function(response) {
 	var currentDay = currentDate.getDate()
 	var scheduleDate = currentDate.getFullYear() + "-" + (currentMonth < 10 ? "0" : "") + currentMonth + "-" + (currentDay < 10 ? "0" : "") + currentDay
 
-	var schedulePath = "/watch/schedule"
+	var schedulePath = '/api?query=query%20Airings%20(%20%24countryCode%3A%20String!%2C%20%24deviceType%3A%20DeviceType!%2C%20%24tz%3A%20String!%2C%20%24type%3A%20AiringType%2C%20%24categories%3A%20%5BString%5D%2C%20%24networks%3A%20%5BString%5D%2C%20%24packageId%3A%20String%2C%20%24start%3A%20String%2C%20%24end%3A%20String%2C%20%24day%3A%20String%2C%20%24limit%3A%20Int%20)%20%7B%20airings(%20countryCode%3A%20%24countryCode%2C%20deviceType%3A%20%24deviceType%2C%20tz%3A%20%24tz%2C%20type%3A%20%24type%2C%20categories%3A%20%24categories%2C%20networks%3A%20%24networks%2C%20packageId%3A%20%24packageId%2C%20start%3A%20%24start%2C%20end%3A%20%24end%2C%20day%3A%20%24day%2C%20limit%3A%20%24limit%20)%20%7B%20id%20name%20type%20startDateTime%20shortDate%3A%20startDate(style%3A%20SHORT)%20image%20%7B%20url%20%7D%20network%20%7B%20abbreviation%20name%20shortName%20adobeResource%20isIpAuth%20%7D%20sport%20%7B%20id%20name%20abbreviation%20%7D%20league%20%7B%20id%20name%20abbreviation%20%7D%20franchise%20%7B%20id%20name%20%7D%20%7D%20%7D&variables=%7B"countryCode"%3A"US"%2C"deviceType"%3A"DESKTOP"%2C"tz"%3A"UTC-0500"%2C"type"%3A"LIVE"%2C"limit"%3A500%7D&apiKey=0dbf88e8-cc6d-41da-aa83-18b5c630bc5c'
 	console.log("Requesting program guide for watchEspn " + scheduleDate + "...")
 	var scheduleRequest = HTTP.request({
-		host: 'www.espn.com',
+		host: 'watch.product.api.espn.com',
 		path: schedulePath
 
 	}, function(scheduleResponse) {
@@ -1424,17 +1567,17 @@ var fetchGuideWatchEspn = function(response) {
 
 			var events = []
 
-			var cheerioBox = Cheerio.load(scheduleBody)
-			var eventItems = cheerioBox('tr')
-			eventItems.each(function(index, element) {
-				var eventItem = cheerioBox(element)
-				var eventName = cheerioBox('.schedule__competitors a', eventItem).text().trim()
-				var eventId = cheerioBox('.collection_item--one', eventItem).attr("data-id")
+			var responseResult = JSON.parse(scheduleBody)
+			var eventItems = responseResult.data.airings
+			eventItems.forEach(function(element, index) {
+				var eventItem = element
+				var eventName = element.name
+				var eventId = element.id
 
-				var eventUrl = cheerioBox('a', eventItem).attr("href")
+				var eventUrl = "/watch/player?id=" + eventId
 
-				var eventTime = cheerioBox('.schedule__time', eventItem).text()
-				var eventChannel = cheerioBox('.schedule__network img', eventItem).attr("alt")
+				var eventTime = element.startDateTime
+				var eventChannel = element.network.name
 
 				//console.log(eventItem.html().magenta)
 
@@ -1597,6 +1740,27 @@ var fetchPreCachePrograms = function() {
 	})
 }
 
+var fetchNetworks = function() {
+	FS.readFile('./remote/networks.json', function(error, data) {
+		if (error) {
+			return console.log('error fetching networks: '.red + error.message)
+		}
+
+		var networks = JSON.parse(data)
+		for (var i = 0; i < networks.networks.length; i++) {
+			var currentValue = networks.networks[i];
+			var channelId = currentValue.channelId;
+
+			networksByChannelId[channelId] = currentValue;
+			//fetchGuide(null, channelId);
+			//fetchGuideChannelTitle(null, channelId);
+		}
+
+		console.log('Guide prefetched.'.yellow);
+		//fetchPreCacheProgramsTitle();
+	})
+}
+
 var fetchPreCacheProgramsTitle = function() {
 	for (var key in networksByChannelId) {
 		var currentValue = networksByChannelId[key];
@@ -1615,4 +1779,4 @@ console.log("Server successfully created on port ".green + port.toString().green
 // serverHttps.listen(4433)
 // console.log("HTTPS Server successfully created on port 4433")
 clearSubscribers()
-//clearProgramGuideCache()
+clearProgramGuideCache()

@@ -1186,25 +1186,33 @@ $(document).ready(function () {
 
 		if (!$.isEmptyObject(channelGuide) && channelGuide[channel].length > 0) {
 			for (var i = 0; i < channelGuide[channel].length - 1; i++) {
-				var thisChannelTime = channelGuide[channel][i].time
-				var nextChannelTime = channelGuide[channel][i + 1].time
+				var thisChannelTime = moment(channelGuide[channel][i].time)
+				var nextChannelTime = moment(thisChannelTime).add(channelGuide[channel][i].duration, 'minutes')
 
-				if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "AM") {
-					newDay = -1
+				var firstClause = currentTime.isSameOrAfter(thisChannelTime)
+				var secondClause = currentTime.isBefore(nextChannelTime)
+
+				if (currentTime.isSameOrAfter(thisChannelTime) && currentTime.isBefore(nextChannelTime)) {
+					endTime = nextChannelTime
+					break;
 				}
 
-				//if (thisChannelTime.indexOf("AM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "PM") {
+				//if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "AM") {
 				//	newDay = -1
 				//}
 
-				if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
-					newDay += 1
-				}
+				////if (thisChannelTime.indexOf("AM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "PM") {
+				////	newDay = -1
+				////}
 
-				if (moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days') > currentTime) {
-					endTime = moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
-					break
-				}
+				//if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
+				//	newDay += 1
+				//}
+
+				//if (moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days') > currentTime) {
+				//	endTime = moment(nextChannelTime + " " + baseDate, 'h:mm A YYYY-MM-DD').add(newDay, 'days')
+				//	break
+				//}
 			};
 
 			var currentProgram = channelGuide[channel][i]
@@ -1212,7 +1220,7 @@ $(document).ready(function () {
 
 			if (!endTime) {
 				console.log("no time end time for " + channel)
-				endTime = moment(currentProgram.time, "h:mm A").add(1, 'hours')
+				endTime = moment(currentProgram.time).add(currentProgram.duration, 'minutes')
 			}
 
 			//if (endTime.isSame(moment().add(1, 'day').startOf('day'))) {
@@ -1229,50 +1237,51 @@ $(document).ready(function () {
 			// 	}
 			// }
 
-			var baseDateTitle = moment(channelGuideTitleFetchDate[channel]).format('YYYY-MM-DD')
-			var currentTimeTitle = moment()
-			var endTimeTitle = false
-			var newDayTitle = 0
+			//var baseDateTitle = moment(channelGuideTitleFetchDate[channel]).format('YYYY-MM-DD')
+			//var currentTimeTitle = moment()
+			//var endTimeTitle = false
+			//var newDayTitle = 0
 
-			for (var i = 0; i < channelGuideTitle[channel].length - 1; i++) {
-				var thisChannelTime = channelGuideTitle[channel][i].time
-				var nextChannelTime = channelGuideTitle[channel][i + 1].time
+			//for (var i = 0; i < channelGuideTitle[channel].length - 1; i++) {
+			//	var thisChannelTime = channelGuideTitle[channel][i].time
+			//	var nextChannelTime = channelGuideTitle[channel][i + 1].time
 
-				if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && moment(channelGuideTitleFetchDate[channel]).format('A') == "AM") {
-					newDayTitle = -1
-				}
+			//	if (i == 0 && thisChannelTime.indexOf("PM") >= 0 && moment(channelGuideTitleFetchDate[channel]).format('A') == "AM") {
+			//		newDayTitle = -1
+			//	}
 
-				//if (thisChannelTime.indexOf("AM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "PM") {
-				//	newDay = -1
-				//}
+			//	//if (thisChannelTime.indexOf("AM") >= 0 && moment(channelGuideFetchDate[channel]).format('A') == "PM") {
+			//	//	newDay = -1
+			//	//}
 
-				if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
-					newDayTitle += 1
-				}
+			//	if (thisChannelTime.indexOf("PM") >= 0 && nextChannelTime.indexOf("AM") >= 0) {
+			//		newDayTitle += 1
+			//	}
 
-				if (moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days') > currentTime) {
-					endTimeTitle = moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days')
-					break
-				}
-			};
+			//	if (moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days') > currentTime) {
+			//		endTimeTitle = moment(nextChannelTime + " " + baseDateTitle, 'h:mm A YYYY-MM-DD').add(newDayTitle, 'days')
+			//		break
+			//	}
+			//};
 
-			var currentProgramTitle = channelGuideTitle[channel][i]
-			var nextProgramTitle = channelGuideTitle[channel][i + 1]
+			//var currentProgramTitle = channelGuideTitle[channel][i]
+			//var nextProgramTitle = channelGuideTitle[channel][i + 1]
 
-			var programTitle = currentProgramTitle.title
+			var programTitle = currentProgram.title
 			//programTitle = programTitle.split(" ").join('</span><span class="programTitle">')
-			var startTimeDisplay = currentProgram.time
-			var endTimeDisplay = endTime ? endTime.format("h:mm A") : nextProgram.time
-			var episodeTitle = currentProgram.episode
-			var flags = currentProgram.icons == "" ? [] : currentProgram.icons.split(" ")
-			var genre = currentProgram.genre
-			var description = currentProgram.description
+			var startTimeDisplay = moment(currentProgram.time).format("h:mm A")
+			var endTimeDisplay = endTime ? endTime.format("h:mm A") : moment(nextProgram.time).subtract(2, 'hours').format("h:mm A")
+			var episodeTitle = currentProgram.episode === null ? "" : currentProgram.episode
+			var flags = currentProgram.icons == "" || currentProgram.icon === null ? [] : currentProgram.icons.split(" ")
+			var genre = currentProgram.genre === null ? "" : currentProgram.genre
+			var description = currentProgram.description === null ? "" : currentProgram.description
 			var timeLeft = moment.duration(endTime.diff(currentTime))
-			// var duration = currentProgram.duration;
-			if (nextProgram) {
-				var nextEventTitle = endTime ? nextProgramTitle.title : ""
+			var duration = currentProgram.duration;
+
+			if (nextProgram === undefined) {} else {
+				var nextEventTitle = endTime ? nextProgram.title : ""
 				var nextEventEpisode = endTime ? nextProgram.episode : ""
-				nextEventEpisode = nextEventEpisode == "" ? "" : " - " + nextEventEpisode
+				nextEventEpisode = (nextEventEpisode == "" || nextEventEpisode === null) ? "" : " - " + nextEventEpisode
 				var nextFlags = nextProgram.icons == "" ? [] : nextProgram.icons.split(" ")
 				var nextGenre = nextProgram.genre === undefined ? "" : nextProgram.genre;
 			}
@@ -1282,8 +1291,8 @@ $(document).ready(function () {
 			html += '<span class="programTitle">' + programTitle + '</span> '
 			html += '<span class="timeDisplay"> ' + startTimeDisplay + ' - ' + endTimeDisplay + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 			html += '<span class="episodeTitle">' + episodeTitle + '</span>'
-			html += '<span class="description"><span class="genre">' + (genre && genre.length > 0 ? "[" + genre + "]" : "") + ' </span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "") + '</span> ' + description + '</span>'
-			html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' <span class="genre">' + (nextGenre && nextGenre.length > 0 ? "[" + nextGenre + "]" : "") + ' </span><span class="flags">' + ($.isArray(nextFlags) && nextFlags.length > 0 ? "[" + nextFlags.join(" &#8226 ") + "]" : "") + '</span>' //' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
+			html += '<span class="description"><span class="genre">' + (genre && genre.length > 0 ? "[" + capitalize(genre[0].substring(7)) + "]" : "") + ' </span><span class="flags">' + ($.isArray(flags) && flags.length > 0 ? "[" + flags.join(" &#8226 ") + "]" : "") + '</span> ' + description + '</span>'
+			html += nextEventTitle == "" ? "" : '<span class="description">Next: <span class="genre">' + nextEventTitle + nextEventEpisode + ' <span class="genre">' + (nextGenre && nextGenre.length > 0 ? "[" + capitalize(nextGenre[0].substring(7)) + "]" : "") + ' </span><span class="flags">' + ($.isArray(nextFlags) && nextFlags.length > 0 ? "[" + nextFlags.join(" &#8226 ") + "]" : "") + '</span>' //' (' + endTimeDisplay + ' - ' + moment(endTime).add(nextProgram.duration, 'minutes').format("h:mm A") + (moment().isDST() ? ' EDT' : ' EST') + ')</span></span>'
 
 
 			$("#" + channel + " .info").html(html)
@@ -1421,6 +1430,10 @@ $(document).ready(function () {
 			console.log("refreshing channels")
 			refreshChannels();
 		}, 3600000) //every hour
+	}
+
+	var capitalize = function(string) {
+		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
 	publish();

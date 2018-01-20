@@ -219,8 +219,8 @@
 		"name": "wabc",
 		"alt": "ABC",
 		"channelId": "20453",
-		"channelIdTvGuide": "20160",
-		"baseIdTvGuide": "20517",
+		"channelIdTvGuide": "11247",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Wabc_2013.png/175px-Wabc_2013.png",
 		"urls": [
@@ -245,7 +245,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watchespn/player/_/channel/espn1/"
+			"url": "http://www.espn.com/watch/player?network=espn"
 		},
 		{
 			"source": "xfinity",
@@ -272,7 +272,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watchespn/player/_/channel/espn2/"
+			"url": "http://www.espn.com/watch/player?network=espn"
 		},
 		{
 			"source": "xfinity",
@@ -299,7 +299,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watchespn/player/_/channel/espnews/"
+			"url": "http://www.espn.com/watch/player?network=espn"
 		},
 		{
 			"source": "xfinity",
@@ -326,7 +326,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watchespn/player/_/channel/espnu/"
+			"url": "http://www.espn.com/watch/player?network=espnu"
 		},
 		{
 			"source": "xfinity",
@@ -368,7 +368,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watchespn/player/_/channel/sec/"
+			"url": "http://www.espn.com/watch/player?network=sec"
 		},
 		{
 			"source": "xfinity",
@@ -660,8 +660,8 @@
 		"name": "tsn1",
 		"alt": "TSN1",
 		"channelId": "34313",
-		"channelIdTvGuide": "19695",
-		"baseIdTvGuide": "85061",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/TSN_Logo.svg/181px-TSN_Logo.svg.png",
 		"urls": [
@@ -683,8 +683,8 @@
 		"name": "tsn2",
 		"alt": "TSN2",
 		"channelId": "61474",
-		"channelIdTvGuide": "19695",
-		"baseIdTvGuide": "85061",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
 		"color": "#000000",
 		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/TSN2.svg/180px-TSN2.svg.png",
 		"urls": [
@@ -706,8 +706,8 @@
 		"name": "tsn3",
 		"alt": "TSN3",
 		"channelId": "90138",
-		"channelIdTvGuide": "19695",
-		"baseIdTvGuide": "85061",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
 		"color": "#000000",
 		"image": "https://vignette4.wikia.nocookie.net/logopedia/images/0/0b/TSN3_svg.png/revision/latest/scale-to-width-down/250?cb=20150709183134",
 		"urls": [
@@ -725,8 +725,8 @@
 		"name": "tsn4",
 		"alt": "TSN4",
 		"channelId": "90122",
-		"channelIdTvGuide": "19695",
-		"baseIdTvGuide": "85061",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
 		"color": "#000000",
 		"image": "https://vignette3.wikia.nocookie.net/logopedia/images/5/50/Tsn_4_ca.png/revision/latest/scale-to-width-down/250?cb=20150906015754",
 		"urls": [
@@ -744,8 +744,8 @@
 		"name": "tsn5",
 		"alt": "TSN5",
 		"channelId": "90124",
-		"channelIdTvGuide": "19695",
-		"baseIdTvGuide": "85061",
+		"channelIdTvGuide": "",
+		"baseIdTvGuide": "",
 		"color": "#000000",
 		"image": "https://vignette.wikia.nocookie.net/logopedia/images/a/ac/TSN5_svg.png/revision/latest/scale-to-width-down/250?cb=20150709183505",
 		"urls": [
