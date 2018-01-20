@@ -50,11 +50,11 @@ var NS = require('node-static')
 var Colors = require('colors')
 var Cheerio = require('cheerio')
 var Cookies = require('cookies')
-var Moment = require('moment-timezone')
+var Moment = require('moment')
 
 //set default time zone to New York
-Moment().tz("America/New_York").format();
-Moment.tz.setDefault("America/New_York");
+//Moment().tz("America/New_York").format();
+//Moment.tz.setDefault("America/New_York");
 
 
 /** GLOBAL VARIABLES **/
