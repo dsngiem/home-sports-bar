@@ -272,7 +272,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watch/player?network=espn"
+			"url": "http://www.espn.com/watch/player?network=espn2"
 		},
 		{
 			"source": "xfinity",
@@ -299,7 +299,7 @@
 		"urls": [
 		{
 			"source": "WatchESPN",
-			"url": "http://www.espn.com/watch/player?network=espn"
+			"url": "http://www.espn.com/watch/player?network=espnews"
 		},
 		{
 			"source": "xfinity",
