@@ -436,7 +436,7 @@ var addPublisher = function(response, parameters) {
 		if (lastSubscriberFrames) {
 			result["frames"] = lastSubscriberFrames
 
-			response.writeHead(200, {'Content-Type': 'application/json'})
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'})
 			return response.end(JSON.stringify(result))
 		}
 	}
@@ -444,7 +444,7 @@ var addPublisher = function(response, parameters) {
 	result["frames"] = 0
 	result["subscriberIds"] = getKeys(subscribers)
 
-	response.writeHead(200, {"Content-Type": "application/json"})
+	response.writeHead(200, {"Content-Type": "application/json; Charset=UTF-8"})
 	return response.end(JSON.stringify(result))
 }
 
@@ -485,7 +485,7 @@ var handleMessage = function(response, parameters) {
 		var lastSubscriberFrames = subscribers[subscriberId].frames
 
 		if (lastSubscriberResponse) {
-			lastSubscriberResponse.setHeader('Content-Type', 'application/json')
+			lastSubscriberResponse.setHeader('Content-Type', 'application/json; Charset=UTF-8')
 			lastSubscriberResponse.writeHead(200)
 			lastSubscriberResponse.end(JSON.stringify(result))
 
@@ -534,7 +534,7 @@ var sendFrames = function(response, parameters) {
 		var lastSubscriberFrames = subscribers[subscriberId].frames
 
 		if (lastSubscriberResponse) {
-			lastSubscriberResponse.setHeader('Content-Type', 'application/json')
+			lastSubscriberResponse.setHeader('Content-Type', 'application/json; Charset=UTF-8')
 			lastSubscriberResponse.writeHead(200);
 			lastSubscriberResponse.end(JSON.stringify(result))
 
@@ -626,7 +626,7 @@ var fetchGuide = function(response, parameters) {
 		path: schedulePath
 
 	}, function(scheduleResponse) {
-		scheduleResponse.setEncoding('binary')
+		scheduleResponse.setEncoding('utf8')
 
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
@@ -714,7 +714,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 
 		console.log("Sending program guide for channel titles " + channel + " from cache...")
 
-		response.writeHead(200, {'Content-Type': 'application/json'});
+		response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 		return response.end(JSON.stringify(result))
 	}
 
@@ -778,7 +778,7 @@ var fetchGuideChannelTitle = function(response, channel) {
 
 			console.log("Program guide for channel title " + channel + " fetched.")
 			if (response != null) {
-				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
+				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 				return response.end(JSON.stringify(result))
 			}
 		})
@@ -814,7 +814,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 		console.log("Sending program guide for channel " + channel + " from cache...")
 
-		response.writeHead(200, {'Content-Type': 'application/json'});
+		response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 		return response.end(JSON.stringify(result))
 	} else if (typeof networksByChannelId[channel].channelIdTvGuide !== undefined) {
 		var channelIdTvGuide = networksByChannelId[channel].channelIdTvGuide
@@ -900,7 +900,7 @@ var fetchGuideChannelGrid = function(response, channel) {
 
 			console.log("Program guide for channel " + channel + " fetched.")
 			if (response != null) {
-				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
+				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 				return response.end(JSON.stringify(result))
 			}
 		})
@@ -939,7 +939,7 @@ var fetchGuideChannelTvGuide = function(response, channel, channelId, baseId) {
 		path: schedulePath
 
 	}, function(scheduleResponse) {
-		scheduleResponse.setEncoding('binary')
+		scheduleResponse.setEncoding('utf8')
 
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
@@ -993,7 +993,7 @@ var fetchGuideChannelTvGuide = function(response, channel, channelId, baseId) {
 					"programs": programGuideTitle[channel]
 			}
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(JSON.stringify(result))
 		})
 
@@ -1144,7 +1144,7 @@ var fetchCurrentProgram = function(response, channelId) {
 
 		console.log(result);
 
-		response.writeHead(200, {"Content-Type": "application/json"})
+		response.writeHead(200, {"Content-Type": "application/json; Charset=UTF-8"})
 		return response.end(JSON.stringify(result))
 
 	} else {
@@ -1177,7 +1177,7 @@ var fetchGuideNbcsn = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nbcsn sent.")
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(scheduleBody)
 		})
 
@@ -1233,7 +1233,7 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 			console.log(uri)
 			//console.log(scheduleBody)
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(JSON.stringify(result))
 		})
 
@@ -1300,7 +1300,7 @@ var fetchGuideNbcOlympics = function(response, channel) {
 			var result = {"programs": programs};
 
 			if (response != null) {
-				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json'});
+				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 				return response.end(JSON.stringify(result))
 			}
 		})
@@ -1361,7 +1361,7 @@ var fetchGuideNhl = function(response, parameters) {
 			scheduleBody = scheduleBody.trim()
 			scheduleBody = scheduleBody.slice(0, -1)
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(scheduleBody)
 		})
 
@@ -1414,7 +1414,7 @@ var fetchGuideNhlTv = function(response, parameters) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nhl tv sent.")
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(scheduleBody)
 		})
 
@@ -1463,7 +1463,7 @@ var fetchGuideMls = function(response) {
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for mls sent.")
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(scheduleBody)
 
 			// var games = []
@@ -1555,7 +1555,7 @@ var fetchGuideWatchEspn = function(response) {
 		path: schedulePath
 
 	}, function(scheduleResponse) {
-		scheduleResponse.setEncoding('binary')
+		scheduleResponse.setEncoding('utf8')
 
 		var scheduleBody = ""
 		scheduleResponse.on('data', function(chunk) {
@@ -1596,7 +1596,7 @@ var fetchGuideWatchEspn = function(response) {
 
 			//console.log(result)
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(JSON.stringify(result))
 		})
 
@@ -1642,7 +1642,7 @@ var fetchGuideFsgo = function(response) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for fsgo sent.")
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(scheduleBody)
 		})
 
@@ -1700,7 +1700,7 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 
 			//console.log(scheduleBody)
 
-			response.writeHead(200, {'Content-Type': 'application/json'});
+			response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
 			return response.end(scheduleBody)
 		})
 
