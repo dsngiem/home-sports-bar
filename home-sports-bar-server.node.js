@@ -620,7 +620,7 @@ var fetchGuide = function(response, parameters) {
 	var post_time = Moment().unix()
 
 	//var schedulePath = "/tvgrid/_xhr/schedule?time=&lineupid=USA-DITV-DEFAULT&zip=10001&tz=US%2FEastern&searchId=&count=" + post_count + "&offset=" + post_offset
-	var schedulePath = "/api/grid?lineupId=USA-DITV-DEFAULT&timespan=3&headendId=DITV&country=USA&device=-&postalCode=10027&time=" + post_time + "&pref=-&userId=-"
+	var schedulePath = "/api/grid?lineupId=USA-DITV-DEFAULT&timespan=9&headendId=DITV&country=USA&device=-&postalCode=10027&time=" + post_time + "&pref=-&userId=-"
 	var scheduleRequest = HTTP.request({
 		host: 'tvlistings.gracenote.com',
 		path: schedulePath
