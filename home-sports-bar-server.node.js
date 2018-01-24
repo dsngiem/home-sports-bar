@@ -137,7 +137,7 @@ var clearProgramGuideCache = function() {
 	clearProgramGuideCacheTimeout = setTimeout(function() {
 		console.log("Clearing program guide cache...".yellow)
 		clearProgramGuideCache()
-	}, 21600000) //every 6 hours
+	}, 3600000) //every hour
 }
 
 var checkActiveConnections = function() {

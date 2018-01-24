@@ -213,6 +213,11 @@
         "all_frames": true
     },
     {
+        "matches": ["http://watch.foodnetwork.com/live*"],
+        "css": ["foodnetwork.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://watch.diynetwork.com/live.html"],
         "js": ["cooking.js"],
         "all_frames": true
