@@ -471,8 +471,10 @@ var handleMessage = function(response, parameters) {
 		result["url"] = "https://www.youtube.com/embed/" + QS.parse(paramUrl["query"])["v"] + "?autoplay=1"
 	} else if (endsWith(paramUrl.host, "youtu.be")) {
 		result["url"] = "https://www.youtube.com/embed" + paramUrl["pathname"] + "?autoplay=1"
-	} else if (endsWith(paramUrl.host, "twitch.tv")) {
+	} else if (endsWith(paramUrl.host, "twitch.tv") && !startsWith(paramUrl["pathname"], "/videos")) {
 		result["url"] = "http://player.twitch.tv/?volume=1.0&channel=" + paramUrl["pathname"].slice(1)
+	} else if (endsWith(paramUrl.host, "twitch.tv") && startsWith(paramUrl["pathname"], "/videos")) {
+		result["url"] = "http://player.twitch.tv/?volume=1.0&video=" + paramUrl["pathname"].slice(7)
 	}
 	//console.log(paramUrl)
 
