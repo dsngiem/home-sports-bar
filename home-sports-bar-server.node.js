@@ -1271,6 +1271,8 @@ var fetchGuideNbcOlympics = function(response, channel) {
 			var url = pItem.node_url;
 			var image = "http" + pItem.square_image.slice(5);
 			var medalEvent = pItem.medal_event;
+			var startTime = pItem.video_start_date
+			var endTime = pItem.video_end_date
 
 			programs.push({
 				"title": title,
@@ -1279,7 +1281,9 @@ var fetchGuideNbcOlympics = function(response, channel) {
 				"sport": sport,
 				"url": url,
 				"image": image,
-				"medalEvent": medalEvent
+				"medalEvent": medalEvent,
+				"startTime": startTime,
+				"endTime": endTime
 			})
 		}
 

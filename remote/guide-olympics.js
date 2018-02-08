@@ -958,7 +958,9 @@ $(document).ready(function () {
 					var sport = currentValue.sport
 					var image = currentValue.image
 					var medalEvent = currentValue.medalEvent
-
+					var startTime = moment(currentValue.startTime, "X").subtract(0, 'hours')
+					var endTime = moment(currentValue.endTime, "X").subtract(0, 'hours')
+					var timeLeft = moment.duration(endTime.diff(moment()))
 
 					var alt = title + " - " + episode;
 
@@ -976,7 +978,7 @@ $(document).ready(function () {
 					html += '</div><div class="info" style="">'
 
 					html += '<span class="programTitle">' + title + ' - ' + sport + '</span> '
-					//html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
+					html += '<span class="timeDisplay"> ' + startTime.format('hh:mm A') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 					html += '<span class="episodeTitle">' + episode + '</span>'
 					html += '<span class="description">' + '<span class="flags">[Live]' + (medalEvent ? "[Medal Event]" : "") + '</span>' + (description == null ? "" : description) + '</span>'
 
