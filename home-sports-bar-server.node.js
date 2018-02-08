@@ -64,6 +64,7 @@ var programGuideFetchDate = {}
 var programGuideTitle = {}
 var programGuideTitleFetchDate = {}
 var networksByChannelId = {}
+var olympicsCache = null
 
 var clearSubscribersTimeout;
 var clearProgramGuideCacheTimeout;
@@ -1256,9 +1257,61 @@ var fetchGuideNbcsnUrl = function(response, parameters) {
 
 
 var fetchGuideNbcOlympics = function(response, channel) {
+	var sendResponse = function(programItems) {
+		var programs = []
+
+		var pushProgram = function(pItem) {
+			console.log(pItem);
+			var title = pItem.title;
+			var episode = pItem.sub_title;
+			var description = pItem.must_see_headline;
+			var sport = pItem.roofline_text;
+			var url = pItem.node_url;
+			var image = pItem.square_image;
+			var medalEvent = pItem.medal_event;
+
+			programs.push({
+				"title": title,
+				"episode": episode,
+				"description": description,
+				"sport": sport,
+				"url": url,
+				"image": image,
+				"medalEvent": medalEvent
+			})
+		}
+
+		for (var i = 0; i < programItems.length; i++) {
+			var element = programItems[i]
+
+			if (Moment().unix(element.video_start_date) > Moment()) {
+				break;
+			}
+
+			if (Moment().unix(parseInt(element.video_end_date) + 900) > Moment()) {
+				pushProgram(element)
+			}
+		}
+
+		var result = {"programs": programs};
+
+		if (response != null) {
+			response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
+			return response.end(JSON.stringify(result))
+		}
+	}
+
+	if (olympicsCache != null) {
+		console.log("Requesting program guide for NBC Olympics from cache...")
+
+		sendResponse(olympicsCache)
+
+		return;
+	}
+
 	console.log("Requesting program guide for NBC Olympics...")
 
-	var schedulePath = "/live-stream-schedule"
+	var schedulePath = "/api/v1/all_live_streams"
 	var scheduleRequest = HTTP.request({
 		host: 'www.nbcolympics.com',
 		path: schedulePath,
@@ -1273,38 +1326,10 @@ var fetchGuideNbcOlympics = function(response, channel) {
 
 		scheduleResponse.on('end', function() {
 			console.log("Program guide for nbcolympics")
+			var programItems = JSON.parse(scheduleBody)
+			olympicsCache = programItems
 
-			var programs = []
-
-			var cheerioBox = Cheerio.load(scheduleBody);
-			var programItems = cheerioBox(".list-item-row.on-now-row");
-
-			var pushProgram = function(pItem) {
-				console.log(pItem);
-				var title = cheerioBox('.sport-roofline-text', pItem).text().trim();
-				var episode = cheerioBox('.event-data h3', pItem).text().trim();
-
-				var url = cheerioBox('.schedule-item-link', pItem).attr('href');
-
-				programs.push({
-					"title": title,
-					"episode": episode,
-					"url": url
-				})
-			}
-
-			programItems.each(function(index, element) {
-				var programItem = cheerioBox(element)
-
-				pushProgram(programItem)
-			})
-
-			var result = {"programs": programs};
-
-			if (response != null) {
-				response.headersSent ? response.writeHead(200) : response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
-				return response.end(JSON.stringify(result))
-			}
+			sendResponse(programItems)
 		})
 
 		scheduleResponse.on('error', function(scheduleError) {

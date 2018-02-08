@@ -503,7 +503,7 @@
 		"urls": [
 		{
 			"source": "NFL Network",
-			"url": "http://nflnonline.nfl.com/nflno/console.jsp"
+			"url": "https://www.nfl.com/watch/channel/nflnetwork?icampaign=network_watchnfln_watchbtn"
 		},
 		{
 			"source": "FiOS",
@@ -1371,7 +1371,11 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
 		"urls": [
 		{
-			"source": "1",
+			"source": "C-SPAN",
+			"url": "https://www.c-span.org/networks/?channel=c-span"
+		},
+		{
+			"source": "xfinity",
 			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN1H"
 		}
 		]
@@ -1385,6 +1389,10 @@
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
 		"urls": [
+		{
+			"source": "C-SPAN",
+			"url": "https://www.c-span.org/networks/?channel=c-span-2"
+		},
 		{
 			"source": "2",
 			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN2D"
@@ -1400,6 +1408,10 @@
 		"color": "#000000",
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Logo_of_C-SPAN.svg/200px-Logo_of_C-SPAN.svg.png",
 		"urls": [
+		{
+			"source": "C-SPAN",
+			"url": "https://www.c-span.org/networks/?channel=c-span-3"
+		},
 		{
 			"source": "3",
 			"url": "https://tv.xfinity.com/live/Watch/6421427898916050105/CPN3H"

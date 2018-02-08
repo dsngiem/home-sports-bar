@@ -213,6 +213,11 @@
         "all_frames": true
     },
     {
+        "matches": ["https://www.c-span.org/networks/?channel=c-span*", "https://www.c-span.org/networks/?channel=c-span-2*", "https://www.c-span.org/networks/?channel=c-span-3*"],
+        "css": ["cspan.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://watch.foodnetwork.com/live*"],
         "css": ["foodnetwork.css"],
         "all_frames": true
