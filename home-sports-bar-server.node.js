@@ -51,10 +51,12 @@ var Colors = require('colors')
 var Cheerio = require('cheerio')
 var Cookies = require('cookies')
 var Moment = require('moment-timezone')
+//var Moment = require('moment')
+
 
 //set default time zone to New York
-Moment().tz("America/New_York").format();
-Moment.tz.setDefault("America/New_York");
+//Moment().tz("America/New_York").format();
+//Moment.tz.setDefault("America/New_York");
 
 
 /** GLOBAL VARIABLES **/
@@ -1261,13 +1263,13 @@ var fetchGuideNbcOlympics = function(response, channel) {
 		var programs = []
 
 		var pushProgram = function(pItem) {
-			console.log(pItem);
+			//console.log(pItem);
 			var title = pItem.title;
 			var episode = pItem.sub_title;
 			var description = pItem.must_see_headline;
 			var sport = pItem.roofline_text;
 			var url = pItem.node_url;
-			var image = pItem.square_image;
+			var image = "http" + pItem.square_image.slice(5);
 			var medalEvent = pItem.medal_event;
 
 			programs.push({
@@ -1284,11 +1286,11 @@ var fetchGuideNbcOlympics = function(response, channel) {
 		for (var i = 0; i < programItems.length; i++) {
 			var element = programItems[i]
 
-			if (Moment().unix(element.video_start_date) > Moment()) {
+			if (parseInt(element.video_start_date) > new Date() / 1000) {
 				break;
 			}
 
-			if (Moment().unix(parseInt(element.video_end_date) + 900) > Moment()) {
+			if (parseInt(element.video_end_date) > new Date() / 1000) {
 				pushProgram(element)
 			}
 		}

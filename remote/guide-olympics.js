@@ -954,6 +954,11 @@ $(document).ready(function () {
 
 					var title = currentValue.title;
 					var episode = currentValue.episode;
+					var description = currentValue.description;
+					var sport = currentValue.sport
+					var image = currentValue.image
+					var medalEvent = currentValue.medalEvent
+
 
 					var alt = title + " - " + episode;
 
@@ -961,7 +966,7 @@ $(document).ready(function () {
 
 					html += '<li class="channel" id="NBCOlympics-' + source + '" onclick = "void(0)">'
 
-					html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="logo.png" alt="' + alt + '"/></div></div></a>'
+					html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' + url + '" alt="' + alt + '" style="float: left;"><div class="image"><div><img src="' + image + '" alt="' + alt + '"/></div></div></a>'
 
 					html += '<div class="sources" style="display: none;">'
 					html += '<a href="#' + name + '-' + source + '" class="network ' + name + '" src="' +  url + '" alt="' + alt + '"><div><p style="color: #000000">' + name + '</p>'
@@ -970,10 +975,10 @@ $(document).ready(function () {
 
 					html += '</div><div class="info" style="">'
 
-					html += '<span class="programTitle">' + title + '</span> '
+					html += '<span class="programTitle">' + title + ' - ' + sport + '</span> '
 					//html += '<span class="timeDisplay"> ' + startTime.format('hh:mm') + ' - ' + endTime.format('hh:mm A z') + (moment().isDST() ? ' EDT' : ' EST') + ' (' + timeLeft.humanize() + ' left)</span>'
 					html += '<span class="episodeTitle">' + episode + '</span>'
-					html += '<span class="description">' + '<span class="flags">[Live]</span></span>'
+					html += '<span class="description">' + '<span class="flags">[Live]' + (medalEvent ? "[Medal Event]" : "") + '</span>' + (description == null ? "" : description) + '</span>'
 
 					html += '</div></li>'
 
