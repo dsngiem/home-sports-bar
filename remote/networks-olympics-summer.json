@@ -50,6 +50,7 @@
 		}
 		]
 	},
+
 	{
 		"name": "cnbc",
 		"alt": "CNBC",
@@ -70,6 +71,52 @@
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/cnbc"
+		}
+		]
+	},
+	{
+		"name": "golf",
+		"alt": "Golf Channel",
+		"channelId": "61854",
+		"channelIdTvGuide": "20001",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Golf_Channel_Logo.png/220px-Golf_Channel_Logo.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/golfchannel?cmpid=livetv_golf-channel"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/golf"
+		},
+		{
+			"source": "Golf Channel",
+			"url": "http://stream.golfchannel.com/"
+		}
+		]
+	},
+	{
+		"name": "msnbc",
+		"alt": "MSNBC",
+		"channelId": "64241",
+		"channelIdTvGuide": "23408",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSNBC_2008_logo.svg/270px-MSNBC_2008_logo.svg.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/msnbc?cmpid=livetv_msnbc"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/msnbc"
+		},
+		{
+			"source": "MSNBC",
+			"url": "http://www.msnbc.com/now"
 		}
 		]
 	},
@@ -97,17 +144,32 @@
 		]
 	},
 	{
-		"name": "olympic",
-		"alt": "Olympic Channel",
-		"channelId": "88466",
-		"channelIdTvGuide": "88466",
-		"baseIdTvGuide": "889066",
+		"name": "wnju",
+		"alt": "Telemundo",
+		"channelId": "54437",
+		"channelIdTvGuide": "23223",
+		"baseIdTvGuide": "85061",
 		"color": "#000000",
-		"image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Olympic_Channel_logo.png",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Telemundo_logo_2012.svg/200px-Telemundo_logo_2012.svg.png"
+	},
+	{
+		"name": "univo",
+		"alt": "NBC Universo",
+		"channelId": "91588",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NBCUniverso_logo.png/200px-NBCUniverso_logo.png",
 		"urls": [
 		{
-			"source": "Olympic Channel",
-			"url": "https://www.olympicchannel.com/en/channel/olympic-channel/"
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcuniverso?cmpid=livetv_nbc-universo"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/nbcuniverso"
+		},
+		{
+			"source": "NBC Universo",
+			"url": "http://www.nbcuniverso.com/now/live"
 		}
 		]
 	},

@@ -201,6 +201,21 @@
 		]
 	},
 	{
+		"name": "olympic",
+		"alt": "Olympic Channel",
+		"channelId": "88466",
+		"channelIdTvGuide": "88466",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Olympic_Channel_logo.png",
+		"urls": [
+		{
+			"source": "Olympic Channel",
+			"url": "https://www.olympicchannel.com/en/channel/olympic-channel/"
+		}
+		]
+	},
+	{
 		"name": "nhl",
 		"alt": "NHL.TV",
 		"channelId": "58690",
