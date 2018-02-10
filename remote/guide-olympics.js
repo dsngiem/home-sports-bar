@@ -1492,9 +1492,20 @@ $(document).ready(function () {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
+	var refreshOlympicsTimeout;
+	var refreshOlympics = function () {
+		getGuideNbcOlympics();
+
+		refreshOlympicsTimeout = setTimeout(function () {
+			console.log("refreshing olympics")
+			refreshOlympics();
+		}, 60000) //every min
+	}
+
 	publish();
 	getNetworks();
 	refreshChannels();
+	refreshOlympics();
 	//getAllChannels();
 	//var testTimeout = scheduleChannelChange(moment().add(1, 'minute'), 1, "http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1", "FS1", 1689, 82547)
 	//clearTimeout(testTimeout);
@@ -1502,8 +1513,8 @@ $(document).ready(function () {
 	window.onfocus = function () {
 		console.log("Window on focus");
 		getGuidePrograms();
+		//getGuideNbcOlympics();
 		//getGuide();
-		getGuideNbcOlympics();
 		adjustScheduleTime()
 	}
 })
