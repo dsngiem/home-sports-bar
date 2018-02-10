@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 		$("#status").hide()
 
-		publish(post_data)
+		//publish(post_data)
 		return false;
 	})
 
@@ -98,7 +98,7 @@ $(document).ready(function () {
 			}
 		}
 
-		publishMessage(selectedFrame, networkUrl, alt, subscriberId, channelId)
+		//publishMessage(selectedFrame, networkUrl, alt, subscriberId, channelId)
 	})
 
 	function startsWith(str, prefix) {
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
 		// }
 
-		publishMessage(selectedFrame, networkUrl, networkUrl, subscriberId, "custom")
+		//publishMessage(selectedFrame, networkUrl, networkUrl, subscriberId, "custom")
 
 	})
 
@@ -1492,7 +1492,7 @@ $(document).ready(function () {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
-	publish();
+    publish();
 	getNetworks();
 	refreshChannels();
 	//getAllChannels();

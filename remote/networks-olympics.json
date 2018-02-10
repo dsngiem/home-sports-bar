@@ -29,12 +29,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/en/thumb/1/14/NBCSN_logo.png/250px-NBCSN_logo.png",
 		"urls": [
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
-		},
-		{
 			"source": "NBCSN",
 			"url": "http://stream.nbcsports.com/nbcsn/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/nbcsports?cmpid=livetv_nbc-sports"
 		},
 		{
 			"source": "iframe",
@@ -60,12 +60,12 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/180px-CNBC_logo.svg.png",
 		"urls": [
 		{
-			"source": "xfinity",
-			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
-		},
-		{
 			"source": "CNBC",
 			"url": "http://www.cnbc.com/live-tv/"
+		},
+		{
+			"source": "xfinity",
+			"url": "http://xfinitytv.comcast.net/live/network/cnbc?cmpid=livetv_cnbc"
 		},
 		{
 			"source": "FiOS",
@@ -83,16 +83,16 @@
 		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/USA_Network_logo_%282006%29.svg/220px-USA_Network_logo_%282006%29.svg.png",
 		"urls": [
 		{
+			"source": "USA Live",
+			"url": "http://www.usanetwork.com/videos/live"
+		},
+		{
 			"source": "xfinity",
 			"url": "http://xfinitytv.comcast.net/live/network/usa?cmpid=livetv_usa"
 		},
 		{
 			"source": "FiOS",
 			"url": "http://tv.verizon.com/livetv/usa"
-		},
-		{
-			"source": "USA Live",
-			"url": "http://www.usanetwork.com/videos/live"
 		}
 		]
 	},
