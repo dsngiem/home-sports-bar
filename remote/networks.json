@@ -508,6 +508,33 @@
 		]
 	},
 	{
+		"name": "trutv",
+		"alt": "truTV",
+		"channelId": "64490",
+		"channelIdTvGuide": "23561",
+		"baseIdTvGuide": "889066",
+		"color": "#000000",
+		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/TruTV_logo_2014.png/200px-TruTV_logo_2014.png",
+		"urls": [
+		{
+			"source": "xfinity",
+			"url": "https://tv.xfinity.com/live/Watch/5197383487287436105/TRTVD"
+		},
+		{
+			"source": "truTV",
+			"url": "http://www.trutv.com/live/index.html"
+		},
+		{
+			"source": "FiOS",
+			"url": "http://tv.verizon.com/livetv/trutv"
+		},
+		{
+			"source": "DirecTV",
+			"url": "https://www.directv.com/Channels/truTV-HD-246?format=HD"
+		}
+		]
+	},
+	{
 		"name": "nfl",
 		"alt": "NFL Network",
 		"channelId": "45399",
@@ -3033,33 +3060,6 @@
 		{
 			"source": "DirecTV",
 			"url": "https://www.directv.com/Channels/Travel-Channel-HD-277?format=HD"
-		}
-		]
-	},
-	{
-		"name": "trutv",
-		"alt": "truTV",
-		"channelId": "64490",
-		"channelIdTvGuide": "23561",
-		"baseIdTvGuide": "889066",
-		"color": "#000000",
-		"image": "http://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/TruTV_logo_2014.png/200px-TruTV_logo_2014.png",
-		"urls": [
-		{
-			"source": "xfinity",
-			"url": "https://tv.xfinity.com/live/Watch/5197383487287436105/TRTVD"
-		},
-		{
-			"source": "truTV",
-			"url": "http://www.trutv.com/live/index.html"
-		},
-		{
-			"source": "FiOS",
-			"url": "http://tv.verizon.com/livetv/trutv"
-		},
-		{
-			"source": "DirecTV",
-			"url": "https://www.directv.com/Channels/truTV-HD-246?format=HD"
 		}
 		]
 	},

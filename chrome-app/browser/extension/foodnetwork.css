@@ -1,4 +1,4 @@
-#player_140 {
+.video-player > iframe {
     position: fixed !important;
     top: 0px !important;
     left: 0px !important;
