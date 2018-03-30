@@ -532,6 +532,8 @@ var sendFrames = function(response, parameters) {
 
 	result = {}
 	result["frames"] = Number(parameters["frames"])
+	if (parameters["frames"] == "2h")
+		result["frames"] = parameters["frames"]
 
 	//console.log(result)
 	console.log(JSON.stringify(result).grey)
