@@ -541,15 +541,14 @@ $(document).ready(function () {
 								webview2();
 								_frames = 2;
 								break
-							case "2h":
-								webview2h();
-								_frames = "2h";
-								break
 							case 4:
 								webview4();
 								_frames = 4;
 								break
 							default:
+								webview2h();
+								_frames = "2h";
+								break
 						}
 
 						console.log("response received\nframes: " + response["frames"])

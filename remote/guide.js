@@ -41,6 +41,9 @@ $(document).ready(function () {
 		if (frames != 0) {
 			$("#frames").html("")
 
+			if (frames == "2h")
+				frames = 2
+
 			for (var i = 1; i < frames + 1; i++) {
 				var html = '<li id="frame-' + i + '-box"'
 				if (i == 1) {
