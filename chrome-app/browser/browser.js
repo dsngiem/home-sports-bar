@@ -470,6 +470,21 @@ function webview2() {
 	webview4.setAttribute("src", "http://peaceful-forest-5547.herokuapp.com/player/index.html");
 }
 
+function webview2h() {
+	var webview1 = document.querySelector("#webview-1");
+	var webview2 = document.querySelector("#webview-2");
+	var webview3 = document.querySelector("#webview-3");
+	var webview4 = document.querySelector("#webview-4");
+
+	webview1.setAttribute("class", "screens-2h");
+	webview2.setAttribute("class", "screens-2h");
+	webview3.setAttribute("class", "screens-2h");
+	webview4.setAttribute("class", "screens-2h");
+
+	webview3.setAttribute("src", "http://peaceful-forest-5547.herokuapp.com/player/index.html");
+	webview4.setAttribute("src", "http://peaceful-forest-5547.herokuapp.com/player/index.html");
+}
+
 function webview4() {
 	var webview1 = document.querySelector("#webview-1");
 	var webview2 = document.querySelector("#webview-2");
@@ -525,6 +540,10 @@ $(document).ready(function () {
 							case 2:
 								webview2();
 								_frames = 2;
+								break
+							case "2h":
+								webview2h();
+								_frames = "2h";
 								break
 							case 4:
 								webview4();

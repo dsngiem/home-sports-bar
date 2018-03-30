@@ -391,6 +391,9 @@ var server = HTTP.createServer(
 
 				} else if (parsedUrl["pathname"] == "/api/guide/nba") {
 					return fetchGuideNbaLeaguePass(response, parameters)
+
+				} else if (parsedUrl["pathname"] == "/api/guide/ncaa") {
+					return fetchGuideNcaa(response, parameters)
 				}
 
 				console.log(parsedUrl)
@@ -1743,9 +1746,61 @@ var fetchGuideNbaLeaguePass = function(response, parameters) {
 			return response.end(scheduleError.error)
 		})
 	})
+}
+
+
+	var fetchGuideNcaa = function(response, parameters) {
+		console.log("Requesting program guide for ncaa...")
+
+		var scheduleDate = parameters["date"]
+		var currentDate = new Date()
+
+		if (scheduleDate == null) {
+			var currentMonth = currentDate.getMonth() + 1
+			var currentDay = currentDate.getDate()
+			scheduleDate = currentDate.getFullYear() + "/" + (currentMonth < 10 ? "0" : "") + currentMonth + "/" + (currentDay < 10 ? "0" : "") + currentDay
+		}
+		//var schedulePath = "/f/fKc3BC/dSIgD7iSdSrr?range=1-120&form=cjson&count=true&byCustomValue={device}{web},{delivery}{Live},{operatingUnit}{WNYW|FOX|FCSA|FCSC|FCSP|FXDEP|FS1|FS2|BIGE|FSGO|TUDOR|USOPEN|YES|KTTV|FSWHD|PRIME},{channelID}{fspt|foxdep|fs2|fs1|fbc-fox|fcs|fsw|bige|fsgo|tudor|usopen|yes}"
+		//var seasonYear = currentDate.getMonth() < 8 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()
+		//console.log(seasonYear)
+		var schedulePath = "/jsonp/scoreboard/basketball-men/d1/" + scheduleDate + "/scoreboard.html?callback=ncaaScoreboard.dispScoreboard"
+		//var schedulePath = "/data/10s/json/nbacom/" + seasonYear + "/gameline/" + scheduleDate + "/games.json"
+		var scheduleRequest = HTTP.request({
+			host: 'data.ncaa.com',
+			path: schedulePath,
+
+			// headers: {
+			// 	'content-type': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+			// 	'connection': 'keep-alive',
+			// 	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:35.0) Gecko/20100101 Firefox/35.0',
+			// 	'X-Requested-With': 'XMLHttpRequest'
+			// }
+		}, function(scheduleResponse) {
+			//scheduleResponse.setEncoding('binary')
+
+			var scheduleBody = ""
+			scheduleResponse.on('data', function(chunk) {
+				scheduleBody += chunk
+			})
+
+			scheduleResponse.on('end', function() {
+				console.log("Program guide for ncaa march madness.")
+
+				//console.log(scheduleBody)
+
+				response.writeHead(200, {'Content-Type': 'application/json; Charset=UTF-8'});
+				return response.end(scheduleBody)
+			})
+
+			scheduleResponse.on('error', function(scheduleError) {
+				console.log("schedule error for ncaa march madness")
+				response.writeHead(200)
+				return response.end(scheduleError.error)
+			})
+		})
 
 	scheduleRequest.on('error', function(scheduleRequestError) {
-		console.log("schedule request error for nba league pass".red)
+		console.log("schedule request error for ncaa march madness".red)
 		console.log("error: ".red + scheduleRequestError.message)
 	})
 

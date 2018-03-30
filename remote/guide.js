@@ -1370,6 +1370,17 @@ $(document).ready(function () {
 			})
 	})
 
+	$("#numFrames-2h").click(function () {
+		var post_data = { "frames": "2h", "subscriberId": subscriberId }
+
+		$.post("/api/publish/frames", post_data)
+			.done(function (response) {
+				frames = "2h"
+				selectedFrame = 1
+				frameSet();
+			})
+	})
+
 	$("#numFrames-4").click(function () {
 		var post_data = { "frames": 4, "subscriberId": subscriberId }
 

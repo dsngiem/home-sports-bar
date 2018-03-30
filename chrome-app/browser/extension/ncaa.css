@@ -4,5 +4,13 @@
 
 .main-player {
 	position: fixed !important;
-    z-index: 99 !important;
+    z-index: 9999 !important;
+}
+
+#mss-legal-banner {
+	display: none !important;
+}
+
+body {
+	overflow: hidden !important;
 }

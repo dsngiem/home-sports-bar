@@ -32,7 +32,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.ncaa.com/march-madness-live/game/*"],
+        "matches": ["http://www.ncaa.com/march-madness-live/game/*", "https://www.ncaa.com/march-madness-live/game/*"],
         "css": ["ncaa.css"],
         "all_frames": true
     },
