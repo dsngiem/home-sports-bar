@@ -474,7 +474,7 @@ var handleMessage = function(response, parameters) {
 
 	//parse given url
 	var paramUrl = URL.parse(parameters["url"])
-	if (endsWith(paramUrl.host, "youtube.com")) {
+	if (endsWith(paramUrl.host, "youtube.com") && startsWith(paramUrl.pathname, "watch")) {
 		result["url"] = "https://www.youtube.com/embed/" + QS.parse(paramUrl["query"])["v"] + "?autoplay=1"
 	} else if (endsWith(paramUrl.host, "youtu.be")) {
 		result["url"] = "https://www.youtube.com/embed" + paramUrl["pathname"] + "?autoplay=1"
