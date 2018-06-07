@@ -65,7 +65,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.fox.com/live*"],
+        "matches": ["http://www.fox.com/live*", "https://www.fox.com/live*"],
         "js": ["fox.js"],
         "css": ["fox.css"],
         "all_frames": true
@@ -223,6 +223,11 @@
         "all_frames": true
     },
     {
+        "matches": ["https://www.go90.com/videos*"],
+        "css": ["go90.css"],
+        "all_frames": true
+    },
+    {
         "matches": ["http://watch.diynetwork.com/live.html"],
         "js": ["cooking.js"],
         "all_frames": true
@@ -365,6 +370,12 @@
     {
         "matches": ["http://saracatunga.bid/embeds/*"],
         "css": ["saracatunga.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.vh1.com/live-tv*", "https://www.vh1.com/live-tv*"],
+        "css": ["vh1.css"],
+        "js": ["vh1.js"],
         "all_frames": true
     },
     {

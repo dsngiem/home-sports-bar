@@ -227,7 +227,7 @@
         "all_frames": true
     },
     {
-        "matches": ["https://www.directv.com/Channels/*", "https://www.directv.com/entertainment/video/*", "http://www.directv.com/entertainment/video/*"],
+        "matches": ["https://www.directv.com/Channels/*", "https://www.directv.com/entertainment/video/*", "http://www.directv.com/entertainment/video/*", "http://www.directv.com/guide*", "https://www.directv.com/guide*"],
         "js": ["extension/dtv.js"],
         "css": ["extension/dtv.css"],
         "all_frames": true
@@ -278,17 +278,22 @@
         "css": ["extension/nbclive.css"],
         "js": ["extension/nbclive.js"],
         "all_frames": true
-    },   
+    },
     {
         "matches": ["http://abc.go.com/watch-live*"],
         "css": ["extension/abc-live.css"],
         "all_frames": true
-    },    
+    },
+    {
+        "matches": ["https://www.go90.com/videos*"],
+        "css": ["go90.css"],
+        "all_frames": true
+    },
     {
         "matches": ["http://pix11.com/on-air/live-streaming/*"],
         "css": ["extension/pix-11.css"],
         "all_frames": true
-    },    
+    },
     {
         "matches": ["https://idp.optimum.net/idp.optimum.net/SSOPOST/metaAlias/realm4/idpv2"],
         "js": ["extension/logins/optimum.js"],

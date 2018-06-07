@@ -159,7 +159,7 @@ function doLayout() {
 	//webview1.style.width = webviewWidth + 'px';
 	//webview1.style.height = webviewHeight + 'px';
 
-	testCanvas();
+	//testCanvas();
 }
 
 function handleExit(event) {
@@ -231,7 +231,7 @@ function handleKeyDown(event) {
 				break;
 			case 32:
 				event.preventDefault();
-				testCanvas();
+				//testCanvas();
 		}
 	}
 }
@@ -503,7 +503,7 @@ $(document).ready(function () {
 	var errorCount = 0;
 	var timeout = 1;
 	var titleTimeout;
-	var subscriberId = "HSB-JQ";
+	var subscriberId = "VH1";
 
 	if (_frames == 1) {
         //$("#webview-1-title").html(subscriberId)
@@ -578,7 +578,7 @@ $(document).ready(function () {
 								console.log("set name to: " + channelId);
 							});
 
-							testCanvas();
+							//testCanvas();
 						}
 
 						//$("#startup").hide();
