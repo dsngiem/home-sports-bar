@@ -1014,7 +1014,7 @@ $(document).ready(function () {
 
 						var name = currentValue.fsmobile$operatingUnit
 						var source = currentValue.fsmobile$mcpid
-						var url = "http://www.foxsports.com/embed/mcp/" + source
+						var url = "https://www.foxsportsgo.com/register-embed?mcpid=" + source
 
 						var alt = name + " - " + currentValue.title
 
