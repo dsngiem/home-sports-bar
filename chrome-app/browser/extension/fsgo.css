@@ -2,3 +2,7 @@
     position: fixed !important;
     z-index: 9999 !important;
 }
+
+iframe#video_frame {
+    position: fixed !important;
+}

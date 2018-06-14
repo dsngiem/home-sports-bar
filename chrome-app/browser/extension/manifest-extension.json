@@ -59,7 +59,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/channel/*", "https://www.foxsportsgo.com/channel/*"],
+        "matches": ["http://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/event/*", "https://www.foxsportsgo.com/channel/*", "https://www.foxsportsgo.com/channel/*", "https://www.foxsports.com/soccer/fifa-world-cup/*", "https://www.foxsports.com/soccer/fifa-world-cup/*"],
         "js": ["fsgo.js"],
         "css": ["fsgo.css"],
         "all_frames": true
@@ -336,7 +336,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.nbc.com/live*"],
+        "matches": ["http://www.nbc.com/live*", "https://www.nbc.com/live*"],
         "css": ["nbclive.css"],
         "js": ["nbclive.js"],
         "all_frames": true

@@ -550,10 +550,6 @@ $(document).ready(function () {
 				})
 			}
 		})
-
-		nbcsnPost.always(function () {
-			getGuideNhlTv()
-		})
 	}
 
 	var toTitleCase = function (str) {
@@ -641,11 +637,6 @@ $(document).ready(function () {
 				})
 			}
 		})
-
-		nhlPost.always(function () {
-			getGuideMls()
-		})
-
 	}
 
 	var getGuideNhl = function () {
@@ -710,11 +701,6 @@ $(document).ready(function () {
 				})
 			}
 		})
-
-		nhlPost.always(function () {
-			getGuideMls()
-		})
-
 	}
 
 
@@ -835,10 +821,6 @@ $(document).ready(function () {
 				})
 			}
 		})
-
-		nbaPost.always(function () {
-
-		})
 	}
 
 	var getGuideMls = function () {
@@ -913,10 +895,6 @@ $(document).ready(function () {
 			}
 
 		})
-
-		mlsPost.always(function () {
-			getGuideWatchEspn()
-		})
 	}
 
 	var espnChannelRank = {
@@ -989,11 +967,6 @@ $(document).ready(function () {
 				})
 			}
 		})
-
-		watchEspnPost.always(function () {
-			getGuideFsgo();
-
-		})
 	}
 
 	var fsgoChannelRank = {
@@ -1041,7 +1014,7 @@ $(document).ready(function () {
 
 						var name = currentValue.fsmobile$operatingUnit
 						var source = currentValue.fsmobile$mcpid
-						var url = "http://www.foxsports.com/foxsportsgo/?mcpid=" + source
+						var url = "http://www.foxsports.com/embed/mcp/" + source
 
 						var alt = name + " - " + currentValue.title
 
@@ -1084,10 +1057,6 @@ $(document).ready(function () {
 				})
 			}
 		})
-
-		fsgoPost.always(function () {
-			getGuideNba();
-		})
 	}
 
 	var getGuideProgramsTimeout;
@@ -1096,7 +1065,7 @@ $(document).ready(function () {
 			networks.forEach(function (network, index, networkarray) {
 				var channelId = network.channelId
 
-				if (channelGuide[channelId] && moment.duration(moment().diff(channelGuideFetchDate[channelId])).asHours() < 6) {
+				if (channelGuide[channelId] && moment.duration(moment().diff(moment.unix(channelGuideFetchDate[channelId]))).asHours() < 6) {
 					postCurrentProgram(channelId)
 
 				} else {
@@ -1461,7 +1430,14 @@ $(document).ready(function () {
 		console.log("Window on focus");
 		getGuidePrograms();
 		//getGuide();
+
 		getGuideNbcsn();
+		getGuideNba();
+		getGuideNhlTv();
+		getGuideWatchEspn();
+		getGuideFsgo();
+		getGuideMls();
+
 		adjustScheduleTime()
 	}
 })

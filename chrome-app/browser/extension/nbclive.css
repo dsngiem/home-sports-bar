@@ -10,3 +10,16 @@ iframe#nbctveappplayer.bonus {
     none !important;
 	background-color: #000000;
 }
+
+iframe#nbctveappplayer.bonus {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    z-index: 1000000 !important;
+    left: 0px !important;
+    top: 0px !important;
+    cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjbQg61aAAAADUlEQVQYV2P4//8/IwAI/QL/+TZZdwAAAABJRU5ErkJggg=='),
+    url(images/blank.cur),
+    none !important;
+	background-color: #000000;
+}
