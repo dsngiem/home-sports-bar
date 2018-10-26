@@ -1436,7 +1436,7 @@ $(document).ready(function () {
 		getGuideNhlTv();
 		getGuideWatchEspn();
 		getGuideFsgo();
-		getGuideMls();
+		//getGuideMls();
 
 		adjustScheduleTime()
 	}
