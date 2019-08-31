@@ -1,9 +1,8 @@
-#player object {
+#player object, .video-js .vjs-tech {
     position: fixed !important;
     top: 0px !important;
     left: 0px !important;
     z-index: 99999 !important;
-    width: 75% !important;
 }
 
 body {

@@ -1,0 +1,14 @@
+.video-container .fs-player {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.header-light #header-wrapper, .header-light .body-header {
+    background-color: #002e56;
+    border-bottom: none;
+    height: 46px;
+    display: none !important;
+}

@@ -3,3 +3,19 @@
 	height: -moz-calc(100% + 30px) !important;
 	height: -webkit-calc(100% + 30px) !important;
 }
+
+div.extension-container {
+	display: none !important;
+}
+
+div.extension-taskbar {
+	display: none !important;
+}
+
+div.extensions-dock__layout {
+	display: none !important;
+}
+
+div.extensions-video-overlay-size-container {
+	display: none !important;
+}

@@ -3,7 +3,7 @@
 
     "name": "Home Sports Bar",
     "description": "Watch four television streaming websites at once.",
-    "version": "1.0.36",
+    "version": "1.0.40",
 
     "content_scripts": [
     {
@@ -292,8 +292,7 @@
         "all_frames": true
     },
     {
-        "matches": ["http://www.twitch.tv/*"],
-        "js": ["twitch.js"],
+        "matches": ["http://www.twitch.tv/*", "https://www.twitch.tv/*","http://twitch.tv/*", "https://twitch.tv/*"],
         "css": ["twitch.css"],
         "all_frames": true
     },
@@ -329,6 +328,11 @@
     {
         "matches": ["http://pix11.com/on-air/live-streaming/*"],
         "css": ["pix-11.css"],
+        "all_frames": true
+    },
+    {
+        "matches": ["http://www.foxsports.com/live*", "https://www.foxsports.com/live*"],
+        "css": ["fsgolive.css"],
         "all_frames": true
     },
     {
