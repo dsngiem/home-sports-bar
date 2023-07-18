@@ -1,0 +1,22 @@
+.bonus header {
+  display: none;
+}
+
+.bonus footer {
+  display: none;
+}
+
+.bonus .videoContainer {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+}
+
+.page-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+
+#vp2_adobe_access_enabler {
+  visibility: hidden !important;
+}

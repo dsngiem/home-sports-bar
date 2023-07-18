@@ -1,0 +1,12 @@
+#US_flash_api {	
+	position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10000 !important;
+}
+
+.persistent-header-placeholder, .tophat, .torso-module-view, .section-front__first-module-group {
+	display: none !important;
+}

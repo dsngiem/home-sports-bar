@@ -1,0 +1,13 @@
+#cspan-brightcove-video-player_html5_api {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0px !important;
+}
+
+body {
+    overflow: hidden !important;
+}

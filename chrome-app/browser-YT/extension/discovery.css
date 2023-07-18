@@ -1,0 +1,8 @@
+.bonus div.video-area {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 9999 !important;
+    margin-bottom: 0px !important;
+    height: 100% !important;
+}

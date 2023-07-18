@@ -1,0 +1,17 @@
+.tpVideo video {
+	position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10 !important;
+}
+
+header.main-header {
+	display: none !important;
+}
+
+div.content-wrapper {
+	height: 100% !important;
+	position: fixed !important;
+}

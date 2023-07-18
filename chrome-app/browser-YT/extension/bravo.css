@@ -1,0 +1,17 @@
+#pdk-player, div.playerColumn, #frametve0, #videoplayer {
+	width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    z-index: 1000000 !important;
+    left: 0px !important;
+    top: 0px !important;
+    padding: 0px !important;
+}
+
+#header, #site-header {
+	display: none !important;
+}
+
+body {
+    overflow: hidden !important;
+}

@@ -1,0 +1,22 @@
+.jw-video {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0px !important;
+}
+
+body {
+    overflow: hidden !important;
+}
+
+.headroom-wrapper {
+    display: none;
+}
+
+.Live_panelPlayerAltHeader_1lYfk.Live_panelPlayer_1f4sJ.Live_videoSizer_2kIdJ {
+    padding: 0px !important;
+    margin: 0px !important;
+}

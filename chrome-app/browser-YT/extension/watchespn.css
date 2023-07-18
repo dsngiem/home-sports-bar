@@ -1,0 +1,12 @@
+.espnplayerwrapper {
+    position: fixed !important;
+    z-index: 999 !important;
+    top: 0px !important;
+    left: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+body {
+    overflow: hidden !important;
+}

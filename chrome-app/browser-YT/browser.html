@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="browser.css">
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="browser.js"></script>
+    <script src="moment.js"></script>
+    <!-- <script src="canvas-test.js"></script> -->
+	<style>
+		iframe.screens-1 {
+			width: 100%;
+			height: 100%;
+			margin: 0px 0px;
+			padding: 0px;
+			border: 0px none transparent;
+			display: inline;
+			overflow: auto;
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
+
+		#webview-1.screens-1 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 100%;
+			display: inline;
+		}
+		#webview-2.screens-1 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-3.screens-1 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-4.screens-1 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+
+
+
+		#webview-1.screens-2 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-2.screens-2 {
+			position: fixed;
+			top: 0px;
+			left: 50%;
+			height: 100%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-3.screens-2 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-4.screens-2 {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+
+
+		#webview-1.screens-2h {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 50%;
+			width: 100%;
+			display: inline;
+		}
+		#webview-2.screens-2h {
+			position: fixed;
+			top: 50%;
+			left: 0px;
+			height: 50%;
+			width: 100%;
+			display: inline;
+		}
+		#webview-3.screens-2h {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+		#webview-4.screens-2h {
+			position: fixed;
+			top: 100%;
+			left: 100%;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+
+		#webview-1.screens-4 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-2.screens-4 {
+			position: fixed;
+			top: 0px;
+			left: 50%;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-3.screens-4 {
+			position: fixed;
+			top: 50%;
+			left: 0px;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+		#webview-4.screens-4 {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			height: 50%;
+			width: 50%;
+			display: inline;
+		}
+
+		#webview-1-overlay.screens-1 {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			display: none;
+			z-index: 10000000;
+		}
+
+		#webview-1-title.screens-1 {
+			position: absolute;
+			top: 0%;
+			right: 0%;
+			display: block;
+			z-index: 10000000;
+			margin-right: 10px;
+			color: white;
+			font-size: 48px;
+			font-family: helvetica;
+			font-weight: bold;
+			text-shadow: 0px 0px 3px #111111;
+		}
+
+
+
+
+
+		#webview-1::-webkit-scrollbar {
+			display: none;
+		}
+
+		#webview-2::-webkit-scrollbar {
+			display: none;
+		}
+
+		#webview-3::-webkit-scrollbar {
+			display: none;
+		}
+
+		#webview-4::-webkit-scrollbar {
+			display: none;
+		}
+
+		#webview-modal {
+			width: 50%;
+			height: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 50;
+		}
+
+	</style>
+
+  <body>
+  	<canvas id="canvas-test" width="20" height="20" style="z-index: 10; position: fixed; top: 0px; left: 0px; -webkit-app-region: drag;"></canvas>
+
+	<div id="webview-1-title"></div>
+	<!--<div id="webview-1-overlay">
+		<a href="index.html" target="webview-1">&#215;</a>
+	</div>	-->
+    <webview id="webview-1" src="http://xfinitytv.comcast.net/live/network/foxsports1?cmpid=chrome_ext_1" style="" class="screens-1" name="82547" partition="persist:hsb-1"></webview>
+	<webview id="webview-2" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1" partition="persist:hsb-1"></webview>
+	<webview id="webview-3" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1" partition="persist:hsb-1"></webview>
+	<webview id="webview-4" src="https://peaceful-forest-5547.herokuapp.com/player/index.html" style="" class="screens-1" partition="persist:hsb-1"></webview>
+    <webview id="webview-modal" src="about:blank" style="display: none" partition="persist:hsb-1"></webview>
+
+  </body>
+</html>

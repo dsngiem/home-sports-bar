@@ -1,0 +1,186 @@
+/*
+@media screen and (min-width:1292px) and (min-height:900px) {
+	.GCLContainer {
+		margin-left: -646px !important;
+	}
+}
+*/
+
+.bonus {
+	left: 50%;
+	margin-left: -518px !important;
+	position: fixed !important;
+	top: -25px !important;
+	bottom: auto !important;
+}
+
+
+.GCLContainer {
+	left: 50%;
+	margin-left: -518px !important;
+	position: fixed !important;
+	top: auto;
+	bottom: 0px;
+}
+
+/*.GCLContainer:hover {
+	left: 50%;
+	margin-left: -518px !important;
+	position: fixed !important;
+	top: auto !important;
+	bottom: 0px !important;
+}*/
+
+#topNavigation {
+	z-index: 0 !important;
+}
+
+
+.top-navigation {
+    z-index: 0 !important;
+}
+
+/*! GameCenterLive.css
+.GCLContainer,.GCLContainer * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.GCLContainer {
+	position: relative;
+	overflow: hidden;
+	width: 1036px;
+	margin: auto;
+	border: 1px solid #333;
+}
+*/
+@media screen and (min-width:1292px) and (min-height:900px) {
+	.GCLContainer {
+		width: 1292px;
+		top: auto !important;
+		bottom: 0px !important;
+		margin-left: -646px !important;
+	}
+
+	.bonus {
+		left: 50%;
+		margin-left: -518px !important;
+		position: fixed !important;
+		top: 0px !important;
+	}
+
+	/*.GCLContainer:hover {
+		left: 50%;
+		margin-left: -646px !important;
+		position: fixed !important;
+		top: 0px !important;
+		bottom: auto !important;
+	}*/
+
+	#topNavigation {
+		z-index: 0 !important;
+	}
+
+	.top-navigation {
+	    z-index: 0 !important;
+	}
+}
+
+@media screen {
+	.top-navigation {
+	    z-index: 0 !important;
+	}
+}
+
+/*
+.GCLContentContainer {
+	float: left;
+	width: 1036px;
+} 
+
+@media screen and (min-width:1292px) and (min-height:900px) {
+	.GCLContentContainer {
+		width: 1292px;
+		margin-left: -646px !important;
+	}
+}
+
+#GCLConsole {
+	position: relative;
+	z-index: 1000;
+	float: left;
+	width: 1036px;
+	height: 627.75px;
+	background-color: #111;
+}
+
+@media screen and (min-width:1292px) and (min-height:900px) {
+	#GCLConsole{
+		width: 1292px;
+		height: 771.75px;
+		margin-left: -646px !important;
+	}
+}
+#GCLConsole #nlGclWrapper {
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100% !important;
+	background-color: #aaa
+}
+
+#GCLConsole.active {
+	width:732px
+}
+
+@media screen and (min-width:1292px) and (min-height:900px) {
+	#GCLConsole.active {
+		width: 972px
+	}
+}
+
+#GCLConsole.active #nlGclWrapper {
+	height: 456.75px
+}
+
+@media screen and (min-width:1292px) and (min-height:900px) {
+	#GCLConsole.active #nlGclWrapper {
+		height:591.75px
+	}
+}
+
+.chrome {
+	overflow: hidden
+}
+
+#GCLConsoleButtons {
+	position: absolute;
+	z-index: 3000;
+	right: 0;
+	bottom: 0;
+}
+
+#GCLConsoleButtons li {
+	font-family: AvenirNextCondensed-DemiBold;
+	display: inline-block;
+	min-width: 85px;
+	height: 20px;
+	padding: 2px 5px;
+	text-align: center;
+	color: #fff;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background-color: rgba(0,0,0,.5);
+}
+
+#GCLConsoleButtons li a {
+	cursor: pointer;
+	color: #34a3ed;
+}
+
+#GCLConsoleButtons li:first-child {
+	border-left: 1px solid #fff;
+}
+*/

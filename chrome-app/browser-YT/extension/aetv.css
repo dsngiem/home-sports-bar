@@ -1,0 +1,12 @@
+#liveplayer-container {	
+	position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1001 !important;
+}
+
+.liveplayer-inner {
+	position: initial !important;
+}

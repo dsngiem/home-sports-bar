@@ -1,0 +1,67 @@
+.bonus {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	margin: 0px !important;
+	z-index: 1000 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#playBox.big #player #playerObject {
+	position: fixed !important;
+	top: 0px !important;
+	left: 0px !important;
+	margin: 0px !important;
+	z-index: 1000 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+@media (max-width:1028px)
+{
+	.bonus {
+		position: fixed !important;
+		top: 0px !important;
+		left: 0px !important;
+		margin: 0px !important;
+		z-index: 1000 !important;
+	}
+
+	#playBox
+	{
+		width: 100% !important;
+		height: 100% !important;
+	}
+	#playBox.big
+	{
+		width: 100% !important;
+		height: 100% !important;
+	}
+	#playBox.big #player #playerObject,
+	#playBox.big #player #playerObjectInfo
+	{
+		width: 100% !important;
+		height: 360px;
+	}
+	#playBox.big #player #playerObjectInfo .alertTxt
+	{
+		padding-top: 180px;
+		width: 100% !important;
+	}
+	#playBox.big #player #playerObjectInfo .alertTxt.blocked
+	{
+		padding: 100px 10px 0;
+		width: 100% !important;
+	}
+	#playBox.big #player #playerObjectInfo .countdown
+	{
+		padding-top: 150px;
+		width: 100% !important;
+	}
+	#playBox #player #playerObject,
+	#playBox #player #playerObjectInfo
+	{
+		top: 0;
+	}
+}

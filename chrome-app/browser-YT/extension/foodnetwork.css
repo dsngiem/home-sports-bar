@@ -1,0 +1,8 @@
+.video-player > iframe {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 9 !important;
+    width: 100% !important;
+    height: 100% !important;
+}

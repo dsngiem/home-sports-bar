@@ -1,0 +1,10 @@
+.bonus .header-navigation-wrapper {
+	display: none !important;
+}
+
+.bonus .platform-container object {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+}

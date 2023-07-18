@@ -1,0 +1,16 @@
+.video-player-controls-content {
+	z-index: 9999 !important;
+}
+
+.main-player {
+	position: fixed !important;
+    z-index: 9999 !important;
+}
+
+#mss-legal-banner {
+	display: none !important;
+}
+
+body {
+	overflow: hidden !important;
+}

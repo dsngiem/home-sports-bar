@@ -1,0 +1,17 @@
+#p0 {
+    position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1000 !important;
+    background-color: #000 !important;
+}
+
+div.header {
+	display: none !important;
+}
+
+section.live-page-wrapper {
+	margin: 0px !important;
+}

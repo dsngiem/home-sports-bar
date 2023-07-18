@@ -1,0 +1,12 @@
+#div.playback object, #cvp_1 {
+	position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10 !important;
+}
+
+#global-nav, #nav-bar {
+	display: none !important;
+}

@@ -1,0 +1,10 @@
+#channelplayer {
+	position: fixed !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 1 !important;
+}
+
+#SnapABug_Button {
+	display: none !important;
+}

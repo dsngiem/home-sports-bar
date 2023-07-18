@@ -1,0 +1,14 @@
+#player-container {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    z-index: 999999999 !important;
+}
+
+#player-container video {
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    position: fixed !important;
+}
